@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <a href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[hsl(200,100%,50%)] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[hsl(185,80%,50%)] flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">G</span>
               </div>
               <span className="text-xl font-bold text-foreground">GetBookedOut</span>
