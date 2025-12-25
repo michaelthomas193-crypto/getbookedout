@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-up text-primary" style={{ animationDelay: '0.1s' }}>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-normal mb-6 animate-fade-up text-primary" style={{ animationDelay: '0.1s' }}>
           <span>Get Booked Out With</span>
           <br />
           <span>Qualified HVAC Leads That Close</span>
