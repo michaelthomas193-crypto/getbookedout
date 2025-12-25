@@ -3,7 +3,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[hsl(var(--bg-light-blue))]">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-float" />

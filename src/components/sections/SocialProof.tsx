@@ -26,7 +26,7 @@ const testimonials = [
 
 const SocialProof = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-secondary/50">
+    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
