@@ -11,7 +11,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[hsl(185,80%,50%)] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[hsl(185,80%,42%)] flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">G</span>
             </div>
             <span className="text-xl font-bold text-foreground">GetBookedOut</span>
@@ -19,23 +19,23 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               How It Works
             </a>
-            <a href="#why-us" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#why-us" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Why Us
             </a>
-            <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Results
             </a>
-            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               FAQ
             </a>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground hover:text-foreground">
               <Phone className="w-4 h-4" />
               1300 000 000
             </Button>
@@ -55,21 +55,21 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 glass border-t border-border/50 animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border shadow-lg animate-fade-in">
             <nav className="flex flex-col p-4 space-y-4">
-              <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+              <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium">
                 How It Works
               </a>
-              <a href="#why-us" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+              <a href="#why-us" className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium">
                 Why Us
               </a>
-              <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+              <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium">
                 Results
               </a>
-              <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors py-2">
+              <a href="#faq" className="text-muted-foreground hover:text-primary transition-colors py-2 font-medium">
                 FAQ
               </a>
-              <div className="pt-4 border-t border-border/50 space-y-3">
+              <div className="pt-4 border-t border-border space-y-3">
                 <Button variant="ghost" className="w-full justify-center gap-2">
                   <Phone className="w-4 h-4" />
                   1300 000 000

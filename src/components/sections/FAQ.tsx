@@ -30,17 +30,14 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
-      {/* Background Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
-      
+    <section className="section-padding relative overflow-hidden bg-secondary/50">
       <div className="container-padding max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient">Frequently Asked Questions</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about GetBookedOut
@@ -52,7 +49,7 @@ const FAQ = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="rounded-xl border border-border/50 bg-secondary/30 px-6 data-[state=open]:border-primary/30 transition-colors"
+              className="rounded-xl border border-border bg-background px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-lg transition-all"
             >
               <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary transition-colors py-6 [&[data-state=open]]:text-primary">
                 {faq.question}
