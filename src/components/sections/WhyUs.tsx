@@ -30,17 +30,14 @@ const differentiators = [
 
 const WhyUs = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px]" />
-      
+    <section className="section-padding relative overflow-hidden bg-background">
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             Why GetBookedOut
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient">The GetBookedOut Difference</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            The GetBookedOut Difference
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're not just another lead gen company. We're your growth partner.
@@ -73,12 +70,10 @@ const DifferentiatorCard = ({
   description: string; 
   index: number;
 }) => (
-  <div className="group relative p-8 rounded-2xl bg-secondary/50 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1">
-    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    
+  <div className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500 hover:-translate-y-1">
     <div className="relative z-10 text-center">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-        <Icon className="w-8 h-8 text-primary" />
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6 group-hover:bg-primary transition-all duration-300">
+        <Icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
       </div>
       
       <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">

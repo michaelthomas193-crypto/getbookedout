@@ -26,14 +26,14 @@ const testimonials = [
 
 const SocialProof = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-secondary/30">
+    <section className="section-padding relative overflow-hidden bg-secondary/50">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             Success Stories
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="text-gradient">HVAC Companies Trust GetBookedOut</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            HVAC Companies Trust GetBookedOut
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             To Fill Their Schedule
@@ -41,23 +41,23 @@ const SocialProof = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="relative p-8 rounded-2xl card-gradient border border-border/50 hover:border-accent/30 transition-all duration-500 group"
+              className="relative p-8 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-500 group"
             >
               {/* Quote icon */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-accent/20 group-hover:text-accent/40 transition-colors" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10 group-hover:text-primary/20 transition-colors" />
               
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-foreground/90 leading-relaxed mb-8 relative z-10">
+              <p className="text-foreground/80 leading-relaxed mb-8 relative z-10">
                 "{testimonial.quote}"
               </p>
 
@@ -66,7 +66,7 @@ const SocialProof = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-accent/30"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-primary/20"
                 />
                 <div>
                   <p className="font-semibold text-foreground">{testimonial.name}</p>

@@ -6,57 +6,58 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 215 25% 17%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 20% 98%;
+    --card-foreground: 215 25% 17%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 17%;
 
-    --primary: 195 76% 55%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 195 85% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 17%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 15% 93%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 175 70% 50%;
-    --accent-foreground: 220 20% 4%;
+    --accent: 195 85% 45%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 195 76% 55%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 195 85% 45%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --glow-primary: 0 0 80px hsl(195 76% 55% / 0.35);
-    --glow-accent: 0 0 60px hsl(175 70% 50% / 0.25);
-    --gradient-hero: linear-gradient(135deg, hsl(220 20% 4%) 0%, hsl(210 25% 8%) 50%, hsl(220 20% 4%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 20% 10%) 0%, hsl(220 20% 6%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(195 76% 55%) 0%, hsl(185 80% 50%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(175 70% 50%) 0%, hsl(185 75% 45%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 15% 75%) 100%);
+    --glow-primary: 0 0 60px hsl(195 85% 45% / 0.2);
+    --glow-accent: 0 0 40px hsl(195 85% 45% / 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(210 25% 97%) 0%, hsl(195 30% 95%) 50%, hsl(210 20% 98%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(195 85% 45%) 0%, hsl(185 80% 42%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(195 85% 45%) 0%, hsl(200 75% 40%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(215 25% 17%) 0%, hsl(215 20% 30%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(215 30% 18%) 0%, hsl(210 25% 22%) 100%);
     
-    --sidebar-background: 220 20% 6%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 195 76% 55%;
-    --sidebar-primary-foreground: 220 25% 8%;
-    --sidebar-accent: 220 20% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 195 76% 55%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 25% 17%;
+    --sidebar-primary: 195 85% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent-foreground: 215 25% 17%;
+    --sidebar-border: 214 20% 88%;
+    --sidebar-ring: 195 85% 45%;
   }
 
   .dark {
-    --background: 220 20% 4%;
+    --background: 215 25% 12%;
     --foreground: 210 40% 98%;
   }
 }
@@ -103,12 +104,20 @@
     background: var(--gradient-hero);
   }
 
+  .dark-gradient {
+    background: var(--gradient-dark);
+  }
+
   .btn-gradient {
     background: var(--gradient-primary);
   }
 
   .glass {
-    @apply backdrop-blur-xl bg-secondary/30 border border-border/50;
+    @apply backdrop-blur-xl bg-background/80 border border-border/50;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-foreground/90 border border-foreground/20;
   }
 
   .section-padding {
@@ -163,10 +172,10 @@
 
   @keyframes glowPulse {
     0%, 100% {
-      box-shadow: 0 0 40px hsl(195 76% 55% / 0.3);
+      box-shadow: 0 0 40px hsl(195 85% 45% / 0.2);
     }
     50% {
-      box-shadow: 0 0 80px hsl(195 76% 55% / 0.5);
+      box-shadow: 0 0 60px hsl(195 85% 45% / 0.35);
     }
   }
 
