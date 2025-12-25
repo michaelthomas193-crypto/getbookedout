@@ -21,10 +21,10 @@ const Hero = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-          <span className="text-foreground">Get Booked Out With</span>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 animate-fade-up text-primary" style={{ animationDelay: '0.1s' }}>
+          <span>Get Booked Out With</span>
           <br />
-          <span className="text-gradient-primary">Qualified HVAC Leads That Close</span>
+          <span>Qualified HVAC Leads That Close</span>
         </h1>
 
         {/* Subheadline */}
