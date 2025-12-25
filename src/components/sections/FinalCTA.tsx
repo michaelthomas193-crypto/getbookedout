@@ -29,7 +29,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-background">
+    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}

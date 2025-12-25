@@ -23,7 +23,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-background">
+    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold mb-4">

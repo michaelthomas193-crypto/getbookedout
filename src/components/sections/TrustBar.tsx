@@ -25,7 +25,7 @@ const stats = [
 
 const TrustBar = () => {
   return (
-    <section className="relative py-8 overflow-hidden bg-primary text-primary-foreground">
+    <section className="relative py-8 overflow-hidden bg-[hsl(var(--bg-light-blue))]">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat) => (
@@ -34,12 +34,12 @@ const TrustBar = () => {
               className="flex flex-col items-center text-center group"
             >
               <div className="flex items-center gap-3 mb-2">
-                <stat.icon className="w-5 h-5 text-primary-foreground/80" />
-                <span className="text-3xl md:text-4xl font-bold text-primary-foreground">
+                <stat.icon className="w-5 h-5 text-primary" />
+                <span className="text-3xl md:text-4xl font-bold text-foreground">
                   {stat.value}
                 </span>
               </div>
-              <span className="text-sm text-primary-foreground/80">
+              <span className="text-sm text-muted-foreground">
                 {stat.label}
               </span>
             </div>
