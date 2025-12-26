@@ -7,40 +7,35 @@ import {
 
 const faqs = [
   {
-    question: "How quickly will I see leads?",
-    answer: "Most clients see their first qualified leads within 48-72 hours of campaign launch. Our rapid deployment process means we can have you up and running faster than any other provider in the market.",
+    question: "How quickly can I get set up?",
+    answer: "Most businesses are up and running within 24-48 hours. We handle all the setup, integration, and customization so you can start capturing leads immediately.",
   },
   {
-    question: "What makes a lead 'qualified'?",
-    answer: "Every lead is screened for: 1) Budget capability ($8k-$18k replacement range), 2) Timeline urgency (need service within 24-48 hours), 3) Decision-maker status (homeowner or authorised decision-maker), and 4) Property qualification (suitable for emergency HVAC replacement).",
+    question: "Do I need technical skills?",
+    answer: "Not at all! Get Booked Out is designed for business owners, not developers. Our team handles all the technical work, and our dashboard is simple and intuitive.",
   },
   {
-    question: "Do I share leads with other HVAC companies?",
-    answer: "Absolutely not. Every lead you receive is 100% exclusive to your business. We never resell or share leads with competitors. Your leads are yours and yours alone.",
+    question: "What industries do you work with?",
+    answer: "We work with any service-based business including trades (plumbers, electricians, HVAC), healthcare (dentists, physios), beauty (salons, spas), and professional services (accountants, lawyers).",
   },
   {
-    question: "What's the investment?",
-    answer: "Our pricing is performance-based and tailored to your market and goals. We offer flexible packages starting from a simple pay-per-lead model to full-service managed campaigns. Book a strategy call to get a custom quote for your business.",
+    question: "How does pricing work?",
+    answer: "We offer flexible plans based on your business size and needs. All plans include unlimited AI conversations, booking automation, and review management. Book a demo to get a custom quote.",
   },
   {
-    question: "What if the leads don't convert?",
-    answer: "We stand behind our lead quality with a satisfaction guarantee. If a lead doesn't meet our qualification criteria, we replace it at no cost. We're in the business of delivering booked jobs, not just contact information.",
+    question: "Can I cancel anytime?",
+    answer: "Yes! We don't believe in lock-in contracts. You can cancel your subscription at any time with no penalties or hidden fees.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
-      <div className="container-padding max-w-4xl mx-auto relative z-10">
+    <section id="faq" className="section-padding bg-background">
+      <div className="container-padding max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            FAQ
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to know about GetBookedOut
+          <h2 className="section-title mb-4">Frequently Asked Questions</h2>
+          <p className="section-subtitle">
+            Everything you need to know about Get Booked Out
           </p>
         </div>
 
@@ -49,7 +44,7 @@ const FAQ = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="rounded-xl border border-border bg-background px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-lg transition-all"
+              className="rounded-xl border border-border bg-card px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-lg transition-all card-shadow"
             >
               <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary transition-colors py-6 [&[data-state=open]]:text-primary">
                 {faq.question}
