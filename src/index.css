@@ -7,50 +7,52 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
+    --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 0 0% 13%;
 
-    /* Baby Blue - Primary brand color */
-    --primary: 197 82% 75%;
+    /* Sky Blue - Primary brand color (richer, more vibrant #3B9FD0) */
+    --primary: 199 58% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 20% 98%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary-foreground: 0 0% 13%;
 
     --muted: 210 20% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 197 82% 95%;
-    --accent-foreground: 0 0% 20%;
+    --accent: 199 58% 94%;
+    --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 197 82% 75%;
+    --ring: 199 58% 52%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --baby-blue: 197 82% 75%;
-    --baby-blue-light: 197 82% 95%;
+    --sky-blue: 199 58% 52%;
+    --sky-blue-light: 199 58% 94%;
     --gray-light: 210 20% 98%;
-    --gray-text: 0 0% 20%;
+    --gray-text: 0 0% 13%;
+    --charcoal: 0 0% 10%;
+    --warning: 38 92% 50%;
     
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 197 82% 75%;
+    --sidebar-foreground: 0 0% 13%;
+    --sidebar-primary: 199 58% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 210 20% 96%;
-    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 13%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 197 82% 75%;
+    --sidebar-ring: 199 58% 52%;
   }
 
   .dark {

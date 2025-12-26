@@ -41,10 +41,10 @@ const Features = () => {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group p-8 bg-card rounded-xl border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 card-shadow"
+              className="group p-8 bg-card rounded-xl border-t-4 border-t-primary border-x border-b border-border hover:shadow-xl transition-all duration-300 card-shadow"
             >
-              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
+                <feature.icon className="w-7 h-7 text-primary-foreground" />
               </div>
               
               <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -52,7 +52,7 @@ const Features = () => {
               
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
               >
                 See How It Works <ArrowRight className="w-4 h-4" />
               </a>

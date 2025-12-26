@@ -1,23 +1,24 @@
-import { MessageSquare } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const ChatWidget = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50 hidden md:block group">
-      <div className="absolute bottom-full right-0 mb-2 w-64 p-4 bg-card rounded-lg shadow-xl border border-border opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-        <p className="text-sm">
-          Hey! 👋 Interested in automating your leads and bookings? I can answer any questions or help you book a demo.
-        </p>
+    <a
+      href="tel:1300000000"
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform group"
+    >
+      <MessageCircle className="w-7 h-7 text-primary-foreground" />
+      
+      {/* Tooltip */}
+      <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        <div className="bg-card text-foreground text-sm font-medium px-4 py-3 rounded-xl shadow-xl border border-border whitespace-nowrap max-w-[240px]">
+          <p className="font-semibold mb-1">Hey! 👋</p>
+          <p className="text-muted-foreground text-xs">Interested in automating your leads and bookings?</p>
+        </div>
       </div>
-      <button
-        className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="Open chat"
-      >
-        <MessageSquare className="w-6 h-6 text-primary-foreground" />
-      </button>
-      <p className="text-xs text-muted-foreground text-center mt-2">
-        Powered by<br />Get Booked Out
-      </p>
-    </div>
+
+      {/* Pulse animation */}
+      <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-25" />
+    </a>
   );
 };
 

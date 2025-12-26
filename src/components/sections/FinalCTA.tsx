@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -26,6 +26,12 @@ const FinalCTA = () => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch within 24 hours to book your strategy call.");
   };
+
+  const bulletPoints = [
+    "No obligation strategy session",
+    "Custom plan for your market",
+    "See real results from businesses like yours",
+  ];
 
   return (
     <section className="section-padding relative overflow-hidden bg-secondary">
@@ -46,24 +52,14 @@ const FinalCTA = () => {
             </p>
             
             <div className="space-y-4 text-left max-w-md mx-auto lg:mx-0">
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
+              {bulletPoints.map((point) => (
+                <div key={point} className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="text-foreground">{point}</span>
                 </div>
-                <span className="text-muted-foreground">No obligation strategy session</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                </div>
-                <span className="text-muted-foreground">Custom plan for your market</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                </div>
-                <span className="text-muted-foreground">See real results from businesses like yours</span>
-              </div>
+              ))}
             </div>
           </div>
 
