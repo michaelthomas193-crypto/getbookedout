@@ -28,7 +28,7 @@ const Problems = () => {
       <div className="container-padding max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title mb-4">
-            Right now, you're losing jobs you don't even know about.
+            Right now, you're <span className="text-[#E74C3C] underline decoration-2">losing jobs</span> you don't even know about.
           </h2>
           <p className="text-lg text-muted-foreground">
             While you're on a job site with dirty hands...
