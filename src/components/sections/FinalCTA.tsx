@@ -29,7 +29,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
+    <section className="section-padding relative overflow-hidden bg-secondary">
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
@@ -40,7 +40,7 @@ const FinalCTA = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Ready to Get
               <br />
-              <span className="text-gradient-primary">Booked Out?</span>
+              <span className="text-primary">Booked Out?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
               Let's build a pipeline that keeps your trucks rolling. Book a free strategy call and see how we can transform your lead flow.
@@ -174,7 +174,7 @@ const FinalCTA = () => {
                   </Select>
                 </div>
 
-                <Button type="submit" variant="hero" size="xl" className="w-full group">
+                <Button type="submit" variant="cta" size="xl" className="w-full group">
                   Book a Strategy Call
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
