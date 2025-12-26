@@ -1,65 +1,61 @@
-import { PhoneOff, Timer, UserX, Eye } from "lucide-react";
+import { Clock, HelpCircle, CalendarX } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const problems = [
   {
-    icon: PhoneOff,
-    title: "Your phone isn't ringing enough.",
-    description: "Emergency HVAC replacements require a steady stream of homeowners who need help NOW. Our lead system delivers high-intent prospects actively searching for same-day solutions.",
+    icon: Clock,
+    title: "Are waiting for a response",
+    description: "If you don't reply within 5 minutes, they've moved on to your competitor.",
   },
   {
-    icon: Timer,
-    title: "Leads go cold before you can respond.",
-    description: "Speed wins in emergency HVAC. Our AI qualification and instant routing means you connect with homeowners within minutes, not hours.",
+    icon: HelpCircle,
+    title: "Have questions about your services",
+    description: "If they can't get instant answers, they bounce.",
   },
   {
-    icon: UserX,
-    title: "You're wasting money on tyre-kickers.",
-    description: "Every lead is pre-qualified for budget, urgency, and decision-making authority before it hits your calendar. No more wasted site visits.",
-  },
-  {
-    icon: Eye,
-    title: "You can't see what's working.",
-    description: "Full visibility into your pipeline, lead sources, and ROI. Know exactly which dollars are driving booked jobs.",
+    icon: CalendarX,
+    title: "Want to book but it's too hard",
+    description: "Friction in booking = lost revenue.",
   },
 ];
 
 const Problems = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-[hsl(var(--bg-light-blue))]">
-      <div className="container-padding max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            The Problem
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            Sound Familiar?
+    <section className="section-padding bg-gray-light">
+      <div className="container-padding max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="section-title mb-4">
+            Only 20% of your leads actually book.{" "}
+            <span className="text-primary">Why not capture the other 80%?</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Most HVAC companies struggle with the same challenges. We built GetBookedOut to solve them.
+          <p className="text-lg text-muted-foreground">
+            Right now, your potential customers...
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="space-y-6 mb-12">
           {problems.map((problem) => (
             <div
               key={problem.title}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500"
+              className="flex items-start gap-6 p-6 bg-card rounded-xl border border-border card-shadow"
             >
-              <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <problem.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  {problem.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {problem.description}
-                </p>
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center shrink-0">
+                <problem.icon className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">{problem.title}</h3>
+                <p className="text-muted-foreground">{problem.description}</p>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Solution CTA */}
+        <div className="text-center bg-card rounded-xl p-8 border border-border card-shadow">
+          <p className="text-xl font-semibold mb-6">
+            We help you capture ALL of these customers with smart AI automation.
+          </p>
+          <Button size="lg">Book a Free Consultation</Button>
         </div>
       </div>
     </section>

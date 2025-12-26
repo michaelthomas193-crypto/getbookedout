@@ -1,154 +1,88 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Phone, MessageCircle } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
-import heroHome from "@/assets/hero-home.jpg";
+import { Star, MessageSquare } from "lucide-react";
 
 const Hero = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    phone: "",
-    message: "",
-    agreeToTerms: false,
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.agreeToTerms) {
-      toast.error("Please agree to receive text messages to continue.");
-      return;
-    }
-    toast.success("Emergency request sent! We'll contact you within minutes.");
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroHome})` }}
-      >
-        <div className="absolute inset-0 bg-navy/70" />
-      </div>
-
-      <div className="container-padding relative z-10 max-w-7xl mx-auto pt-24 pb-16">
+    <section className="section-padding bg-background overflow-hidden">
+      <div className="container-padding max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Side - Content */}
-          <div className="text-left animate-fade-up">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6 text-primary-foreground leading-tight">
-              <span className="block">EMERGENCY</span>
-              <span className="block">HVAC</span>
-              <span className="block">REPLACEMENT</span>
+          {/* Left Content */}
+          <div className="animate-fade-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              AI That Converts Leads Into{" "}
+              <span className="text-primary">Booked Appointments</span> While You Sleep
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg mb-8">
-              Regional NSW's trusted 24/7 rapid response team. We specialize in
-              high-ticket replacements for systems over 10 years old.
+            
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl">
+              Choose Get Booked Out. Automate lead responses, bookings, and reviews — 
+              so you never miss another customer.
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button size="xl">Get Started</Button>
+              <Button variant="outline" size="xl">Book a Demo</Button>
+            </div>
+            
+            {/* Trust Badge */}
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="font-medium">Rated 5/5 from 200+ reviews</span>
+            </div>
           </div>
 
-          {/* Right Side - Floating Lead Capture Card */}
-          <div
-            className="relative animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            {/* Card with logo breaking top border */}
-            <div className="relative bg-accent rounded-xl shadow-2xl p-8 pt-16">
-              {/* Logo Circle - Breaking top border */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg border-4 border-accent">
-                  <span className="text-primary-foreground font-black text-2xl">
-                    GBO
-                  </span>
+          {/* Right Content - Chat Widget Mockup */}
+          <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="relative bg-card rounded-2xl shadow-xl border border-border p-6 max-w-md mx-auto lg:ml-auto">
+              {/* Chat Header */}
+              <div className="flex items-center gap-3 pb-4 border-b border-border mb-4">
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                  <MessageSquare className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <p className="font-semibold">Get Booked Out AI</p>
+                  <p className="text-sm text-muted-foreground">Online now</p>
                 </div>
               </div>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-accent-foreground text-center mb-8">
-                GET A FREE QUOTE
-              </h2>
-
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-accent-foreground">
-                    Full Name *
-                  </label>
-                  <Input
-                    placeholder="John Smith"
-                    value={formData.fullName}
-                    onChange={(e) =>
-                      setFormData({ ...formData, fullName: e.target.value })
-                    }
-                    required
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground h-12"
-                  />
+              {/* Chat Messages */}
+              <div className="space-y-4 mb-4">
+                <div className="bg-secondary rounded-lg rounded-tl-none p-3 max-w-[80%]">
+                  <p className="text-sm">Hi! 👋 I'm here to help you book an appointment. What service are you looking for today?</p>
                 </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-accent-foreground">
-                    Phone *
-                  </label>
-                  <Input
-                    type="tel"
-                    placeholder="(02) 1234 5678"
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    required
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground h-12"
-                  />
+                
+                <div className="bg-primary text-primary-foreground rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto">
+                  <p className="text-sm">I need a plumber for a leaking tap</p>
                 </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-accent-foreground">
-                    Short message about your needs *
-                  </label>
-                  <Textarea
-                    placeholder="Your message goes straight to our priority dispatch."
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    required
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground min-h-[100px]"
-                  />
+                
+                <div className="bg-secondary rounded-lg rounded-tl-none p-3 max-w-[80%]">
+                  <p className="text-sm">I can help with that! I have availability tomorrow at 9am, 11am, or 2pm. Which works best for you?</p>
                 </div>
+              </div>
 
-                <p className="text-xs text-muted-foreground">
-                  Your message goes straight to our priority dispatch.
-                </p>
+              {/* Chat Input */}
+              <div className="flex items-center gap-2 pt-4 border-t border-border">
+                <input
+                  type="text"
+                  placeholder="Type a message..."
+                  className="flex-1 bg-secondary rounded-lg px-4 py-2 text-sm focus:outline-none"
+                  disabled
+                />
+                <Button size="sm" className="shrink-0">Send</Button>
+              </div>
 
-                <div className="flex items-start gap-3">
-                  <Checkbox
-                    id="terms"
-                    checked={formData.agreeToTerms}
-                    onCheckedChange={(checked) =>
-                      setFormData({ ...formData, agreeToTerms: checked as boolean })
-                    }
-                    className="mt-0.5 border-muted-foreground data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="text-sm text-accent-foreground leading-snug cursor-pointer"
-                  >
-                    I agree to receive text messages for my quote. By providing my
-                    phone number, I agree to receive text messages from the
-                    business.
-                  </label>
-                </div>
-
-                <Button
-                  type="submit"
-                  variant="cta"
-                  size="xl"
-                  className="w-full uppercase tracking-wide"
-                >
-                  SEND EMERGENCY REQUEST
-                </Button>
-              </form>
+              {/* Powered By */}
+              <p className="text-xs text-muted-foreground text-center mt-4">
+                Powered by Get Booked Out
+              </p>
             </div>
+
+            {/* Floating decoration */}
+            <div className="absolute -z-10 top-8 -right-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -z-10 -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-2xl" />
           </div>
         </div>
       </div>
