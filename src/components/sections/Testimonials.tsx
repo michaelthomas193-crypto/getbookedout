@@ -62,10 +62,9 @@ const Testimonials = () => {
     <section id="testimonials" className="section-padding bg-gray-light">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="section-title mb-4">
-            See Why Service Businesses Trust Get Booked Out
+          <h2 className="section-title">
+            See Why Service Businesses Trust <span className="text-[#2B8BBF]">Get Booked Out</span>
           </h2>
-          <p className="section-subtitle">To Fill Their Schedule</p>
         </div>
 
         <div className="relative px-12">

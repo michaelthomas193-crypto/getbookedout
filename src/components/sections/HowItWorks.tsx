@@ -35,51 +35,42 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="section-padding bg-secondary">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="section-title mb-4">How It Works</h2>
           <p className="section-subtitle">
             We handle the business stuff. You handle the trade.
           </p>
         </div>
 
-        {/* Steps with connecting line */}
+        {/* Timeline layout */}
         <div className="relative">
           {/* Connecting line - desktop only */}
-          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-1 bg-gradient-to-r from-[#7DD3E8] via-[#2B8BBF] to-[#1A6B9A] rounded-full" />
+          <div className="hidden lg:block absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#7DD3E8] via-[#4BADD4] to-[#1A6B9A]" />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((step) => (
               <div key={step.number} className="relative">
-                {/* Step card */}
-                <div className="p-6 bg-card rounded-xl border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 card-shadow h-full flex flex-col">
-                  {/* Step Number - large and prominent */}
-                  <div 
-                    className="w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto lg:mx-0 relative z-10"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    <span className="text-2xl font-bold text-white">{step.number}</span>
+                {/* Step card - compact */}
+                <div className="p-5 bg-card rounded-xl border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                  {/* Combined Number + Icon row */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div 
+                      className="w-14 h-14 rounded-full flex items-center justify-center relative z-10 shrink-0"
+                      style={{ backgroundColor: step.color }}
+                    >
+                      <span className="text-xl font-bold text-white">{step.number}</span>
+                    </div>
+                    <div 
+                      className="w-10 h-10 rounded-lg flex items-center justify-center"
+                      style={{ backgroundColor: step.color }}
+                    >
+                      <step.icon className="w-5 h-5 text-white" />
+                    </div>
                   </div>
                   
-                  {/* Icon */}
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                    style={{ backgroundColor: step.color }}
-                  >
-                    <step.icon className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                  <h3 className="text-lg font-bold mb-2">{step.title}</h3>
                   <p className="text-muted-foreground text-sm flex-grow">{step.description}</p>
                 </div>
-
-                {/* Arrow connector - desktop only */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:flex absolute top-12 -right-4 z-20 w-8 h-8 bg-muted-foreground/20 rounded-full items-center justify-center">
-                    <svg className="w-4 h-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                )}
               </div>
             ))}
           </div>

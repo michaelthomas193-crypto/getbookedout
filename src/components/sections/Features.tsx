@@ -29,7 +29,7 @@ const Features = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">
-            One Platform. Everything You Need.
+            One Platform. <span className="text-[#2B8BBF]">Everything You Need.</span>
           </h2>
           <p className="section-subtitle">
             Stop juggling five different tools. Get Booked Out handles your leads, 
