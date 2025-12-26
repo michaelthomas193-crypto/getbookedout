@@ -1,21 +1,21 @@
-import { Clock, HelpCircle, CalendarX } from "lucide-react";
+import { PhoneMissed, HelpCircle, CalendarX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const problems = [
   {
-    icon: Clock,
-    title: "Are waiting for a response",
-    description: "If you don't reply within 5 minutes, they've moved on to your competitor.",
+    icon: PhoneMissed,
+    title: "Your phone rang. You couldn't answer.",
+    description: "78% of customers book with whoever responds first. By the time you call back, they've already hired your competitor.",
   },
   {
     icon: HelpCircle,
-    title: "Have questions about your services",
-    description: "If they can't get instant answers, they bounce.",
+    title: "A customer visited your website.",
+    description: "They had questions. Nobody answered. They bounced. Another job gone.",
   },
   {
     icon: CalendarX,
-    title: "Want to book but it's too hard",
-    description: "Friction in booking = lost revenue.",
+    title: "Someone wanted to book you.",
+    description: "But your booking process was confusing. They gave up and called the bloke down the road instead.",
   },
 ];
 
@@ -25,11 +25,10 @@ const Problems = () => {
       <div className="container-padding max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title mb-4">
-            Only 20% of your leads actually book.{" "}
-            <span className="text-primary">Why not capture the other 80%?</span>
+            Right now, you're losing jobs you don't even know about.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Right now, your potential customers...
+            While you're on a job site with dirty hands...
           </p>
         </div>
 
@@ -53,9 +52,11 @@ const Problems = () => {
         {/* Solution CTA */}
         <div className="text-center bg-card rounded-xl p-8 border border-border card-shadow">
           <p className="text-xl font-semibold mb-6">
-            We help you capture ALL of these customers with smart AI automation.
+            Stop bleeding money. Start capturing every lead.
           </p>
-          <Button size="lg">Book a Free Consultation</Button>
+          <Button size="lg" asChild>
+            <a href="#how-it-works">See How It Works</a>
+          </Button>
         </div>
       </div>
     </section>

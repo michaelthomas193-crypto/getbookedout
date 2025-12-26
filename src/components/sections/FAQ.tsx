@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "How quickly can I get set up?",
-    answer: "Most businesses are up and running within 24-48 hours. We handle all the setup, integration, and customization so you can start capturing leads immediately.",
+    question: "I'm not tech-savvy. Can I still use this?",
+    answer: "Absolutely. We set everything up for you. If you can use a smartphone, you can use Get Booked Out.",
   },
   {
-    question: "Do I need technical skills?",
-    answer: "Not at all! Get Booked Out is designed for business owners, not developers. Our team handles all the technical work, and our dashboard is simple and intuitive.",
+    question: "How quickly will I see results?",
+    answer: "Most businesses see their first automated leads within the first week. ROI typically shows within 30 days.",
   },
   {
-    question: "What industries do you work with?",
-    answer: "We work with any service-based business including trades (plumbers, electricians, HVAC), healthcare (dentists, physios), beauty (salons, spas), and professional services (accountants, lawyers).",
+    question: "What types of businesses do you work with?",
+    answer: "Any service-based business: HVAC, plumbing, electrical, landscaping, cleaning, pool services, pest control, and more.",
   },
   {
-    question: "How does pricing work?",
-    answer: "We offer flexible plans based on your business size and needs. All plans include unlimited AI conversations, booking automation, and review management. Book a demo to get a custom quote.",
+    question: "How much does it cost?",
+    answer: "Plans start from $297/month. Book a demo and we'll show you the ROI calculator — most clients make their money back from just 1-2 extra jobs per month.",
   },
   {
-    question: "Can I cancel anytime?",
-    answer: "Yes! We don't believe in lock-in contracts. You can cancel your subscription at any time with no penalties or hidden fees.",
+    question: "Is there a lock-in contract?",
+    answer: "No. Month-to-month. Cancel anytime. We believe in earning your business, not trapping you.",
   },
 ];
 
@@ -34,9 +34,6 @@ const FAQ = () => {
       <div className="container-padding max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title mb-4">Frequently Asked Questions</h2>
-          <p className="section-subtitle">
-            Everything you need to know about Get Booked Out
-          </p>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
