@@ -8,6 +8,8 @@ import Process from "@/components/sections/Process";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
+import ChatWidget from "@/components/ChatWidget";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const Index = () => {
   return (
@@ -32,6 +34,8 @@ const Index = () => {
       </section>
       <FinalCTA />
       <Footer />
+      <ChatWidget />
+      <MobileStickyCTA />
     </main>
   );
 };
