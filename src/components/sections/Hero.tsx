@@ -50,7 +50,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="xl">Get Started</Button>
-              <Button variant="outline" size="xl">Book a Demo</Button>
+              <Button variant="outline" size="xl">See How It Works</Button>
             </div>
             
             {/* Trust Badge */}
@@ -84,7 +84,7 @@ const Hero = () => {
                   <span className="text-primary-foreground font-bold text-xl">GBO</span>
                 </div>
                 <h2 className="text-2xl font-bold">GET A FREE DEMO</h2>
-                <p className="text-muted-foreground text-sm mt-2">See how we can automate your business</p>
+                <p className="text-muted-foreground text-sm mt-2">Takes 2 minutes. We'll be in touch within the hour.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -135,7 +135,7 @@ const Hero = () => {
                 </div>
 
                 <Button type="submit" size="xl" className="w-full group">
-                  BOOK MY FREE DEMO
+                  Show Me How It Works
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>

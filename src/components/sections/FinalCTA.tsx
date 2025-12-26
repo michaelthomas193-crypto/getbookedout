@@ -8,15 +8,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ArrowRight, Calendar, Check } from "lucide-react";
+import { ArrowRight, MessageCircle, Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 const FinalCTA = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
+    fullName: "",
     phone: "",
     businessType: "",
     challenge: "",
@@ -24,13 +22,13 @@ const FinalCTA = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thanks! We'll be in touch within 24 hours to book your strategy call.");
+    toast.success("Thanks! We'll be in touch within the hour for a quick chat.");
   };
 
   const bulletPoints = [
-    "No obligation strategy session",
-    "Custom plan for your market",
-    "See real results from businesses like yours",
+    "Takes 15 minutes, zero pressure",
+    "We'll show you exactly how it works for your trade",
+    "Ask us anything — we're straight shooters",
   ];
 
   return (
@@ -40,7 +38,7 @@ const FinalCTA = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              Let's Talk
+              Got 5 Minutes?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Ready to Get
@@ -48,7 +46,7 @@ const FinalCTA = () => {
               <span className="text-primary">Booked Out?</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Let's build a system that keeps your trucks rolling. Book a free strategy call and see how we can transform your lead flow.
+              Not sure if it's right for you? No worries. Jump on a quick call, we'll show you how it works, and you can decide if it makes sense.
             </p>
             
             <div className="space-y-4 text-left max-w-md mx-auto lg:mx-0">
@@ -69,45 +67,19 @@ const FinalCTA = () => {
             <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border shadow-xl">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-primary-foreground" />
+                  <MessageCircle className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Book Your Strategy Call</h3>
+                <h3 className="text-xl font-bold text-foreground">Quick Chat — No Pressure</h3>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input
-                      id="firstName"
-                      placeholder="John"
-                      value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      required
-                      className="bg-background border-border focus:border-primary"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input
-                      id="lastName"
-                      placeholder="Smith"
-                      value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      required
-                      className="bg-background border-border focus:border-primary"
-                    />
-                  </div>
-                </div>
-
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                  <Label htmlFor="fullName">Full Name</Label>
                   <Input
-                    id="email"
-                    type="email"
-                    placeholder="john@company.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    id="fullName"
+                    placeholder="John Smith"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
                     className="bg-background border-border focus:border-primary"
                   />
@@ -145,7 +117,7 @@ const FinalCTA = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label>Biggest Challenge</Label>
+                  <Label>Biggest Challenge (optional)</Label>
                   <Select onValueChange={(value) => setFormData({ ...formData, challenge: value })}>
                     <SelectTrigger className="bg-background border-border focus:border-primary">
                       <SelectValue placeholder="Select your challenge" />
@@ -161,7 +133,7 @@ const FinalCTA = () => {
                 </div>
 
                 <Button type="submit" size="xl" className="w-full group">
-                  Book My Strategy Call
+                  Let's Chat
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
