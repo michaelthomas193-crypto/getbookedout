@@ -3,34 +3,34 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Get Booked Out has completely transformed our business. We went from missing calls to having a fully booked calendar within weeks.",
-    name: "Sarah Mitchell",
-    business: "Plumbing Services",
-    avatar: "SM",
+    quote: "Within the first week, we had 12 qualified leads. By month two, we'd closed $87,000 in jobs. Get Booked Out changed our business.",
+    name: "Michael Torres",
+    business: "Torres HVAC Solutions, Sydney NSW",
+    avatar: "MT",
   },
   {
-    quote: "The AI chat is incredible. It responds to inquiries instantly, even at 2am. Our booking rate has increased by 40%.",
-    name: "James Thompson",
-    business: "HVAC Company",
-    avatar: "JT",
+    quote: "No more chasing leads or wasting time on tyre-kickers. Every call we get is from a homeowner ready to buy. Our close rate jumped from 40% to 72%.",
+    name: "Sarah Chen",
+    business: "CoolComfort Pro, Melbourne VIC",
+    avatar: "SC",
   },
   {
-    quote: "Finally, a system that actually works! The review automation alone has boosted our Google rating from 4.1 to 4.8 stars.",
+    quote: "I used to lose half my leads because I couldn't answer the phone on a job. Now every single one gets handled. I've hired two extra blokes just to keep up with the work.",
+    name: "David Walsh",
+    business: "Walsh Air & Heating, Brisbane QLD",
+    avatar: "DW",
+  },
+  {
+    quote: "The review automation alone has boosted our Google rating from 4.1 to 4.8 stars. Customers find us way easier now.",
     name: "Emma Davis",
-    business: "Beauty Salon",
+    business: "Davis Plumbing, Perth WA",
     avatar: "ED",
   },
   {
-    quote: "We used to lose so many leads because we couldn't respond fast enough. Now our AI handles everything perfectly.",
-    name: "Michael Chen",
-    business: "Electrical Services",
-    avatar: "MC",
-  },
-  {
-    quote: "The setup was seamless and the support team is amazing. Best investment we've made for our practice.",
-    name: "Dr. Lisa Wang",
-    business: "Dental Clinic",
-    avatar: "LW",
+    quote: "Finally, a system that actually works! Setup was painless and the results were immediate. Best investment we've made.",
+    name: "James Thompson",
+    business: "Thompson Electrical, Adelaide SA",
+    avatar: "JT",
   },
 ];
 
@@ -59,12 +59,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="section-padding bg-gray-light">
+    <section id="testimonials" className="section-padding bg-gray-light">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title mb-4">
-            See why service businesses love Get Booked Out
+            See Why Service Businesses Trust Get Booked Out
           </h2>
+          <p className="section-subtitle">To Fill Their Schedule</p>
         </div>
 
         <div className="relative">
@@ -126,6 +127,12 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <a href="#results" className="text-primary font-medium hover:underline">
+            View More Results →
+          </a>
         </div>
       </div>
     </section>

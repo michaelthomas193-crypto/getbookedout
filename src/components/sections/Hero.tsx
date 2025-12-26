@@ -1,7 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Star, MessageSquare } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    businessType: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Thanks! We'll be in touch within 24 hours to book your demo.");
+  };
+
   return (
     <section className="section-padding bg-background overflow-hidden">
       <div className="container-padding max-w-7xl mx-auto">
@@ -9,13 +32,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="animate-fade-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              AI That Converts Leads Into{" "}
-              <span className="text-primary">Booked Appointments</span> While You Sleep
+              Good At Your Trade.{" "}
+              <span className="text-primary">Bad At The Other Stuff?</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl">
-              Choose Get Booked Out. Automate lead responses, bookings, and reviews — 
-              so you never miss another customer.
+              You didn't become a tradie to chase leads, manage websites, and beg for reviews. 
+              Get Booked Out handles all of that — so you can focus on what you're actually good at.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -30,54 +53,73 @@ const Hero = () => {
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
-              <span className="font-medium">Rated 5/5 from 200+ reviews</span>
+              <span className="font-medium">Trusted by 500+ service businesses</span>
             </div>
           </div>
 
-          {/* Right Content - Chat Widget Mockup */}
+          {/* Right Content - Demo Form */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative bg-card rounded-2xl shadow-xl border border-border p-6 max-w-md mx-auto lg:ml-auto">
-              {/* Chat Header */}
-              <div className="flex items-center gap-3 pb-4 border-b border-border mb-4">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5 text-primary-foreground" />
+            <div className="relative bg-card rounded-2xl shadow-xl border border-border p-8">
+              {/* Form Header */}
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-primary-foreground font-bold text-xl">GBO</span>
                 </div>
+                <h2 className="text-2xl font-bold">GET A FREE DEMO</h2>
+                <p className="text-muted-foreground text-sm mt-2">See how we can automate your business</p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <p className="font-semibold">Get Booked Out AI</p>
-                  <p className="text-sm text-muted-foreground">Online now</p>
+                  <Input
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    required
+                    className="h-12"
+                  />
                 </div>
-              </div>
 
-              {/* Chat Messages */}
-              <div className="space-y-4 mb-4">
-                <div className="bg-secondary rounded-lg rounded-tl-none p-3 max-w-[80%]">
-                  <p className="text-sm">Hi! 👋 I'm here to help you book an appointment. What service are you looking for today?</p>
+                <div>
+                  <Input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
+                    className="h-12"
+                  />
                 </div>
-                
-                <div className="bg-primary text-primary-foreground rounded-lg rounded-tr-none p-3 max-w-[80%] ml-auto">
-                  <p className="text-sm">I need a plumber for a leaking tap</p>
-                </div>
-                
-                <div className="bg-secondary rounded-lg rounded-tl-none p-3 max-w-[80%]">
-                  <p className="text-sm">I can help with that! I have availability tomorrow at 9am, 11am, or 2pm. Which works best for you?</p>
-                </div>
-              </div>
 
-              {/* Chat Input */}
-              <div className="flex items-center gap-2 pt-4 border-t border-border">
-                <input
-                  type="text"
-                  placeholder="Type a message..."
-                  className="flex-1 bg-secondary rounded-lg px-4 py-2 text-sm focus:outline-none"
-                  disabled
-                />
-                <Button size="sm" className="shrink-0">Send</Button>
-              </div>
+                <div>
+                  <Select onValueChange={(value) => setFormData({ ...formData, businessType: value })}>
+                    <SelectTrigger className="h-12 bg-background">
+                      <SelectValue placeholder="Business Type" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-card border-border z-50">
+                      <SelectItem value="hvac">HVAC</SelectItem>
+                      <SelectItem value="plumbing">Plumbing</SelectItem>
+                      <SelectItem value="electrical">Electrical</SelectItem>
+                      <SelectItem value="landscaping">Landscaping</SelectItem>
+                      <SelectItem value="cleaning">Cleaning</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-              {/* Powered By */}
-              <p className="text-xs text-muted-foreground text-center mt-4">
-                Powered by Get Booked Out
-              </p>
+                <div>
+                  <Textarea
+                    placeholder="Short message about your needs (optional)"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="min-h-[80px]"
+                  />
+                </div>
+
+                <Button type="submit" size="xl" className="w-full">
+                  BOOK MY FREE DEMO
+                </Button>
+              </form>
             </div>
 
             {/* Floating decoration */}

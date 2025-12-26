@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
+  { value: "500+", label: "Service Businesses Automated" },
   { value: "10K+", label: "Leads Captured Monthly" },
-  { value: "50M+", label: "Messages Automated" },
-  { value: "500+", label: "Businesses Served" },
+  { value: "45%", label: "Average Increase in Bookings" },
 ];
 
 const StatsBar = () => {
