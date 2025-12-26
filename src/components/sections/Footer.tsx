@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const whatWeSolve = [
@@ -25,20 +25,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-charcoal text-white">
       <div className="container-padding max-w-7xl mx-auto py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1 - Brand */}
           <div>
             <div className="mb-6">
               <span className="text-2xl font-bold">
-                <span className="text-background">Get </span>
+                <span className="text-white">Get </span>
                 <span className="text-primary">Booked</span>
-                <span className="text-background"> Out</span>
+                <span className="text-white"> Out</span>
               </span>
             </div>
             
-            <div className="space-y-4 text-background/70">
+            <div className="space-y-4 text-white/70">
               <a href="mailto:info@getbookedout.com.au" className="flex items-center gap-3 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
                 info@getbookedout.com.au
@@ -52,6 +52,19 @@ const Footer = () => {
                 <span>Sydney, Australia</span>
               </div>
             </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 mt-6">
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Column 2 - What We Solve */}
@@ -62,7 +75,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
+                    className="text-white/70 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -79,7 +92,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
+                    className="text-white/70 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -96,7 +109,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-background/70 hover:text-primary transition-colors"
+                    className="text-white/70 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -108,9 +121,9 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-background/10">
+      <div className="border-t border-white/10">
         <div className="container-padding max-w-7xl mx-auto py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/60">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
             <p>© 2025 Get Booked Out. All Rights Reserved.</p>
             <div className="flex gap-6">
               <a href="#terms" className="hover:text-primary transition-colors">

@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Star, MessageSquare } from "lucide-react";
+import { Star, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -26,8 +26,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="section-padding bg-background overflow-hidden">
-      <div className="container-padding max-w-7xl mx-auto">
+    <section className="relative section-padding bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+      </div>
+      
+      <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="animate-fade-up">
@@ -50,16 +57,27 @@ const Hero = () => {
             <div className="flex items-center gap-2 text-muted-foreground">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
               <span className="font-medium">Trusted by 500+ service businesses</span>
+            </div>
+
+            {/* Phone mockup indicator */}
+            <div className="mt-8 hidden lg:flex items-center gap-3 p-4 bg-card rounded-xl border border-border shadow-lg max-w-sm animate-fade-up" style={{ animationDelay: "0.4s" }}>
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shrink-0">
+                <MessageSquare className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold">New lead captured!</p>
+                <p className="text-xs text-muted-foreground">AI responded in 3 seconds</p>
+              </div>
             </div>
           </div>
 
           {/* Right Content - Demo Form */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative bg-card rounded-2xl shadow-xl border border-border p-8">
+            <div className="relative bg-card rounded-2xl shadow-2xl border border-border p-8">
               {/* Form Header */}
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
@@ -116,15 +134,16 @@ const Hero = () => {
                   />
                 </div>
 
-                <Button type="submit" size="xl" className="w-full">
+                <Button type="submit" size="xl" className="w-full group">
                   BOOK MY FREE DEMO
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>
             </div>
 
             {/* Floating decoration */}
-            <div className="absolute -z-10 top-8 -right-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute -z-10 -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-2xl" />
+            <div className="absolute -z-10 top-8 -right-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+            <div className="absolute -z-10 -bottom-8 -left-8 w-48 h-48 bg-primary/10 rounded-full blur-2xl" />
           </div>
         </div>
       </div>

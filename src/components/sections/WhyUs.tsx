@@ -38,10 +38,10 @@ const WhyUs = () => {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="text-center p-8 bg-card rounded-xl border border-border hover:border-primary/40 hover:shadow-lg transition-all duration-300 card-shadow"
+              className="text-center p-8 bg-card rounded-xl border border-border hover:border-primary/40 hover:shadow-xl transition-all duration-300 card-shadow"
             >
-              <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center mx-auto mb-6">
-                <reason.icon className="w-7 h-7 text-primary" />
+              <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <reason.icon className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="text-lg font-bold mb-3">{reason.title}</h3>
               <p className="text-muted-foreground text-sm">{reason.description}</p>

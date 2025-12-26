@@ -38,30 +38,41 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative">
-              <div className="p-6 bg-card rounded-xl border border-border hover:border-primary/40 transition-all duration-300 card-shadow h-full">
-                {/* Step Number */}
-                <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                  {step.number}
+        {/* Steps with connecting line */}
+        <div className="relative">
+          {/* Connecting line - desktop only */}
+          <div className="hidden lg:block absolute top-12 left-[10%] right-[10%] h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 rounded-full" />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={step.number} className="relative">
+                {/* Step card */}
+                <div className="p-6 bg-card rounded-xl border border-border hover:border-primary/40 transition-all duration-300 card-shadow h-full">
+                  {/* Step Number - large and prominent */}
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6 mx-auto lg:mx-0 relative z-10">
+                    <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
+                  </div>
+                  
+                  {/* Icon */}
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <step.icon className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  
+                  <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
                 </div>
-                
-                {/* Icon */}
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4 mt-2">
-                  <step.icon className="w-6 h-6 text-primary" />
-                </div>
-                
-                <h3 className="text-lg font-bold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground text-sm">{step.description}</p>
-              </div>
 
-              {/* Connector Arrow (hidden on mobile) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 bg-primary/30" />
-              )}
-            </div>
-          ))}
+                {/* Arrow connector - desktop only */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:flex absolute top-12 -right-4 z-20 w-8 h-8 bg-primary rounded-full items-center justify-center">
+                    <svg className="w-4 h-4 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

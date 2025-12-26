@@ -50,11 +50,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "baby-blue": {
-          DEFAULT: "hsl(var(--baby-blue))",
-          light: "hsl(var(--baby-blue-light))",
+        "sky-blue": {
+          DEFAULT: "hsl(var(--sky-blue))",
+          light: "hsl(var(--sky-blue-light))",
         },
         "gray-light": "hsl(var(--gray-light))",
+        "charcoal": "hsl(var(--charcoal))",
+        "warning": "hsl(var(--warning))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
