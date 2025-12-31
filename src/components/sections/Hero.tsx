@@ -48,13 +48,8 @@ const Hero = () => {
             </p>
             
             {/* Trust Badge */}
-            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-6">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm font-medium">Trusted by 500+ service businesses</span>
+            <div className="flex items-center justify-center text-muted-foreground mb-6">
+              <span className="text-sm font-medium">Built by a business owner who was sick of the same problems.</span>
             </div>
 
             {/* Quick benefits */}
