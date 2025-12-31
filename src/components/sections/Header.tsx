@@ -21,7 +21,6 @@ const Header = () => {
     { label: "Why Us", href: "/#why-us" },
     { label: "Pricing", href: "/pricing" },
     { label: "Who We Are", href: "/who-we-are" },
-    { label: "Resources", href: "/#faq" },
   ];
 
   return (
@@ -48,7 +47,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img src={logo} alt="Get Booked Out" className="h-10 md:h-12 w-auto" />
+              <img src={logo} alt="Get Booked Out" className="h-14 md:h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -74,16 +73,6 @@ const Header = () => {
               )}
             </nav>
 
-            {/* Desktop CTAs */}
-            <div className="hidden md:flex items-center gap-4">
-              <a
-                href="#login"
-                className="text-muted-foreground hover:text-foreground font-medium transition-colors"
-              >
-                Dashboard Login
-              </a>
-              <Button size="default">Get Started</Button>
-            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -124,13 +113,6 @@ const Header = () => {
                     </a>
                   )
                 )}
-                <a
-                  href="#login"
-                  className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2"
-                >
-                  Dashboard Login
-                </a>
-                <Button className="w-full mt-2">Get Started</Button>
               </div>
             </nav>
           )}
