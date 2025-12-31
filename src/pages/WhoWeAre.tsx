@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import founderImage from "@/assets/founder-michael.png";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const WhoWeAre = () => {
   return (
@@ -10,19 +11,19 @@ const WhoWeAre = () => {
       <Header />
       
       {/* Main Content Section */}
-      <section className="py-12 md:py-20 bg-secondary/40">
+      <section className="py-8 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
-          {/* Header - Photo + Headline */}
-          <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-8 md:mb-10">
-            {/* Circular Photo */}
+          {/* Header - Photo centered on mobile, side-by-side on larger screens */}
+          <div className="flex flex-col items-center gap-4 md:gap-8 mb-6 md:mb-10">
+            {/* Circular Photo - Centered on mobile */}
             <img
               src={founderImage}
               alt="Michael, Founder of Get Booked Out"
-              className="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover object-top shadow-lg flex-shrink-0"
+              className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover object-top shadow-lg flex-shrink-0"
             />
 
-            {/* Headline - Two clean lines */}
-            <div className="text-center sm:text-left">
+            {/* Headline - Centered */}
+            <div className="text-center">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 <span className="text-foreground">I Know Why Good Tradies</span>
                 <br />
@@ -32,36 +33,36 @@ const WhoWeAre = () => {
           </div>
 
           {/* Body Text */}
-          <div className="text-foreground/90 space-y-5">
-            <p className="text-lg md:text-xl leading-relaxed">
+          <div className="text-foreground/90 space-y-4 md:space-y-5">
+            <p className="text-base md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base md:text-xl leading-relaxed">
               I've built a $17.5 million property portfolio. I've spent six figures on renovations. And I've lost count of how many times I've called a tradie, got no answer, and just moved on to the next one.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base md:text-xl leading-relaxed">
               Here's what I kept seeing: Tradies who were incredible at their craft but terrible at answering the phone. Guys who could rewire a house or tile a bathroom perfectly—but couldn't respond to an enquiry within 24 hours.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base md:text-xl leading-relaxed">
               I'd call. No answer. I'd leave a voicemail. Nothing. I'd find someone else.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base md:text-xl leading-relaxed">
               The frustrating part? I knew these tradies were losing jobs they didn't even know about. Not because they weren't good enough—but because they were too busy doing the work to answer the phone.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
+            <p className="text-base md:text-xl leading-relaxed font-semibold text-foreground">
               That's why I built Get Booked Out.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed">
+            <p className="text-base md:text-xl leading-relaxed">
               It's the system I wish every tradie I tried to hire had. Missed call? Instant text back. Website enquiry? Handled automatically. Reviews? Requested after every job.
             </p>
             
-            <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
+            <p className="text-base md:text-xl leading-relaxed font-semibold text-foreground">
               You focus on the tools. We make sure the phone doesn't cost you jobs.
             </p>
           </div>
@@ -69,18 +70,19 @@ const WhoWeAre = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-10 md:py-14 bg-background">
+      <section className="py-8 md:py-14 bg-background">
         <div className="container-padding max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 md:mb-8">
             Want to See How It Works?
           </h2>
           <Link to="/#hero-form">
-            <Button size="xl">Let's Chat</Button>
+            <Button size="xl" className="w-full sm:w-auto min-h-[52px]">Let's Chat</Button>
           </Link>
         </div>
       </section>
 
       <Footer />
+      <MobileStickyCTA />
     </div>
   );
 };

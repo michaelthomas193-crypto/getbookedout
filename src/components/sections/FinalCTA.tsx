@@ -33,28 +33,29 @@ const FinalCTA = () => {
   return (
     <section className="section-padding relative overflow-hidden bg-secondary">
       <div className="container-padding max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Stacked on mobile, side-by-side on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4 md:mb-6">
               Got 10 Minutes?
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-foreground leading-tight">
               Stop Losing Jobs to
               <br />
               <span className="text-primary">Missed Calls</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Home service businesses miss up to 62% of their calls. How many are you losing?
             </p>
             
-            <div className="space-y-4 text-left max-w-md mx-auto lg:mx-0">
+            <div className="space-y-3 md:space-y-4 text-left max-w-md mx-auto lg:mx-0">
               {bulletPoints.map((point) => (
                 <div key={point} className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
                     <Check className="w-4 h-4 text-primary-foreground" />
                   </div>
-                  <span className="text-foreground">{point}</span>
+                  <span className="text-foreground text-sm md:text-base">{point}</span>
                 </div>
               ))}
             </div>
@@ -63,30 +64,31 @@ const FinalCTA = () => {
           {/* Right Form */}
           <div className="relative">
             <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-xl" />
-            <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border shadow-xl">
-              <div className="flex items-center gap-3 mb-8">
+            <div className="relative p-5 md:p-8 lg:p-10 rounded-2xl bg-card border border-border shadow-xl">
+              <div className="flex items-center gap-3 mb-6 md:mb-8">
                 <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                   <MessageCircle className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Quick Chat — No Pressure</h3>
+                <h3 className="text-lg md:text-xl font-bold text-foreground">Quick Chat — No Pressure</h3>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                 <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name</Label>
+                  <Label htmlFor="fullName" className="text-sm font-medium">Full Name</Label>
                   <Input
                     id="fullName"
                     placeholder="John Smith"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     required
-                    className="bg-background border-border focus:border-primary"
+                    className="h-12 md:h-10 bg-background border-border focus:border-primary text-base md:text-sm"
                   />
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
+                {/* Stacked on mobile, side-by-side on tablet+ */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
+                    <Label htmlFor="phone" className="text-sm font-medium">Phone</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -94,13 +96,13 @@ const FinalCTA = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="bg-background border-border focus:border-primary"
+                      className="h-12 md:h-10 bg-background border-border focus:border-primary text-base md:text-sm"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label>Business Type</Label>
+                    <Label className="text-sm font-medium">Business Type</Label>
                     <Select onValueChange={(value) => setFormData({ ...formData, businessType: value })}>
-                      <SelectTrigger className="bg-background border-border focus:border-primary">
+                      <SelectTrigger className="h-12 md:h-10 bg-background border-border focus:border-primary text-base md:text-sm">
                         <SelectValue placeholder="Select type" />
                       </SelectTrigger>
                       <SelectContent className="bg-card border-border z-50">
@@ -116,9 +118,9 @@ const FinalCTA = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label>Biggest Challenge (optional)</Label>
+                  <Label className="text-sm font-medium">Biggest Challenge (optional)</Label>
                   <Select onValueChange={(value) => setFormData({ ...formData, challenge: value })}>
-                    <SelectTrigger className="bg-background border-border focus:border-primary">
+                    <SelectTrigger className="h-12 md:h-10 bg-background border-border focus:border-primary text-base md:text-sm">
                       <SelectValue placeholder="Select your challenge" />
                     </SelectTrigger>
                     <SelectContent className="bg-card border-border z-50">
@@ -131,7 +133,7 @@ const FinalCTA = () => {
                   </Select>
                 </div>
 
-                <Button type="submit" size="xl" className="w-full group">
+                <Button type="submit" size="xl" className="w-full min-h-[52px] group text-base md:text-lg">
                   Let's Chat
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
