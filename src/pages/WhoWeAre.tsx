@@ -12,8 +12,8 @@ const WhoWeAre = () => {
       {/* Main Content Section */}
       <section className="py-12 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
-          {/* Header - Photo + Headline (centered as a unit) */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-8 mb-8 md:mb-10">
+          {/* Header - Photo + Headline */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 md:gap-8 mb-8 md:mb-10">
             {/* Circular Photo */}
             <img
               src={founderImage}
@@ -21,10 +21,10 @@ const WhoWeAre = () => {
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg flex-shrink-0"
             />
 
-            {/* Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left whitespace-nowrap">
-              <span className="text-foreground">I Know Why Good Tradies </span>
-              <span className="text-primary">Lose Jobs</span>
+            {/* Headline - Two lines */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left">
+              <span className="text-foreground block">I Know Why Good Tradies</span>
+              <span className="text-primary block">Lose Jobs</span>
             </h1>
           </div>
 
