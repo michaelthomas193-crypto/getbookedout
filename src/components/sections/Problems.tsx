@@ -11,7 +11,7 @@ const problems = [
   {
     icon: HelpCircle,
     title: "A customer visited your website.",
-    description: "Less than 3% of people leave a voicemail. The rest just disappear.",
+    description: "They had questions. Nobody answered. They bounced. Another job gone.",
     color: "bg-orange-100 text-orange-600",
   },
   {
