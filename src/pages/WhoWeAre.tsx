@@ -24,7 +24,7 @@ const WhoWeAre = () => {
             {/* Headline - Two lines */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left">
               <span className="text-foreground block">I Know Why Good Tradies</span>
-              <span className="text-primary block">Lose Jobs</span>
+              <span className="text-primary block text-center">Lose Jobs</span>
             </h1>
           </div>
 
