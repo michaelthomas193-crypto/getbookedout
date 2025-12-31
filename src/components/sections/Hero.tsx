@@ -79,11 +79,8 @@ const Hero = () => {
             <div className="relative bg-card rounded-2xl shadow-2xl border border-border p-6">
               {/* Form Header */}
               <div className="text-center mb-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-primary-foreground font-bold text-sm">GBO</span>
-                </div>
-                <h2 className="text-xl font-bold">GET A FREE DEMO</h2>
-                <p className="text-muted-foreground text-xs mt-1">Takes 2 minutes. We'll be in touch within the hour.</p>
+                <h2 className="text-xl font-bold">Stop Losing Jobs</h2>
+                <p className="text-muted-foreground text-sm mt-1">10min chat. No sales pitch.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-3">
