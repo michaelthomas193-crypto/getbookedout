@@ -24,40 +24,40 @@ const problems = [
 
 const Problems = () => {
   return (
-    <section className="pt-8 md:pt-10 pb-16 md:pb-20 bg-gray-light">
+    <section className="pt-6 md:pt-10 pb-10 md:pb-16 bg-gray-light">
       <div className="container-padding max-w-4xl mx-auto">
-        <div className="text-center mb-10 md:mb-12">
-          <h2 className="section-title mb-3">
+        <div className="text-center mb-6 md:mb-10">
+          <h2 className="section-title mb-2 md:mb-3">
             Right now, you're <span className="text-[#E74C3C] underline decoration-2">losing jobs</span> you don't even know about.
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             While you're on a job site with dirty hands...
           </p>
         </div>
 
-        <div className="space-y-6 mb-12">
+        <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
           {problems.map((problem) => (
             <div
               key={problem.title}
-              className="flex items-start gap-6 p-6 bg-card rounded-xl border border-border card-shadow hover:shadow-lg transition-shadow"
+              className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 p-5 md:p-6 bg-card rounded-xl border border-border card-shadow hover:shadow-lg transition-shadow"
             >
-              <div className={`w-14 h-14 ${problem.color} rounded-xl flex items-center justify-center shrink-0`}>
-                <problem.icon className="w-7 h-7" />
+              <div className={`w-12 h-12 md:w-14 md:h-14 ${problem.color} rounded-xl flex items-center justify-center shrink-0`}>
+                <problem.icon className="w-6 h-6 md:w-7 md:h-7" />
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">{problem.title}</h3>
-                <p className="text-muted-foreground">{problem.description}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">{problem.title}</h3>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{problem.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Solution CTA */}
-        <div className="text-center bg-card rounded-xl p-8 border border-border card-shadow">
-          <p className="text-xl font-semibold mb-6">
+        <div className="text-center bg-card rounded-xl p-6 md:p-8 border border-border card-shadow">
+          <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
             Stop bleeding money. Start capturing every lead.
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" className="w-full sm:w-auto min-h-[48px]" asChild>
             <a href="#how-it-works">See How It Works</a>
           </Button>
         </div>

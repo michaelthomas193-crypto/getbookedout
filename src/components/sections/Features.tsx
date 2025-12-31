@@ -27,8 +27,8 @@ const Features = () => {
   return (
     <section id="features" className="section-padding bg-background">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="section-title mb-4">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="section-title mb-3 md:mb-4">
             One Platform. <span className="text-[#2B8BBF]">Everything You Need.</span>
           </h2>
           <p className="section-subtitle">
@@ -37,22 +37,23 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        {/* Single column on mobile, 2 columns on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group p-8 bg-card rounded-xl border-t-4 border-t-primary border-x border-b border-border hover:shadow-xl transition-all duration-300 card-shadow"
+              className="group p-5 md:p-8 bg-card rounded-xl border-t-4 border-t-primary border-x border-b border-border hover:shadow-xl transition-all duration-300 card-shadow"
             >
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <feature.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
               </div>
               
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground mb-4">{feature.description}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm md:text-base mb-3 md:mb-4 leading-relaxed">{feature.description}</p>
               
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all text-sm md:text-base min-h-[44px] py-2"
               >
                 See How It Works <ArrowRight className="w-4 h-4" />
               </a>
