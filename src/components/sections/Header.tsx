@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -15,10 +16,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: "Solutions", href: "#features" },
-    { label: "Why Us", href: "#why-us" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Resources", href: "#faq" },
+    { label: "Solutions", href: "/#features" },
+    { label: "Why Us", href: "/#why-us" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "Who We Are", href: "/who-we-are" },
+    { label: "Resources", href: "/#faq" },
   ];
 
   return (
@@ -54,15 +56,25 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground font-medium transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.href.startsWith("/") && !link.href.includes("#") ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-muted-foreground hover:text-foreground font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-foreground font-medium transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
             </nav>
 
             {/* Desktop CTAs */}
@@ -94,16 +106,27 @@ const Header = () => {
           {isMobileMenuOpen && (
             <nav className="md:hidden py-4 border-t border-border">
               <div className="flex flex-col gap-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {navLinks.map((link) =>
+                  link.href.startsWith("/") && !link.href.includes("#") ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
                 <a
                   href="#login"
                   className="text-muted-foreground hover:text-foreground font-medium transition-colors py-2"
