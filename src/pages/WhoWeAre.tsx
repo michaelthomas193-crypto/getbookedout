@@ -9,28 +9,24 @@ const WhoWeAre = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="section-padding bg-background">
-        <div className="container-padding max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight">
+      {/* Hero + Content Section */}
+      <section className="py-12 md:py-16 bg-background">
+        <div className="container-padding max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight text-center">
             I've Been On the Other Side of Your Missed Calls
           </h1>
           
           {/* Founder Photo */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-10">
             <img
               src={founderImage}
               alt="Michael, Founder of Get Booked Out"
-              className="w-64 md:w-80 lg:w-96 rounded-lg shadow-lg object-cover"
+              className="w-56 md:w-72 lg:w-80 rounded-lg shadow-lg object-cover"
             />
           </div>
-        </div>
-      </section>
 
-      {/* Body Content */}
-      <section className="section-padding bg-background">
-        <div className="container-padding max-w-3xl mx-auto">
-          <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+          {/* Body Content */}
+          <div className="max-w-3xl mx-auto text-muted-foreground space-y-5">
             <p className="text-lg md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
