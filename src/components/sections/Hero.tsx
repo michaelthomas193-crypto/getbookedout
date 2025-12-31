@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative py-8 md:py-12 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden min-h-[calc(100vh-80px)]">
+    <section className="relative py-8 md:py-12 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
@@ -34,38 +34,22 @@ const Hero = () => {
       </div>
       
       <div className="container-padding max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="animate-fade-up pt-4 lg:pt-8 text-center">
+          <div className="animate-fade-up text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-              Good At Your Trade.{" "}
-              <span className="text-primary">Bad At The Other Stuff?</span>
+              <span className="block">Good At Your Trade.</span>
+              <span className="block text-primary">Bad At The Other Stuff?</span>
             </h1>
             
-            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-lg mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground mb-3 max-w-lg mx-auto lg:mx-0">
               You didn't become a tradie to chase leads, manage websites, and beg for reviews. 
               Get Booked Out handles all of that — so you can focus on what you're actually good at.
             </p>
             
             {/* Trust Badge */}
-            <div className="flex items-center justify-center text-muted-foreground mb-6">
+            <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
               <span className="text-sm font-medium">Built by a business owner who was sick of the same problems.</span>
-            </div>
-
-            {/* Quick benefits */}
-            <div className="hidden lg:flex flex-col gap-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>AI responds to leads in seconds, 24/7</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>Automated booking & follow-ups</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-                <span>Get more 5-star reviews on autopilot</span>
-              </div>
             </div>
           </div>
 
