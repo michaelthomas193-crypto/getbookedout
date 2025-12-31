@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,13 +9,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Left - Logo & Contact */}
           <div className="space-y-4">
-            <div>
-              <span className="text-2xl font-bold">
-                <span className="text-white">Get </span>
-                <span className="text-primary">Booked</span>
-                <span className="text-white"> Out</span>
-              </span>
-            </div>
+            <Link to="/">
+              <img src={logo} alt="Get Booked Out" className="h-10 w-auto" />
+            </Link>
             
             <div className="space-y-2 text-white/70 text-sm">
               <a href="mailto:info@getbookedout.com.au" className="flex items-center gap-2 hover:text-primary transition-colors">
