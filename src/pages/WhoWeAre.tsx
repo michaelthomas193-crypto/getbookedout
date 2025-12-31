@@ -13,20 +13,22 @@ const WhoWeAre = () => {
       <section className="py-12 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
           {/* Header - Photo + Headline */}
-          <div className="flex flex-col sm:flex-row items-center sm:items-center gap-5 md:gap-8 mb-8 md:mb-10">
+          <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 mb-8 md:mb-10">
             {/* Circular Photo */}
             <img
               src={founderImage}
               alt="Michael, Founder of Get Booked Out"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg flex-shrink-0"
+              className="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover object-top shadow-lg flex-shrink-0"
             />
 
-            {/* Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left">
-              <span className="text-foreground block">I Know Why Good</span>
-              <span className="text-foreground">Tradies </span>
-              <span className="text-primary">Lose Jobs</span>
-            </h1>
+            {/* Headline - Two clean lines */}
+            <div className="text-center sm:text-left">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                <span className="text-foreground">I Know Why Good Tradies</span>
+                <br />
+                <span className="text-primary">Lose Jobs</span>
+              </h1>
+            </div>
           </div>
 
           {/* Body Text */}
