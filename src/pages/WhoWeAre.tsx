@@ -69,7 +69,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-10 md:py-14 bg-background">
         <div className="container-padding max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8">
             Want to See How It Works?
