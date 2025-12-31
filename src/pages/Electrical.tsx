@@ -98,11 +98,11 @@ const Electrical = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-8 md:py-16 bg-background">
+      <section className="py-8 md:py-12 lg:py-16 bg-background">
         <div className="container-padding max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
-            {/* Left - Copy + Form */}
-            <div className="flex flex-col justify-center">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-stretch">
+            {/* Left - Copy + Form (60%) */}
+            <div className="lg:col-span-3 flex flex-col justify-center">
               <div className="text-center lg:text-left mb-6 lg:mb-8">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
                   Lost Your Spark for Chasing Callbacks?{" "}
@@ -164,24 +164,16 @@ const Electrical = () => {
               </div>
             </div>
 
-            {/* Right - Image */}
-            <div className="hidden lg:block relative rounded-2xl overflow-hidden min-h-[600px]">
-              <img 
-                src={heroImage} 
-                alt="Electrician on ladder working on lighting" 
-                className="absolute inset-0 w-full h-full object-cover object-center"
-              />
-              {/* Subtle gradient overlay on left edge for visual blending */}
-              <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-transparent to-transparent" />
-            </div>
-
-            {/* Mobile Image - shown above form on mobile */}
-            <div className="lg:hidden rounded-xl overflow-hidden h-48 sm:h-64 order-first">
-              <img 
-                src={heroImage} 
-                alt="Electrician on ladder working on lighting" 
-                className="w-full h-full object-cover object-top"
-              />
+            {/* Right - Image (40%) - Desktop only */}
+            <div className="hidden lg:flex lg:col-span-2 items-stretch">
+              <div className="relative w-full rounded-2xl overflow-hidden">
+                <img 
+                  src={heroImage} 
+                  alt="Electrician on ladder working on lighting" 
+                  className="w-full h-full object-cover object-top"
+                  style={{ minHeight: '100%' }}
+                />
+              </div>
             </div>
           </div>
         </div>
