@@ -1,36 +1,14 @@
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const whatWeSolve = [
-    { label: "Stop Losing Leads", href: "#problems" },
-    { label: "Fill Your Calendar", href: "#features" },
-    { label: "Build Your Reputation", href: "#features" },
-    { label: "Save Hours on Admin", href: "#how-it-works" },
-    { label: "Look Professional Online", href: "#features" },
-  ];
-
-  const solutions = [
-    { label: "Instant Lead Response", href: "#features" },
-    { label: "Automated Booking", href: "#features" },
-    { label: "Review Generator", href: "#features" },
-    { label: "Landing Pages", href: "#features" },
-    { label: "Missed Call Text-Back", href: "#features" },
-  ];
-
-  const company = [
-    { label: "About Us", href: "#about" },
-    { label: "Results", href: "#testimonials" },
-    { label: "Blog", href: "#blog" },
-    { label: "Contact", href: "#contact" },
-  ];
-
   return (
     <footer className="bg-charcoal text-white">
-      <div className="container-padding max-w-7xl mx-auto py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Column 1 - Brand */}
-          <div>
-            <div className="mb-6">
+      <div className="container-padding max-w-7xl mx-auto py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          {/* Left - Logo & Contact */}
+          <div className="space-y-4">
+            <div>
               <span className="text-2xl font-bold">
                 <span className="text-white">Get </span>
                 <span className="text-primary">Booked</span>
@@ -38,102 +16,52 @@ const Footer = () => {
               </span>
             </div>
             
-            <div className="space-y-4 text-white/70">
-              <a href="mailto:info@getbookedout.com.au" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
+            <div className="space-y-2 text-white/70 text-sm">
+              <a href="mailto:info@getbookedout.com.au" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4" />
                 info@getbookedout.com.au
               </a>
-              <a href="tel:1300000000" className="flex items-center gap-3 hover:text-primary transition-colors">
-                <Phone className="w-5 h-5" />
+              <a href="tel:1300000000" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4" />
                 1300 XXX XXX
               </a>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 mt-0.5" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
                 <span>Sydney, Australia</span>
               </div>
             </div>
+          </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-6">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Facebook className="w-5 h-5" />
+          {/* Right - About Link & Socials */}
+          <div className="flex flex-col items-start md:items-end gap-4">
+            <Link 
+              to="/who-we-are" 
+              className="text-white/70 hover:text-primary transition-colors font-medium"
+            >
+              About Us
+            </Link>
+            
+            <div className="flex gap-3">
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Facebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Instagram className="w-5 h-5" />
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Instagram className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a href="#" className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                <Linkedin className="w-4 h-4" />
               </a>
             </div>
-          </div>
-
-          {/* Column 2 - What We Solve */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">What We Solve</h4>
-            <ul className="space-y-3">
-              {whatWeSolve.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 - Solutions */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Solutions</h4>
-            <ul className="space-y-3">
-              {solutions.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4 - Company */}
-          <div>
-            <h4 className="font-semibold text-lg mb-6">Company</h4>
-            <ul className="space-y-3">
-              {company.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container-padding max-w-7xl mx-auto py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>© 2025 Get Booked Out. All Rights Reserved.</p>
-            <div className="flex gap-6">
-              <a href="#terms" className="hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <a href="#privacy" className="hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-            </div>
-          </div>
+        <div className="container-padding max-w-7xl mx-auto py-4">
+          <p className="text-center text-sm text-white/60">
+            © 2025 Get Booked Out. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
