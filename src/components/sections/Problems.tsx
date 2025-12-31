@@ -24,10 +24,10 @@ const problems = [
 
 const Problems = () => {
   return (
-    <section className="section-padding bg-gray-light">
+    <section className="pt-8 md:pt-10 pb-16 md:pb-20 bg-gray-light">
       <div className="container-padding max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="section-title mb-4">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="section-title mb-3">
             Right now, you're <span className="text-[#E74C3C] underline decoration-2">losing jobs</span> you don't even know about.
           </h2>
           <p className="text-lg text-muted-foreground">
