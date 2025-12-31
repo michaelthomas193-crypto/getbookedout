@@ -10,60 +10,65 @@ const WhoWeAre = () => {
       <Header />
       
       {/* Hero + Content Section */}
-      <section className="py-12 md:py-16 bg-background">
-        <div className="container-padding max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 leading-tight text-center">
-            I've Been On the Other Side of Your Missed Calls
-          </h1>
-          
-          {/* Founder Photo */}
-          <div className="flex justify-center mb-10">
-            <img
-              src={founderImage}
-              alt="Michael, Founder of Get Booked Out"
-              className="w-56 md:w-72 lg:w-80 rounded-lg shadow-lg object-cover"
-            />
-          </div>
+      <section className="py-16 md:py-24 bg-secondary/40">
+        <div className="container-padding max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+            {/* Left - Founder Photo */}
+            <div className="lg:col-span-2">
+              <img
+                src={founderImage}
+                alt="Michael, Founder of Get Booked Out"
+                className="w-full max-w-md mx-auto lg:mx-0 rounded shadow-xl object-cover"
+              />
+            </div>
 
-          {/* Body Content */}
-          <div className="max-w-3xl mx-auto text-muted-foreground space-y-5">
-            <p className="text-lg md:text-xl leading-relaxed">
-              I'm Michael, the founder of Get Booked Out.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed">
-              I've built a $17.5 million property portfolio. I've spent six figures on renovations. And I've lost count of how many times I've called a tradie, got no answer, and just moved on to the next one.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed">
-              Here's what I kept seeing: Tradies who were incredible at their craft but terrible at answering the phone. Guys who could rewire a house or tile a bathroom perfectly—but couldn't respond to an enquiry within 24 hours.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed">
-              I'd call. No answer. I'd leave a voicemail. Nothing. I'd find someone else.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed">
-              The frustrating part? I knew these tradies were losing jobs they didn't even know about. Not because they weren't good enough—but because they were too busy doing the work to answer the phone.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
-              That's why I built Get Booked Out.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed">
-              It's the system I wish every tradie I tried to hire had. Missed call? Instant text back. Website enquiry? Handled automatically. Reviews? Requested after every job.
-            </p>
-            
-            <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
-              You focus on the tools. We make sure the phone doesn't cost you jobs.
-            </p>
+            {/* Right - Content */}
+            <div className="lg:col-span-3">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
+                <span className="text-foreground">I've Been On the Other Side of Your </span>
+                <span className="text-primary">Missed Calls</span>
+              </h1>
+
+              <div className="text-muted-foreground space-y-6">
+                <p className="text-lg md:text-xl leading-relaxed">
+                  I'm Michael, the founder of Get Booked Out.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  I've built a $17.5 million property portfolio. I've spent six figures on renovations. And I've lost count of how many times I've called a tradie, got no answer, and just moved on to the next one.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  Here's what I kept seeing: Tradies who were incredible at their craft but terrible at answering the phone. Guys who could rewire a house or tile a bathroom perfectly—but couldn't respond to an enquiry within 24 hours.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  I'd call. No answer. I'd leave a voicemail. Nothing. I'd find someone else.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  The frustrating part? I knew these tradies were losing jobs they didn't even know about. Not because they weren't good enough—but because they were too busy doing the work to answer the phone.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
+                  That's why I built Get Booked Out.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed">
+                  It's the system I wish every tradie I tried to hire had. Missed call? Instant text back. Website enquiry? Handled automatically. Reviews? Requested after every job.
+                </p>
+                
+                <p className="text-lg md:text-xl leading-relaxed font-semibold text-foreground">
+                  You focus on the tools. We make sure the phone doesn't cost you jobs.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-secondary/30">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container-padding max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-8">
             Want to See How It Works?
