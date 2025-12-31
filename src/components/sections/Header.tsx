@@ -44,33 +44,35 @@ const Header = () => {
         }`}
       >
         <div className="container-padding max-w-7xl mx-auto">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <img src={logo} alt="Get Booked Out" className="h-14 md:h-16 w-auto" />
+            <Link to="/" className="flex-shrink-0">
+              <img src={logo} alt="Get Booked Out" className="h-12 md:h-14 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) =>
-                link.href.startsWith("/") && !link.href.includes("#") ? (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    className="text-muted-foreground hover:text-foreground font-medium transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground font-medium transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                )
-              )}
+            <nav className="hidden md:flex items-center justify-end flex-1 ml-12">
+              <div className="flex items-center gap-12">
+                {navLinks.map((link) =>
+                  link.href.startsWith("/") && !link.href.includes("#") ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      className="text-muted-foreground hover:text-primary font-medium transition-colors text-sm tracking-wide"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary font-medium transition-colors text-sm tracking-wide"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
+              </div>
             </nav>
 
 
