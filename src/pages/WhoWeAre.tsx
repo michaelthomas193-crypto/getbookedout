@@ -21,10 +21,11 @@ const WhoWeAre = () => {
               className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg flex-shrink-0"
             />
 
-            {/* Headline - Two lines */}
+            {/* Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left">
-              <span className="text-foreground block">I Know Why Good Tradies</span>
-              <span className="text-primary block text-center">Lose Jobs</span>
+              <span className="text-foreground block">I Know Why Good</span>
+              <span className="text-foreground">Tradies </span>
+              <span className="text-primary">Lose Jobs</span>
             </h1>
           </div>
 
