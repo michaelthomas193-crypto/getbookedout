@@ -12,8 +12,8 @@ const WhoWeAre = () => {
       {/* Main Content Section */}
       <section className="py-12 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
-          {/* Header - Photo + Headline */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-8 mb-10 md:mb-12">
+          {/* Header - Photo + Headline (centered as a unit) */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-8 mb-8 md:mb-10">
             {/* Circular Photo */}
             <img
               src={founderImage}
@@ -29,7 +29,7 @@ const WhoWeAre = () => {
           </div>
 
           {/* Body Text */}
-          <div className="text-muted-foreground space-y-5">
+          <div className="text-foreground/90 space-y-5">
             <p className="text-lg md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
