@@ -10,9 +10,9 @@ const ChatWidget = () => {
       
       {/* Tooltip */}
       <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-        <div className="bg-card text-foreground text-sm font-medium px-4 py-3 rounded-xl shadow-xl border border-border whitespace-nowrap max-w-[240px]">
-          <p className="font-semibold mb-1">Hey! 👋</p>
-          <p className="text-muted-foreground text-xs">Interested in automating your leads and bookings?</p>
+        <div className="bg-card text-foreground text-sm font-medium px-4 py-3 rounded-xl shadow-xl border border-border whitespace-nowrap">
+          <p className="font-semibold">Hey 👋</p>
+          <p className="text-muted-foreground text-xs">How can we help?</p>
         </div>
       </div>
 
