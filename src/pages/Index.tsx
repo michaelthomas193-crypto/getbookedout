@@ -9,7 +9,6 @@ import Results from "@/components/sections/Results";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyUs from "@/components/sections/WhyUs";
 import FAQ from "@/components/sections/FAQ";
-import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
@@ -28,7 +27,6 @@ const Index = () => {
       <Testimonials />
       <WhyUs />
       <FAQ />
-      <FinalCTA />
       <Footer />
       <ChatWidget />
       <MobileStickyCTA />
