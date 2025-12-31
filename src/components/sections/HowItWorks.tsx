@@ -12,7 +12,7 @@ const steps = [
     number: "02",
     icon: Zap,
     title: "Leads Start Flowing",
-    description: "Every enquiry — phone, web, Facebook — gets answered instantly. Customers book straight into your calendar.",
+    description: "Every enquiry — phone, web, Facebook — gets answered instantly. Customers book straight into your calendar. Respond in under 5 minutes and you're 21x more likely to win the job.",
     color: "#4BADD4", // medium blue
   },
   {

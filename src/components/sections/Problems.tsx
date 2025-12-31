@@ -5,13 +5,13 @@ const problems = [
   {
     icon: PhoneMissed,
     title: "Your phone rang. You couldn't answer.",
-    description: "78% of customers book with whoever responds first. By the time you call back, they've already hired your competitor.",
+    description: "85% of missed calls never call back. They've already called your competitor.",
     color: "bg-red-100 text-red-600",
   },
   {
     icon: HelpCircle,
     title: "A customer visited your website.",
-    description: "They had questions. Nobody answered. They bounced. Another job gone.",
+    description: "Less than 3% of people leave a voicemail. The rest just disappear.",
     color: "bg-orange-100 text-orange-600",
   },
   {

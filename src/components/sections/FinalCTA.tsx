@@ -45,7 +45,7 @@ const FinalCTA = () => {
               <span className="text-primary">Missed Calls</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Find out how many enquiries you're actually missing — and how to fix it.
+              Home service businesses miss up to 62% of their calls. How many are you losing?
             </p>
             
             <div className="space-y-4 text-left max-w-md mx-auto lg:mx-0">
