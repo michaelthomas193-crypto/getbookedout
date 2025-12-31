@@ -9,30 +9,27 @@ const WhoWeAre = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Header Section - Photo + Headline */}
-      <section className="py-12 md:py-16 bg-secondary/40">
-        <div className="container-padding max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+      {/* Main Content Section */}
+      <section className="py-12 md:py-20 bg-secondary/40">
+        <div className="container-padding max-w-3xl mx-auto">
+          {/* Header - Photo + Headline */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-8 mb-10 md:mb-12">
             {/* Circular Photo */}
             <img
               src={founderImage}
               alt="Michael, Founder of Get Booked Out"
-              className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover object-top shadow-lg flex-shrink-0"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg flex-shrink-0"
             />
 
             {/* Headline */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center md:text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center sm:text-left">
               <span className="text-foreground">I've Been On the Other Side of Your </span>
               <span className="text-primary">Missed Calls</span>
             </h1>
           </div>
-        </div>
-      </section>
 
-      {/* Body Text Section */}
-      <section className="py-12 md:py-16 bg-background">
-        <div className="container-padding max-w-3xl mx-auto">
-          <div className="text-muted-foreground space-y-6">
+          {/* Body Text */}
+          <div className="text-muted-foreground space-y-5">
             <p className="text-lg md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
