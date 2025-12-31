@@ -36,7 +36,7 @@ const Hero = () => {
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="animate-fade-up text-center lg:text-left">
+          <div className="animate-fade-up text-center lg:text-left flex flex-col justify-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
               <span className="block">Good At Your Trade.</span>
               <span className="block text-primary">Bad At The Other Stuff?</span>
