@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,13 +47,9 @@ const Header = () => {
         <div className="container-padding max-w-7xl mx-auto">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center">
-              <span className="text-xl md:text-2xl font-bold tracking-tight">
-                <span className="text-foreground">Get </span>
-                <span className="text-primary">Booked</span>
-                <span className="text-foreground"> Out</span>
-              </span>
-            </a>
+            <Link to="/" className="flex items-center">
+              <img src={logo} alt="Get Booked Out" className="h-10 md:h-12 w-auto" />
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
