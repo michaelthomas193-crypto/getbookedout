@@ -5,7 +5,7 @@ import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone, Send } f
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-orange.png";
-import heroImage from "@/assets/hero-electrical.png";
+import heroImage from "@/assets/hero-electrical-landscape.png";
 
 const Electrical = () => {
   const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
@@ -97,84 +97,81 @@ const Electrical = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-background">
-        <div className="container-padding max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-10 items-stretch">
-            {/* Left - Copy + Form (60%) */}
-            <div className="lg:col-span-3 flex flex-col justify-center">
-              <div className="text-center lg:text-left mb-6 lg:mb-8">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
-                  Lost Your Spark for Chasing Callbacks?{" "}
-                  <span style={{ color: accentColor }}>We'll Answer While You're Up a Ladder.</span>
-                </h1>
-                <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
-                  You're in a roof space or halfway through a switchboard. Phone rings. Can't answer. Customer calls the next sparkie on Google. Sound familiar?
-                </p>
-                <p className="text-sm text-muted-foreground italic">
-                  Built by a business owner who was sick of the same problems.
-                </p>
-              </div>
+      {/* Hero Section with Background Image */}
+      <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="" 
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Semi-transparent overlay with radial gradient - more opaque in center */}
+          <div className="absolute inset-0 bg-gradient-radial from-white/85 via-white/80 to-white/60" />
+          {/* Fallback linear gradient overlay */}
+          <div className="absolute inset-0 bg-white/75" />
+        </div>
 
-              {/* Form */}
-              <div id="hero-form" className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg">
-                <div className="text-center mb-6">
-                  <h2 className="text-xl md:text-2xl font-bold mb-2">Stop Losing Jobs</h2>
-                  <p className="text-muted-foreground text-sm">10min chat. No sales pitch.</p>
-                </div>
-                <form onSubmit={handleHeroSubmit} className="space-y-4">
-                  <div>
-                    <label htmlFor="hero-name" className="block text-sm font-medium mb-2">
-                      Full Name
-                    </label>
-                    <Input
-                      id="hero-name"
-                      type="text"
-                      placeholder="John Smith"
-                      value={heroForm.fullName}
-                      onChange={(e) => setHeroForm({ ...heroForm, fullName: e.target.value })}
-                      required
-                      className="h-12 md:h-14 text-base"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="hero-phone" className="block text-sm font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <Input
-                      id="hero-phone"
-                      type="tel"
-                      placeholder="0400 000 000"
-                      value={heroForm.phone}
-                      onChange={(e) => setHeroForm({ ...heroForm, phone: e.target.value })}
-                      required
-                      className="h-12 md:h-14 text-base"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full h-12 md:h-14 text-base font-semibold text-white"
-                    style={{ backgroundColor: accentColor }}
-                  >
-                    Show Me How It Works
-                    <Send className="w-4 h-4 ml-2" />
-                  </Button>
-                </form>
-              </div>
+        <div className="container-padding max-w-3xl mx-auto relative z-10">
+          {/* Centered Content */}
+          <div className="text-center mb-8 md:mb-10">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
+              Lost Your Spark for Chasing Callbacks?{" "}
+              <span style={{ color: accentColor }}>We'll Answer While You're Up a Ladder.</span>
+            </h1>
+            <p className="text-base md:text-lg text-foreground/80 mb-4 md:mb-6 leading-relaxed max-w-2xl mx-auto">
+              You're in a roof space or halfway through a switchboard. Phone rings. Can't answer. Customer calls the next sparkie on Google. Sound familiar?
+            </p>
+            <p className="text-sm text-foreground/60 italic">
+              Built by a business owner who was sick of the same problems.
+            </p>
+          </div>
+
+          {/* Form Card with shadow to lift off background */}
+          <div id="hero-form" className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-xl max-w-md mx-auto">
+            <div className="text-center mb-6">
+              <h2 className="text-xl md:text-2xl font-bold mb-2">Stop Losing Jobs</h2>
+              <p className="text-muted-foreground text-sm">10min chat. No sales pitch.</p>
             </div>
-
-            {/* Right - Image (40%) - Desktop only */}
-            <div className="hidden lg:flex lg:col-span-2 items-stretch">
-              <div className="relative w-full rounded-2xl overflow-hidden">
-                <img 
-                  src={heroImage} 
-                  alt="Electrician on ladder working on lighting" 
-                  className="w-full h-full object-cover object-top"
-                  style={{ minHeight: '100%' }}
+            <form onSubmit={handleHeroSubmit} className="space-y-4">
+              <div>
+                <label htmlFor="hero-name" className="block text-sm font-medium mb-2">
+                  Full Name
+                </label>
+                <Input
+                  id="hero-name"
+                  type="text"
+                  placeholder="John Smith"
+                  value={heroForm.fullName}
+                  onChange={(e) => setHeroForm({ ...heroForm, fullName: e.target.value })}
+                  required
+                  className="h-12 md:h-14 text-base"
                 />
               </div>
-            </div>
+              <div>
+                <label htmlFor="hero-phone" className="block text-sm font-medium mb-2">
+                  Phone Number
+                </label>
+                <Input
+                  id="hero-phone"
+                  type="tel"
+                  placeholder="0400 000 000"
+                  value={heroForm.phone}
+                  onChange={(e) => setHeroForm({ ...heroForm, phone: e.target.value })}
+                  required
+                  className="h-12 md:h-14 text-base"
+                />
+              </div>
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full h-12 md:h-14 text-base font-semibold text-white"
+                style={{ backgroundColor: accentColor }}
+              >
+                Show Me How It Works
+                <Send className="w-4 h-4 ml-2" />
+              </Button>
+            </form>
           </div>
         </div>
       </section>
