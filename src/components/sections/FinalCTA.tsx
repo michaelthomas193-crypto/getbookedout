@@ -26,9 +26,8 @@ const FinalCTA = () => {
   };
 
   const bulletPoints = [
-    "Takes 15 minutes, zero pressure",
-    "We'll show you exactly how it works for your trade",
-    "Ask us anything — we're straight shooters",
+    "10 minutes. No sales pitch.",
+    "We'll show you exactly where you're losing jobs",
   ];
 
   return (
@@ -38,15 +37,15 @@ const FinalCTA = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              Got 5 Minutes?
+              Got 10 Minutes?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-              Ready to Get
+              Stop Losing Jobs to
               <br />
-              <span className="text-primary">Booked Out?</span>
+              <span className="text-primary">Missed Calls</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Not sure if it's right for you? No worries. Jump on a quick call, we'll show you how it works, and you can decide if it makes sense.
+              Find out how many enquiries you're actually missing — and how to fix it.
             </p>
             
             <div className="space-y-4 text-left max-w-md mx-auto lg:mx-0">
