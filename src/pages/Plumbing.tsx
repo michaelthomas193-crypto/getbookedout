@@ -184,13 +184,13 @@ const Plumbing = () => {
             {painPoints.map((point) => (
               <div
                 key={point.title}
-                className="flex flex-col sm:flex-row items-start gap-4 p-5 md:p-6 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
+                className="flex flex-row items-start gap-3 md:gap-4 p-4 md:p-6 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className={`w-12 h-12 md:w-14 md:h-14 ${point.color} rounded-xl flex items-center justify-center shrink-0`}>
-                  <point.icon className="w-6 h-6 md:w-7 md:h-7" />
+                <div className={`w-10 h-10 md:w-14 md:h-14 ${point.color} rounded-xl flex items-center justify-center shrink-0`}>
+                  <point.icon className="w-5 h-5 md:w-7 md:h-7" />
                 </div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">{point.title}</h3>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2">{point.title}</h3>
                   <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{point.description}</p>
                 </div>
               </div>
