@@ -5,6 +5,7 @@ import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone, Send } f
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import heroImage from "@/assets/hero-plumbing.png";
 
 const Plumbing = () => {
   const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
@@ -96,64 +97,72 @@ const Plumbing = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-8 md:py-16 bg-background">
-        <div className="container-padding max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left - Copy */}
-            <div className="text-center lg:text-left">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6">
-                Sick of Dealing With Shit{" "}
-                <span className="text-primary">AND Chasing Callbacks?</span>
+      {/* Hero Section with Background Image */}
+      <section className="relative pt-6 pb-6 md:pt-12 md:pb-8 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          {/* White overlay for readability */}
+          <div className="absolute inset-0 bg-white/70"></div>
+        </div>
+
+        <div className="container-padding max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+            {/* Left Content - Text */}
+            <div className="text-center lg:text-left flex flex-col justify-center order-1">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
+                <span className="block">Sick of Dealing With Shit</span>
+                <span className="block text-primary">AND Chasing Callbacks?</span>
               </h1>
-              <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
-                You're under a house or elbow-deep in a blocked drain. Phone rings. Can't answer. Customer calls the next plumber on Google. Sound familiar?
+              
+              <p className="text-base md:text-lg text-muted-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                You're under a house or elbow-deep in a blocked drain. Phone rings. Can't answer. 
+                Customer calls the next plumber on Google. Sound familiar?
               </p>
-              <p className="text-sm text-muted-foreground italic">
-                Built by a business owner who was sick of the same problems.
-              </p>
+              
+              {/* Trust Badge */}
+              <div className="flex items-center justify-center lg:justify-start text-muted-foreground">
+                <span className="text-sm font-medium italic">Built by a business owner who was sick of the same problems.</span>
+              </div>
             </div>
 
-            {/* Right - Form */}
-            <div id="hero-form" className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg">
-              <div className="text-center mb-6">
-                <h2 className="text-xl md:text-2xl font-bold mb-2">Stop Losing Jobs</h2>
-                <p className="text-muted-foreground text-sm">10min chat. No sales pitch.</p>
-              </div>
-              <form onSubmit={handleHeroSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="hero-name" className="block text-sm font-medium mb-2">
-                    Full Name
-                  </label>
+            {/* Right Content - Form Card */}
+            <div id="hero-form" className="relative order-2">
+              <div className="bg-card rounded-2xl shadow-2xl border border-border p-5 md:p-6">
+                {/* Form Header */}
+                <div className="text-center mb-4">
+                  <h2 className="text-lg md:text-xl font-bold">Stop Losing Jobs</h2>
+                  <p className="text-muted-foreground text-sm mt-1">10min chat. No sales pitch.</p>
+                </div>
+
+                <form onSubmit={handleHeroSubmit} className="space-y-3">
                   <Input
-                    id="hero-name"
-                    type="text"
-                    placeholder="John Smith"
+                    placeholder="Full Name"
                     value={heroForm.fullName}
                     onChange={(e) => setHeroForm({ ...heroForm, fullName: e.target.value })}
                     required
-                    className="h-12 md:h-14 text-base"
+                    className="h-12 md:h-10 text-base md:text-sm"
                   />
-                </div>
-                <div>
-                  <label htmlFor="hero-phone" className="block text-sm font-medium mb-2">
-                    Phone Number
-                  </label>
+
                   <Input
-                    id="hero-phone"
                     type="tel"
-                    placeholder="0400 000 000"
+                    placeholder="Phone Number"
                     value={heroForm.phone}
                     onChange={(e) => setHeroForm({ ...heroForm, phone: e.target.value })}
                     required
-                    className="h-12 md:h-14 text-base"
+                    className="h-12 md:h-10 text-base md:text-sm"
                   />
-                </div>
-                <Button type="submit" size="lg" className="w-full h-12 md:h-14 text-base font-semibold">
-                  Show Me How It Works
-                  <Send className="w-4 h-4 ml-2" />
-                </Button>
-              </form>
+
+                  <Button type="submit" size="lg" className="w-full min-h-[48px] group text-base">
+                    Show Me How It Works
+                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
