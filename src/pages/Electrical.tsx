@@ -99,8 +99,8 @@ const Electrical = () => {
 
       {/* Hero Section with Background Image */}
       <section className="relative pt-6 pb-6 md:pt-12 md:pb-8 overflow-hidden">
-        {/* Background Image - Desktop only */}
-        <div className="absolute inset-0 z-0 hidden md:block">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
           <img 
             src={heroImage} 
             alt="" 
