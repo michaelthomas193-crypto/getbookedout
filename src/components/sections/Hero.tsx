@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative py-8 md:py-12 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
+    <section className="relative py-12 md:py-16 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
