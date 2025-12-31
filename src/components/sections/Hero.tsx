@@ -36,19 +36,19 @@ const Hero = () => {
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Content */}
-          <div className="animate-fade-up pt-4 lg:pt-8">
+          <div className="animate-fade-up pt-4 lg:pt-8 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
               Good At Your Trade.{" "}
               <span className="text-primary">Bad At The Other Stuff?</span>
             </h1>
             
-            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-lg">
+            <p className="text-base md:text-lg text-muted-foreground mb-6 max-w-lg mx-auto">
               You didn't become a tradie to chase leads, manage websites, and beg for reviews. 
               Get Booked Out handles all of that — so you can focus on what you're actually good at.
             </p>
             
             {/* Trust Badge */}
-            <div className="flex items-center gap-2 text-muted-foreground mb-6">
+            <div className="flex items-center justify-center gap-2 text-muted-foreground mb-6">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
