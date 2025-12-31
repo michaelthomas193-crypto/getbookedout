@@ -91,7 +91,7 @@ const Plumbing = () => {
       <header className="py-4 px-4 md:px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <Link to="/" className="inline-block">
-            <img src={logo} alt="Get Booked Out" className="h-10 md:h-12 w-auto" />
+            <img src={logo} alt="Get Booked Out" className="h-12 md:h-20 w-auto" />
           </Link>
         </div>
       </header>
