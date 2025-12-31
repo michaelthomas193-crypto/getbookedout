@@ -26,12 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-12 md:pt-16 pb-6 md:pb-8 bg-gradient-to-br from-background via-accent/30 to-background overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      </div>
+    <section className="relative pt-12 md:pt-16 pb-6 md:pb-8 bg-background">
       
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -101,8 +96,6 @@ const Hero = () => {
               </form>
             </div>
 
-            {/* Floating decoration */}
-            <div className="absolute -z-10 top-4 -right-4 w-48 h-48 bg-primary/20 rounded-full blur-3xl" />
           </div>
         </div>
       </div>
