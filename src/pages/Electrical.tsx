@@ -106,8 +106,8 @@ const Electrical = () => {
             alt="" 
             className="w-full h-full object-cover object-center"
           />
-          {/* Semi-transparent white overlay (75-80% opacity) */}
-          <div className="absolute inset-0 bg-white/[0.78]" />
+          {/* Semi-transparent white overlay (70% opacity - subtle enough to see image) */}
+          <div className="absolute inset-0 bg-white/70" />
         </div>
 
         <div className="container-padding max-w-7xl mx-auto relative z-10">
@@ -116,7 +116,8 @@ const Electrical = () => {
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4">
                 <span className="block">Lost Your Spark for</span>
-                <span className="block" style={{ color: accentColor }}>Chasing Callbacks?</span>
+                <span className="block">Chasing Callbacks?</span>
+                <span className="block" style={{ color: accentColor }}>We'll Answer While You're Up a Ladder.</span>
               </h1>
               
               <p className="text-base md:text-lg text-muted-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
