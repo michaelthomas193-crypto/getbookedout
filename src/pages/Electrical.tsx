@@ -8,8 +8,8 @@ import logo from "@/assets/logo-orange.png";
 import heroImage from "@/assets/hero-electrical-landscape.png";
 
 const Electrical = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Electrician" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Electrician" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   // Orange accent color for electrical
@@ -41,13 +41,13 @@ const Electrical = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Electrician" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Electrician" });
   };
 
   const painPoints = [

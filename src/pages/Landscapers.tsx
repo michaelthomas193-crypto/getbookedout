@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 import heroLandscaping from "@/assets/hero-landscaping.png";
 
 const Landscapers = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Landscaper" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Landscaper" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -37,13 +37,13 @@ const Landscapers = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Landscaper" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Landscaper" });
   };
 
   const accentColor = "#2E7D32"; // Earth Green
