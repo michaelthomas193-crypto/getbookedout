@@ -5,6 +5,7 @@ import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone, Send } f
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import heroPainting from "@/assets/hero-painting.png";
 
 const Painters = () => {
   const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
@@ -102,8 +103,13 @@ const Painters = () => {
 
       {/* Hero Section */}
       <section className="relative pt-6 pb-6 md:pt-12 md:pb-8 overflow-hidden">
-        {/* Background with gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-sky-50 to-sky-100"></div>
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroPainting})` }}
+        />
+        {/* Gradient Overlay - more opaque on left for text readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/90 via-white/80 to-white/60" />
 
         <div className="container-padding max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
