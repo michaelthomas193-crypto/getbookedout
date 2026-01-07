@@ -117,7 +117,7 @@ const Landscapers = () => {
 
             {/* Right Content - Form Card */}
             <div id="hero-form" className="relative order-2">
-              <LeadFormEmbed />
+              <LeadFormEmbed height={520} showHeader={false} />
             </div>
           </div>
         </div>
