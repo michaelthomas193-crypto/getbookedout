@@ -117,7 +117,7 @@ const Handyman = () => {
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
                 <span className="block">You Fix Everything.</span>
-                <span className="block text-[#C62828]">Except Missed Calls.</span>
+                <span className="block" style={{ color: accentColor }}>Except Missed Calls.</span>
               </h1>
               
               <p className="text-base md:text-lg text-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
