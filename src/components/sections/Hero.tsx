@@ -33,7 +33,7 @@ const Hero = () => {
 
           {/* Right Content - Demo Form */}
           <div id="hero-form" className="relative animate-fade-up order-2 lg:order-2" style={{ animationDelay: "0.1s" }}>
-            <LeadFormEmbed />
+            <LeadFormEmbed height={520} showHeader={false} />
           </div>
         </div>
       </div>
