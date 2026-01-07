@@ -118,7 +118,7 @@ const Electrical = () => {
 
             {/* Right Content - Form */}
             <div id="hero-form" className="relative order-2">
-              <LeadFormEmbed />
+              <LeadFormEmbed height={520} showHeader={false} />
             </div>
           </div>
         </div>
