@@ -39,6 +39,11 @@ const Header = () => {
     { label: "Industries", href: "#", isDropdown: true, dropdownItems: [
       { label: "Plumbers", href: "/plumbing" },
       { label: "Electricians", href: "/electrical" },
+      { label: "Painters", href: "/painters" },
+      { label: "Landscapers", href: "/landscapers" },
+      { label: "Handyman", href: "/handyman" },
+      { label: "Carpenters", href: "/carpenters" },
+      { label: "Concreters", href: "/concreters" },
     ]},
     { label: "Why Us", href: "/#why-us" },
     { label: "Pricing", href: "/pricing" },
