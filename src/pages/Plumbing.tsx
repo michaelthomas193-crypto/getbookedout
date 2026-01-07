@@ -116,7 +116,7 @@ const Plumbing = () => {
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
                 <span className="block">Sick of Dealing With Shit</span>
-                <span className="block text-[#1565C0]">AND Chasing Callbacks?</span>
+                <span className="block text-primary">AND Chasing Callbacks?</span>
               </h1>
               
               <p className="text-base md:text-lg text-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
