@@ -5,13 +5,15 @@ interface LeadFormEmbedProps {
   subtitle?: string;
   className?: string;
   height?: number;
+  showHeader?: boolean;
 }
 
 const LeadFormEmbed = ({ 
   title = "Stop Losing Jobs", 
   subtitle = "10min chat. No sales pitch.",
   className = "",
-  height = 600
+  height = 480,
+  showHeader = true
 }: LeadFormEmbedProps) => {
   useEffect(() => {
     // Load the form embed script
@@ -25,17 +27,19 @@ const LeadFormEmbed = ({
   }, []);
 
   return (
-    <div className={`bg-card rounded-2xl shadow-2xl border border-border p-5 md:p-6 ${className}`}>
+    <div className={`bg-card rounded-2xl shadow-2xl border border-border overflow-hidden ${className}`}>
       {/* Form Header */}
-      <div className="text-center mb-4">
-        <h2 className="text-lg md:text-xl font-bold">{title}</h2>
-        <p className="text-muted-foreground text-sm mt-1">{subtitle}</p>
-      </div>
+      {showHeader && (
+        <div className="text-center p-4 pb-0">
+          <h2 className="text-lg md:text-xl font-bold">{title}</h2>
+          <p className="text-muted-foreground text-sm mt-1">{subtitle}</p>
+        </div>
+      )}
 
       {/* Embedded Form */}
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/l0s50SAT3j1HjcABaNr8"
-        style={{ width: "100%", height: `${height}px`, border: "none", borderRadius: "3px" }}
+        style={{ width: "100%", height: `${height}px`, border: "none" }}
         id="inline-l0s50SAT3j1HjcABaNr8"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
