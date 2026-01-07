@@ -117,7 +117,7 @@ const Painters = () => {
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
                 <span className="block">Brush in Hand. Phone in Pocket.</span>
-                <span className="block text-[#3B9FD0]">Jobs Going to the Next Bloke.</span>
+                <span className="block" style={{ color: accentColor }}>Jobs Going to the Next Bloke.</span>
               </h1>
               
               <p className="text-base md:text-lg text-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
