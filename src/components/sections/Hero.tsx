@@ -32,7 +32,7 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroTradesBackground})` }}
       />
       {/* Gradient Overlay - more opaque on left, fades to right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/80 to-white/60 md:from-white/85 md:via-white/75 md:to-white/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/70 to-white/45 md:from-white/80 md:via-white/65 md:to-white/40" />
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left Content */}
