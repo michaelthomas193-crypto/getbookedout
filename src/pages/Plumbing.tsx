@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone, Send } from "lucide-react";
-import { toast } from "sonner";
+import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import heroImage from "@/assets/hero-plumbing.png";
+import LeadFormEmbed from "@/components/LeadFormEmbed";
 
 const Plumbing = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Plumber" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Plumber" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -34,18 +31,6 @@ const Plumbing = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleHeroSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "", businessType: "Plumber" });
-  };
-
-  const handleCtaSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "", businessType: "Plumber" });
-  };
 
   const painPoints = [
     {
@@ -132,37 +117,7 @@ const Plumbing = () => {
 
             {/* Right Content - Form Card */}
             <div id="hero-form" className="relative order-2">
-              <div className="bg-card rounded-2xl shadow-2xl border border-border p-5 md:p-6">
-                {/* Form Header */}
-                <div className="text-center mb-4">
-                  <h2 className="text-lg md:text-xl font-bold">Stop Losing Jobs</h2>
-                  <p className="text-muted-foreground text-sm mt-1">10min chat. No sales pitch.</p>
-                </div>
-
-                <form onSubmit={handleHeroSubmit} className="space-y-3">
-                  <Input
-                    placeholder="Full Name"
-                    value={heroForm.fullName}
-                    onChange={(e) => setHeroForm({ ...heroForm, fullName: e.target.value })}
-                    required
-                    className="h-12 md:h-10 text-base md:text-sm"
-                  />
-
-                  <Input
-                    type="tel"
-                    placeholder="Phone Number"
-                    value={heroForm.phone}
-                    onChange={(e) => setHeroForm({ ...heroForm, phone: e.target.value })}
-                    required
-                    className="h-12 md:h-10 text-base md:text-sm"
-                  />
-
-                  <Button type="submit" size="lg" className="w-full min-h-[48px] group text-base">
-                    Show Me How It Works
-                    <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </form>
-              </div>
+              <LeadFormEmbed />
             </div>
           </div>
         </div>
@@ -229,33 +184,11 @@ const Plumbing = () => {
       {/* Final CTA Section */}
       <section id="final-cta" className="py-10 md:py-16 bg-background">
         <div className="container-padding max-w-xl mx-auto">
-          <div className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Stop Losing Jobs to Missed Calls</h2>
-            <p className="text-muted-foreground mb-6">
-              Find out how many enquiries you're actually missing — and how to fix it.
-            </p>
-            <form onSubmit={handleCtaSubmit} className="space-y-4">
-              <Input
-                type="text"
-                placeholder="Full Name"
-                value={ctaForm.fullName}
-                onChange={(e) => setCtaForm({ ...ctaForm, fullName: e.target.value })}
-                required
-                className="h-12 md:h-14 text-base"
-              />
-              <Input
-                type="tel"
-                placeholder="Phone Number"
-                value={ctaForm.phone}
-                onChange={(e) => setCtaForm({ ...ctaForm, phone: e.target.value })}
-                required
-                className="h-12 md:h-14 text-base"
-              />
-              <Button type="submit" size="lg" className="w-full h-12 md:h-14 text-base font-semibold">
-                Let's Chat
-              </Button>
-            </form>
-          </div>
+          <LeadFormEmbed 
+            title="Stop Losing Jobs to Missed Calls"
+            subtitle="Find out how many enquiries you're actually missing — and how to fix it."
+            height={650}
+          />
         </div>
       </section>
 
