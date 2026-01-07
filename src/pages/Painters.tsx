@@ -45,24 +45,29 @@ const Painters = () => {
     setCtaForm({ fullName: "", phone: "" });
   };
 
+  const accentColor = "#89CFF0"; // Baby Blue
+
   const painPoints = [
     {
       icon: PhoneMissed,
       title: "Your phone rang. You couldn't answer.",
       description: "85% of missed calls never call back. They've already called another painter.",
-      color: "bg-red-100 text-red-600",
+      bgColor: "bg-[#89CFF0]/20",
+      textColor: "text-[#89CFF0]",
     },
     {
       icon: Clock,
       title: "You called back 2 hours later.",
       description: "Respond in under 5 minutes and you're 21x more likely to win the job. Two hours? They've already booked someone else.",
-      color: "bg-orange-100 text-orange-600",
+      bgColor: "bg-[#89CFF0]/20",
+      textColor: "text-[#89CFF0]",
     },
     {
       icon: Star,
       title: "Your reviews don't reflect your work.",
       description: "You do quality work but only the unhappy customers leave reviews. The happy ones forget.",
-      color: "bg-amber-100 text-amber-600",
+      bgColor: "bg-[#89CFF0]/20",
+      textColor: "text-[#89CFF0]",
     },
   ];
 
@@ -98,20 +103,19 @@ const Painters = () => {
       {/* Hero Section */}
       <section className="relative pt-6 pb-6 md:pt-12 md:pb-8 overflow-hidden">
         {/* Background with gradient */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-teal-50 to-cyan-100"></div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-sky-50 to-sky-100"></div>
 
         <div className="container-padding max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             {/* Left Content - Text */}
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
-                <span className="block">Great At Painting.</span>
-                <span className="block text-[#0D9488]">Tired Of Chasing Leads?</span>
+                <span className="block">Brush in Hand. Phone in Pocket.</span>
+                <span className="block text-[#89CFF0]">Jobs Going to the Next Bloke.</span>
               </h1>
               
               <p className="text-base md:text-lg text-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                You're up a ladder or in the middle of cutting in. Phone rings. Can't answer. 
-                Customer calls the next painter on Google. Sound familiar?
+                You're up a ladder with a roller in hand. Phone rings. Can't answer. Customer calls the next painter on Google. Sound familiar?
               </p>
               
               {/* Trust Badge */}
@@ -147,7 +151,12 @@ const Painters = () => {
                     className="h-12 md:h-10 text-base md:text-sm"
                   />
 
-                  <Button type="submit" size="lg" className="w-full min-h-[48px] group text-base">
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full min-h-[48px] group text-base"
+                    style={{ backgroundColor: accentColor, color: "#000" }}
+                  >
                     Show Me How It Works
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -166,7 +175,7 @@ const Painters = () => {
               Right now, you're <span className="text-[#E74C3C] underline decoration-2">losing jobs</span> you don't even know about.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              While you're on the job with a brush in hand...
+              While you're on site with a brush in hand...
             </p>
           </div>
 
@@ -176,8 +185,8 @@ const Painters = () => {
                 key={point.title}
                 className="flex flex-row items-start gap-3 md:gap-4 p-4 md:p-6 bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className={`w-10 h-10 md:w-14 md:h-14 ${point.color} rounded-xl flex items-center justify-center shrink-0`}>
-                  <point.icon className="w-5 h-5 md:w-7 md:h-7" />
+                <div className={`w-10 h-10 md:w-14 md:h-14 ${point.bgColor} rounded-xl flex items-center justify-center shrink-0`}>
+                  <point.icon className={`w-5 h-5 md:w-7 md:h-7 ${point.textColor}`} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2">{point.title}</h3>
@@ -204,9 +213,9 @@ const Painters = () => {
               >
                 <div 
                   className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-                  style={{ backgroundColor: index === 0 ? "#7DD3E8" : index === 1 ? "#4BADD4" : "#2B8BBF" }}
+                  style={{ backgroundColor: accentColor }}
                 >
-                  <step.icon className="w-6 h-6 text-white" />
+                  <step.icon className="w-6 h-6 text-black" />
                 </div>
                 <p className="font-bold text-lg mb-2">{step.trigger}</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">{step.result}</p>
@@ -220,7 +229,9 @@ const Painters = () => {
       <section id="final-cta" className="py-10 md:py-16 bg-background">
         <div className="container-padding max-w-xl mx-auto">
           <div className="bg-card rounded-2xl p-6 md:p-8 border border-border shadow-lg text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">Stop Losing Jobs to Missed Calls</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              Stop <span className="text-[#89CFF0]">Losing Jobs</span> to Missed Calls
+            </h2>
             <p className="text-muted-foreground mb-6">
               Find out how many enquiries you're actually missing — and how to fix it.
             </p>
@@ -241,7 +252,12 @@ const Painters = () => {
                 required
                 className="h-12 md:h-14 text-base"
               />
-              <Button type="submit" size="lg" className="w-full h-12 md:h-14 text-base font-semibold">
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full h-12 md:h-14 text-base font-semibold"
+                style={{ backgroundColor: accentColor, color: "#000" }}
+              >
                 Let's Chat
               </Button>
             </form>
@@ -258,7 +274,11 @@ const Painters = () => {
       {showStickyCTA && (
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur-sm border-t border-border md:hidden z-50">
           <a href="tel:1300000000">
-            <Button size="lg" className="w-full h-12 text-base font-semibold">
+            <Button 
+              size="lg" 
+              className="w-full h-12 text-base font-semibold"
+              style={{ backgroundColor: accentColor, color: "#000" }}
+            >
               <Phone className="w-5 h-5 mr-2" />
               Call Now
             </Button>
