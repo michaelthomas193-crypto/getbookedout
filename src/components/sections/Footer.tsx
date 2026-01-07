@@ -16,11 +16,11 @@ const Footer = () => {
             
             <div className="flex flex-col items-center md:items-start space-y-3 text-white/70 text-sm">
               <a 
-                href="mailto:info@getbookedout.com.au" 
+                href="mailto:bookings@getbookedout.com.au" 
                 className="flex items-center gap-2 hover:text-primary transition-colors min-h-[44px] py-2"
               >
                 <Mail className="w-4 h-4" />
-                info@getbookedout.com.au
+                bookings@getbookedout.com.au
               </a>
               <a 
                 href="tel:1300000000" 

@@ -59,8 +59,8 @@ const Header = () => {
           1300 000 000
         </a>
         <span className="mx-2">|</span>
-        <a href="mailto:hello@getbookedout.com.au" className="hover:underline">
-          hello@getbookedout.com.au
+        <a href="mailto:bookings@getbookedout.com.au" className="hover:underline">
+          bookings@getbookedout.com.au
         </a>
       </div>
 
@@ -206,8 +206,8 @@ const Header = () => {
                 <a href="tel:1300000000" className="block py-2 font-medium hover:text-primary">
                   1300 000 000
                 </a>
-                <a href="mailto:hello@getbookedout.com.au" className="block py-2 hover:text-primary">
-                  hello@getbookedout.com.au
+                <a href="mailto:bookings@getbookedout.com.au" className="block py-2 hover:text-primary">
+                  bookings@getbookedout.com.au
                 </a>
               </div>
             </div>
