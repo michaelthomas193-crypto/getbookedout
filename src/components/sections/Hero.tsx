@@ -10,6 +10,7 @@ import {
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import heroTradesBackground from "@/assets/hero-trades-background.png";
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative pt-6 pb-6 md:pt-16 md:pb-8 bg-background">
+    <section id="hero" className="relative pt-6 pb-6 md:pt-16 md:pb-8 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroTradesBackground})` }}
+      />
+      {/* Gradient Overlay - more opaque on left, fades to right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/75 md:from-white/90 md:via-white/85 md:to-white/70" />
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Left Content */}
@@ -47,7 +55,7 @@ const Hero = () => {
 
           {/* Right Content - Demo Form */}
           <div id="hero-form" className="relative animate-fade-up order-2 lg:order-2" style={{ animationDelay: "0.1s" }}>
-            <div className="relative bg-card rounded-2xl shadow-2xl border border-border p-5 md:p-6">
+            <div className="relative bg-white rounded-2xl shadow-2xl border border-border p-5 md:p-6">
               {/* Form Header */}
               <div className="text-center mb-4">
                 <h2 className="text-lg md:text-xl font-bold">Stop Losing Jobs</h2>
