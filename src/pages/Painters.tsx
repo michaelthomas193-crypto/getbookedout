@@ -117,7 +117,7 @@ const Painters = () => {
             <div className="text-center lg:text-left flex flex-col justify-center order-1">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 md:mb-4 text-foreground">
                 <span className="block">Brush in Hand. Phone in Pocket.</span>
-                <span className="block text-[#89CFF0] drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.2)' }}>Jobs Going to the Next Bloke.</span>
+                <span className="block text-[#89CFF0]">Jobs Going to the Next Bloke.</span>
               </h1>
               
               <p className="text-base md:text-lg text-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
