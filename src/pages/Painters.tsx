@@ -108,8 +108,8 @@ const Painters = () => {
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroPainting})` }}
         />
-        {/* Gradient Overlay - higher opacity for text readability */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/90 to-white/75" />
+        {/* Gradient Overlay - balanced for image visibility and text readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/80 via-white/70 to-white/50" />
 
         <div className="container-padding max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
