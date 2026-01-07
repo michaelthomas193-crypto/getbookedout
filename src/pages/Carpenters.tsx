@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 import heroCarpenter from "@/assets/hero-carpenter.png";
 
 const Carpenters = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Carpenter" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Carpenter" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -37,13 +37,13 @@ const Carpenters = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Carpenter" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Carpenter" });
   };
 
   const accentColor = "#8D6E63"; // Warm Brown

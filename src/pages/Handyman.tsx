@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 import heroHandyman from "@/assets/hero-handyman.png";
 
 const Handyman = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Handyman" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Handyman" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -37,13 +37,13 @@ const Handyman = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Handyman" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Handyman" });
   };
 
   const accentColor = "#C62828"; // Red

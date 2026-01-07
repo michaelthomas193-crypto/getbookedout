@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 import heroConcreter from "@/assets/hero-concreter.png";
 
 const Concreters = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Concreter" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Concreter" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -37,13 +37,13 @@ const Concreters = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Concreter" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Concreter" });
   };
 
   const accentColor = "#546E7A"; // Slate Grey

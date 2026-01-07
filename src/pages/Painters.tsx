@@ -8,8 +8,8 @@ import logo from "@/assets/logo.png";
 import heroPainting from "@/assets/hero-painting.png";
 
 const Painters = () => {
-  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "" });
-  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "" });
+  const [heroForm, setHeroForm] = useState({ fullName: "", phone: "", businessType: "Painter" });
+  const [ctaForm, setCtaForm] = useState({ fullName: "", phone: "", businessType: "Painter" });
   const [showStickyCTA, setShowStickyCTA] = useState(true);
 
   useEffect(() => {
@@ -37,13 +37,13 @@ const Painters = () => {
   const handleHeroSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setHeroForm({ fullName: "", phone: "" });
+    setHeroForm({ fullName: "", phone: "", businessType: "Painter" });
   };
 
   const handleCtaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thanks! We'll be in touch shortly.");
-    setCtaForm({ fullName: "", phone: "" });
+    setCtaForm({ fullName: "", phone: "", businessType: "Painter" });
   };
 
   const accentColor = "#89CFF0"; // Baby Blue
