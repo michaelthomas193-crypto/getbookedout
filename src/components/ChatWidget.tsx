@@ -1,10 +1,19 @@
 import { MessageCircle } from "lucide-react";
 
 const ChatWidget = () => {
+  const handleClick = () => {
+    const formElement = document.getElementById('hero-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <a
-      href="tel:1300000000"
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform group"
+    <button
+      onClick={handleClick}
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-primary rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform group cursor-pointer"
     >
       <MessageCircle className="w-7 h-7 text-primary-foreground" />
       
@@ -18,7 +27,7 @@ const ChatWidget = () => {
 
       {/* Pulse animation */}
       <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-25" />
-    </a>
+    </button>
   );
 };
 
