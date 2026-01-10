@@ -6,7 +6,7 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
-import ChatWidget from "@/components/ChatWidget";
+
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const Index = () => {
@@ -20,7 +20,7 @@ const Index = () => {
       <FAQ />
       <FinalCTA />
       <Footer />
-      <ChatWidget />
+      
       <MobileStickyCTA />
     </main>
   );
