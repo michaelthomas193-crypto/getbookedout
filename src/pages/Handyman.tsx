@@ -200,7 +200,7 @@ const Handyman = () => {
       {/* Mobile Sticky CTA */}
       {showStickyCTA && (
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur-sm border-t border-border md:hidden z-50">
-          <a href="tel:0468092946">
+          <a href="tel:0485008132">
             <Button 
               size="lg" 
               className="w-full h-12 text-base font-semibold text-white hover:opacity-90"
