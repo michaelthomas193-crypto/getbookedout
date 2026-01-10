@@ -55,8 +55,8 @@ const Header = () => {
       {/* Top Banner - Hidden on mobile for cleaner look */}
       <div className="hidden sm:block bg-primary text-primary-foreground text-sm py-2 text-center">
         <span className="font-medium">Questions? Call us: </span>
-        <a href="tel:1300000000" className="font-bold hover:underline">
-          1300 000 000
+        <a href="tel:0468092946" className="font-bold hover:underline">
+          0468 092 946
         </a>
         <span className="mx-2">|</span>
         <a href="mailto:bookings@getbookedout.com.au" className="hover:underline">
@@ -203,8 +203,8 @@ const Header = () => {
               
               {/* Contact info on mobile */}
               <div className="mt-6 text-center space-y-2 text-muted-foreground">
-                <a href="tel:1300000000" className="block py-2 font-medium hover:text-primary">
-                  1300 000 000
+                <a href="tel:0468092946" className="block py-2 font-medium hover:text-primary">
+                  0468 092 946
                 </a>
                 <a href="mailto:bookings@getbookedout.com.au" className="block py-2 hover:text-primary">
                   bookings@getbookedout.com.au
