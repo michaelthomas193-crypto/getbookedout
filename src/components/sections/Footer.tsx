@@ -23,11 +23,11 @@ const Footer = () => {
                 bookings@getbookedout.com.au
               </a>
               <a 
-                href="tel:0468092946" 
+                href="tel:0485008132" 
                 className="flex items-center gap-2 hover:text-primary transition-colors min-h-[44px] py-2"
               >
                 <Phone className="w-4 h-4" />
-                0468 092 946
+                0485 008 132
               </a>
               <div className="flex items-center gap-2 py-2">
                 <MapPin className="w-4 h-4" />
