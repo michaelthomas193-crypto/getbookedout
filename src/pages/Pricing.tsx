@@ -7,54 +7,37 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const pricingPlans = [
   {
-    name: "Starter",
-    price: "$299",
+    name: "Essentials",
+    price: "$499",
     tagline: "Stop Losing Jobs to Missed Calls",
     features: [
-      "Professional landing page that actually converts enquiries",
-      "Missed call text-back — every unanswered call gets an instant response",
-      "Automatic review requests after every job",
+      "AI Chatbot — answers enquiries 24/7 on your website",
+      "Professional Landing Page — done-for-you, built to convert",
+      "Missed Call Text-Back — every unanswered call gets an instant response",
     ],
     description:
-      "You're on a job. Phone rings. Can't answer. Instead of losing that customer to the next bloke on Google, they get a text in seconds. You follow up when you're ready.",
+      "You're on a job. Phone rings. Can't answer. Instead of losing that customer to the next bloke on Google, they get a text in seconds. Your website chat handles the late-night browsers and weekend enquiries — so you wake up to jobs, not missed opportunities.",
     highlighted: false,
     badge: null,
-    order: 2,
   },
   {
-    name: "Growth",
-    price: "$499",
-    tagline: "Never Miss an Enquiry — Even at 10pm on a Saturday",
-    features: [
-      "Everything in Starter",
-      "AI Chatbot — answers questions, captures details, books jobs 24/7",
-    ],
-    description:
-      "Enquiries don't stop at 5pm. Your website chat handles the late-night browsers, the weekend planners, and the 'just quickly checking' customers — so you wake up to qualified jobs in your calendar.",
-    highlighted: true,
-    badge: "Most Popular",
-    order: 1, // Show first on mobile
-  },
-  {
-    name: "Pro",
-    price: "$749",
+    name: "Complete",
+    price: "$999",
     tagline: "Your Own Receptionist — Without the Salary",
     features: [
-      "Everything in Growth",
+      "Everything in Essentials",
       "AI Receptionist — answers calls, handles customer service, books appointments",
+      "Calendar Integration — customers book directly into your calendar",
+      "Google Review Automation — automatic requests after every job, only 5-stars go to Google",
     ],
     description:
-      "A full-time receptionist costs $50k+ a year. This does the same job for a fraction of the price — answers your phone, books jobs, filters tyre-kickers — while you stay on the tools.",
-    highlighted: false,
-    badge: null,
-    order: 3,
+      "A full-time receptionist costs $50k+ a year. This does the same job for a fraction of the price — answers your phone, books jobs, filters tyre-kickers, and builds your Google reviews — while you stay on the tools.",
+    highlighted: true,
+    badge: "Most Popular",
   },
 ];
 
 const Pricing = () => {
-  // Sort plans for mobile - Most Popular first
-  const sortedPlans = [...pricingPlans].sort((a, b) => a.order - b.order);
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -73,59 +56,57 @@ const Pricing = () => {
 
       {/* Pricing Cards */}
       <section className="pb-8 md:pb-16 bg-background">
-        <div className="container-padding max-w-6xl mx-auto">
-          {/* Stack on mobile, 3 columns on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-stretch">
-            {/* On mobile, use sorted order. On desktop, use original order */}
-            {sortedPlans.map((plan) => (
+        <div className="container-padding max-w-5xl mx-auto">
+          {/* Stack on mobile, 2 columns on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+            {pricingPlans.map((plan) => (
               <Card
                 key={plan.name}
                 className={`relative flex flex-col h-full transition-all duration-300 ${
                   plan.highlighted
-                    ? "border-primary border-2 shadow-lg md:scale-105 z-10"
-                    : "border-border"
-                } ${plan.order === 1 ? 'order-first md:order-none' : ''}`}
-                style={{ order: window.innerWidth < 768 ? plan.order : undefined }}
+                    ? "border-primary border-2 shadow-xl md:scale-[1.02] z-10 ring-4 ring-primary/10"
+                    : "border-border shadow-sm"
+                }`}
               >
                 {plan.badge && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">
+                    <span className="bg-primary text-primary-foreground text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap shadow-md">
                       {plan.badge}
                     </span>
                   </div>
                 )}
-                <CardHeader className="text-center pb-3 md:pb-4 pt-6 md:pt-8">
-                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
+                <CardHeader className="text-center pb-3 md:pb-4 pt-8 md:pt-10">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                     {plan.name}
                   </h3>
-                  <div className="mb-2 md:mb-3">
-                    <span className="text-3xl md:text-4xl font-bold text-foreground">
+                  <div className="mb-3 md:mb-4">
+                    <span className="text-4xl md:text-5xl font-bold text-foreground">
                       {plan.price}
                     </span>
-                    <span className="text-muted-foreground">/month</span>
+                    <span className="text-muted-foreground text-lg">/month</span>
                   </div>
-                  <p className="text-xs md:text-sm font-medium text-primary">
+                  <p className="text-sm md:text-base font-medium text-primary">
                     {plan.tagline}
                   </p>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col px-4 md:px-6">
-                  <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+                <CardContent className="flex-1 flex flex-col px-5 md:px-8">
+                  <ul className="space-y-3 md:space-y-4 mb-5 md:mb-6">
                     {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2 md:gap-3">
-                        <Check className="h-4 w-4 md:h-5 md:w-5 text-primary shrink-0 mt-0.5" />
-                        <span className="text-xs md:text-sm text-foreground leading-relaxed">
+                      <li key={index} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                        <span className="text-sm md:text-base text-foreground leading-relaxed">
                           {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6 flex-1 leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 flex-1 leading-relaxed">
                     {plan.description}
                   </p>
                   <Button
-                    className="w-full min-h-[48px]"
+                    className="w-full min-h-[52px]"
                     variant={plan.highlighted ? "default" : "outline"}
-                    size="lg"
+                    size="xl"
                     asChild
                   >
                     <a href="/#hero">Get Started</a>
@@ -136,7 +117,7 @@ const Pricing = () => {
           </div>
 
           {/* Usage Costs Note */}
-          <p className="text-center text-xs md:text-sm text-muted-foreground mt-6 md:mt-8">
+          <p className="text-center text-sm md:text-base text-muted-foreground mt-8 md:mt-10">
             AI and texting usage billed at cost — typically $10-50/month
             depending on volume.
           </p>
@@ -144,7 +125,7 @@ const Pricing = () => {
       </section>
 
       {/* Bottom CTA Section */}
-      <section className="py-10 md:py-16 bg-secondary/30">
+      <section className="py-12 md:py-20 bg-secondary/30">
         <div className="container-padding max-w-3xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
             Not Sure Which Plan Fits?
