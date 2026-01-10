@@ -46,10 +46,10 @@ const MobileStickyCTA = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-background p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] border-t border-border safe-area-bottom">
-      <a href="tel:1300000000" className="block">
+      <a href="tel:0468092946" className="block">
         <Button size="lg" className="w-full min-h-[52px] gap-2 text-base font-semibold">
           <Phone className="w-5 h-5" />
-          CALL NOW - 1300 000 000
+          CALL NOW - 0468 092 946
         </Button>
       </a>
     </div>
