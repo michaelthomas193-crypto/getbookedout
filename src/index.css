@@ -110,10 +110,17 @@
 
 /* Chat widget bubble - position to align with sticky CTA bar */
 @media (max-width: 767px) {
+  /* Try multiple selectors (LeadConnector implementations vary) */
   chat-widget,
+  chat-widget-container,
+  #chat-widget,
+  #chat-widget-container,
+  .lc_text-widget,
+  [data-chat-widget],
   [class*="chat-widget"] {
-    bottom: 12px !important;
     right: 12px !important;
+    bottom: 6px !important; /* nudge down to align with CTA */
+    transform: translateY(6px) !important;
   }
 }
 
