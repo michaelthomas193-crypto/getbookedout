@@ -108,17 +108,13 @@
   }
 }
 
-/* Chat widget bubble - white border to separate from Call Now button */
-chat-widget {
-  --chat-widget-border: 3px solid white !important;
-}
-
-chat-widget::part(bubble),
-chat-widget .lc_text-widget,
-chat-widget [class*="bubble"],
-chat-widget [class*="chat-bubble"] {
-  border: 3px solid white !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 3px white !important;
+/* Chat widget bubble - position to align with sticky CTA bar */
+@media (max-width: 767px) {
+  chat-widget,
+  [class*="chat-widget"] {
+    bottom: 12px !important;
+    right: 12px !important;
+  }
 }
 
 @layer utilities {
