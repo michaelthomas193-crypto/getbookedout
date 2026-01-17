@@ -12,7 +12,7 @@ const WhyUs = () => {
       {/* Section 1 - Hero */}
       <section className="pt-8 pb-4 md:pt-10 md:pb-6 bg-secondary/30">
         <div className="container-padding max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
             Good Tradies Lose Jobs Every Day.{" "}
             <span className="text-primary">Not Because They're Bad—Because They're Busy.</span>
           </h1>
@@ -25,13 +25,13 @@ const WhyUs = () => {
       {/* Section 2 - The Cost of Missed Calls */}
       <section className="py-6 md:py-8 bg-background">
         <div className="container-padding max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4">
             That Missed Call at 7pm?{" "}
             <span className="text-primary">It Was Worth $500.</span>
           </h2>
           
-          <div className="prose prose-lg max-w-none mb-10">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+          <div className="prose prose-lg max-w-none mb-6">
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
               Let's do the maths. Say you miss just 4 calls a day. That's 28 missed calls a week. 
               85% of those people won't call back—they've already called your competitor. 
               That leaves you with 24 lost opportunities every single week.
