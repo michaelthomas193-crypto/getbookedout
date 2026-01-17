@@ -45,7 +45,7 @@ const Header = () => {
       { label: "Carpenters", href: "/carpentry" },
       { label: "Concreters", href: "/concreting" },
     ]},
-    { label: "Why Us", href: "/#why-us" },
+    { label: "Why Us", href: "/why-us" },
     { label: "Pricing", href: "/pricing" },
     { label: "Who We Are", href: "/who-we-are" },
   ];
