@@ -10,7 +10,7 @@ const WhyUs = () => {
       <Header />
       
       {/* Section 1 - Hero */}
-      <section className="py-12 md:py-16 bg-secondary/30">
+      <section className="pt-12 pb-8 md:pt-16 md:pb-10 bg-secondary/30">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Good Tradies Lose Jobs Every Day.{" "}
@@ -23,7 +23,7 @@ const WhyUs = () => {
       </section>
 
       {/* Section 2 - The Cost of Missed Calls */}
-      <section className="py-12 md:py-16 bg-background">
+      <section className="pt-8 pb-12 md:pt-10 md:pb-16 bg-background">
         <div className="container-padding max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
             That Missed Call at 7pm?{" "}
