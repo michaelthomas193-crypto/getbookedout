@@ -3,28 +3,14 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 const MobileStickyCTA = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the hero form and final CTA form positions
-      const heroForm = document.getElementById('hero-form');
-      const finalCTA = document.querySelector('section:has(form)');
-      
-      if (!heroForm) {
-        setIsVisible(true);
-        return;
-      }
-
-      const heroRect = heroForm.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Hide when hero form is in view (within viewport)
-      const heroInView = heroRect.top < windowHeight && heroRect.bottom > 100;
-      
-      // Also check for any form section near the bottom
+      // Check if any form is in view - if so, hide the CTA
       const allForms = document.querySelectorAll('form');
       let anyFormInView = false;
+      const windowHeight = window.innerHeight;
       
       allForms.forEach((form) => {
         const formRect = form.getBoundingClientRect();
@@ -33,7 +19,7 @@ const MobileStickyCTA = () => {
         }
       });
 
-      setIsVisible(!heroInView && !anyFormInView);
+      setIsHidden(anyFormInView);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -42,7 +28,7 @@ const MobileStickyCTA = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!isVisible) return null;
+  if (isHidden) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-background p-3 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] border-t border-border safe-area-bottom">
