@@ -10,7 +10,7 @@ const WhyUs = () => {
       <Header />
       
       {/* Section 1 - Hero */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Good Tradies Lose Jobs Every Day.{" "}
@@ -23,7 +23,7 @@ const WhyUs = () => {
       </section>
 
       {/* Section 2 - The Cost of Missed Calls */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container-padding max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8">
             That Missed Call at 7pm?{" "}
@@ -112,7 +112,7 @@ const WhyUs = () => {
       </section>
 
       {/* Section 3 - Receptionist Comparison */}
-      <section className="py-16 md:py-24 bg-secondary/30">
+      <section className="py-12 md:py-16 bg-secondary/30">
         <div className="container-padding max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
             A Receptionist Costs $80k.{" "}
@@ -192,7 +192,7 @@ const WhyUs = () => {
       </section>
 
       {/* Section 4 - The Stress */}
-      <section className="py-16 md:py-24 bg-muted/50">
+      <section className="py-12 md:py-16 bg-muted/50">
         <div className="container-padding max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10">
             You Became a Tradie to Do the Work.{" "}
@@ -223,7 +223,7 @@ const WhyUs = () => {
       </section>
 
       {/* Section 5 - CTA */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+      <section className="py-12 md:py-16 bg-primary text-primary-foreground">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
             Stop Losing Jobs. Stop Paying Receptionist Wages.{" "}
