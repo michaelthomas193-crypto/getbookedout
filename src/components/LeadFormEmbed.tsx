@@ -1,5 +1,12 @@
 import { useEffect } from "react";
 
+// Declare fbq for TypeScript
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 interface LeadFormEmbedProps {
   title?: string;
   subtitle?: string;
@@ -24,6 +31,26 @@ const LeadFormEmbed = ({
       script.async = true;
       document.body.appendChild(script);
     }
+
+    // Listen for form submission messages from LeadConnector iframe
+    const handleMessage = (event: MessageEvent) => {
+      // LeadConnector sends messages on form events
+      if (
+        event.data?.type === 'form-submitted' ||
+        event.data?.event === 'form_submit' ||
+        event.data?.formSubmitted ||
+        (typeof event.data === 'string' && event.data.includes('submit'))
+      ) {
+        // Fire Meta Pixel CompleteRegistration event
+        if (window.fbq) {
+          window.fbq('track', 'CompleteRegistration');
+          console.log('Meta Pixel: CompleteRegistration event fired');
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
   }, []);
 
   return (
