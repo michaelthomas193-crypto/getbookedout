@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* About Link & Socials - Centered on mobile */}
+          {/* About Link - Centered on mobile */}
           <div className="flex flex-col items-center md:items-end gap-5">
             <Link 
               to="/who-we-are" 
@@ -67,6 +67,31 @@ const Footer = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex flex-col items-center md:items-end gap-3">
+            <span className="text-white/50 text-sm font-medium">Legal</span>
+            <div className="flex flex-col items-center md:items-end gap-2">
+              <Link 
+                to="/terms" 
+                className="text-white/70 hover:text-primary transition-colors text-sm min-h-[44px] flex items-center"
+              >
+                Terms of Service
+              </Link>
+              <Link 
+                to="/cookies" 
+                className="text-white/70 hover:text-primary transition-colors text-sm min-h-[44px] flex items-center"
+              >
+                Cookie Policy
+              </Link>
+              <Link 
+                to="/privacy" 
+                className="text-white/70 hover:text-primary transition-colors text-sm min-h-[44px] flex items-center"
+              >
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>
