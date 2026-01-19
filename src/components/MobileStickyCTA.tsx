@@ -19,7 +19,17 @@ const MobileStickyCTA = () => {
         }
       });
 
-      setIsHidden(anyFormInView);
+      // Also hide when footer is in view
+      const footer = document.querySelector('footer');
+      let footerInView = false;
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        if (footerRect.top < windowHeight) {
+          footerInView = true;
+        }
+      }
+
+      setIsHidden(anyFormInView || footerInView);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
