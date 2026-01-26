@@ -20,13 +20,13 @@ const Hero = () => {
               <span className="block text-primary">Bad At The Other Stuff?</span>
             </h1>
             
-            <p className="text-base md:text-lg text-muted-foreground mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-base md:text-lg text-foreground/80 mb-2 md:mb-3 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               You didn't become a tradie to chase leads, manage websites, and beg for reviews. 
               Get Booked Out handles all of that — so you can focus on what you're actually good at.
             </p>
             
             {/* Trust Badge */}
-            <div className="flex items-center justify-center lg:justify-start text-muted-foreground mb-4 lg:mb-0">
+            <div className="flex items-center justify-center lg:justify-start text-foreground/70 mb-4 lg:mb-0">
               <span className="text-sm font-medium">Built by a business owner who was sick of the same problems.</span>
             </div>
           </div>
