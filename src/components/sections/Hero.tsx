@@ -90,28 +90,19 @@ const Hero = () => {
           <div id="hero-form" className="relative animate-fade-up order-2 lg:order-2" style={{ animationDelay: "0.1s" }}>
             {/* Form Header */}
             <div className="bg-white rounded-t-xl border border-b-0 border-border px-6 py-5 text-center">
-              <h2 
-                className="text-xl md:text-2xl font-bold"
-                style={{ color: '#1a1a1a' }}
-              >
+              <h2 className="text-xl md:text-2xl font-bold text-primary">
                 Start Your Free 14-Day Trial
               </h2>
+              <p className="text-[13px] leading-[1.5] text-muted-foreground mt-2">
+                Takes 2 minutes to set up. No credit card required. Cancel anytime.
+              </p>
             </div>
             
             {/* Form Embed */}
             <LeadFormEmbed height={420} showHeader={false} />
             
             {/* Below Form Text */}
-            <div 
-              className="bg-white rounded-b-xl border border-t-0 border-border px-6 py-3 text-center"
-              style={{ marginTop: '-2px' }}
-            >
-              <p 
-                className="text-[13px] leading-[1.5]"
-                style={{ color: '#666666' }}
-              >
-                Takes 2 minutes to set up. No credit card required. Cancel anytime.
-              </p>
+            <div className="bg-white rounded-b-xl border border-t-0 border-border px-6 py-3" style={{ marginTop: '-2px' }}>
             </div>
           </div>
         </div>
