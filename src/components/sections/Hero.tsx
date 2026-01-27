@@ -25,19 +25,12 @@ const Hero = () => {
             </h1>
             
             {/* Subheadline */}
-            <div className="mb-6 max-w-[580px] mx-auto lg:mx-0">
-              <p 
-                className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4]"
-                style={{ color: '#444444' }}
-              >
-                Try our Automated System:
-              </p>
-              <p 
-                className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] text-primary"
-              >
-                Free for 14 days. No credit card. No contract.
-              </p>
-            </div>
+            <p 
+              className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] mb-6 max-w-[580px] mx-auto lg:mx-0"
+              style={{ color: '#444444' }}
+            >
+              Try our AI receptionist <span className="text-primary">free for 14 days</span>. <span className="text-primary">No credit card. No contract.</span> Just see how many jobs you stop losing.
+            </p>
             
             {/* Body Copy */}
             <div 
@@ -97,19 +90,19 @@ const Hero = () => {
           <div id="hero-form" className="relative animate-fade-up order-2 lg:order-2" style={{ animationDelay: "0.1s" }}>
             {/* Form Header */}
             <div className="bg-white rounded-t-xl border border-b-0 border-border px-6 py-5 text-center">
-              <h2 className="text-xl md:text-2xl font-bold text-primary">
+              <h2 className="text-2xl md:text-[28px] font-bold text-primary mb-0">
                 Start Your Free 14-Day Trial
               </h2>
-              <p className="text-[13px] leading-[1.5] text-muted-foreground mt-2">
-                Takes 2 minutes to set up. No credit card required. Cancel anytime.
-              </p>
             </div>
             
             {/* Form Embed */}
             <LeadFormEmbed height={420} showHeader={false} />
             
             {/* Below Form Text */}
-            <div className="bg-white rounded-b-xl border border-t-0 border-border px-6 py-3" style={{ marginTop: '-2px' }}>
+            <div className="bg-white rounded-b-xl border border-t-0 border-border px-6 py-4 text-center" style={{ marginTop: '-2px' }}>
+              <p className="text-[13px] leading-[1.5] text-muted-foreground max-w-[90%] mx-auto">
+                Takes 2 minutes to set up. No credit card required. Cancel anytime.
+              </p>
             </div>
           </div>
         </div>
