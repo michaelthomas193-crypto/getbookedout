@@ -25,12 +25,19 @@ const Hero = () => {
             </h1>
             
             {/* Subheadline */}
-            <p 
-              className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] mb-6 max-w-[580px] mx-auto lg:mx-0"
-              style={{ color: '#444444' }}
-            >
-              Try our AI receptionist <span className="text-primary">free for 14 days</span>. <span className="text-primary">No credit card. No contract.</span> Just see how many jobs you stop losing.
-            </p>
+            <div className="mb-6 max-w-[580px] mx-auto lg:mx-0">
+              <p 
+                className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4]"
+                style={{ color: '#444444' }}
+              >
+                Try our Automated System:
+              </p>
+              <p 
+                className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] text-primary"
+              >
+                Free for 14 days. No credit card. No contract.
+              </p>
+            </div>
             
             {/* Body Copy */}
             <div 
