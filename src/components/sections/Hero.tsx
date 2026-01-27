@@ -21,7 +21,7 @@ const Hero = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-[1.2] mb-4 max-w-[600px] mx-auto lg:mx-0"
               style={{ color: '#1a1a1a' }}
             >
-              Stop Losing 3-5 Jobs This Week
+              Stop Losing <span className="text-primary">3-5 Jobs</span> This Week
             </h1>
             
             {/* Subheadline */}
@@ -29,7 +29,7 @@ const Hero = () => {
               className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] mb-6 max-w-[580px] mx-auto lg:mx-0"
               style={{ color: '#444444' }}
             >
-              Try our AI receptionist free for 14 days. No credit card. No contract. Just see how many jobs you stop losing.
+              Try our AI receptionist <span className="text-primary">free for 14 days</span>. <span className="text-primary">No credit card. No contract.</span> Just see how many jobs you stop losing.
             </p>
             
             {/* Body Copy */}
@@ -51,7 +51,7 @@ const Hero = () => {
                 className="text-base font-semibold mb-3"
                 style={{ color: '#444444' }}
               >
-                Here's what you get for 14 days free:
+                Here's what you get for <span className="text-primary">14 days free</span>:
               </p>
               <ul className="space-y-2 text-base leading-[1.8]" style={{ color: '#444444' }}>
                 <li className="flex items-start gap-2">
