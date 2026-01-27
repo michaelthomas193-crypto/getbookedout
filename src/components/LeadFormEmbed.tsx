@@ -54,7 +54,7 @@ const LeadFormEmbed = ({
   }, []);
 
   return (
-    <div className={`bg-card rounded-2xl shadow-2xl border border-border overflow-hidden ${className}`}>
+    <div className={`bg-card overflow-hidden ${className}`}>
       {/* Form Header */}
       {showHeader && (
         <div className="text-center p-4 pb-0">

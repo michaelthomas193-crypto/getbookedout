@@ -88,21 +88,26 @@ const Hero = () => {
 
           {/* Right Content - Demo Form */}
           <div id="hero-form" className="relative animate-fade-up order-2 lg:order-2" style={{ animationDelay: "0.1s" }}>
-            {/* Form Header */}
-            <div className="bg-white rounded-t-xl border border-b-0 border-border px-6 py-5 text-center">
-              <h2 className="text-2xl md:text-[28px] font-bold text-primary mb-0">
-                Start Your Free 14-Day Trial
-              </h2>
-            </div>
-            
-            {/* Form Embed */}
-            <LeadFormEmbed height={420} showHeader={false} />
-            
-            {/* Below Form Text */}
-            <div className="bg-white rounded-b-xl border border-t-0 border-border px-6 py-4 text-center" style={{ marginTop: '-2px' }}>
-              <p className="text-[13px] leading-[1.5] text-muted-foreground max-w-[90%] mx-auto">
-                Takes 2 minutes to set up. No credit card required. Cancel anytime.
-              </p>
+            {/* Unified Form Container */}
+            <div className="bg-white rounded-xl border border-border overflow-hidden">
+              {/* Form Header */}
+              <div className="px-6 py-5 text-center">
+                <h2 className="text-2xl md:text-[28px] font-bold text-primary mb-0">
+                  Start Your Free 14-Day Trial
+                </h2>
+              </div>
+              
+              {/* Form Embed */}
+              <div className="-mt-2">
+                <LeadFormEmbed height={420} showHeader={false} className="rounded-none border-0 shadow-none" />
+              </div>
+              
+              {/* Below Form Text */}
+              <div className="px-6 py-4 text-center">
+                <p className="text-[13px] leading-[1.5] text-muted-foreground max-w-[90%] mx-auto">
+                  Takes 2 minutes to set up. No credit card required. Cancel anytime.
+                </p>
+              </div>
             </div>
           </div>
         </div>
