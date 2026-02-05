@@ -18,6 +18,7 @@ import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import Privacy from "./pages/Privacy";
 import ThankYou from "./pages/ThankYou";
+ import Thanks from "./pages/Thanks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/thank-you" element={<ThankYou />} />
+           <Route path="/thanks" element={<Thanks />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
