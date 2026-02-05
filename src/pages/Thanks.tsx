@@ -14,13 +14,10 @@
          </div>
  
          {/* Main Heading */}
-         <div className="space-y-4">
+         <div>
            <h1 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
              Thanks for Getting in Touch!
            </h1>
-           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-             We've received your details and one of our team will be in touch within 24 hours.
-           </p>
          </div>
  
          {/* Spam Notice */}
