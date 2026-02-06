@@ -3,41 +3,20 @@ import { CheckCircle } from "lucide-react";
 
 const FormThankYou = () => {
   useEffect(() => {
-    // Completely remove the chat widget from the DOM on this page
-    const hideWidget = () => {
-      const chatWidget = document.querySelector("chat-widget");
-      if (chatWidget) {
-        chatWidget.remove();
+    // Hide (not remove) the chat widget so it can be restored on other pages
+    const style = document.createElement("style");
+    style.id = "hide-chat-widget";
+    style.textContent = `
+      chat-widget {
+        display: none !important;
       }
-      // Also remove the loader script's injected elements
-      const widgetElements = document.querySelectorAll(
-        '[data-widget-id], #lc_chat_layout, .lc_text-widget'
-      );
-      widgetElements.forEach((el) => el.remove());
-    };
-
-    // Run immediately
-    hideWidget();
-
-    // Also run with a delay since the widget loads asynchronously
-    const timer1 = setTimeout(hideWidget, 500);
-    const timer2 = setTimeout(hideWidget, 1500);
-    const timer3 = setTimeout(hideWidget, 3000);
-
-    // Observe for dynamically added chat widget
-    const observer = new MutationObserver(() => {
-      const chatWidget = document.querySelector("chat-widget");
-      if (chatWidget) {
-        chatWidget.remove();
-      }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      observer.disconnect();
+      // Restore the widget when navigating away
+      const el = document.getElementById("hide-chat-widget");
+      if (el) el.remove();
     };
   }, []);
 
