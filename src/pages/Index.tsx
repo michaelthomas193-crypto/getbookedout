@@ -7,8 +7,6 @@ import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
 
-import MobileStickyCTA from "@/components/MobileStickyCTA";
-
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
@@ -20,8 +18,6 @@ const Index = () => {
       <FAQ />
       <FinalCTA />
       <Footer />
-      
-      <MobileStickyCTA />
     </main>
   );
 };
