@@ -7,15 +7,34 @@ const FormThankYou = () => {
     const style = document.createElement("style");
     style.id = "hide-chat-widget";
     style.textContent = `
-      #lc_chat_layout, .lc_text-widget, [data-widget-id] {
+      chat-widget,
+      #lc_chat_layout,
+      .lc_text-widget,
+      [data-widget-id],
+      iframe[src*="leadconnector"],
+      iframe[src*="widgets.leadconnectorhq"] {
         display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
       }
     `;
     document.head.appendChild(style);
 
+    // Also try to directly hide the chat widget element
+    const chatWidget = document.querySelector("chat-widget");
+    if (chatWidget) {
+      (chatWidget as HTMLElement).style.display = "none";
+    }
+
     return () => {
       const el = document.getElementById("hide-chat-widget");
       if (el) el.remove();
+      // Restore chat widget when leaving
+      const widget = document.querySelector("chat-widget");
+      if (widget) {
+        (widget as HTMLElement).style.display = "";
+      }
     };
   }, []);
 
