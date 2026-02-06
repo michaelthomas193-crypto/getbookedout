@@ -3,38 +3,41 @@ import { CheckCircle } from "lucide-react";
 
 const FormThankYou = () => {
   useEffect(() => {
-    // Hide the LeadConnector chat widget on this page
-    const style = document.createElement("style");
-    style.id = "hide-chat-widget";
-    style.textContent = `
-      chat-widget,
-      #lc_chat_layout,
-      .lc_text-widget,
-      [data-widget-id],
-      iframe[src*="leadconnector"],
-      iframe[src*="widgets.leadconnectorhq"] {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
+    // Completely remove the chat widget from the DOM on this page
+    const hideWidget = () => {
+      const chatWidget = document.querySelector("chat-widget");
+      if (chatWidget) {
+        chatWidget.remove();
       }
-    `;
-    document.head.appendChild(style);
+      // Also remove the loader script's injected elements
+      const widgetElements = document.querySelectorAll(
+        '[data-widget-id], #lc_chat_layout, .lc_text-widget'
+      );
+      widgetElements.forEach((el) => el.remove());
+    };
 
-    // Also try to directly hide the chat widget element
-    const chatWidget = document.querySelector("chat-widget");
-    if (chatWidget) {
-      (chatWidget as HTMLElement).style.display = "none";
-    }
+    // Run immediately
+    hideWidget();
+
+    // Also run with a delay since the widget loads asynchronously
+    const timer1 = setTimeout(hideWidget, 500);
+    const timer2 = setTimeout(hideWidget, 1500);
+    const timer3 = setTimeout(hideWidget, 3000);
+
+    // Observe for dynamically added chat widget
+    const observer = new MutationObserver(() => {
+      const chatWidget = document.querySelector("chat-widget");
+      if (chatWidget) {
+        chatWidget.remove();
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      const el = document.getElementById("hide-chat-widget");
-      if (el) el.remove();
-      // Restore chat widget when leaving
-      const widget = document.querySelector("chat-widget");
-      if (widget) {
-        (widget as HTMLElement).style.display = "";
-      }
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+      observer.disconnect();
     };
   }, []);
 
