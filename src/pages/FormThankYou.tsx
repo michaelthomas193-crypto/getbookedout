@@ -1,8 +1,24 @@
+import { useEffect } from "react";
 import { CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const FormThankYou = () => {
+  useEffect(() => {
+    // Hide the LeadConnector chat widget on this page
+    const style = document.createElement("style");
+    style.id = "hide-chat-widget";
+    style.textContent = `
+      #lc_chat_layout, .lc_text-widget, [data-widget-id] {
+        display: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      const el = document.getElementById("hide-chat-widget");
+      if (el) el.remove();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
       <div className="max-w-lg w-full text-center space-y-6">
@@ -22,11 +38,6 @@ const FormThankYou = () => {
         <p className="text-lg text-muted-foreground leading-relaxed">
           Thanks for filling in the form. We've received your details and will be in touch shortly.
         </p>
-
-        {/* Back to Home */}
-        <Button asChild size="lg" className="mt-4">
-          <Link to="/">Back to Home</Link>
-        </Button>
       </div>
     </div>
   );
