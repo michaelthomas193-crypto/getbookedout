@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { CheckCircle, Mail, Settings, Rocket } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import logo from "@/assets/logo.png";
 
 const PaymentConfirmed = () => {
   useEffect(() => {
@@ -23,6 +24,9 @@ const PaymentConfirmed = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
       <div className="max-w-xl w-full text-center space-y-8">
+        {/* Logo */}
+        <img src={logo} alt="Get Booked Out" className="h-10 mx-auto" />
+
         {/* Success Icon */}
         <div className="flex justify-center">
           <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
