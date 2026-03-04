@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoOrange from "@/assets/logo-orange.png";
@@ -11,18 +11,24 @@ const RateUs = () => {
   const [selectedStar, setSelectedStar] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => {
+    // Load the form embed script
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handleSubmit = () => {
     if (selectedStar === 0) return;
 
     if (selectedStar === 5) {
-      // Redirect to Google review
       window.location.href = GOOGLE_REVIEW_URL;
     } else {
-      // Redirect to internal form for private feedback
       setSubmitted(true);
-      setTimeout(() => {
-        window.location.href = "/schedule-demo";
-      }, 2000);
     }
   };
 
@@ -31,15 +37,31 @@ const RateUs = () => {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center px-4">
-        <div className="max-w-md w-full text-center space-y-6">
+      <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
+        <div className="max-w-lg w-full text-center space-y-6">
           <img src={logoOrange} alt="Get Booked Out" className="h-10 mx-auto" />
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-            Thanks for Your Feedback!
+            We'd Love to Hear More
           </h1>
           <p className="text-muted-foreground">
-            We appreciate you taking the time. Redirecting you now so we can hear more about your experience…
+            Thanks for rating us. Let us know how we can do better — your feedback stays private.
           </p>
+          <div className="w-full">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/K90zyVa6HE0X17tLPc6i"
+              style={{ width: "100%", height: 313, border: "none", borderRadius: 3 }}
+              id="inline-K90zyVa6HE0X17tLPc6i"
+              data-layout='{"id":"INLINE"}'
+              data-trigger-type="alwaysShow"
+              data-activation-type="alwaysActivated"
+              data-deactivation-type="neverDeactivate"
+              data-form-name="Survey Feedback"
+              data-height="313"
+              data-layout-iframe-id="inline-K90zyVa6HE0X17tLPc6i"
+              data-form-id="K90zyVa6HE0X17tLPc6i"
+              title="Survey Feedback"
+            />
+          </div>
         </div>
       </div>
     );
@@ -48,10 +70,8 @@ const RateUs = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full text-center space-y-8">
-        {/* Logo */}
         <img src={logoOrange} alt="Get Booked Out" className="h-10 mx-auto" />
 
-        {/* Heading */}
         <div className="space-y-3">
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">
             How Was Your Experience?
@@ -61,7 +81,6 @@ const RateUs = () => {
           </p>
         </div>
 
-        {/* Star Rating */}
         <div className="flex justify-center gap-2">
           {[1, 2, 3, 4, 5].map((star) => (
             <button
@@ -84,7 +103,6 @@ const RateUs = () => {
           ))}
         </div>
 
-        {/* Star Label */}
         <div className="h-6">
           {activeStar > 0 && (
             <p className="text-sm font-medium text-muted-foreground animate-in fade-in duration-200">
@@ -93,7 +111,6 @@ const RateUs = () => {
           )}
         </div>
 
-        {/* Submit Button */}
         <Button
           size="lg"
           onClick={handleSubmit}
