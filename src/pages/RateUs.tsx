@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoOrange from "@/assets/logo-orange.png";
+import logo from "@/assets/logo.png";
 
 const GOOGLE_REVIEW_URL =
   "https://search.google.com/local/writereview?placeid=ChIJ4S7legKrE2sRFnJUnfJgpXA";
