@@ -39,7 +39,7 @@ const RateUs = () => {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
         <div className="max-w-lg w-full text-center space-y-6">
-          <img src={logoOrange} alt="Get Booked Out" className="h-10 mx-auto" />
+          <img src={logo} alt="Get Booked Out" className="h-10 mx-auto" />
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">
             We'd Love to Hear More
           </h1>
@@ -70,7 +70,7 @@ const RateUs = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
       <div className="max-w-md w-full text-center space-y-8">
-        <img src={logoOrange} alt="Get Booked Out" className="h-10 mx-auto" />
+        <img src={logo} alt="Get Booked Out" className="h-10 mx-auto" />
 
         <div className="space-y-3">
           <h1 className="text-2xl md:text-3xl font-bold text-foreground">
