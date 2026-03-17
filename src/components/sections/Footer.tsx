@@ -47,25 +47,22 @@ const Footer = () => {
             
             <div className="flex gap-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=61586125082752" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/getbookedout.au/?hl=en" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-11 h-11 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
