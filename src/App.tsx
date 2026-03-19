@@ -23,6 +23,7 @@ import ScheduleDemo from "./pages/ScheduleDemo";
 import FormThankYou from "./pages/FormThankYou";
 import PaymentConfirmed from "./pages/PaymentConfirmed";
 import RateUs from "./pages/RateUs";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
