@@ -55,6 +55,7 @@ const App = () => (
            <Route path="/form-thank-you" element={<FormThankYou />} />
            <Route path="/payment-confirmed" element={<PaymentConfirmed />} />
            <Route path="/rate-us" element={<RateUs />} />
+           <Route path="/unsubscribe" element={<Unsubscribe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
