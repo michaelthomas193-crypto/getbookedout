@@ -24,6 +24,7 @@ import FormThankYou from "./pages/FormThankYou";
 import PaymentConfirmed from "./pages/PaymentConfirmed";
 import RateUs from "./pages/RateUs";
 import Unsubscribe from "./pages/Unsubscribe";
+import NeverMissEnquiry from "./pages/NeverMissEnquiry";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ const App = () => (
            <Route path="/payment-confirmed" element={<PaymentConfirmed />} />
            <Route path="/rate-us" element={<RateUs />} />
            <Route path="/unsubscribe" element={<Unsubscribe />} />
+           <Route path="/never-miss-an-enquiry-again" element={<NeverMissEnquiry />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
