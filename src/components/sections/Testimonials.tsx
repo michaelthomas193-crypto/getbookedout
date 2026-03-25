@@ -58,7 +58,7 @@ const Testimonials = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title">
-            See Why Service Businesses Trust <span className="text-[#2B8BBF]">Get Booked Out</span>
+            What Our Clients Say About <span className="text-primary">Get Booked Out</span>
           </h2>
         </div>
 
