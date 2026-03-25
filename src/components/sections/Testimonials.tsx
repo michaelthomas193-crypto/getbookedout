@@ -110,7 +110,6 @@ const Testimonials = () => {
                   </div>
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.business}</p>
                   </div>
                 </div>
               </div>
