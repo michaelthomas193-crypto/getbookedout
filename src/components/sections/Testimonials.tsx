@@ -3,39 +3,34 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Within the first week, we had 12 qualified leads. By month two, we'd closed $87,000 in jobs. Get Booked Out changed our business.",
-    name: "Michael Torres",
-    business: "Torres HVAC Solutions, Sydney NSW",
-    avatar: "MT",
-    avatarBg: "bg-blue-500",
+    quote: "I honestly didn't know where to start with AI on my business model but I knew I needed it. Thank you so so much for streamlining the process and making it easy for me!",
+    name: "Therese Smith",
+    avatar: "TS",
+    avatarBg: "bg-primary",
   },
   {
-    quote: "No more chasing leads or wasting time on tyre-kickers. Every call we get is from a homeowner ready to buy. Our close rate jumped from 40% to 72%.",
-    name: "Sarah Chen",
-    business: "CoolComfort Pro, Melbourne VIC",
-    avatar: "SC",
-    avatarBg: "bg-green-500",
+    quote: "Didn't think it would be this easy managing my schedule with clients! With the help of their AI system, I've got a 24/7 receptionist and more! Highly recommended 10/10",
+    name: "John",
+    avatar: "J",
+    avatarBg: "bg-accent",
   },
   {
-    quote: "I used to lose half my leads because I couldn't answer the phone on a job. Now every single one gets handled. I've hired two extra blokes just to keep up with the work.",
-    name: "David Walsh",
-    business: "Walsh Electrical, Brisbane QLD",
-    avatar: "DW",
-    avatarBg: "bg-purple-500",
+    quote: "I have no idea how to use AI for my business so using Get Booked Out was a super helpful and affordable way to take advantage of the new tech! Thank you Jesse!",
+    name: "Jayson",
+    avatar: "J",
+    avatarBg: "bg-secondary",
   },
   {
-    quote: "The review automation alone has boosted our Google rating from 4.1 to 4.8 stars. Customers find us way easier now.",
-    name: "Emma Davis",
-    business: "Davis Plumbing, Perth WA",
-    avatar: "ED",
-    avatarBg: "bg-pink-500",
+    quote: "Very professional and easy to deal with, highly recommend.",
+    name: "Anonymous",
+    avatar: "★",
+    avatarBg: "bg-primary",
   },
   {
-    quote: "Finally, a system that actually works! Setup was painless and the results were immediate. Best investment we've made.",
-    name: "James Thompson",
-    business: "Thompson Electrical, Adelaide SA",
-    avatar: "JT",
-    avatarBg: "bg-orange-500",
+    quote: "Amazing customer service 👌. It was smooth and easy process, they paid very quickly.",
+    name: "Anonymous",
+    avatar: "★",
+    avatarBg: "bg-accent",
   },
 ];
 
@@ -59,11 +54,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section-padding bg-gray-light">
+    <section id="testimonials" className="section-padding bg-secondary/30">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="section-title">
-            See Why Service Businesses Trust <span className="text-[#2B8BBF]">Get Booked Out</span>
+            What Our Clients Say About <span className="text-primary">Get Booked Out</span>
           </h2>
         </div>
 
@@ -99,7 +94,7 @@ const Testimonials = () => {
                 {/* Stars - Yellow/Gold */}
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-5 h-5 fill-[hsl(var(--warning))] text-[hsl(var(--warning))]" />
                   ))}
                 </div>
                 
@@ -115,7 +110,6 @@ const Testimonials = () => {
                   </div>
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.business}</p>
                   </div>
                 </div>
               </div>
@@ -143,12 +137,6 @@ const Testimonials = () => {
               />
             ))}
           </div>
-        </div>
-
-        <div className="text-center mt-8">
-          <a href="#results" className="text-primary font-semibold hover:underline">
-            View More Results →
-          </a>
         </div>
       </div>
     </section>
