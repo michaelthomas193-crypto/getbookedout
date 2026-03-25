@@ -78,6 +78,20 @@ const reviewSchema = {
       "datePublished": "2025-03-15",
       "reviewBody": "I have no idea how to use AI for my business so using Get Booked Out was a super helpful and affordable way to take advantage of the new tech! Thank you Jesse!",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Anonymous" },
+      "datePublished": "2025-03-18",
+      "reviewBody": "Very professional and easy to deal with, highly recommend.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Anonymous" },
+      "datePublished": "2025-03-20",
+      "reviewBody": "Amazing customer service 👌. It was smooth and easy process, they paid very quickly.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
     }
   ]
 };
