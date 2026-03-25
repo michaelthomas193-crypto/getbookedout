@@ -24,6 +24,7 @@ import FormThankYou from "./pages/FormThankYou";
 import PaymentConfirmed from "./pages/PaymentConfirmed";
 import RateUs from "./pages/RateUs";
 import Unsubscribe from "./pages/Unsubscribe";
+import NeverMissEnquiry from "./pages/NeverMissEnquiry";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
