@@ -57,6 +57,27 @@ const reviewSchema = {
       "datePublished": "2025-02-20",
       "reviewBody": "Finally, a system that actually works! Setup was painless and the results were immediate. Best investment we've made.",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Therese Smith" },
+      "datePublished": "2025-03-10",
+      "reviewBody": "I honestly didn't know where to start with AI on my business model but I knew I needed it. Thank you so so much for streamlining the process and making it easy for me!",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "John" },
+      "datePublished": "2025-03-12",
+      "reviewBody": "Didn't think it would be this easy managing my schedule with clients! With the help of their AI system, I've got a 24/7 receptionist and more! Highly recommended 10/10",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Jayson" },
+      "datePublished": "2025-03-15",
+      "reviewBody": "I have no idea how to use AI for my business so using Get Booked Out was a super helpful and affordable way to take advantage of the new tech! Thank you Jesse!",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
     }
   ]
 };
