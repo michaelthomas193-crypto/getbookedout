@@ -138,12 +138,6 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
-
-        <div className="text-center mt-8">
-          <a href="#results" className="text-primary font-semibold hover:underline">
-            View More Results →
-          </a>
-        </div>
       </div>
     </section>
   );
