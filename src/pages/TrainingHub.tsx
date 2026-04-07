@@ -234,13 +234,6 @@ const advancedModules = [
     benefits: null,
   },
   {
-    title: "Reviews",
-    icon: Star,
-    what: "Request customer feedback.",
-    steps: ["Send review request", "Share link"],
-    benefits: ["Build trust", "Get more jobs"],
-  },
-  {
     title: "Payments",
     icon: CreditCard,
     what: "Collect payments.",
