@@ -25,6 +25,7 @@ import PaymentConfirmed from "./pages/PaymentConfirmed";
 import RateUs from "./pages/RateUs";
 import Unsubscribe from "./pages/Unsubscribe";
 import NeverMissEnquiry from "./pages/NeverMissEnquiry";
+import TrainingHub from "./pages/TrainingHub";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
