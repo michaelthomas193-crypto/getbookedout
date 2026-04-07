@@ -151,6 +151,64 @@ const coreModules = [
       benefits: ["See all jobs at a glance", "Stay organised"],
     },
   },
+  {
+    title: "Module 8: Integrations",
+    icon: Plug,
+    content: {
+      what: "Connect Google, Google Business Profile, Facebook, and other tools to your system.",
+      lessons: null,
+      steps: [
+        "Go to Settings → Integrations",
+        "Find the app you want to connect (Google, Facebook, Stripe, etc.)",
+        "Click Connect and sign in with your account",
+        "Allow the requested permissions",
+        "Once connected, your data will sync automatically",
+      ],
+      benefits: ["Sync calendars and contacts", "Manage everything from one place", "Connect payment and social tools"],
+      subsections: [
+        {
+          title: "Google Integration",
+          where: "Settings → Integrations → Google",
+          steps: [
+            "Click Connect next to Google",
+            "Sign in with your Google account",
+            "Allow permissions for Calendar & Contacts",
+            "Choose which calendars to sync",
+          ],
+          benefits: ["Two-way calendar sync", "Import Google contacts", "Google sign-in for your team"],
+        },
+        {
+          title: "Google Business Profile",
+          where: "Settings → Integrations → Google Business Profile",
+          steps: [
+            "Click Connect next to Google Business Profile (or Google My Business)",
+            "Sign in with the Google account linked to your business listing",
+            "Select your business location from the list",
+            "Once connected, manage reviews from Reputation → Reviews",
+            "Post updates via Marketing → Social Planner",
+          ],
+          benefits: ["Manage Google reviews from your dashboard", "Post updates directly to your listing", "Track customer engagement"],
+        },
+      ],
+    },
+  },
+  {
+    title: "Module 9: Reputation Management (Reviews)",
+    icon: Star,
+    content: {
+      what: "Request, manage, and respond to customer reviews — all from one place.",
+      lessons: null,
+      steps: [
+        "Go to Reputation → Reviews",
+        "View all your Google reviews in one dashboard",
+        "Reply to reviews directly from the platform",
+        "Go to Reputation → Requests to send review requests",
+        "Send via SMS or email with your review link",
+        "Track your overall rating and review count",
+      ],
+      benefits: ["Build trust with new customers", "Get more 5-star reviews", "Respond to reviews fast", "Boost your Google ranking"],
+    },
+  },
 ];
 
 const advancedModules = [
