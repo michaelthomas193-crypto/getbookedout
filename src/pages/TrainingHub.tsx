@@ -544,6 +544,12 @@ const TrainingHub = () => {
                           </div>
                         </div>
                       )}
+                      {"where" in mod && mod.where && (
+                        <div className="bg-muted/50 rounded-lg p-3 border border-border">
+                          <p className="text-sm font-semibold text-foreground mb-1">📍 Where to find it:</p>
+                          <p className="text-sm text-muted-foreground font-mono">{(mod as any).where}</p>
+                        </div>
+                      )}
                       {mod.benefits && (
                         <div>
                           <p className="text-sm font-semibold text-foreground mb-2">Benefits:</p>
