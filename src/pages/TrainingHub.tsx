@@ -32,6 +32,8 @@ import {
   ClipboardList,
   Layout,
   Settings,
+  Globe,
+  MapPin,
 } from "lucide-react";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -214,6 +216,36 @@ const advancedModules = [
     what: "Connect other tools.",
     steps: ["Go to Settings → Integrations", "Connect apps"],
     benefits: null,
+  },
+  {
+    title: "Google Integration",
+    icon: Globe,
+    what: "Connect your Google account to sync calendars, contacts, and enable Google sign-in.",
+    steps: [
+      "Go to Settings → Integrations",
+      "Find 'Google' and click Connect",
+      "Sign in with your Google account",
+      "Allow the requested permissions",
+      "Choose which calendars to sync",
+      "Confirm connection — your Google Calendar and Contacts will now sync automatically",
+    ],
+    benefits: ["Two-way calendar sync", "Import Google contacts", "Google sign-in for your team"],
+    where: "Settings → Integrations → Google",
+  },
+  {
+    title: "Google Business Profile",
+    icon: MapPin,
+    what: "Connect your Google Business Profile to manage reviews, post updates, and track engagement — all from one place.",
+    steps: [
+      "Go to Settings → Integrations",
+      "Find 'Google Business Profile' (or 'Google My Business')",
+      "Click Connect and sign in with the Google account linked to your business listing",
+      "Select your business location from the list",
+      "Once connected, go to Marketing → Social Planner to post updates to your profile",
+      "Go to Reputation → Reviews to see and respond to Google reviews",
+    ],
+    benefits: ["Manage Google reviews from your dashboard", "Post updates directly to your listing", "Track customer engagement"],
+    where: "Settings → Integrations → Google Business Profile",
   },
   {
     title: "Custom Values (Personalisation)",
@@ -510,6 +542,12 @@ const TrainingHub = () => {
                               <code key={i} className="bg-muted px-2 py-1 rounded text-xs font-mono text-foreground">{ex}</code>
                             ))}
                           </div>
+                        </div>
+                      )}
+                      {"where" in mod && mod.where && (
+                        <div className="bg-muted/50 rounded-lg p-3 border border-border">
+                          <p className="text-sm font-semibold text-foreground mb-1">📍 Where to find it:</p>
+                          <p className="text-sm text-muted-foreground font-mono">{(mod as any).where}</p>
                         </div>
                       )}
                       {mod.benefits && (
