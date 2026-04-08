@@ -45,38 +45,38 @@ const STORAGE_KEY = "ghl-training-checklist";
 const checklistDays = [
   {
     day: 1,
-    title: "Getting Started",
-    tasks: ["Log in to your account", "Explore dashboard", "Open each main menu"],
+    title: "Getting Started (Module 1)",
+    tasks: ["Log in to your account", "Explore the dashboard", "Open each main menu and get familiar with the layout"],
   },
   {
     day: 2,
-    title: "Contacts",
-    tasks: ["Add 3 contacts", "Add a tag", "Review contact details"],
+    title: "Contacts (Module 2)",
+    tasks: ["Add 3 contacts manually", "Add a tag to a contact", "Review a contact's detail page"],
   },
   {
     day: 3,
-    title: "Conversations",
-    tasks: ["Send test SMS", "Reply to a message"],
+    title: "Conversations (Module 3)",
+    tasks: ["Send a test SMS to yourself", "Reply to a message in the inbox"],
   },
   {
     day: 4,
-    title: "Funnels & Forms",
-    tasks: ["Open your funnel", "Submit a test lead"],
+    title: "Funnels & Forms (Module 4)",
+    tasks: ["Open your funnel and review the page", "Submit a test lead through the form", "Check the lead appeared in Contacts"],
   },
   {
     day: 5,
-    title: "Automation",
-    tasks: ["Trigger automation", "Confirm SMS/email sent"],
+    title: "Automation & Calendar (Modules 5 & 6)",
+    tasks: ["Trigger an automation and confirm SMS/email was sent", "Book a test appointment via your booking link", "Check the appointment confirmation"],
   },
   {
     day: 6,
-    title: "Calendar",
-    tasks: ["Book a test appointment", "Check confirmation"],
+    title: "Pipeline & Reputation (Modules 7 & 9)",
+    tasks: ["Move a lead through pipeline stages", "Send a test review request", "Check your reviews dashboard"],
   },
   {
     day: 7,
-    title: "Pipeline",
-    tasks: ["Move a lead through stages", "Review full system"],
+    title: "Integrations & Review (Module 8)",
+    tasks: ["Connect Google or another integration", "Verify your calendar is syncing", "Review your full system end-to-end"],
   },
 ];
 
