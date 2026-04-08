@@ -151,6 +151,64 @@ const coreModules = [
       benefits: ["See all jobs at a glance", "Stay organised"],
     },
   },
+  {
+    title: "Module 8: Integrations",
+    icon: Plug,
+    content: {
+      what: "Connect Google, Google Business Profile, Facebook, and other tools to your system.",
+      lessons: null,
+      steps: [
+        "Go to Settings → Integrations",
+        "Find the app you want to connect (Google, Facebook, Stripe, etc.)",
+        "Click Connect and sign in with your account",
+        "Allow the requested permissions",
+        "Once connected, your data will sync automatically",
+      ],
+      benefits: ["Sync calendars and contacts", "Manage everything from one place", "Connect payment and social tools"],
+      subsections: [
+        {
+          title: "Google Integration",
+          where: "Settings → Integrations → Google",
+          steps: [
+            "Click Connect next to Google",
+            "Sign in with your Google account",
+            "Allow permissions for Calendar & Contacts",
+            "Choose which calendars to sync",
+          ],
+          benefits: ["Two-way calendar sync", "Import Google contacts", "Google sign-in for your team"],
+        },
+        {
+          title: "Google Business Profile",
+          where: "Settings → Integrations → Google Business Profile",
+          steps: [
+            "Click Connect next to Google Business Profile (or Google My Business)",
+            "Sign in with the Google account linked to your business listing",
+            "Select your business location from the list",
+            "Once connected, manage reviews from Reputation → Reviews",
+            "Post updates via Marketing → Social Planner",
+          ],
+          benefits: ["Manage Google reviews from your dashboard", "Post updates directly to your listing", "Track customer engagement"],
+        },
+      ],
+    },
+  },
+  {
+    title: "Module 9: Reputation Management (Reviews)",
+    icon: Star,
+    content: {
+      what: "Request, manage, and respond to customer reviews — all from one place.",
+      lessons: null,
+      steps: [
+        "Go to Reputation → Reviews",
+        "View all your Google reviews in one dashboard",
+        "Reply to reviews directly from the platform",
+        "Go to Reputation → Requests to send review requests",
+        "Send via SMS or email with your review link",
+        "Track your overall rating and review count",
+      ],
+      benefits: ["Build trust with new customers", "Get more 5-star reviews", "Respond to reviews fast", "Boost your Google ranking"],
+    },
+  },
 ];
 
 const advancedModules = [
@@ -174,13 +232,6 @@ const advancedModules = [
     what: "Schedule social posts.",
     steps: ["Go to Social Planner", "Create post", "Schedule"],
     benefits: null,
-  },
-  {
-    title: "Reviews",
-    icon: Star,
-    what: "Request customer feedback.",
-    steps: ["Send review request", "Share link"],
-    benefits: ["Build trust", "Get more jobs"],
   },
   {
     title: "Payments",
@@ -209,43 +260,6 @@ const advancedModules = [
     what: "Add team members.",
     steps: ["Go to Settings → Staff", "Add user"],
     benefits: null,
-  },
-  {
-    title: "Integrations",
-    icon: Plug,
-    what: "Connect other tools.",
-    steps: ["Go to Settings → Integrations", "Connect apps"],
-    benefits: null,
-  },
-  {
-    title: "Google Integration",
-    icon: Globe,
-    what: "Connect your Google account to sync calendars, contacts, and enable Google sign-in.",
-    steps: [
-      "Go to Settings → Integrations",
-      "Find 'Google' and click Connect",
-      "Sign in with your Google account",
-      "Allow the requested permissions",
-      "Choose which calendars to sync",
-      "Confirm connection — your Google Calendar and Contacts will now sync automatically",
-    ],
-    benefits: ["Two-way calendar sync", "Import Google contacts", "Google sign-in for your team"],
-    where: "Settings → Integrations → Google",
-  },
-  {
-    title: "Google Business Profile",
-    icon: MapPin,
-    what: "Connect your Google Business Profile to manage reviews, post updates, and track engagement — all from one place.",
-    steps: [
-      "Go to Settings → Integrations",
-      "Find 'Google Business Profile' (or 'Google My Business')",
-      "Click Connect and sign in with the Google account linked to your business listing",
-      "Select your business location from the list",
-      "Once connected, go to Marketing → Social Planner to post updates to your profile",
-      "Go to Reputation → Reviews to see and respond to Google reviews",
-    ],
-    benefits: ["Manage Google reviews from your dashboard", "Post updates directly to your listing", "Track customer engagement"],
-    where: "Settings → Integrations → Google Business Profile",
   },
   {
     title: "Custom Values (Personalisation)",
@@ -485,6 +499,37 @@ const TrainingHub = () => {
                           </ul>
                         </div>
                       )}
+                      {"subsections" in mod.content && (mod.content as any).subsections?.map((sub: any, si: number) => (
+                        <div key={si} className="bg-muted/30 rounded-lg p-4 border border-border space-y-3">
+                          <p className="font-semibold text-foreground">{sub.title}</p>
+                          {sub.where && (
+                            <div className="bg-background rounded-md p-2 border border-border">
+                              <p className="text-xs font-semibold text-muted-foreground">📍 Where to find it:</p>
+                              <p className="text-sm font-mono text-foreground">{sub.where}</p>
+                            </div>
+                          )}
+                          {sub.steps && (
+                            <ol className="space-y-1.5">
+                              {sub.steps.map((s: string, i: number) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <span className="w-5 h-5 rounded-full bg-primary/10 text-primary text-xs flex items-center justify-center shrink-0 mt-0.5 font-semibold">{i + 1}</span>
+                                  {s}
+                                </li>
+                              ))}
+                            </ol>
+                          )}
+                          {sub.benefits && (
+                            <ul className="space-y-1.5">
+                              {sub.benefits.map((b: string, i: number) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <Star className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
+                                  {b}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
