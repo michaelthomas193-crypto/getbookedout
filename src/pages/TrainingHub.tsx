@@ -35,8 +35,8 @@ import {
   Globe,
   MapPin,
 } from "lucide-react";
-import Header from "@/components/sections/Header";
-import Footer from "@/components/sections/Footer";
+
+
 
 const STORAGE_KEY = "ghl-training-checklist";
 
