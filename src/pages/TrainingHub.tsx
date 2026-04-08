@@ -499,6 +499,37 @@ const TrainingHub = () => {
                           </ul>
                         </div>
                       )}
+                      {"subsections" in mod.content && (mod.content as any).subsections?.map((sub: any, si: number) => (
+                        <div key={si} className="bg-muted/30 rounded-lg p-4 border border-border space-y-3">
+                          <p className="font-semibold text-foreground">{sub.title}</p>
+                          {sub.where && (
+                            <div className="bg-background rounded-md p-2 border border-border">
+                              <p className="text-xs font-semibold text-muted-foreground">📍 Where to find it:</p>
+                              <p className="text-sm font-mono text-foreground">{sub.where}</p>
+                            </div>
+                          )}
+                          {sub.steps && (
+                            <ol className="space-y-1.5">
+                              {sub.steps.map((s: string, i: number) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <span className="w-5 h-5 rounded-full bg-primary/10 text-primary text-xs flex items-center justify-center shrink-0 mt-0.5 font-semibold">{i + 1}</span>
+                                  {s}
+                                </li>
+                              ))}
+                            </ol>
+                          )}
+                          {sub.benefits && (
+                            <ul className="space-y-1.5">
+                              {sub.benefits.map((b: string, i: number) => (
+                                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <Star className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
+                                  {b}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
