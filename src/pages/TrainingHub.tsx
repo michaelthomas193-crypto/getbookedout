@@ -314,7 +314,6 @@ const TrainingHub = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
 
       {/* Hero */}
       <section className="bg-primary/5 border-b border-border">
@@ -700,7 +699,7 @@ const TrainingHub = () => {
         </section>
       </div>
 
-      <Footer />
+      
     </div>
   );
 };
