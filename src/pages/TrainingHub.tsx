@@ -324,7 +324,7 @@ const TrainingHub = () => {
             Client Training
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            GoHighLevel Training Hub
+            Get Booked Out Training Hub
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Your step-by-step guide to managing leads, conversations, bookings, and jobs using your system.
