@@ -29,7 +29,7 @@ const Hero = () => {
               className="text-lg sm:text-xl md:text-2xl font-semibold leading-[1.4] mb-6 max-w-[580px] mx-auto lg:mx-0"
               style={{ color: '#444444' }}
             >
-              Try our AI receptionist <span className="text-primary">free for 14 days</span>. <span className="text-primary">No credit card. No contract.</span> Just see how many jobs you stop losing.
+              Our AI receptionist <span className="text-primary">answers calls, books jobs, and follows up</span> — so you <span className="text-primary">never lose work</span> to a missed call again.
             </p>
             
             {/* Body Copy */}
@@ -51,7 +51,7 @@ const Hero = () => {
                 className="text-base font-semibold mb-3"
                 style={{ color: '#444444' }}
               >
-                Here's what you get for <span className="text-primary">14 days free</span>:
+                Here's what you get:
               </p>
               <ul className="space-y-2 text-base leading-[1.8]" style={{ color: '#444444' }}>
                 <li className="flex items-start gap-2">
@@ -93,7 +93,7 @@ const Hero = () => {
               {/* Form Header */}
               <div className="px-6 py-5 text-center">
                 <h2 className="text-2xl md:text-[28px] font-bold text-primary mb-0">
-                  Start Your Free 14-Day Trial
+                  Get Started Today
                 </h2>
               </div>
               
@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Below Form Text */}
               <div className="px-6 py-4 text-center">
                 <p className="text-[13px] leading-[1.5] text-muted-foreground max-w-[90%] mx-auto">
-                  Takes 2 minutes to set up. No credit card required. Cancel anytime.
+                  Takes 2 minutes to set up. No lock-in contracts. Cancel anytime.
                 </p>
               </div>
             </div>

@@ -12,7 +12,6 @@ const pricingPlans = [
     tagline: "Stop Losing Jobs to Missed Calls",
     features: [
       "AI Chatbot — answers enquiries 24/7 on your website",
-      "Professional Landing Page — done-for-you, built to convert",
       "Missed Call Text-Back — every unanswered call gets an instant response",
     ],
     description:
