@@ -55,8 +55,8 @@ const ReviewAutomationDemo = () => {
             </div>
           </div>
           <div className="flex items-start gap-3 p-5 rounded-2xl bg-card border border-border">
-            <div className="w-10 h-10 rounded-xl bg-success/10 flex items-center justify-center flex-shrink-0">
-              <Star className="w-5 h-5 text-success fill-success" />
+            <div className="w-10 h-10 rounded-xl bg-accent/30 flex items-center justify-center flex-shrink-0">
+              <Star className="w-5 h-5 text-primary fill-primary" />
             </div>
             <div>
               <h3 className="font-bold text-foreground">5★ goes straight to Google</h3>
