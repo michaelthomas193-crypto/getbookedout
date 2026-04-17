@@ -17,7 +17,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headerOp = interpolate(frame, [0, 15], [0, 1], {
+  const headerOp = interpolate(frame, [0, 15, 45, 62], [0, 1, 1, 0], {
     extrapolateRight: "clamp",
   });
 
@@ -76,7 +76,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           textAlign: "center",
           opacity: headerOp,
           marginBottom: vertical ? 40 : 30,
-          marginTop: vertical ? -40 : 0,
+          marginTop: vertical ? 60 : 40,
         }}
       >
         <div
@@ -109,7 +109,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           position: "relative",
         }}
       >
-        <PhoneFrame width={vertical ? 420 : 380}>
+        <PhoneFrame width={vertical ? 360 : 320}>
           <div
             style={{
               paddingTop: 80,

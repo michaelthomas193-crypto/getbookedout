@@ -17,7 +17,7 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const headerOp = interpolate(frame, [0, 15], [0, 1], {
+  const headerOp = interpolate(frame, [0, 15, 55, 72], [0, 1, 1, 0], {
     extrapolateRight: "clamp",
   });
 
@@ -106,8 +106,8 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: vertical ? 20 : 60,
-          paddingTop: vertical ? 380 : 220,
-          paddingBottom: vertical ? 60 : 60,
+          paddingTop: vertical ? 280 : 80,
+          paddingBottom: 40,
         }}
       >
         {/* Detection pill */}

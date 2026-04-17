@@ -20,7 +20,7 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
   const headerY = interpolate(frame, [0, 18], [-30, 0], {
     extrapolateRight: "clamp",
   });
-  const headerOp = interpolate(frame, [0, 18], [0, 1], {
+  const headerOp = interpolate(frame, [0, 18, 50, 68], [0, 1, 1, 0], {
     extrapolateRight: "clamp",
   });
 
@@ -112,8 +112,8 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: vertical ? 30 : 80,
-          paddingTop: vertical ? 380 : 220,
-          paddingBottom: vertical ? 60 : 60,
+          paddingTop: vertical ? 280 : 80,
+          paddingBottom: 40,
         }}
       >
         {/* Dashboard card */}
