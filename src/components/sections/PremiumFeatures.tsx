@@ -3,46 +3,46 @@ import { Calendar, PhoneCall, Link2, GraduationCap, Star, Globe } from "lucide-r
 const features = [
   {
     icon: Calendar,
-    tier: "Complete",
-    title: "Book appointments",
-    description: "Sends scheduling links by text and books straight into your calendar.",
+    tier: "SCALE",
+    title: "Set up appointments",
+    description: "Lets your AI offer to book customer appointments and send scheduling links by text.",
   },
   {
     icon: PhoneCall,
-    tier: "Complete",
+    tier: "SCALE",
     title: "Transfer important calls",
-    description: "Routes the calls that need a real human straight to the right person on your team.",
+    description: "Transfers calls to the right person on your team when they need live help.",
   },
   {
     icon: Link2,
-    tier: "Complete",
+    tier: "SCALE",
     title: "Text custom links",
-    description: "Sends links to pricing, promos, or scheduling pages mid-call — instantly.",
+    description: "Sends links to pricing, promotions, or scheduling pages while on customer calls.",
   },
   {
     icon: GraduationCap,
-    tier: "Scale",
-    title: "Specialist training",
-    description: "Upload training files to teach your AI the specific skills your business needs.",
+    tier: "GROWTH",
+    title: "Offer elite training",
+    description: "Teach your AI specialised skills by uploading training files specific to your business.",
   },
   {
     icon: Star,
-    tier: "Complete",
+    tier: "SCALE",
     title: "Review automation",
     description: "Asks every happy customer for a review and routes 5-stars straight to Google.",
   },
   {
     icon: Globe,
-    tier: "Add-on",
+    tier: "ADD-ON",
     title: "Website texting",
     description: "Capture phone numbers from website visitors and follow up over text — you own the lead.",
   },
 ];
 
 const tierColor: Record<string, string> = {
-  Complete: "bg-primary/10 text-primary border-primary/20",
-  Scale: "bg-foreground/10 text-foreground border-foreground/20",
-  "Add-on": "bg-[hsl(var(--warning))]/10 text-[hsl(var(--warning))] border-[hsl(var(--warning))]/30",
+  SCALE: "bg-primary/10 text-primary border-primary/20",
+  GROWTH: "bg-foreground/10 text-foreground border-foreground/20",
+  "ADD-ON": "bg-[hsl(var(--warning))]/10 text-[hsl(var(--warning))] border-[hsl(var(--warning))]/30",
 };
 
 const PremiumFeatures = () => {

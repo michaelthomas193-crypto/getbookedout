@@ -1,24 +1,35 @@
 const row1 = [
-  "So far this has been a game changer.",
-  "It felt like a waste of time handling our calls before — not anymore.",
-  "I've been able to capture every lead that comes in, even when I'm deep in work.",
-  "I spend less time playing phone tag and more time delivering for my customers.",
-  "She doesn't take breaks, doesn't go on vacation, doesn't punch out at 5.",
-  "Now I can focus on customers without missing important calls.",
+  { text: "So far this has been a game changer.", name: "JR", business: "Local business owner" },
+  { text: "It felt like a waste of time handling our calls before — not anymore.", name: "Lisa", business: "Salon owner" },
+  { text: "I've been able to capture every lead that comes in, even when I'm deep in work.", name: "Derek", business: "Trade business" },
+  { text: "I spend less time playing phone tag and more time delivering for my customers.", name: "Marco", business: "Service pro" },
+  { text: "She doesn't take breaks, doesn't go on vacation, doesn't punch out at 5.", name: "Edgar", business: "Owner / operator" },
+  { text: "Now I can focus on customers without missing important calls.", name: "Priya", business: "Studio owner" },
 ];
 
 const row2 = [
-  "The response is so real, sometimes customers don't know it's AI.",
-  "Helped me stay on top of calls and get more sales without hiring anyone.",
-  "It's almost every day that I lost a job from not answering the phone — not anymore.",
-  "I called, got the link, the pricing was there, I booked. So easy.",
-  "Safer to pick up now because I know it's a real customer, not spam.",
-  "Best investment we've made for the business this year.",
+  { text: "The response is so real, sometimes customers don't know it's AI.", name: "Ron", business: "Clinic owner" },
+  { text: "Helped me stay on top of calls and get more sales without hiring anyone.", name: "Jason", business: "Business owner" },
+  { text: "It's almost every day I'd lose a job from not answering — not anymore.", name: "Sam", business: "Tradesperson" },
+  { text: "I called, got the link, the pricing was there, I booked. So easy.", name: "Anna", business: "Customer review" },
+  { text: "Safer to pick up now because I know it's a real customer, not spam.", name: "Lucas", business: "Solo founder" },
+  { text: "Best investment we've made for the business this year.", name: "Emma", business: "Franchise owner" },
 ];
 
-const Bubble = ({ text }: { text: string }) => (
-  <div className="shrink-0 w-[300px] md:w-[360px] mx-3 px-5 py-4 rounded-2xl bg-card border border-border shadow-sm">
-    <p className="text-sm md:text-base text-foreground leading-relaxed">"{text}"</p>
+type Quote = { text: string; name: string; business: string };
+
+const Bubble = ({ q }: { q: Quote }) => (
+  <div className="shrink-0 w-[300px] md:w-[360px] mx-3 px-5 py-5 rounded-2xl bg-card border border-border shadow-sm flex flex-col gap-3">
+    <p className="text-sm md:text-base text-foreground leading-relaxed">"{q.text}"</p>
+    <div className="flex items-center gap-2 mt-auto">
+      <div className="w-8 h-8 rounded-full bg-primary/15 text-primary flex items-center justify-center text-xs font-bold">
+        {q.name.charAt(0)}
+      </div>
+      <div>
+        <div className="text-xs font-semibold text-foreground leading-tight">{q.name}</div>
+        <div className="text-[11px] text-muted-foreground leading-tight">{q.business}</div>
+      </div>
+    </div>
   </div>
 );
 
@@ -39,7 +50,7 @@ const MarqueeQuotes = () => {
         <div className="relative overflow-hidden">
           <div className="flex animate-slide-left" style={{ width: "max-content" }}>
             {[...row1, ...row1].map((q, i) => (
-              <Bubble key={`r1-${i}`} text={q} />
+              <Bubble key={`r1-${i}`} q={q} />
             ))}
           </div>
         </div>
@@ -51,7 +62,7 @@ const MarqueeQuotes = () => {
             style={{ width: "max-content", animationDirection: "reverse", animationDuration: "40s" }}
           >
             {[...row2, ...row2].map((q, i) => (
-              <Bubble key={`r2-${i}`} text={q} />
+              <Bubble key={`r2-${i}`} q={q} />
             ))}
           </div>
         </div>
