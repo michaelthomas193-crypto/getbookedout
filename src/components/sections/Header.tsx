@@ -35,19 +35,11 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { label: "Solutions", href: "/#features" },
-    { label: "Industries", href: "#", isDropdown: true, dropdownItems: [
-      { label: "Plumbers", href: "/plumbing" },
-      { label: "Electricians", href: "/electrical" },
-      { label: "Painters", href: "/painting" },
-      { label: "Landscapers", href: "/landscaping" },
-      { label: "Handyman", href: "/handyman" },
-      { label: "Carpenters", href: "/carpentry" },
-      { label: "Concreters", href: "/concreting" },
-    ]},
-    { label: "Why Us", href: "/why-us" },
+    { label: "Features", href: "/#features" },
+    { label: "How It Works", href: "/#how-it-works" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Who We Are", href: "/who-we-are" },
+    { label: "Why Us", href: "/why-us" },
+    { label: "About", href: "/who-we-are" },
   ];
 
   return (

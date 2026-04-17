@@ -7,46 +7,62 @@ import {
 
 const faqs = [
   {
+    question: "What kinds of businesses is this for?",
+    answer:
+      "Any business with a phone. We work with home services, salons, clinics, legal practices, real estate, auto shops, cleaners, fitness studios, and more. If your customers call you and you sometimes can't pick up, this is for you.",
+  },
+  {
     question: "I'm not tech-savvy. Can I still use this?",
-    answer: "Absolutely. We set everything up for you. If you can use a smartphone, you can use Get Booked Out.",
+    answer:
+      "Absolutely. We handle setup end-to-end. Your AI learns from your website automatically, you review and tweak the answers, and we connect everything to your phone. If you can use a smartphone, you can use Get Booked Out.",
   },
   {
-    question: "How quickly will I see results?",
-    answer: "Most businesses see their first automated leads within the first week. ROI typically shows within 30 days.",
+    question: "How quickly will it be live?",
+    answer:
+      "Most businesses are up and taking calls within 48 hours. We do the heavy lifting — you just confirm the details and forward your number.",
   },
   {
-    question: "What types of businesses do you work with?",
-    answer: "Any service-based business: HVAC, plumbing, electrical, landscaping, cleaning, pool services, pest control, and more.",
+    question: "Will my customers know it's AI?",
+    answer:
+      "The voice is natural enough that most callers don't realise. You can also pick a custom name and greeting so it sounds like part of your team.",
   },
   {
-    question: "How much does it cost?",
-    answer: "Plans start from $297/month. Book a demo and we'll show you the ROI calculator — most clients make their money back from just 1-2 extra jobs per month.",
+    question: "What happens to spam and sales calls?",
+    answer:
+      "Filtered out automatically. Robocalls, 1-800 numbers, and sales reps don't make it through to you — only real customers do.",
   },
   {
     question: "Is there a lock-in contract?",
-    answer: "No. Month-to-month. Cancel anytime. We believe in earning your business, not trapping you.",
+    answer:
+      "No. Month-to-month, cancel any time. We'd rather earn your business every month than trap you in a contract.",
+  },
+  {
+    question: "Can it book appointments straight into my calendar?",
+    answer:
+      "Yes — on the Complete plan and above. Works with Google Calendar, Calendly, Acuity, and most popular booking tools.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section id="faq" className="section-padding bg-background">
+    <section id="faq" className="section-padding bg-secondary/40">
       <div className="container-padding max-w-3xl mx-auto">
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="section-title mb-3 md:mb-4">Frequently Asked Questions</h2>
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="section-title mb-3">Frequently asked questions</h2>
+          <p className="section-subtitle">Everything you need to know before getting started.</p>
         </div>
 
-        <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3 md:space-y-4">
+        <Accordion type="single" collapsible defaultValue="item-0" className="space-y-3">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="rounded-xl border border-border bg-card px-4 md:px-6 data-[state=open]:border-primary data-[state=open]:shadow-lg transition-all card-shadow"
+              className="rounded-xl border border-border bg-card px-5 md:px-6 data-[state=open]:border-primary/40 data-[state=open]:shadow-md transition-all"
             >
-              <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:text-primary transition-colors py-4 md:py-6 [&[data-state=open]]:text-primary [&>svg]:text-primary min-h-[48px]">
+              <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:text-primary transition-colors py-5 [&[data-state=open]]:text-primary [&>svg]:text-primary">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4 md:pb-6 leading-relaxed text-sm md:text-base">
+              <AccordionContent className="text-muted-foreground pb-5 leading-relaxed text-sm md:text-base">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

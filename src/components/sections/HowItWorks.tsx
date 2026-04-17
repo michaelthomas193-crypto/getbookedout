@@ -1,79 +1,63 @@
-import { Settings, Zap, Star, Calendar } from "lucide-react";
+import { Globe, Settings2, PhoneForwarded } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    icon: Settings,
-    title: "We Build Your System",
-    description: "We set up your landing page, lead capture, booking automation, and review requests. Takes 48 hours. Zero effort from you.",
-    color: "#7DD3E8",
+    icon: Globe,
+    title: "Add your website to train it.",
+    description: "Our AI automatically learns your business hours, services, pricing, and FAQs in seconds — straight from your website or Google Business Profile.",
   },
   {
     number: "02",
-    icon: Zap,
-    title: "Leads Start Flowing",
-    description: "Every enquiry — phone, web, Facebook — gets answered instantly. Customers book straight into your calendar. Respond in under 5 minutes and you're 21x more likely to win the job.",
-    color: "#4BADD4",
+    icon: Settings2,
+    title: "Review and customise your information.",
+    description: "Confirm key business details, customise your greeting, add specific FAQs, and turn on spam filtering. Then test your AI with a real call before going live.",
   },
   {
     number: "03",
-    icon: Star,
-    title: "Your Reputation Grows",
-    description: "Happy customers automatically get asked for reviews. Your Google rating climbs. More customers find you.",
-    color: "#2B8BBF",
-  },
-  {
-    number: "04",
-    icon: Calendar,
-    title: "You Stay Booked Out",
-    description: "Focus on the work. We handle the rest. Watch your schedule fill up and your business grow.",
-    color: "#1A6B9A",
+    icon: PhoneForwarded,
+    title: "Start sending your calls.",
+    description: "Forward your business number and we take it from there — answering questions, taking actionable messages, booking appointments, and keeping you in the loop via text or email.",
   },
 ];
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="section-padding bg-secondary">
+    <section id="how-it-works" className="section-padding bg-background">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="section-title mb-3 md:mb-4">How It Works</h2>
+        <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
+          <h2 className="section-title mb-4">
+            Ready to answer your business calls in <span className="text-primary">3 simple steps</span>
+          </h2>
           <p className="section-subtitle">
-            We handle the business stuff. You handle the trade.
+            No tech skills needed. We handle setup. You start capturing every call within 48 hours.
           </p>
         </div>
 
-        {/* Timeline layout - stacked on mobile */}
-        <div className="relative">
-          {/* Connecting line - desktop only */}
-          <div className="hidden lg:block absolute top-8 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-[#7DD3E8] via-[#4BADD4] to-[#1A6B9A]" />
-          
-          {/* Single column on mobile, 2 on tablet, 4 on desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {steps.map((step) => (
-              <div key={step.number} className="relative">
-                <div className="p-4 md:p-5 bg-card rounded-xl border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                  {/* Combined Number + Icon row */}
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div 
-                      className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center relative z-10 shrink-0"
-                      style={{ backgroundColor: step.color }}
-                    >
-                      <span className="text-lg md:text-xl font-bold text-white">{step.number}</span>
-                    </div>
-                    <div 
-                      className="w-9 h-9 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
-                      style={{ backgroundColor: step.color }}
-                    >
-                      <step.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
-                    </div>
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 relative">
+          {steps.map((step, i) => (
+            <div key={step.number} className="relative">
+              {/* Connector line */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-10 left-full w-full h-px border-t-2 border-dashed border-primary/30 -translate-x-1/2 z-0" style={{ width: "calc(100% - 5rem)", left: "calc(50% + 2.5rem)" }} />
+              )}
+              <div className="relative bg-card rounded-2xl p-6 md:p-8 border border-border h-full hover:border-primary/40 hover:shadow-lg transition-all">
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-14 h-14 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/20">
+                    {step.number}
                   </div>
-                  
-                  <h3 className="text-base md:text-lg font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{step.description}</p>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                    <step.icon className="w-6 h-6" />
+                  </div>
                 </div>
+                <div className="text-xs uppercase tracking-wider text-primary font-semibold mb-2">
+                  Step {step.number}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-foreground leading-snug">{step.title}</h3>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{step.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

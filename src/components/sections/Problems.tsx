@@ -1,65 +1,85 @@
-import { PhoneMissed, HelpCircle, CalendarX } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Voicemail, DollarSign } from "lucide-react";
 
-const problems = [
+const options = [
   {
-    icon: PhoneMissed,
-    title: "Your phone rang. You couldn't answer.",
-    description: "85% of missed calls never call back. They've already called your competitor.",
-    color: "bg-red-100 text-red-600",
+    icon: Phone,
+    title: "Answer every call yourself",
+    points: [
+      "Constant interruptions during the day",
+      "Wasted time on spam and sales calls",
+      "Always chasing customers down later",
+    ],
   },
   {
-    icon: HelpCircle,
-    title: "A customer visited your website.",
-    description: "They had questions. Nobody answered. They bounced. Another job gone.",
-    color: "bg-orange-100 text-orange-600",
+    icon: Voicemail,
+    title: "Send the calls you can't take to voicemail",
+    points: [
+      "Most people won't leave a message",
+      "Hard to find time to call back",
+      "By the time you do, they've already booked someone else",
+    ],
   },
   {
-    icon: CalendarX,
-    title: "Someone wanted to book you.",
-    description: "But your booking process was confusing. They gave up and called the bloke down the road instead.",
-    color: "bg-amber-100 text-amber-600",
+    icon: DollarSign,
+    title: "Pay too much for an outsourced service",
+    points: [
+      "Expensive per-minute pricing",
+      "Long hold times for your callers",
+      "Inconsistent service from untrained staff",
+    ],
   },
 ];
 
 const Problems = () => {
   return (
-    <section className="pt-6 md:pt-10 pb-10 md:pb-16 bg-gray-light">
-      <div className="container-padding max-w-4xl mx-auto">
-        <div className="text-center mb-6 md:mb-10">
-          <h2 className="section-title mb-2 md:mb-3">
-            Right now, you're <span className="text-[#E74C3C] underline decoration-2">losing jobs</span> you don't even know about.
+    <section className="section-padding bg-secondary/40">
+      <div className="container-padding max-w-7xl mx-auto">
+        <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+          <h2 className="section-title mb-4">
+            Right now, you have <span className="text-primary">three bad options</span> for handling incoming calls
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            While you're on a job site with dirty hands...
+          <p className="section-subtitle">
+            Every business owner ends up in one of these traps. None of them actually work.
           </p>
         </div>
 
-        <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
-          {problems.map((problem) => (
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          {options.map((opt) => (
             <div
-              key={problem.title}
-              className="flex flex-row items-start gap-3 md:gap-4 p-4 md:p-6 bg-card rounded-xl border border-border card-shadow hover:shadow-lg transition-shadow"
+              key={opt.title}
+              className="p-6 md:p-8 bg-card rounded-2xl border border-border card-shadow"
             >
-              <div className={`w-10 h-10 md:w-14 md:h-14 ${problem.color} rounded-xl flex items-center justify-center shrink-0`}>
-                <problem.icon className="w-5 h-5 md:w-7 md:h-7" />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                <opt.icon className="w-6 h-6" />
               </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-base md:text-xl font-bold mb-1 md:mb-2">{problem.title}</h3>
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{problem.description}</p>
-              </div>
+              <h3 className="text-lg md:text-xl font-bold mb-4 leading-snug text-foreground">
+                {opt.title}
+              </h3>
+              <ul className="space-y-2.5">
+                {opt.points.map((p) => (
+                  <li key={p} className="flex items-start gap-2 text-sm md:text-base text-muted-foreground leading-relaxed">
+                    <span className="text-destructive mt-1.5 shrink-0">✕</span>
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Solution CTA */}
-        <div className="text-center bg-card rounded-xl p-6 md:p-8 border border-border card-shadow">
-          <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
-            Stop bleeding money. Start capturing every lead.
-          </p>
-          <Button size="lg" className="w-full sm:w-auto min-h-[48px]" asChild>
-            <a href="#how-it-works">See How It Works</a>
-          </Button>
+        {/* Solution Promise */}
+        <div className="mt-12 md:mt-16 text-center max-w-3xl mx-auto bg-card rounded-2xl p-8 md:p-12 border-2 border-primary/20 shadow-lg">
+          <div className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wide mb-4">
+            The fourth option
+          </div>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+            Get Booked Out makes sure you never miss a call.
+          </h3>
+          <div className="space-y-3 text-left max-w-xl mx-auto text-base md:text-lg text-muted-foreground">
+            <p className="flex gap-3"><span className="text-primary font-bold">→</span> Trained on your business and reviewed by you — always accurate.</p>
+            <p className="flex gap-3"><span className="text-primary font-bold">→</span> Available 24/7/365 — taking calls and answering questions anytime you can't.</p>
+            <p className="flex gap-3"><span className="text-primary font-bold">→</span> One simple monthly price — custom greeting, spam filtering, FAQs, and instant notifications included.</p>
+          </div>
         </div>
       </div>
     </section>
