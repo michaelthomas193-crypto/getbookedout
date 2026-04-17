@@ -82,26 +82,7 @@ const Header = () => {
             <nav className="hidden md:flex items-center justify-end flex-1 ml-12">
               <div className="flex items-center gap-12">
                 {navLinks.map((link) =>
-                  link.isDropdown ? (
-                    <DropdownMenu key={link.label}>
-                      <DropdownMenuTrigger className="text-muted-foreground hover:text-primary font-medium transition-colors text-sm tracking-wide flex items-center gap-1 outline-none">
-                        {link.label}
-                        <ChevronDown className="w-4 h-4" />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="bg-background border border-border shadow-lg">
-                        {link.dropdownItems?.map((item) => (
-                          <DropdownMenuItem key={item.label} asChild>
-                            <Link
-                              to={item.href}
-                              className="cursor-pointer"
-                            >
-                              {item.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ) : link.href.startsWith("/") && !link.href.includes("#") ? (
+                  link.href.startsWith("/") && !link.href.includes("#") ? (
                     <Link
                       key={link.label}
                       to={link.href}
@@ -151,25 +132,7 @@ const Header = () => {
           <nav className="relative h-full flex flex-col pt-20 px-6 pb-8 bg-background">
             <div className="flex flex-col gap-2 flex-1">
               {navLinks.map((link) =>
-                link.isDropdown ? (
-                  <div key={link.label} className="border-b border-border">
-                    <p className="text-foreground font-semibold text-xl py-4">
-                      {link.label}
-                    </p>
-                    <div className="pl-4 pb-4 space-y-2">
-                      {link.dropdownItems?.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="block text-muted-foreground hover:text-primary font-medium text-lg py-2 transition-colors"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : link.href.startsWith("/") && !link.href.includes("#") ? (
+                link.href.startsWith("/") && !link.href.includes("#") ? (
                   <Link
                     key={link.label}
                     to={link.href}
