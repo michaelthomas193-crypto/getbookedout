@@ -106,7 +106,8 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: vertical ? 20 : 60,
-          paddingTop: vertical ? 280 : 80,
+          paddingTop: vertical ? 380 : 220,
+          paddingBottom: vertical ? 60 : 60,
         }}
       >
         {/* Detection pill */}
