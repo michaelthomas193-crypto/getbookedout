@@ -109,11 +109,11 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           position: "relative",
         }}
       >
-        <PhoneFrame width={vertical ? 380 : 360}>
+        <PhoneFrame width={vertical ? 480 : 460}>
           <div
             style={{
-              paddingTop: 70,
-              padding: "70px 28px 28px",
+              paddingTop: 80,
+              padding: "80px 32px 32px",
               height: "100%",
               background: "#fff",
               display: "flex",
@@ -123,27 +123,27 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           >
             <div
               style={{
-                width: 56,
-                height: 56,
-                borderRadius: 14,
+                width: 72,
+                height: 72,
+                borderRadius: 18,
                 background: `linear-gradient(135deg, ${COLORS.primary}, ${COLORS.primaryLight})`,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 color: "#fff",
                 fontWeight: 800,
-                fontSize: 22,
-                marginTop: 12,
+                fontSize: 28,
+                marginTop: 16,
               }}
             >
               GBO
             </div>
             <div
               style={{
-                fontSize: 22,
+                fontSize: 32,
                 fontWeight: 800,
                 color: COLORS.ink,
-                marginTop: 20,
+                marginTop: 24,
                 textAlign: "center",
               }}
             >
@@ -151,9 +151,9 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
             </div>
             <div
               style={{
-                fontSize: 14,
+                fontSize: 19,
                 color: COLORS.muted,
-                marginTop: 8,
+                marginTop: 10,
                 textAlign: "center",
               }}
             >
@@ -164,8 +164,8 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
             <div
               style={{
                 display: "flex",
-                gap: 8,
-                marginTop: 50,
+                gap: 10,
+                marginTop: 56,
                 position: "relative",
               }}
             >
@@ -182,7 +182,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
                     }}
                   >
                     <Star
-                      size={50}
+                      size={64}
                       fill={filled ? COLORS.accent : "#E8DEF5"}
                       stroke={filled ? undefined : "#D4C5E8"}
                     />
@@ -193,13 +193,13 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
 
             <div
               style={{
-                marginTop: 16,
-                fontSize: 13,
-                color: COLORS.muted,
+                marginTop: 22,
+                fontSize: 20,
+                color: COLORS.ink,
                 opacity: interpolate(frame, [tapFrame + 5, tapFrame + 20], [0, 1], {
                   extrapolateRight: "clamp",
                 }),
-                fontWeight: 600,
+                fontWeight: 700,
               }}
             >
               ⭐ Excellent — 5/5
@@ -209,11 +209,11 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
             <div
               style={{
                 position: "absolute",
-                bottom: 110,
-                right: 40,
+                bottom: 130,
+                right: 50,
                 transform: `translateY(${fingerY}px)`,
                 opacity: fingerOp,
-                fontSize: 56,
+                fontSize: 72,
                 pointerEvents: "none",
               }}
             >

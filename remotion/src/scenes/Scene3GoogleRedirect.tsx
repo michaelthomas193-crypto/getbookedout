@@ -190,11 +190,11 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
             position: "relative",
           }}
         >
-          <PhoneFrame width={vertical ? 360 : 340}>
+          <PhoneFrame width={vertical ? 460 : 440}>
             <div
               style={{
-                paddingTop: 70,
-                padding: "70px 0 0",
+                paddingTop: 80,
+                padding: "80px 0 0",
                 height: "100%",
                 background: "#fff",
                 display: "flex",
@@ -204,13 +204,13 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
               {/* Google header */}
               <div
                 style={{
-                  padding: "16px 22px",
+                  padding: "20px 26px",
                   borderBottom: "1px solid #E8E8E8",
                   display: "flex",
                   alignItems: "center",
                   gap: 8,
-                  fontWeight: 600,
-                  fontSize: 16,
+                  fontWeight: 700,
+                  fontSize: 22,
                 }}
               >
                 <span style={{ color: "#4285F4" }}>G</span>
@@ -219,15 +219,15 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
                 <span style={{ color: "#4285F4" }}>g</span>
                 <span style={{ color: "#34A853" }}>l</span>
                 <span style={{ color: "#EA4335" }}>e</span>
-                <span style={{ color: COLORS.inkSoft, marginLeft: 6, fontSize: 13 }}>
+                <span style={{ color: COLORS.inkSoft, marginLeft: 8, fontSize: 18, fontWeight: 600 }}>
                   Reviews
                 </span>
               </div>
-              <div style={{ padding: 22, flex: 1 }}>
+              <div style={{ padding: 26, flex: 1 }}>
                 <div
                   style={{
-                    fontSize: 17,
-                    fontWeight: 700,
+                    fontSize: 24,
+                    fontWeight: 800,
                     color: COLORS.ink,
                   }}
                 >
@@ -235,39 +235,40 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
                 </div>
                 <div
                   style={{
-                    fontSize: 12,
+                    fontSize: 16,
                     color: COLORS.muted,
-                    marginTop: 2,
+                    marginTop: 4,
                   }}
                 >
                   Sydney · Plumber
                 </div>
                 <div
                   style={{
-                    marginTop: 24,
-                    fontSize: 14,
-                    color: COLORS.inkSoft,
-                    fontWeight: 600,
+                    marginTop: 28,
+                    fontSize: 19,
+                    color: COLORS.ink,
+                    fontWeight: 700,
                   }}
                 >
                   Rate your experience
                 </div>
-                <div style={{ display: "flex", gap: 4, marginTop: 12 }}>
+                <div style={{ display: "flex", gap: 6, marginTop: 14 }}>
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} size={36} fill={COLORS.accent} />
+                    <Star key={i} size={48} fill={COLORS.accent} />
                   ))}
                 </div>
                 <div
                   style={{
-                    marginTop: 20,
+                    marginTop: 24,
                     background: "#F8F9FA",
                     border: "1px solid #E8E8E8",
-                    borderRadius: 8,
-                    padding: 14,
-                    fontSize: 13,
-                    color: COLORS.inkSoft,
-                    minHeight: 80,
-                    lineHeight: 1.5,
+                    borderRadius: 10,
+                    padding: 18,
+                    fontSize: 18,
+                    color: COLORS.ink,
+                    minHeight: 110,
+                    lineHeight: 1.45,
+                    fontWeight: 500,
                   }}
                 >
                   Mitch was on time, sorted my leaking tap in 20 mins and left
@@ -275,15 +276,15 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
                 </div>
                 <button
                   style={{
-                    marginTop: 20,
+                    marginTop: 24,
                     width: "100%",
-                    padding: "12px 16px",
+                    padding: "16px 20px",
                     background: COLORS.google,
                     color: "#fff",
                     border: "none",
-                    borderRadius: 8,
-                    fontSize: 15,
-                    fontWeight: 700,
+                    borderRadius: 10,
+                    fontSize: 20,
+                    fontWeight: 800,
                     boxShadow: `0 0 ${submitGlow * 30}px ${COLORS.google}`,
                   }}
                 >

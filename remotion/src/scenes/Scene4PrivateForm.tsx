@@ -234,11 +234,11 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
             opacity: formOp,
           }}
         >
-          <PhoneFrame width={vertical ? 360 : 340}>
+          <PhoneFrame width={vertical ? 460 : 440}>
             <div
               style={{
-                paddingTop: 70,
-                padding: "70px 24px 24px",
+                paddingTop: 80,
+                padding: "80px 28px 28px",
                 height: "100%",
                 background: "#fff",
                 display: "flex",
@@ -247,9 +247,9 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
             >
               <div
                 style={{
-                  fontSize: 12,
-                  fontWeight: 700,
-                  color: COLORS.muted,
+                  fontSize: 16,
+                  fontWeight: 800,
+                  color: COLORS.red,
                   letterSpacing: 1.5,
                   textTransform: "uppercase",
                 }}
@@ -258,20 +258,21 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
               </div>
               <div
                 style={{
-                  fontSize: 19,
+                  fontSize: 26,
                   fontWeight: 800,
                   color: COLORS.ink,
-                  marginTop: 8,
-                  lineHeight: 1.25,
+                  marginTop: 10,
+                  lineHeight: 1.2,
                 }}
               >
                 Sorry we missed the mark. What went wrong?
               </div>
               <div
                 style={{
-                  fontSize: 12,
+                  fontSize: 16,
                   color: COLORS.muted,
-                  marginTop: 6,
+                  marginTop: 8,
+                  fontWeight: 500,
                 }}
               >
                 Goes straight to Mitch — not posted publicly.
@@ -279,15 +280,16 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
 
               <div
                 style={{
-                  marginTop: 18,
+                  marginTop: 22,
                   background: "#FAF7FE",
                   border: `1.5px solid ${COLORS.border}`,
-                  borderRadius: 10,
-                  padding: 14,
-                  minHeight: 130,
-                  fontSize: 14,
+                  borderRadius: 12,
+                  padding: 18,
+                  minHeight: 160,
+                  fontSize: 19,
                   color: COLORS.ink,
                   lineHeight: 1.5,
+                  fontWeight: 500,
                 }}
               >
                 {typedText}
@@ -295,8 +297,8 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
                   <span
                     style={{
                       display: "inline-block",
-                      width: 2,
-                      height: 16,
+                      width: 3,
+                      height: 22,
                       background: COLORS.primary,
                       marginLeft: 2,
                       verticalAlign: "middle",
@@ -308,14 +310,14 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
 
               <button
                 style={{
-                  marginTop: 16,
-                  padding: "12px 16px",
+                  marginTop: 20,
+                  padding: "16px 20px",
                   background: COLORS.primary,
                   color: "#fff",
                   border: "none",
-                  borderRadius: 10,
-                  fontSize: 15,
-                  fontWeight: 700,
+                  borderRadius: 12,
+                  fontSize: 20,
+                  fontWeight: 800,
                 }}
               >
                 Send privately
@@ -327,11 +329,11 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
                   marginTop: "auto",
                   background: "#1A0F2E",
                   color: "#fff",
-                  borderRadius: 12,
-                  padding: 12,
-                  fontSize: 12,
+                  borderRadius: 14,
+                  padding: 16,
+                  fontSize: 16,
                   display: "flex",
-                  gap: 10,
+                  gap: 12,
                   alignItems: "center",
                   opacity: interpolate(frame, [135, 150], [0, 1], {
                     extrapolateRight: "clamp",
@@ -344,10 +346,10 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
                   )}px)`,
                 }}
               >
-                <div style={{ fontSize: 18 }}>📩</div>
+                <div style={{ fontSize: 24 }}>📩</div>
                 <div>
-                  <div style={{ fontWeight: 700 }}>Get Booked Out</div>
-                  <div style={{ opacity: 0.8 }}>
+                  <div style={{ fontWeight: 800, fontSize: 17 }}>Get Booked Out</div>
+                  <div style={{ opacity: 0.85, fontSize: 14, marginTop: 2 }}>
                     Private feedback from Sarah · Tap to follow up
                   </div>
                 </div>
