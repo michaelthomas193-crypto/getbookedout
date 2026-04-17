@@ -2,7 +2,7 @@ import { Star, Shield, Zap } from "lucide-react";
 
 const ReviewAutomationDemo = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-gradient-to-b from-background via-purple-50/30 to-background overflow-hidden">
+    <section className="relative py-20 md:py-28 bg-gradient-to-b from-background via-secondary/30 to-background overflow-hidden">
       {/* Soft background accents */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
@@ -55,8 +55,8 @@ const ReviewAutomationDemo = () => {
             </div>
           </div>
           <div className="flex items-start gap-3 p-5 rounded-2xl bg-card border border-border">
-            <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
-              <Star className="w-5 h-5 text-green-600 fill-green-600" />
+            <div className="w-10 h-10 rounded-xl bg-success/10 flex items-center justify-center flex-shrink-0">
+              <Star className="w-5 h-5 text-success fill-success" />
             </div>
             <div>
               <h3 className="font-bold text-foreground">5★ goes straight to Google</h3>
@@ -66,8 +66,8 @@ const ReviewAutomationDemo = () => {
             </div>
           </div>
           <div className="flex items-start gap-3 p-5 rounded-2xl bg-card border border-border">
-            <div className="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0">
-              <Shield className="w-5 h-5 text-red-600" />
+            <div className="w-10 h-10 rounded-xl bg-destructive/10 flex items-center justify-center flex-shrink-0">
+              <Shield className="w-5 h-5 text-destructive" />
             </div>
             <div>
               <h3 className="font-bold text-foreground">Bad days stay private</h3>
