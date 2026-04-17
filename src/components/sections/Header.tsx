@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-text.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -66,7 +66,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="Get Booked Out" className="h-7 md:h-10 w-auto" />
+              <img src={logo} alt="Get Booked Out" className="h-6 md:h-8 w-auto" />
             </Link>
 
             {/* Mobile Phone Number */}
