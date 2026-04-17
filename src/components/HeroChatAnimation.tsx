@@ -135,13 +135,6 @@ const HeroChatAnimation = () => {
           phase === "chat" ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* Status tag */}
-        <div className="absolute top-5 left-5 md:top-6 md:left-6 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-medium">
-          <span className="w-2 h-2 rounded-full bg-emerald-400" style={{ animation: "softPulse 1.6s ease-in-out infinite" }} />
-          <Phone className="w-3 h-3" />
-          AI receptionist · answering now
-        </div>
-
         {/* Scrollable bubble stack */}
         <div
           ref={scrollRef}
