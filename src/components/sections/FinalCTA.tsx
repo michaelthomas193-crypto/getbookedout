@@ -9,7 +9,7 @@ const points = [
 
 const FinalCTA = () => {
   return (
-    <section className="section-padding relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/80">
+    <section id="hero-form" className="section-padding relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/80">
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
