@@ -7,11 +7,13 @@ type Bubble = {
 };
 
 const conversation: Bubble[] = [
-  { side: "right", text: "Hi! Thanks for calling. How can I help today?" },
-  { side: "left", text: "Hey, I need a quote for someone to clean my pool this weekend." },
-  { side: "right", text: "Sure thing. Can we set up a time to visit your home to provide a quote?" },
-  { side: "left", text: "Ok that's great. Let's do it." },
-  { side: "right", text: "Booked you in for Saturday 10am. You'll get a confirmation text shortly." },
+  { side: "right", text: "Hey, this is Sarah — thanks for calling! I'm just with a client. How can I help?" },
+  { side: "left", text: "Hey Sarah, I was hoping you could tell me what time you open?" },
+  { side: "right", text: "Of course! We're open Monday to Friday, 8am to 6pm, and Saturdays 9am to 1pm." },
+  { side: "left", text: "Perfect. Any chance I could book in this Thursday?" },
+  { side: "right", text: "Absolutely. I've got 10am, 1pm or 3:30pm available — what suits you best?" },
+  { side: "left", text: "Let's do 1pm please." },
+  { side: "right", text: "✅ Booked! Thursday at 1pm. You'll get a confirmation text and email shortly." },
 ];
 
 const HeroChatAnimation = () => {
@@ -70,7 +72,7 @@ const HeroChatAnimation = () => {
         <div className="absolute top-5 left-5 md:top-6 md:left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-medium">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <Phone className="w-3 h-3" />
-          Live call · just now
+          AI receptionist · answering now
         </div>
 
         {/* Bubbles */}
