@@ -235,7 +235,7 @@ export const Scene4PrivateForm: React.FC<{ vertical?: boolean }> = ({
             opacity: formOp,
           }}
         >
-          <PhoneFrame width={vertical ? 460 : 440}>
+          <PhoneFrame width={vertical ? 400 : 360}>
             <div
               style={{
                 paddingTop: 80,

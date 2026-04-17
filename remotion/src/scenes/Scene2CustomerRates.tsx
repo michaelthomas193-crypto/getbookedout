@@ -109,7 +109,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           position: "relative",
         }}
       >
-        <PhoneFrame width={vertical ? 480 : 460}>
+        <PhoneFrame width={vertical ? 420 : 380}>
           <div
             style={{
               paddingTop: 80,

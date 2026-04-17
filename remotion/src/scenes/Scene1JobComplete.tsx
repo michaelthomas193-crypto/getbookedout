@@ -252,7 +252,7 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
             opacity: phoneOp,
           }}
         >
-          <PhoneFrame width={vertical ? 440 : 420}>
+          <PhoneFrame width={vertical ? 380 : 340}>
             <div
               style={{
                 paddingTop: 90,

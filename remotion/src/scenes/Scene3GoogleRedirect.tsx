@@ -191,7 +191,7 @@ export const Scene3GoogleRedirect: React.FC<{ vertical?: boolean }> = ({
             position: "relative",
           }}
         >
-          <PhoneFrame width={vertical ? 460 : 440}>
+          <PhoneFrame width={vertical ? 400 : 360}>
             <div
               style={{
                 paddingTop: 80,
