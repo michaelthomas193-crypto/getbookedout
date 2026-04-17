@@ -70,7 +70,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="section-padding bg-secondary/40">
+    <section id="faq" className="section-padding bg-lavender">
       <div className="container-padding max-w-3xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="section-title mb-3">Frequently asked questions</h2>
