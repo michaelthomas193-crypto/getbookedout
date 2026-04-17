@@ -80,15 +80,15 @@ const HeroChatAnimation = () => {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 80% 20%, hsl(var(--purple-glow) / 0.7), transparent 60%), radial-gradient(ellipse 80% 70% at 20% 80%, hsl(var(--purple-mid) / 0.55), transparent 70%), linear-gradient(135deg, hsl(280 75% 88%) 0%, hsl(275 70% 78%) 50%, hsl(266 65% 68%) 100%)",
+            "radial-gradient(ellipse 90% 60% at 80% 20%, hsl(285 80% 75% / 0.55), transparent 60%), radial-gradient(ellipse 80% 70% at 20% 80%, hsl(266 70% 42%), transparent 70%), linear-gradient(135deg, hsl(266 72% 55%) 0%, hsl(266 70% 48%) 50%, hsl(258 70% 38%) 100%)",
         }}
       />
       {/* Soft light streak */}
       <div
-        className="absolute -top-1/4 right-0 w-2/3 h-2/3 opacity-60 blur-3xl pointer-events-none"
+        className="absolute -top-1/4 right-0 w-2/3 h-2/3 opacity-45 blur-3xl pointer-events-none"
         style={{
           background:
-            "linear-gradient(135deg, hsl(0 0% 100% / 0.7), transparent)",
+            "linear-gradient(135deg, hsl(285 80% 80% / 0.55), transparent)",
         }}
       />
 
