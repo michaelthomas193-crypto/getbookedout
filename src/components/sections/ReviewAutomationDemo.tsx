@@ -31,12 +31,10 @@ const ReviewAutomationDemo = () => {
         <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-foreground/5 bg-black">
           <video
             src="/videos/review-automation.mp4"
-            autoPlay
-            muted
             loop
             playsInline
             controls
-            preload="auto"
+            preload="metadata"
             ref={(el) => {
               if (el) el.playbackRate = 0.67;
             }}
