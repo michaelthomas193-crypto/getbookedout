@@ -67,13 +67,8 @@ const PremiumFeatures = () => {
               key={f.title}
               className="p-6 md:p-7 bg-card rounded-2xl border border-border hover:shadow-lg transition-all relative"
             >
-              <div className="flex items-start justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                  <f.icon className="w-6 h-6" />
-                </div>
-                <span className={`text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md border ${tierColor[f.tier]}`}>
-                  {f.tier}
-                </span>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5">
+                <f.icon className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold mb-2 text-foreground">{f.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{f.description}</p>
