@@ -15,44 +15,50 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 13%;
 
-    /* Sky Blue - Primary brand color (richer, more vibrant #3B9FD0) */
-    --primary: 199 58% 52%;
+    /* Rosie Purple - Primary brand color (#6E27D8 vibrant violet) */
+    --primary: 266 71% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 98%;
+    --secondary: 270 30% 98%;
     --secondary-foreground: 0 0% 13%;
 
-    --muted: 210 20% 96%;
+    --muted: 270 20% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 199 58% 94%;
-    --accent-foreground: 0 0% 13%;
+    --accent: 266 71% 96%;
+    --accent-foreground: 266 71% 30%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 199 58% 52%;
+    --border: 270 13% 91%;
+    --input: 270 13% 91%;
+    --ring: 266 71% 50%;
 
     --radius: 0.75rem;
 
     /* Custom design tokens */
-    --sky-blue: 199 58% 52%;
-    --sky-blue-light: 199 58% 94%;
-    --gray-light: 210 20% 98%;
+    --sky-blue: 266 71% 50%;
+    --sky-blue-light: 266 71% 96%;
+    --gray-light: 270 30% 98%;
     --gray-text: 0 0% 13%;
     --charcoal: 0 0% 10%;
     --warning: 38 92% 50%;
-    
+
+    /* Purple gradient stops for hero & accents */
+    --purple-deep: 256 80% 28%;
+    --purple-mid: 266 71% 50%;
+    --purple-light: 280 80% 65%;
+    --purple-glow: 290 90% 75%;
+
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 0 0% 13%;
-    --sidebar-primary: 199 58% 52%;
+    --sidebar-primary: 266 71% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 96%;
+    --sidebar-accent: 270 20% 96%;
     --sidebar-accent-foreground: 0 0% 13%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 199 58% 52%;
+    --sidebar-border: 270 13% 91%;
+    --sidebar-ring: 266 71% 50%;
   }
 
   .dark {

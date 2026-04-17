@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import LeadFormEmbed from "@/components/LeadFormEmbed";
+import HeroChatAnimation from "@/components/HeroChatAnimation";
 
 const bullets = [
   "Answers questions & books appointments — while you're with customers",
@@ -57,24 +57,23 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Form */}
-          <div id="hero-form" className="relative animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/30 rounded-3xl blur-2xl opacity-60" />
-            <div className="relative bg-card rounded-2xl border border-border shadow-xl overflow-hidden">
-              <div className="px-6 pt-6 pb-2 text-center">
-                <h2 className="text-2xl font-bold text-foreground mb-1">
-                  Get Started Today
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                  Setup in minutes. We do the heavy lifting.
-                </p>
-              </div>
-              <LeadFormEmbed height={420} showHeader={false} className="rounded-none border-0 shadow-none" />
-              <div className="px-6 pb-5 pt-1 text-center">
-                <p className="text-xs text-muted-foreground">
-                  No lock-in contracts · Cancel anytime
-                </p>
-              </div>
+          {/* Right Content - Animated chat panel */}
+          <div className="relative animate-fade-up" style={{ animationDelay: "0.15s" }}>
+            <div className="absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
+            <div className="relative">
+              <HeroChatAnimation />
+            </div>
+            {/* Desktop CTA below visual */}
+            <div className="hidden lg:block mt-6 text-center">
+              <a
+                href="#hero-form"
+                className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
+              >
+                Get Started Today
+              </a>
+              <p className="text-xs text-muted-foreground mt-3">
+                No lock-in contracts · Cancel anytime
+              </p>
             </div>
           </div>
         </div>
