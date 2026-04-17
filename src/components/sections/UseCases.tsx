@@ -47,12 +47,10 @@ const UseCases = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {cases.map((c, i) => (
+          {cases.map((c) => (
             <div
               key={c.title}
-              className={`group p-6 md:p-8 bg-card rounded-2xl border border-border hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all ${
-                i === 4 ? "lg:col-span-1 sm:col-span-2 lg:col-span-1" : ""
-              }`}
+              className="group p-6 md:p-8 bg-card rounded-2xl border border-border hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all"
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 text-primary-foreground flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform">
                 <c.icon className="w-6 h-6" />
