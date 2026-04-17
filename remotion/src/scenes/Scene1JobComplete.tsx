@@ -112,7 +112,8 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
           alignItems: "center",
           justifyContent: "center",
           gap: vertical ? 30 : 80,
-          paddingTop: vertical ? 280 : 60,
+          paddingTop: vertical ? 380 : 220,
+          paddingBottom: vertical ? 60 : 60,
         }}
       >
         {/* Dashboard card */}
