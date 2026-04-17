@@ -35,7 +35,8 @@ const ReviewAutomationDemo = () => {
             muted
             loop
             playsInline
-            preload="metadata"
+            controls
+            preload="auto"
             className="w-full h-auto block"
             aria-label="Animated demo: 5-star reviews routed to Google, low-star feedback kept private"
           />
