@@ -1,21 +1,21 @@
 const testimonials = [
   {
     quote:
-      "We needed a way to stop calls from going to voicemail because everyone just hangs up. Now Get Booked Out picks up 24/7 and I feel confident callers aren't just going to the next competitor on their list.",
-    name: "Hello Sugar Salon",
-    role: "Owner",
+      "Half our bookings come in while we're elbow-deep in a detail. Get Booked Out picks up every call, quotes our packages, and locks in the booking before the customer rings the next mob. Game changer for the shop.",
+    name: "Clean and Co",
+    role: "Mobile car detailing",
   },
   {
     quote:
-      "My colleagues call our number and talk to the AI and they can't believe how good it is. I've already recommended two friends.",
-    name: "Classic City Transportation",
-    role: "Owner",
+      "Sparkies are flat out on the tools — we can't be answering the phone up a ladder. Now every call gets answered, spam gets filtered, and I get a text with the job details before I'm back in the ute. Reckon it's paid for itself ten times over.",
+    name: "Trades for You",
+    role: "Electrical contractors",
   },
   {
     quote:
-      "After 50 years in business, I've hired many live receptionists. The biggest challenges were inconsistency, high cost, and turnover. I fired my answering service yesterday — this gives me more accuracy, faster responses, and 24/7 availability at a fraction of the cost.",
-    name: "James Hanner",
-    role: "Southern Indiana Driving School",
+      "On the yard with a customer, you can't drop everything for the phone. Get Booked Out handles the 'is it still available' calls, books test drives straight into the calendar, and weeds out the tyre-kickers. Best hire we've made all year.",
+    name: "Car Farm",
+    role: "Used car dealership",
   },
 ];
 
