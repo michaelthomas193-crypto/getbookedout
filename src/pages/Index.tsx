@@ -50,6 +50,7 @@ const Index = () => {
       <AudioDemos />
       <MarqueeQuotes />
       <MobileApp />
+      <Problems />
       <UseCases />
       <PremiumFeatures />
       <PhoneQuiz />
