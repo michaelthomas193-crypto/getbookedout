@@ -10,6 +10,8 @@ import PremiumFeatures from "@/components/sections/PremiumFeatures";
 import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
 import AudioDemos from "@/components/sections/AudioDemos";
 import Testimonials from "@/components/sections/Testimonials";
+import MobileApp from "@/components/sections/MobileApp";
+import PhoneQuiz from "@/components/sections/PhoneQuiz";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
@@ -43,6 +45,8 @@ const Index = () => {
       <Hero />
       <SocialProofBar />
       <StatsBar />
+      <MobileApp />
+      <PhoneQuiz />
       <Problems />
       <HowItWorks />
       <UseCases />
