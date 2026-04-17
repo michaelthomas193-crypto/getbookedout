@@ -8,7 +8,7 @@ const features = [
 
 const MobileApp = () => {
   return (
-    <section className="section-padding bg-secondary/40 overflow-hidden">
+    <section className="section-padding bg-lavender overflow-hidden">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Phone mockup */}

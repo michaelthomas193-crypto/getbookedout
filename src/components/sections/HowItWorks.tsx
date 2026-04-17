@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="section-padding bg-background">
+    <section id="how-it-works" className="section-padding bg-lavender">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
           <h2 className="section-title mb-4">

@@ -35,7 +35,7 @@ const Bubble = ({ q }: { q: Quote }) => (
 
 const MarqueeQuotes = () => {
   return (
-    <section className="py-14 md:py-20 bg-secondary/40 overflow-hidden">
+    <section className="py-14 md:py-20 bg-background overflow-hidden">
       <div className="container-padding max-w-7xl mx-auto text-center mb-10">
         <h2 className="section-title mb-3">
           Real businesses. <span className="text-primary">Real results.</span>

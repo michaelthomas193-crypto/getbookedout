@@ -30,7 +30,7 @@ const cases = [
 
 const UseCases = () => {
   return (
-    <section className="section-padding bg-secondary/40">
+    <section className="section-padding bg-background">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="section-title mb-4">

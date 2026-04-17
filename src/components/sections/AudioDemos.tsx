@@ -25,7 +25,7 @@ const demos = [
 
 const AudioDemos = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-lavender">
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-4">

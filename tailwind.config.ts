@@ -55,6 +55,7 @@ export default {
           light: "hsl(var(--sky-blue-light))",
         },
         "gray-light": "hsl(var(--gray-light))",
+        "lavender": "hsl(var(--lavender))",
         "charcoal": "hsl(var(--charcoal))",
         "warning": "hsl(var(--warning))",
         sidebar: {
