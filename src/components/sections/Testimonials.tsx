@@ -1,142 +1,58 @@
-import { useRef, useState } from "react";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
-
 const testimonials = [
   {
-    quote: "I honestly didn't know where to start with AI on my business model but I knew I needed it. Thank you so so much for streamlining the process and making it easy for me!",
-    name: "Therese Smith",
-    avatar: "TS",
-    avatarBg: "bg-primary",
+    quote:
+      "We needed a way to stop calls from going to voicemail because everyone just hangs up. Now Get Booked Out picks up 24/7 and I feel confident callers aren't just going to the next competitor on their list.",
+    name: "Hello Sugar Salon",
+    role: "Owner",
   },
   {
-    quote: "Didn't think it would be this easy managing my schedule with clients! With the help of their AI system, I've got a 24/7 receptionist and more! Highly recommended 10/10",
-    name: "John",
-    avatar: "J",
-    avatarBg: "bg-accent",
+    quote:
+      "My colleagues call our number and talk to the AI and they can't believe how good it is. I've already recommended two friends.",
+    name: "Classic City Transportation",
+    role: "Owner",
   },
   {
-    quote: "I have no idea how to use AI for my business so using Get Booked Out was a super helpful and affordable way to take advantage of the new tech! Thank you Jesse!",
-    name: "Jayson",
-    avatar: "J",
-    avatarBg: "bg-secondary",
-  },
-  {
-    quote: "Very professional and easy to deal with, highly recommend.",
-    name: "Anonymous",
-    avatar: "★",
-    avatarBg: "bg-primary",
-  },
-  {
-    quote: "Amazing customer service 👌. It was smooth and easy process, they paid very quickly.",
-    name: "Anonymous",
-    avatar: "★",
-    avatarBg: "bg-accent",
+    quote:
+      "After 50 years in business, I've hired many live receptionists. The biggest challenges were inconsistency, high cost, and turnover. I fired my answering service yesterday — this gives me more accuracy, faster responses, and 24/7 availability at a fraction of the cost.",
+    name: "James Hanner",
+    role: "Southern Indiana Driving School",
   },
 ];
 
 const Testimonials = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const cardWidth = 380;
-      const newIndex = direction === "left" 
-        ? Math.max(0, currentIndex - 1)
-        : Math.min(testimonials.length - 1, currentIndex + 1);
-      
-      scrollRef.current.scrollTo({
-        left: newIndex * cardWidth,
-        behavior: "smooth",
-      });
-      setCurrentIndex(newIndex);
-    }
-  };
-
   return (
-    <section id="testimonials" className="section-padding bg-secondary/30">
+    <section id="testimonials" className="section-padding bg-background">
       <div className="container-padding max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="section-title">
-            What Our Clients Say About <span className="text-primary">Get Booked Out</span>
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="section-title mb-4">
+            What owners are <span className="text-primary">saying</span>
           </h2>
+          <p className="section-subtitle">
+            Long-form stories from people running real businesses with Get Booked Out.
+          </p>
         </div>
 
-        <div className="relative px-12">
-          {/* Navigation Arrows */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors border border-border"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors border border-border"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Testimonials Carousel */}
-          <div
-            ref={scrollRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-[350px] bg-card rounded-xl p-6 border border-border card-shadow snap-start flex flex-col"
-              >
-                {/* Stars - Yellow/Gold */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[hsl(var(--warning))] text-[hsl(var(--warning))]" />
-                  ))}
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
+          {testimonials.map((t) => (
+            <figure
+              key={t.name}
+              className="flex flex-col p-6 md:p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all"
+            >
+              <div className="text-5xl text-primary/30 leading-none mb-4 font-serif">"</div>
+              <blockquote className="flex-1 text-foreground text-base leading-relaxed mb-6">
+                {t.quote}
+              </blockquote>
+              <figcaption className="flex items-center gap-3 pt-4 border-t border-border">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
+                  {t.name.charAt(0)}
                 </div>
-                
-                {/* Quote */}
-                <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
-                  "{testimonial.quote}"
-                </p>
-                
-                {/* Author */}
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className={`w-12 h-12 ${testimonial.avatarBg} rounded-full flex items-center justify-center text-white font-semibold text-sm`}>
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                  </div>
+                <div>
+                  <div className="font-semibold text-foreground text-sm">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.role}</div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Dot indicators */}
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  if (scrollRef.current) {
-                    scrollRef.current.scrollTo({
-                      left: index * 380,
-                      behavior: "smooth",
-                    });
-                    setCurrentIndex(index);
-                  }
-                }}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === currentIndex ? "bg-primary w-6" : "bg-border"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
