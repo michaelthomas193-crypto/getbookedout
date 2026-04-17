@@ -3,6 +3,7 @@ import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 
 import StatsBar from "@/components/sections/StatsBar";
+import ReviewAutomationDemo from "@/components/sections/ReviewAutomationDemo";
 import Problems from "@/components/sections/Problems";
 import HowItWorks from "@/components/sections/HowItWorks";
 import UseCases from "@/components/sections/UseCases";
@@ -45,6 +46,7 @@ const Index = () => {
       <Hero />
       
       <StatsBar />
+      <ReviewAutomationDemo />
       <MobileApp />
       <PhoneQuiz />
       <Problems />
