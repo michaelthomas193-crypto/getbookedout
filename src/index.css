@@ -45,6 +45,9 @@
     --charcoal: 0 0% 10%;
     --warning: 38 92% 50%;
 
+    /* Rosie-style alternating section background (light lavender) */
+    --lavender: 280 60% 97%;
+
     /* Purple gradient stops for hero & accents */
     --purple-deep: 256 80% 28%;
     --purple-mid: 266 71% 50%;
