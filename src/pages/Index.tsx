@@ -5,12 +5,12 @@ import Hero from "@/components/sections/Hero";
 import StatsBar from "@/components/sections/StatsBar";
 import ReviewAutomationDemo from "@/components/sections/ReviewAutomationDemo";
 import Problems from "@/components/sections/Problems";
-import HowItWorks from "@/components/sections/HowItWorks";
+
 import UseCases from "@/components/sections/UseCases";
 import PremiumFeatures from "@/components/sections/PremiumFeatures";
 import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
 import AudioDemos from "@/components/sections/AudioDemos";
-import Testimonials from "@/components/sections/Testimonials";
+
 import MobileApp from "@/components/sections/MobileApp";
 import PhoneQuiz from "@/components/sections/PhoneQuiz";
 import FAQ from "@/components/sections/FAQ";

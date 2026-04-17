@@ -54,10 +54,10 @@ const PremiumFeatures = () => {
             Premium features
           </div>
           <h2 className="section-title mb-4">
-            When you're ready, unlock <span className="text-primary">more horsepower</span>
+            Make more, <span className="text-primary">do less.</span>
           </h2>
           <p className="section-subtitle">
-            Start simple. Scale up as your business grows. Every plan is month-to-month with no lock-in.
+            You didn't start a business to answer repetitive questions and do admin — focus on what you actually want to do while we handle the rest.
           </p>
         </div>
 
