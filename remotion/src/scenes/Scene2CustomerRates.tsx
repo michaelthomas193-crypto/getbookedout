@@ -76,7 +76,7 @@ export const Scene2CustomerRates: React.FC<{ vertical?: boolean }> = ({
           textAlign: "center",
           opacity: headerOp,
           marginBottom: vertical ? 40 : 30,
-          marginTop: vertical ? -40 : 0,
+          marginTop: vertical ? 60 : 40,
         }}
       >
         <div
