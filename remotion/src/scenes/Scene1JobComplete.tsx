@@ -251,19 +251,19 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
             opacity: phoneOp,
           }}
         >
-          <PhoneFrame width={vertical ? 340 : 320}>
+          <PhoneFrame width={vertical ? 440 : 420}>
             <div
               style={{
-                paddingTop: 80,
-                paddingLeft: 20,
-                paddingRight: 20,
+                paddingTop: 90,
+                paddingLeft: 24,
+                paddingRight: 24,
                 height: "100%",
                 background: "#F7F5FA",
               }}
             >
               <div
                 style={{
-                  fontSize: 13,
+                  fontSize: 18,
                   fontWeight: 700,
                   color: COLORS.muted,
                   textAlign: "center",
@@ -274,7 +274,7 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
               </div>
               <div
                 style={{
-                  marginTop: 24,
+                  marginTop: 28,
                   display: "flex",
                   justifyContent: "flex-start",
                   opacity: smsOp,
@@ -285,12 +285,13 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
                   style={{
                     background: "#E5E5EA",
                     color: COLORS.ink,
-                    padding: "14px 18px",
-                    borderRadius: 22,
-                    borderBottomLeftRadius: 6,
-                    maxWidth: "85%",
-                    fontSize: 16,
+                    padding: "18px 22px",
+                    borderRadius: 24,
+                    borderBottomLeftRadius: 8,
+                    maxWidth: "90%",
+                    fontSize: 22,
                     lineHeight: 1.4,
+                    fontWeight: 500,
                   }}
                 >
                   Hey Sarah! Thanks for choosing us today. Mind sharing a quick
@@ -298,10 +299,10 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
                   <div
                     style={{
                       color: COLORS.primary,
-                      marginTop: 6,
-                      fontWeight: 600,
+                      marginTop: 10,
+                      fontWeight: 700,
                       textDecoration: "underline",
-                      fontSize: 14,
+                      fontSize: 20,
                     }}
                   >
                     review.gbo.au/sm
@@ -311,10 +312,11 @@ export const Scene1JobComplete: React.FC<{ vertical?: boolean }> = ({
               <div
                 style={{
                   textAlign: "center",
-                  marginTop: 12,
-                  fontSize: 11,
+                  marginTop: 16,
+                  fontSize: 16,
                   color: COLORS.muted,
                   opacity: smsOp,
+                  fontWeight: 600,
                 }}
               >
                 sent automatically · just now
