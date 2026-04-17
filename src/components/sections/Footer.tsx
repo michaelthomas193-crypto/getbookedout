@@ -1,6 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 const columns = [
   {
@@ -16,12 +15,14 @@ const columns = [
   {
     title: "Industries",
     links: [
-      { label: "Home services", to: "/" },
-      { label: "Plumbing", to: "/plumbing" },
-      { label: "Electrical", to: "/electrical" },
-      { label: "Carpentry", to: "/carpenters" },
-      { label: "Landscaping", to: "/landscapers" },
-      { label: "All industries", to: "/" },
+      { label: "Trades & home services", to: "/" },
+      { label: "Real estate & property", to: "/" },
+      { label: "Health & wellness clinics", to: "/" },
+      { label: "Beauty & personal care", to: "/" },
+      { label: "Automotive & repair", to: "/" },
+      { label: "Hospitality & events", to: "/" },
+      { label: "Professional services", to: "/" },
+      { label: "Any customer-facing business", to: "/" },
     ],
   },
   {
@@ -51,8 +52,10 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10">
           {/* Brand block */}
           <div className="col-span-2 lg:col-span-2 space-y-4">
-            <Link to="/">
-              <img src={logo} alt="Get Booked Out" className="h-10 w-auto" />
+            <Link to="/" className="inline-flex items-baseline gap-2 text-3xl font-black tracking-tight">
+              <span className="text-white font-semibold">Get</span>
+              <span className="text-primary">BOOKED</span>
+              <span className="text-white font-semibold">Out</span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-xs">
               Your AI receptionist — answering calls, booking appointments, and capturing every lead 24/7.
