@@ -75,20 +75,20 @@ const HeroChatAnimation = () => {
 
   return (
     <div className="relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl">
-      {/* Layered purple gradient background */}
+      {/* Layered lighter purple gradient background */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 80% 20%, hsl(var(--purple-glow) / 0.55), transparent 60%), radial-gradient(ellipse 80% 70% at 20% 80%, hsl(var(--purple-deep)), transparent 70%), linear-gradient(135deg, hsl(var(--purple-deep)) 0%, hsl(var(--purple-mid)) 50%, hsl(256 70% 22%) 100%)",
+            "radial-gradient(ellipse 90% 60% at 80% 20%, hsl(var(--purple-glow) / 0.7), transparent 60%), radial-gradient(ellipse 80% 70% at 20% 80%, hsl(var(--purple-mid) / 0.55), transparent 70%), linear-gradient(135deg, hsl(280 75% 88%) 0%, hsl(275 70% 78%) 50%, hsl(266 65% 68%) 100%)",
         }}
       />
       {/* Soft light streak */}
       <div
-        className="absolute -top-1/4 right-0 w-2/3 h-2/3 opacity-50 blur-3xl pointer-events-none"
+        className="absolute -top-1/4 right-0 w-2/3 h-2/3 opacity-60 blur-3xl pointer-events-none"
         style={{
           background:
-            "linear-gradient(135deg, hsl(var(--purple-glow) / 0.6), transparent)",
+            "linear-gradient(135deg, hsl(0 0% 100% / 0.7), transparent)",
         }}
       />
 
