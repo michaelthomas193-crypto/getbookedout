@@ -1,4 +1,4 @@
-import { Users, Store, UserPlus, ShieldCheck, MessageSquareText } from "lucide-react";
+import { Users, Store, UserPlus, ShieldCheck, MessageSquareText, CalendarClock } from "lucide-react";
 
 const cases = [
   {
@@ -25,6 +25,11 @@ const cases = [
     icon: MessageSquareText,
     title: "Convert website visitors",
     description: "Turn browsers into leads by letting them text directly from your website — you own the relationship.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Cover after-hours calls",
+    description: "Answers nights, weekends, and holidays so you book jobs while competitors send callers to voicemail.",
   },
 ];
 
