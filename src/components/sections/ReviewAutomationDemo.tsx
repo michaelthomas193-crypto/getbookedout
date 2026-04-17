@@ -38,7 +38,7 @@ const ReviewAutomationDemo = () => {
             controls
             preload="auto"
             ref={(el) => {
-              if (el) el.playbackRate = 0.5;
+              if (el) el.playbackRate = 0.67;
             }}
             className="w-full h-auto block"
             aria-label="Animated demo: 5-star reviews routed to Google, low-star feedback kept private"
