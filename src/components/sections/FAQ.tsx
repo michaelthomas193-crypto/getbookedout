@@ -41,6 +41,31 @@ const faqs = [
     answer:
       "Yes — on the Complete plan and above. Works with Google Calendar, Calendly, Acuity, and most popular booking tools.",
   },
+  {
+    question: "How do you connect to our phone system?",
+    answer:
+      "Simple call forwarding. You keep your existing number — we give you instructions to forward unanswered or all calls to your AI receptionist. Takes about 2 minutes and works with every major carrier.",
+  },
+  {
+    question: "Can I access call history, recordings, and transcripts?",
+    answer:
+      "Yes. Every call is logged with a full transcript, audio recording, AI-generated summary, and the caller's number. Available in your dashboard and the mobile app.",
+  },
+  {
+    question: "Will I get notified when there's a new call or booking?",
+    answer:
+      "Instantly — by SMS, email, and push notification on the mobile app. You'll see the caller, what they wanted, and any actions taken before you even open the app.",
+  },
+  {
+    question: "Do I need a developer to set this up?",
+    answer:
+      "No. We handle the setup end-to-end. No code, no integrations to wire up — just a 30-minute onboarding call and you're live.",
+  },
+  {
+    question: "Is there a free trial?",
+    answer:
+      "We don't run free trials, but every plan is month-to-month with no lock-in. If it's not pulling its weight in the first 30 days, cancel and walk away — no questions asked.",
+  },
 ];
 
 const FAQ = () => {
