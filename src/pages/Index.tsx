@@ -47,15 +47,15 @@ const Index = () => {
       
       <ReviewAutomationDemo />
       <StatsBar />
+      <AudioDemos />
+      <MarqueeQuotes />
       <MobileApp />
-      <PhoneQuiz />
       <Problems />
       <HowItWorks />
       <UseCases />
       <PremiumFeatures />
-      <MarqueeQuotes />
-      <AudioDemos />
       <Testimonials />
+      <PhoneQuiz />
       <FAQ />
       <FinalCTA />
       <Footer />
