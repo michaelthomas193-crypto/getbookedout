@@ -45,8 +45,8 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <StatsBar />
       <ReviewAutomationDemo />
+      <StatsBar />
       <MobileApp />
       <PhoneQuiz />
       <Problems />
