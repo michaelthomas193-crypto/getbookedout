@@ -63,10 +63,10 @@ const Header = () => {
         }`}
       >
         <div className="container-padding max-w-7xl mx-auto">
-          <div className="flex items-center justify-between h-16 md:h-24">
+          <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="Get Booked Out" className="h-12 md:h-20 w-auto" />
+              <img src={logo} alt="Get Booked Out" className="h-7 md:h-10 w-auto" />
             </Link>
 
             {/* Mobile Phone Number */}
