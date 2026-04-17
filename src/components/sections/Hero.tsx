@@ -10,7 +10,14 @@ const bullets = [
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative pt-8 pb-10 md:pt-20 md:pb-24 overflow-hidden bg-gradient-to-br from-accent/40 via-background to-background">
+    <section
+      id="hero"
+      className="relative pt-8 pb-10 md:pt-20 md:pb-24 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(105deg, hsl(0 0% 100%) 0%, hsl(280 60% 97%) 38%, hsl(280 65% 92%) 62%, hsl(275 70% 86%) 100%)",
+      }}
+    >
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
