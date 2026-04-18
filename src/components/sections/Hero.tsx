@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="animate-fade-up text-center lg:text-left">
+          <div className="animate-fade-up text-center lg:text-left order-2 lg:order-1">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-5 uppercase tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
@@ -50,8 +50,16 @@ const Hero = () => {
               ))}
             </ul>
 
-            {/* Mobile CTA */}
-            <div className="lg:hidden mb-2">
+          </div>
+
+          {/* Right Content - Animated chat panel */}
+          <div className="relative animate-fade-up order-1 lg:order-2" style={{ animationDelay: "0.15s" }}>
+            <div className="absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
+            <div className="relative">
+              <HeroChatAnimation />
+            </div>
+            {/* Mobile CTA directly under chat */}
+            <div className="lg:hidden mt-6 text-center">
               <a
                 href="#hero-form"
                 className="inline-flex w-full items-center justify-center min-h-[56px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
@@ -61,14 +69,6 @@ const Hero = () => {
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
-            </div>
-          </div>
-
-          {/* Right Content - Animated chat panel */}
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.15s" }}>
-            <div className="absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
-            <div className="relative">
-              <HeroChatAnimation />
             </div>
             {/* Desktop CTA below visual */}
             <div className="hidden lg:block mt-6 text-center">
