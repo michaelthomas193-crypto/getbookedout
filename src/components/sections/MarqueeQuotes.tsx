@@ -57,28 +57,6 @@ const MarqueeQuotes = () => {
         </div>
       </div>
 
-      <div className="space-y-4">
-        {/* Row 1 - left scroll */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-slide-left" style={{ width: "max-content" }}>
-            {[...row1, ...row1].map((q, i) => (
-              <Bubble key={`r1-${i}`} q={q} />
-            ))}
-          </div>
-        </div>
-
-        {/* Row 2 - right scroll (reversed) */}
-        <div className="relative overflow-hidden">
-          <div
-            className="flex animate-slide-left"
-            style={{ width: "max-content", animationDirection: "reverse", animationDuration: "40s" }}
-          >
-            {[...row2, ...row2].map((q, i) => (
-              <Bubble key={`r2-${i}`} q={q} />
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
