@@ -50,18 +50,6 @@ const Hero = () => {
               ))}
             </ul>
 
-            {/* Mobile CTA */}
-            <div className="lg:hidden mb-2">
-              <a
-                href="#hero-form"
-                className="inline-flex w-full items-center justify-center min-h-[56px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
-              >
-                Get Started Today
-              </a>
-              <p className="text-xs text-muted-foreground mt-3">
-                No lock-in contracts · Cancel anytime
-              </p>
-            </div>
           </div>
 
           {/* Right Content - Animated chat panel */}
