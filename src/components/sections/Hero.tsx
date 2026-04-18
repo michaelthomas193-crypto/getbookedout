@@ -19,6 +19,11 @@ const Hero = () => {
       }}
     >
       <div className="container-padding max-w-7xl mx-auto relative z-10">
+        {/* Mobile-only headline above chat */}
+        <h1 className="lg:hidden text-4xl sm:text-5xl font-bold leading-[1.1] mb-5 text-foreground tracking-tight text-center animate-fade-up">
+          AI receptionist for your <span className="text-primary">business calls</span>
+        </h1>
+
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="animate-fade-up text-center lg:text-left order-2 lg:order-1">
@@ -28,13 +33,13 @@ const Hero = () => {
               New · 24/7 AI Receptionist
             </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] mb-5 text-foreground tracking-tight">
+            {/* Headline - desktop only */}
+            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] mb-5 text-foreground tracking-tight">
               AI receptionist for your <span className="text-primary">business calls</span>
             </h1>
 
-            {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-7 max-w-[560px] mx-auto lg:mx-0">
+            {/* Subheadline - desktop only */}
+            <p className="hidden lg:block text-lg md:text-xl text-muted-foreground leading-relaxed mb-7 max-w-[560px] mx-auto lg:mx-0">
               Get Booked Out is your AI receptionist — trained on your business and ready to field calls, answer questions, set appointments, and send you all the details 24/7.
             </p>
 
