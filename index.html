@@ -24,6 +24,14 @@
     <link rel="apple-touch-icon" href="/favicon.png" />
     <!-- Canonical -->
     <link rel="canonical" href="https://getbookedout.com.au" />
+
+    <!-- Performance: preconnect to third-party origins used early -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.leadconnectorhq.com" />
+    <link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com" />
+    <link rel="dns-prefetch" href="https://services.leadconnectorhq.com" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
     
     <!-- Meta Pixel Code -->
     <script>
@@ -57,10 +65,16 @@
     /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script 
-      src="https://widgets.leadconnectorhq.com/loader.js"  
-      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
-      data-widget-id="696dd4f39ec20110976a08c7">
+    <!-- LeadConnector chat widget — defer so it never blocks first paint or interactivity -->
+    <script>
+      window.addEventListener('load', function () {
+        var s = document.createElement('script');
+        s.src = 'https://widgets.leadconnectorhq.com/loader.js';
+        s.async = true;
+        s.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+        s.setAttribute('data-widget-id', '696dd4f39ec20110976a08c7');
+        document.body.appendChild(s);
+      });
     </script>
   </body>
 </html>
