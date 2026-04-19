@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
-import founderImage from "@/assets/founder-michael.png";
+import founderImage from "@/assets/founder-michael.webp";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const WhoWeAre = () => {

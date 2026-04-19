@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import heroLandscaping from "@/assets/hero-landscaping.png";
+import heroLandscaping from "@/assets/hero-landscaping.webp";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
 
 const Landscapers = () => {
