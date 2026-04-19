@@ -2,7 +2,13 @@ import { Star, Shield, Zap } from "lucide-react";
 
 const ReviewAutomationDemo = () => {
   return (
-    <section className="relative py-20 md:py-28 bg-lavender overflow-hidden">
+    <section
+      className="relative py-20 md:py-28 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, hsl(275 70% 86%) 0%, hsl(280 65% 92%) 30%, hsl(280 60% 97%) 100%)",
+      }}
+    >
       {/* Soft background accents */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
