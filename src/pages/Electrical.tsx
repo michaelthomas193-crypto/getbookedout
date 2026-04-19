@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-orange.png";
-import heroImage from "@/assets/hero-electrical-landscape.png";
+import heroImage from "@/assets/hero-electrical-landscape.webp";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
 
 const Electrical = () => {
