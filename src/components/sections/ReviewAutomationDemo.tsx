@@ -6,7 +6,7 @@ const ReviewAutomationDemo = () => {
       className="relative py-20 md:py-28 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, hsl(275 70% 86%) 0%, hsl(280 65% 92%) 30%, hsl(280 60% 97%) 100%)",
+          "linear-gradient(105deg, hsl(275 70% 86%) 0%, hsl(280 65% 92%) 38%, hsl(280 60% 97%) 100%)",
       }}
     >
       {/* Soft background accents */}
