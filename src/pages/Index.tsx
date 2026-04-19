@@ -46,8 +46,8 @@ const Index = () => {
       <Hero />
       
       <ReviewAutomationDemo />
-      <StatsBar />
       <AudioDemos />
+      <StatsBar />
       <MarqueeQuotes />
       <MobileApp />
       <Problems />
