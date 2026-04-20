@@ -17,11 +17,16 @@ const ScheduleDemo = () => {
           Would you like to schedule a live demo now?
         </h1>
 
-        {/* Button */}
-        <div className="flex justify-center">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button asChild size="xl">
+            <a href="https://api.leadconnectorhq.com/widget/bookings/get-booked-out-calendar">
+              Yes
+            </a>
+          </Button>
           <Button asChild size="xl" variant="outline">
             <a href="https://www.getbookedout.com.au/thanks">
-              No thanks
+              No
             </a>
           </Button>
         </div>
