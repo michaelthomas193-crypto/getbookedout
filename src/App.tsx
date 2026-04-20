@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import ChatWidgetLoader from "./components/ChatWidgetLoader";
 
 // Lazy-load all secondary routes — keeps homepage JS small.
 const WhoWeAre = lazy(() => import("./pages/WhoWeAre"));
@@ -44,7 +43,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ChatWidgetLoader />
         <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route path="/" element={<Index />} />
