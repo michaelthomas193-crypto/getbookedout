@@ -65,16 +65,8 @@
     /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- LeadConnector chat widget — defer so it never blocks first paint or interactivity -->
-    <script>
-      window.addEventListener('load', function () {
-        var s = document.createElement('script');
-        s.src = 'https://widgets.leadconnectorhq.com/loader.js';
-        s.async = true;
-        s.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
-        s.setAttribute('data-widget-id', '69e5d2a306d5d5a3c87556bd');
-        document.body.appendChild(s);
-      });
-    </script>
+    <!-- LeadConnector chat widget is loaded conditionally per-route by
+         src/components/ChatWidgetLoader.tsx (A2P 10DLC compliance: the chat
+         widget cannot appear on pages that already have a lead form). -->
   </body>
 </html>

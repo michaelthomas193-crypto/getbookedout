@@ -18,13 +18,13 @@ const LOADER_SRC = "https://widgets.leadconnectorhq.com/loader.js";
 const FORM_ROUTES = new Set<string>([
   "/",
   "/plumbing",
-  "/painters",
+  "/painting",
   "/electrical",
-  "/carpenters",
-  "/concreters",
-  "/landscapers",
+  "/carpentry",
+  "/concreting",
+  "/landscaping",
   "/handyman",
-  "/never-miss-enquiry",
+  "/never-miss-an-enquiry-again",
   "/rate-us",
 ]);
 
