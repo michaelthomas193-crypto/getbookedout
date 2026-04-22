@@ -65,22 +65,15 @@
     /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- LeadConnector chat widgets — defer so they never block first paint or interactivity -->
+    <!-- LeadConnector chat widget — defer so it never blocks first paint or interactivity -->
     <script>
       window.addEventListener('load', function () {
         var s = document.createElement('script');
         s.src = 'https://widgets.leadconnectorhq.com/loader.js';
         s.async = true;
         s.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
-        s.setAttribute('data-widget-id', '69e5d2a306d5d5a3c87556bd');
+        s.setAttribute('data-widget-id', '69e90a7ae6b8ee1a817a8fb4');
         document.body.appendChild(s);
-
-        var s2 = document.createElement('script');
-        s2.src = 'https://widgets.leadconnectorhq.com/loader.js';
-        s2.async = true;
-        s2.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
-        s2.setAttribute('data-widget-id', '69e90a7ae6b8ee1a817a8fb4');
-        document.body.appendChild(s2);
       });
     </script>
   </body>
