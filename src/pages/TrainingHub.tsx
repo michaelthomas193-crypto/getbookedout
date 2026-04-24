@@ -35,6 +35,7 @@ import {
   Globe,
   MapPin,
 } from "lucide-react";
+import SeoToolsCard from "@/components/SeoToolsCard";
 
 
 
