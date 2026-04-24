@@ -361,6 +361,9 @@ const TrainingHub = () => {
           </CardContent>
         </Card>
 
+        {/* SEO / Search Console tools */}
+        <SeoToolsCard />
+
         {/* 7-Day Checklist */}
         <section>
           <div className="flex items-center gap-2 mb-6">
