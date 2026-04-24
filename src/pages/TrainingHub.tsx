@@ -35,6 +35,7 @@ import {
   Globe,
   MapPin,
 } from "lucide-react";
+import SeoToolsCard from "@/components/SeoToolsCard";
 
 
 
@@ -359,6 +360,9 @@ const TrainingHub = () => {
             </ul>
           </CardContent>
         </Card>
+
+        {/* SEO / Search Console tools */}
+        <SeoToolsCard />
 
         {/* 7-Day Checklist */}
         <section>
