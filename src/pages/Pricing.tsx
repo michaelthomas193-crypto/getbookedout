@@ -2,7 +2,7 @@ import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Check, ShieldCheck } from "lucide-react";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const pricingPlans = [
@@ -110,6 +110,12 @@ const Pricing = () => {
                   >
                     <a href="/#hero">Get Started</a>
                   </Button>
+                  <div className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-3 py-2.5">
+                    <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-primary shrink-0" />
+                    <span className="text-xs md:text-sm font-semibold text-primary text-center leading-tight">
+                      Guaranteed $1000+ in revenue or your money back
+                    </span>
+                  </div>
                 </CardContent>
               </Card>
             ))}
