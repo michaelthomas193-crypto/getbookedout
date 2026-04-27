@@ -110,9 +110,9 @@ const Pricing = () => {
                   >
                     <a href="/#hero">Get Started</a>
                   </Button>
-                  <div className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-3 py-2.5">
-                    <ShieldCheck className="h-4 w-4 md:h-5 md:w-5 text-primary shrink-0" />
-                    <span className="text-xs md:text-sm font-semibold text-primary text-center leading-tight">
+                  <div className="mt-4 flex items-center justify-center gap-1.5 rounded-lg bg-primary/10 border border-primary/20 px-2 py-2">
+                    <ShieldCheck className="h-3.5 w-3.5 text-primary shrink-0" />
+                    <span className="text-[11px] sm:text-xs font-semibold text-primary whitespace-nowrap">
                       Guaranteed $1000+ in revenue or your money back
                     </span>
                   </div>
