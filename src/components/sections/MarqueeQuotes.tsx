@@ -32,14 +32,14 @@ const MarqueeQuotes = () => {
       </div>
 
       {/* Video testimonial */}
-      <div className="container-padding max-w-sm mx-auto mb-10 md:mb-14">
+      <div className="container-padding max-w-xl mx-auto mb-10 md:mb-14">
         <figure className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
           <video
             src="/testimonials/joe-trades2you.mp4"
             controls
             playsInline
             preload="metadata"
-            className="w-full h-auto bg-black aspect-video object-cover"
+            className="w-full h-auto bg-black aspect-[9/16] object-contain"
           />
           <figcaption className="flex items-center gap-3 p-5 border-t border-border">
             <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
