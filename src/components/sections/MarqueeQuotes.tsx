@@ -31,6 +31,28 @@ const MarqueeQuotes = () => {
         </p>
       </div>
 
+      {/* Video testimonial */}
+      <div className="container-padding max-w-3xl mx-auto mb-10 md:mb-14">
+        <figure className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
+          <video
+            src="/testimonials/joe-trades2you.mp4"
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full h-auto bg-black"
+          />
+          <figcaption className="flex items-center gap-3 p-5 border-t border-border">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
+              J
+            </div>
+            <div>
+              <div className="font-semibold text-foreground text-sm">Joe</div>
+              <div className="text-xs text-muted-foreground">Trades2You</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
       {/* Featured long-form testimonials */}
       <div className="container-padding max-w-7xl mx-auto mb-10 md:mb-14">
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
