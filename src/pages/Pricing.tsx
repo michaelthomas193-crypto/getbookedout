@@ -110,22 +110,18 @@ const Pricing = () => {
                   >
                     <a href="/#hero">Get Started</a>
                   </Button>
-                  <div className="mt-4 flex items-center justify-center gap-1.5 rounded-lg bg-primary/10 border border-primary/20 px-2 py-2">
-                    <ShieldCheck className="h-3.5 w-3.5 text-primary shrink-0" />
-                    <span className="text-[11px] sm:text-xs font-semibold text-primary whitespace-nowrap">
-                      Guaranteed $1000+ in revenue or your money back
-                    </span>
-                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Usage Costs Note */}
-          <p className="text-center text-sm md:text-base text-muted-foreground mt-8 md:mt-10">
-            AI and texting usage billed at cost — typically $10-50/month
-            depending on volume.
-          </p>
+          {/* Money-Back Guarantee */}
+          <div className="mt-8 md:mt-10 flex items-center justify-center gap-2 sm:gap-3 rounded-xl bg-primary/10 border-2 border-primary/20 px-4 py-4 sm:px-6 sm:py-5 max-w-2xl mx-auto">
+            <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary shrink-0" />
+            <span className="text-base sm:text-lg md:text-xl font-bold text-primary text-center">
+              Guaranteed $1000+ in revenue or your money back
+            </span>
+          </div>
         </div>
       </section>
 
