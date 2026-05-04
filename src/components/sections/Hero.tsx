@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import HeroChatAnimation from "@/components/HeroChatAnimation";
 
 const bullets = [
@@ -10,6 +10,18 @@ const bullets = [
 ];
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/get-started");
+
+    window.setTimeout(() => {
+      if (window.location.pathname !== "/get-started") {
+        window.location.assign("/get-started");
+      }
+    }, 120);
+  };
+
   return (
     <section
       id="hero"
@@ -66,24 +78,26 @@ const Hero = () => {
             </div>
             {/* Mobile CTA directly under chat */}
             <div className="lg:hidden mt-6 text-center">
-              <Link
-                to="/get-started"
+              <button
+                type="button"
+                onClick={handleGetStarted}
                 className="inline-flex w-full items-center justify-center min-h-[56px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
               >
                 Get Started Today
-              </Link>
+              </button>
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
             </div>
             {/* Desktop CTA below visual */}
             <div className="hidden lg:block mt-6 text-center">
-              <Link
-                to="/get-started"
+              <button
+                type="button"
+                onClick={handleGetStarted}
                 className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
               >
                 Get Started Today
-              </Link>
+              </button>
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
