@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import HeroChatAnimation from "@/components/HeroChatAnimation";
 
 const bullets = [
@@ -65,24 +66,24 @@ const Hero = () => {
             </div>
             {/* Mobile CTA directly under chat */}
             <div className="lg:hidden mt-6 text-center">
-              <a
-                href="/get-started"
+              <Link
+                to="/get-started"
                 className="inline-flex w-full items-center justify-center min-h-[56px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
               >
                 Get Started Today
-              </a>
+              </Link>
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
             </div>
             {/* Desktop CTA below visual */}
             <div className="hidden lg:block mt-6 text-center">
-              <a
-                href="/get-started"
+              <Link
+                to="/get-started"
                 className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
               >
                 Get Started Today
-              </a>
+              </Link>
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
