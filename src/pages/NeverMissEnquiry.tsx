@@ -57,7 +57,7 @@ const NeverMissEnquiry = () => {
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Get Booked Out captures every enquiry — 24/7, even when you're busy with customers.
           </p>
-          <Link to="/#lead-form">
+          <Link to="/get-started">
             <Button variant="white" size="xl">
               Get Started Today
             </Button>
