@@ -10,8 +10,8 @@ declare global {
   }
 }
 
-const GHL_FORM_ID = "l0s50SAT3j1HjcABaNr8";
-const GHL_FORM_SRC = `https://api.leadconnectorhq.com/widget/form/${GHL_FORM_ID}`;
+const GHL_FORM_ID = "Bs7UvhiUOzhzwBcZlxtm";
+const GHL_FORM_SRC = `https://app.gohighlevel.com/v2/preview/${GHL_FORM_ID}`;
 const GHL_CALENDAR_SRC =
   "https://api.leadconnectorhq.com/widget/booking/get-booked-out-calendar";
 
