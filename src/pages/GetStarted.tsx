@@ -83,17 +83,18 @@ const GetStarted = () => {
                 Step 1 of 2 — quick details so we know who we're chatting with.
               </p>
             </header>
-            <div className="rounded-2xl border border-border bg-card shadow-sm overflow-hidden">
+            <div>
               <iframe
                 src={GHL_FORM_SRC}
-                style={{ width: "100%", height: "640px", border: "none" }}
+                style={{ width: "100%", height: "900px", border: "none", background: "transparent" }}
+                scrolling="no"
                 id={`inline-${GHL_FORM_ID}`}
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-activation-type="alwaysActivated"
                 data-deactivation-type="neverDeactivate"
                 data-form-name="Get Booked out contact form"
-                data-height="640"
+                data-height="900"
                 data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
                 data-form-id={GHL_FORM_ID}
                 title="Get Booked out contact form"
