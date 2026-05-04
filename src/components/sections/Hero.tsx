@@ -72,12 +72,12 @@ const Hero = () => {
 
           {/* Right Content - Animated chat panel */}
           <div className="relative animate-fade-up order-1 lg:order-2" style={{ animationDelay: "0.15s" }}>
-            <div className="absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
-            <div className="relative">
+            <div className="pointer-events-none absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
+            <div className="relative pointer-events-none">
               <HeroChatAnimation />
             </div>
             {/* Mobile CTA directly under chat */}
-            <div className="lg:hidden mt-6 text-center">
+            <div className="relative z-10 lg:hidden mt-6 text-center">
               <button
                 type="button"
                 onClick={handleGetStarted}
@@ -90,7 +90,7 @@ const Hero = () => {
               </p>
             </div>
             {/* Desktop CTA below visual */}
-            <div className="hidden lg:block mt-6 text-center">
+            <div className="relative z-10 hidden lg:block mt-6 text-center">
               <button
                 type="button"
                 onClick={handleGetStarted}
