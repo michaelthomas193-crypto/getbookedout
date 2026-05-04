@@ -28,6 +28,7 @@ const PaymentConfirmed = lazy(() => import("./pages/PaymentConfirmed"));
 const RateUs = lazy(() => import("./pages/RateUs"));
 const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const NeverMissEnquiry = lazy(() => import("./pages/NeverMissEnquiry"));
+const GetStarted = lazy(() => import("./pages/GetStarted"));
 const TrainingHub = lazy(() => import("./pages/TrainingHub"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/rate-us" element={<RateUs />} />
             <Route path="/unsubscribe" element={<Unsubscribe />} />
             <Route path="/never-miss-an-enquiry-again" element={<NeverMissEnquiry />} />
+            <Route path="/get-started" element={<GetStarted />} />
             <Route path="/training" element={<TrainingHub />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
