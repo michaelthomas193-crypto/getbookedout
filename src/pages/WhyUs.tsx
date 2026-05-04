@@ -232,7 +232,7 @@ const WhyUs = () => {
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
             Get Booked Out from $499/month.
           </p>
-          <Link to="/#lead-form">
+          <Link to="/get-started">
             <Button variant="white" size="xl">
               Get Started
             </Button>

@@ -75,7 +75,7 @@ const WhoWeAre = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 md:mb-8">
             Want to See How It Works?
           </h2>
-          <Link to="/#hero-form">
+          <Link to="/get-started">
             <Button size="xl" className="w-full sm:w-auto min-h-[52px]">Let's Chat</Button>
           </Link>
         </div>
