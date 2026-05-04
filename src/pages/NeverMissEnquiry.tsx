@@ -12,7 +12,7 @@ const NeverMissEnquiry = () => {
         <title>Never Miss an Enquiry Again | Get Booked Out</title>
         <meta
           name="description"
-          content="Even 1 missed enquiry loses you money. See how Get Booked Out ensures every lead is captured and converted — even when you're on the tools."
+          content="Even 1 missed enquiry loses you money. See how Get Booked Out ensures every lead is captured and converted — even when you're busy with customers."
         />
       </Helmet>
 
@@ -55,7 +55,7 @@ const NeverMissEnquiry = () => {
             Stop Losing Jobs to Missed Calls
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Get Booked Out captures every enquiry — 24/7, even when you're on the tools.
+            Get Booked Out captures every enquiry — 24/7, even when you're busy with customers.
           </p>
           <Link to="/#lead-form">
             <Button variant="white" size="xl">

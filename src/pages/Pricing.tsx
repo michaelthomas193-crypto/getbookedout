@@ -30,7 +30,7 @@ const pricingPlans = [
       "Google Review Automation — automatic requests after every job, only 5-stars go to Google",
     ],
     description:
-      "A full-time receptionist costs $50k+ a year. This does the same job for a fraction of the price — answers your phone, books jobs, filters tyre-kickers, and builds your Google reviews — while you stay on the tools.",
+      "A full-time receptionist costs $50k+ a year. This does the same job for a fraction of the price — answers your phone, books jobs, filters tyre-kickers, and builds your Google reviews — while you stay focused on the work.",
     highlighted: true,
     badge: "Most Popular",
   },

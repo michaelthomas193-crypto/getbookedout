@@ -3,7 +3,7 @@ import { Wrench, CheckCircle, Unlock, TrendingUp } from "lucide-react";
 const reasons = [
   {
     icon: Wrench,
-    title: "Built For Tradies",
+    title: "Built For Busy Businesses",
     description: "We're not a generic CRM. Every feature is built specifically for service businesses like yours.",
     color: "#2E86C1", // blue - trust/reliability
   },

@@ -4,7 +4,7 @@ const features = [
   {
     icon: Zap,
     title: "Instant Lead Response",
-    description: "Every enquiry answered in seconds, even when you're on the tools. Never lose another job to a faster competitor.",
+    description: "Every enquiry answered in seconds, even when you're with a customer. Never lose another job to a faster competitor.",
   },
   {
     icon: Calendar,

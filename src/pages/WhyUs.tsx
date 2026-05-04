@@ -13,11 +13,11 @@ const WhyUs = () => {
       <section className="pt-8 pb-4 md:pt-10 md:pb-6 bg-secondary/30">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Good Tradies Lose Jobs Every Day.{" "}
+            Good Businesses Lose Jobs Every Day.{" "}
             <span className="text-primary">Not Because They're Bad—Because They're Busy.</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            You're on the tools. You can't answer every call. But your customers don't wait—they call the next bloke. Here's why that changes with us.
+            You're busy doing the work. You can't answer every call. But your customers don't wait—they call the next business on the list. Here's why that changes with us.
           </p>
         </div>
       </section>
@@ -195,14 +195,14 @@ const WhyUs = () => {
       <section className="py-8 md:py-10 bg-muted/50">
         <div className="container-padding max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10">
-            You Became a Tradie to Do the Work.{" "}
+            You Became a Business Owner to Do the Work.{" "}
             <span className="text-primary">Not to Be a Secretary.</span>
           </h2>
 
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              You didn't spend years learning your trade so you could spend your nights chasing voicemails. 
-              You didn't get your ticket so you could stress about follow-ups while you're trying to have dinner with the family.
+              You didn't spend years learning your craft so you could spend your nights chasing voicemails. 
+              You didn't start your business so you could stress about follow-ups while you're trying to have dinner with the family.
             </p>
             <p>
               But here you are. Listening to messages at 9pm. Sending quotes at midnight. 
