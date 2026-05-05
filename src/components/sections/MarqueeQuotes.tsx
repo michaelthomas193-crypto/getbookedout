@@ -31,26 +31,33 @@ const MarqueeQuotes = () => {
         </p>
       </div>
 
-      {/* Video testimonial */}
-      <div className="container-padding max-w-md mx-auto mb-10 md:mb-14">
-        <figure className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
-          <video
-            src="/testimonials/joe-trades2you.mp4"
-            controls
-            playsInline
-            preload="metadata"
-            className="w-full h-[420px] bg-black object-cover"
-          />
-          <figcaption className="flex items-center gap-3 p-5 border-t border-border">
-            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
-              J
-            </div>
-            <div>
-              <div className="font-semibold text-foreground text-sm">Joe</div>
-              <div className="text-xs text-muted-foreground">Trades2You</div>
-            </div>
-          </figcaption>
-        </figure>
+      {/* Video testimonials */}
+      <div className="container-padding max-w-3xl mx-auto mb-10 md:mb-14">
+        <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
+          {[
+            { src: "/testimonials/joe-trades2you.mp4", name: "Joe", role: "Trades2You", initial: "J" },
+            { src: "/testimonials/client-2.mp4", name: "Client", role: "Get Booked Out", initial: "C" },
+          ].map((v) => (
+            <figure key={v.src} className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
+              <video
+                src={v.src}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-[420px] bg-black object-cover"
+              />
+              <figcaption className="flex items-center gap-3 p-5 border-t border-border">
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
+                  {v.initial}
+                </div>
+                <div>
+                  <div className="font-semibold text-foreground text-sm">{v.name}</div>
+                  <div className="text-xs text-muted-foreground">{v.role}</div>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
 
       {/* Featured long-form testimonials */}
