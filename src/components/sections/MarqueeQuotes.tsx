@@ -36,7 +36,7 @@ const MarqueeQuotes = () => {
         <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
           {[
             { src: "/testimonials/joe-trades2you.mp4", name: "Joe", role: "Trades2You", initial: "J" },
-            { src: "/testimonials/client-2.mp4", name: "Client", role: "Get Booked Out", initial: "C" },
+            { src: "/testimonials/client-2.mp4", name: "Lili", role: "Get Booked Out", initial: "L" },
           ].map((v) => (
             <figure key={v.src} className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
               <video
