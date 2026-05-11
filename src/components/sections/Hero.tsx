@@ -1,12 +1,12 @@
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import HeroChatAnimation from "@/components/HeroChatAnimation";
+import HeroMultiChannel from "@/components/HeroMultiChannel";
 
 const bullets = [
-  "Answers questions & books appointments — while you're with customers",
-  "Filters spam & sales calls — so you only hear from real customers",
-  "Sends instant text & email notifications — never miss a lead again",
-  "Captures more leads from your website with instant text-back",
+  "Answers phone calls so you never miss a customer",
+  "Replies to texts and website messages in seconds",
+  "Books appointments straight into your calendar",
+  "Works 24/7 — even when you're with a customer",
 ];
 
 const Hero = () => {
@@ -32,10 +32,13 @@ const Hero = () => {
       }}
     >
       <div className="container-padding max-w-7xl mx-auto relative z-10">
-        {/* Mobile-only headline above chat */}
-        <h1 className="lg:hidden text-4xl sm:text-5xl font-bold leading-[1.1] mb-5 text-foreground tracking-tight text-center animate-fade-up">
-          AI receptionist for your <span className="text-primary">business calls</span>
+        {/* Mobile-only headline above visual */}
+        <h1 className="lg:hidden text-[34px] sm:text-5xl font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
+          Get more bookings without <span className="text-primary">answering every call yourself</span>
         </h1>
+        <p className="lg:hidden text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 text-center max-w-[560px] mx-auto animate-fade-up">
+          Our AI receptionist answers calls, replies to texts and website messages, books appointments, and keeps your calendar up to date 24/7.
+        </p>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
@@ -47,13 +50,13 @@ const Hero = () => {
             </div>
 
             {/* Headline - desktop only */}
-            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] mb-5 text-foreground tracking-tight">
-              AI receptionist for your <span className="text-primary">business calls</span>
+            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-bold leading-[1.05] mb-5 text-foreground tracking-tight">
+              Get more bookings without <span className="text-primary">answering every call yourself</span>
             </h1>
 
             {/* Subheadline - desktop only */}
             <p className="hidden lg:block text-lg md:text-xl text-muted-foreground leading-relaxed mb-7 max-w-[560px] mx-auto lg:mx-0">
-              Get Booked Out is your AI receptionist — trained on your business and ready to field calls, answer questions, set appointments, and send you all the details 24/7.
+              Our AI receptionist answers calls, replies to texts and website messages, books appointments, and keeps your calendar up to date 24/7.
             </p>
 
             {/* Bullets */}
@@ -74,7 +77,7 @@ const Hero = () => {
           <div className="relative animate-fade-up order-1 lg:order-2" style={{ animationDelay: "0.15s" }}>
             <div className="pointer-events-none absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
             <div className="relative pointer-events-none">
-              <HeroChatAnimation />
+              <HeroMultiChannel />
             </div>
             {/* Mobile CTA directly under chat */}
             <div className="relative z-10 lg:hidden mt-6 text-center">
