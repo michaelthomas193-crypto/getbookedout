@@ -80,11 +80,12 @@ const Hero = () => {
               <HeroMultiChannel />
             </div>
             {/* Mobile CTA directly under chat */}
-            <div className="relative z-10 lg:hidden mt-6 text-center">
+            <div className="relative z-10 lg:hidden mt-5 text-center">
+              <OfferBadge className="w-full" />
               <button
                 type="button"
                 onClick={handleGetStarted}
-                className="inline-flex w-full items-center justify-center min-h-[56px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
+                className="mt-3 inline-flex w-full items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
               >
                 Get Started Today
               </button>
@@ -94,13 +95,16 @@ const Hero = () => {
             </div>
             {/* Desktop CTA below visual */}
             <div className="relative z-10 hidden lg:block mt-6 text-center">
-              <button
-                type="button"
-                onClick={handleGetStarted}
-                className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
-              >
-                Get Started Today
-              </button>
+              <OfferBadge className="inline-flex" />
+              <div className="mt-3">
+                <button
+                  type="button"
+                  onClick={handleGetStarted}
+                  className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
+                >
+                  Get Started Today
+                </button>
+              </div>
               <p className="text-xs text-muted-foreground mt-3">
                 No lock-in contracts · Cancel anytime
               </p>
@@ -111,5 +115,20 @@ const Hero = () => {
     </section>
   );
 };
+
+const OfferBadge = ({ className = "" }: { className?: string }) => (
+  <div
+    className={`${className} items-center justify-center gap-x-2 gap-y-0.5 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 px-4 py-2.5 text-foreground shadow-sm flex flex-wrap text-center`}
+  >
+    <span className="inline-flex items-center gap-1.5 font-bold text-primary text-sm sm:text-[15px] whitespace-nowrap">
+      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+      From $99 / week
+    </span>
+    <span className="hidden sm:inline text-primary/30">•</span>
+    <span className="text-[13px] sm:text-sm font-medium leading-snug w-full sm:w-auto">
+      If it doesn't pay for itself in the first month, you don't pay.
+    </span>
+  </div>
+);
 
 export default Hero;
