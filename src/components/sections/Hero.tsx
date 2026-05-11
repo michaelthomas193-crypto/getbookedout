@@ -36,15 +36,17 @@ const Hero = () => {
         <h1 className="lg:hidden text-[34px] sm:text-5xl font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
           Get more bookings without <span className="text-primary">answering every call yourself</span>
         </h1>
-        <p className="lg:hidden text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 text-center max-w-[560px] mx-auto animate-fade-up">
-          Our AI receptionist answers calls, replies to texts and website messages, books appointments, and keeps your calendar up to date 24/7.
-        </p>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="animate-fade-up text-center lg:text-left order-2 lg:order-1">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-5 uppercase tracking-wide">
+            {/* Mobile-only subheadline (now below CTA) */}
+            <p className="lg:hidden text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 text-center max-w-[560px] mx-auto">
+              Our AI receptionist answers calls, replies to texts and website messages, books appointments, and keeps your calendar up to date 24/7.
+            </p>
+
+            {/* Badge - desktop only */}
+            <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-5 uppercase tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               New · 24/7 AI Receptionist
             </div>
