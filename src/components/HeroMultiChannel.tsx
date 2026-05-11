@@ -32,18 +32,6 @@ const HeroMultiChannel = () => {
         style={{ background: "linear-gradient(135deg, hsl(285 80% 80% / 0.55), transparent)" }}
       />
 
-      {/* Centre orb: AI receptionist */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative">
-          <span className="absolute inset-0 rounded-full bg-white/20" style={{ animation: "orbPulse 2.6s ease-out infinite" }} />
-          <span className="absolute inset-0 rounded-full bg-white/15" style={{ animation: "orbPulse 2.6s ease-out infinite", animationDelay: "0.9s" }} />
-          <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/95 flex flex-col items-center justify-center shadow-2xl">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-primary/70 leading-none">AI</div>
-            <div className="text-xs md:text-sm font-bold text-primary leading-tight mt-0.5">Reception</div>
-          </div>
-        </div>
-      </div>
-
       {/* Channel cards - 4 corners */}
       <div className="absolute inset-0 p-4 md:p-6 grid grid-cols-2 grid-rows-2 gap-3 md:gap-4">
         {/* 1. Incoming call (top-left) */}
