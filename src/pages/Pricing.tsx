@@ -40,7 +40,7 @@ const pricingPlans = [
 const Pricing = () => {
   return (
     <>
-      <SeoHead title="Pricing — From $99/Week, No Lock-In | Get Booked Out" description="Simple AI receptionist pricing for Australian service businesses. Essentials $499/mo, Complete $999/mo. No lock-in, money-back guarantee." path="/pricing" />
+      <SeoHead title="AI Receptionist Pricing Australia — From $99/week | Get Booked Out" description="Simple AI receptionist pricing for Australian service businesses. Essentials $499/mo, Complete $999/mo. No lock-in, money-back guarantee." path="/pricing" />
       <div className="min-h-screen bg-background">
       <Header />
 
