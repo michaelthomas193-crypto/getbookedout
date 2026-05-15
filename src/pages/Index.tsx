@@ -99,7 +99,7 @@ const Index = () => {
         title="AI Receptionist for Your Business Calls | Get Booked Out"
         description="Get Booked Out is your 24/7 AI receptionist. It answers calls, books appointments, filters spam, and sends you every lead — for any small business."
         path="/"
-        jsonLd={[localBusinessSchema, faqSchema]}
+        jsonLd={[organizationSchema, websiteSchema, localBusinessSchema, faqSchema]}
       />
       <Header />
       <Hero />
