@@ -15,14 +15,13 @@ const columns = [
   {
     title: "Industries",
     links: [
-      { label: "Trades & home services", to: "/" },
-      { label: "Real estate & property", to: "/" },
-      { label: "Health & wellness clinics", to: "/" },
-      { label: "Beauty & personal care", to: "/" },
-      { label: "Automotive & repair", to: "/" },
-      { label: "Hospitality & events", to: "/" },
-      { label: "Professional services", to: "/" },
-      { label: "Any customer-facing business", to: "/" },
+      { label: "Plumbers", to: "/plumbing" },
+      { label: "Electricians", to: "/electrical" },
+      { label: "Painters", to: "/painting" },
+      { label: "Landscapers", to: "/landscaping" },
+      { label: "Handyman", to: "/handyman" },
+      { label: "Carpenters", to: "/carpentry" },
+      { label: "Concreters", to: "/concreting" },
     ],
   },
   {
