@@ -24,6 +24,21 @@ Get Booked Out is an Australian-built AI receptionist for any business that take
 - [Carpentry](/carpentry): AI receptionist for carpenters.
 - [Concreting](/concreting): AI receptionist for concreters.
 
+## Locations
+
+- [Sydney](/sydney): AI receptionist for Sydney businesses.
+- [Melbourne](/melbourne): AI receptionist for Melbourne businesses.
+- [Brisbane](/brisbane): AI receptionist for Brisbane businesses.
+- [Perth](/perth): AI receptionist for Perth businesses.
+- [Adelaide](/adelaide): AI receptionist for Adelaide businesses.
+
+## Blog
+
+- [Blog index](/blog): Guides for Australian service businesses.
+- [How much a missed call actually costs](/blog/missed-call-cost-australian-business)
+- [AI receptionist vs call centre](/blog/ai-receptionist-vs-call-centre)
+- [How to get more Google reviews as a tradie](/blog/google-reviews-for-tradies)
+
 ## Optional
 
 - [Terms of service](/terms)

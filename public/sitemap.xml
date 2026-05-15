@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.getbookedout.com.au/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.getbookedout.com.au/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.getbookedout.com.au/who-we-are</loc><priority>0.8</priority></url>
   <url><loc>https://www.getbookedout.com.au/why-us</loc><priority>0.8</priority></url>
   <url><loc>https://www.getbookedout.com.au/pricing</loc><priority>0.8</priority></url>
@@ -11,6 +11,15 @@
   <url><loc>https://www.getbookedout.com.au/handyman</loc><priority>0.7</priority></url>
   <url><loc>https://www.getbookedout.com.au/carpentry</loc><priority>0.7</priority></url>
   <url><loc>https://www.getbookedout.com.au/concreting</loc><priority>0.7</priority></url>
+  <url><loc>https://www.getbookedout.com.au/sydney</loc><priority>0.8</priority></url>
+  <url><loc>https://www.getbookedout.com.au/melbourne</loc><priority>0.8</priority></url>
+  <url><loc>https://www.getbookedout.com.au/brisbane</loc><priority>0.8</priority></url>
+  <url><loc>https://www.getbookedout.com.au/perth</loc><priority>0.8</priority></url>
+  <url><loc>https://www.getbookedout.com.au/adelaide</loc><priority>0.8</priority></url>
+  <url><loc>https://www.getbookedout.com.au/blog</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.getbookedout.com.au/blog/missed-call-cost-australian-business</loc><priority>0.6</priority></url>
+  <url><loc>https://www.getbookedout.com.au/blog/ai-receptionist-vs-call-centre</loc><priority>0.6</priority></url>
+  <url><loc>https://www.getbookedout.com.au/blog/google-reviews-for-tradies</loc><priority>0.6</priority></url>
   <url><loc>https://www.getbookedout.com.au/never-miss-an-enquiry-again</loc><priority>0.7</priority></url>
   <url><loc>https://www.getbookedout.com.au/get-started</loc><priority>0.7</priority></url>
   <url><loc>https://www.getbookedout.com.au/schedule-demo</loc><priority>0.6</priority></url>
