@@ -5,24 +5,24 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import WhoWeAre from "./pages/WhoWeAre";
+import WhyUs from "./pages/WhyUs";
+import Pricing from "./pages/Pricing";
+import Plumbing from "./pages/Plumbing";
+import Electrical from "./pages/Electrical";
+import Painters from "./pages/Painters";
+import Landscapers from "./pages/Landscapers";
+import Handyman from "./pages/Handyman";
+import Carpenters from "./pages/Carpenters";
+import Concreters from "./pages/Concreters";
+import ScheduleDemo from "./pages/ScheduleDemo";
 
-// Lazy-load all secondary routes — keeps homepage JS small.
-const WhoWeAre = lazy(() => import("./pages/WhoWeAre"));
-const WhyUs = lazy(() => import("./pages/WhyUs"));
-const Pricing = lazy(() => import("./pages/Pricing"));
-const Plumbing = lazy(() => import("./pages/Plumbing"));
-const Electrical = lazy(() => import("./pages/Electrical"));
-const Painters = lazy(() => import("./pages/Painters"));
-const Landscapers = lazy(() => import("./pages/Landscapers"));
-const Handyman = lazy(() => import("./pages/Handyman"));
-const Carpenters = lazy(() => import("./pages/Carpenters"));
-const Concreters = lazy(() => import("./pages/Concreters"));
+// Lazy-load secondary non-marketing routes — keeps the app bundle scoped.
 const Terms = lazy(() => import("./pages/Terms"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 const Thanks = lazy(() => import("./pages/Thanks"));
-const ScheduleDemo = lazy(() => import("./pages/ScheduleDemo"));
 const FormThankYou = lazy(() => import("./pages/FormThankYou"));
 const PaymentConfirmed = lazy(() => import("./pages/PaymentConfirmed"));
 const RateUs = lazy(() => import("./pages/RateUs"));
