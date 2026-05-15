@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
-import type { OutputAsset, OutputBundle } from "rollup";
 import react from "@vitejs/plugin-react-swc";
+import fs from "fs";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 // @ts-expect-error - JS module without type declarations
@@ -14,48 +14,89 @@ type PrerenderRoute = {
 };
 
 const prerenderRoutes = routes as PrerenderRoute[];
+const projectRoot = __dirname;
+const sourceIndexPath = path.resolve(projectRoot, "index.html");
 
-function isIndexHtmlAsset(asset: OutputBundle[string] | undefined): asset is OutputAsset {
-  return Boolean(asset && asset.type === "asset" && asset.fileName === "index.html" && typeof asset.source === "string");
+function routeSourcePath(routePath: string) {
+  return path.resolve(projectRoot, routePath.replace(/^\//, ""), "index.html");
+}
+
+function toTitleCaseRoute(routePath: string) {
+  return routePath
+    .split("/")
+    .map((segment) =>
+      segment
+        .split("-")
+        .map((part) => (part ? `${part[0].toUpperCase()}${part.slice(1)}` : part))
+        .join("-")
+    )
+    .join("/");
+}
+
+function getAliasPaths(routePath: string) {
+  const aliases = new Set<string>();
+  const titleCase = toTitleCaseRoute(routePath);
+  const uppercase = routePath.toUpperCase();
+
+  if (titleCase !== routePath) aliases.add(titleCase);
+  if (uppercase !== routePath) aliases.add(uppercase);
+
+  return [...aliases];
+}
+
+function ensurePrerenderSourceFiles() {
+  if (!fs.existsSync(sourceIndexPath)) return;
+
+  const baseHtml = fs.readFileSync(sourceIndexPath, "utf8");
+
+  for (const route of prerenderRoutes) {
+    if (route.path === "/") continue;
+
+    const sourceFiles = [route.path, ...getAliasPaths(route.path)].map(routeSourcePath);
+
+    for (const filePath of sourceFiles) {
+      fs.mkdirSync(path.dirname(filePath), { recursive: true });
+      fs.writeFileSync(filePath, rewriteHtmlForRoute(baseHtml, route));
+    }
+  }
+}
+
+function getPrerenderInputs() {
+  const inputs: Record<string, string> = {
+    main: sourceIndexPath,
+  };
+
+  for (const route of prerenderRoutes) {
+    if (route.path === "/") continue;
+
+    const allPaths = [route.path, ...getAliasPaths(route.path)];
+    for (const entryPath of allPaths) {
+      inputs[entryPath.replace(/[^a-zA-Z0-9]+/g, "_")] = routeSourcePath(entryPath);
+    }
+  }
+
+  return inputs;
 }
 
 /**
  * Build-time prerender plugin.
- * After Vite finishes the SPA build, copies dist/index.html into per-route
- * folders and rewrites <head> with route-specific title, description,
- * canonical, og:* and JSON-LD. Lovable hosting serves dist/<route>/index.html
- * when present and falls back to SPA otherwise — so crawlers see the correct
- * title/meta in the initial HTML response without any framework migration.
+ * Generates real HTML entry files for each marketing route before Vite builds,
+ * so Lovable hosting can serve dist/<route>/index.html directly on deep links.
  */
 function prerenderPlugin(): Plugin {
   return {
     name: "gbo-static-prerender",
     apply: "build" as const,
-    generateBundle(_, bundle) {
-      const indexAsset = Object.values(bundle).find(
-        (asset) => asset.type === "asset" && asset.fileName === "index.html"
-      );
+    config() {
+      ensurePrerenderSourceFiles();
 
-      if (!isIndexHtmlAsset(indexAsset)) return;
-
-      const homeRoute = prerenderRoutes.find((route) => route.path === "/");
-      if (!homeRoute) return;
-
-      const baseHtml = indexAsset.source;
-      indexAsset.source = rewriteHtmlForRoute(baseHtml, homeRoute);
-
-      for (const route of prerenderRoutes) {
-        if (route.path === "/") continue;
-
-        this.emitFile({
-          type: "asset",
-          fileName: `${route.path.replace(/^\//, "")}/index.html`,
-          source: rewriteHtmlForRoute(baseHtml, route),
-        });
-      }
-
-      // eslint-disable-next-line no-console
-      console.log(`[prerender] emitted ${prerenderRoutes.length} static HTML files`);
+      return {
+        build: {
+          rollupOptions: {
+            input: getPrerenderInputs(),
+          },
+        },
+      };
     },
   };
 }
