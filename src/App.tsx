@@ -30,6 +30,9 @@ const Unsubscribe = lazy(() => import("./pages/Unsubscribe"));
 const NeverMissEnquiry = lazy(() => import("./pages/NeverMissEnquiry"));
 const GetStarted = lazy(() => import("./pages/GetStarted"));
 const TrainingHub = lazy(() => import("./pages/TrainingHub"));
+const Location = lazy(() => import("./pages/Location"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -70,6 +73,13 @@ const App = () => (
             <Route path="/never-miss-an-enquiry-again" element={<NeverMissEnquiry />} />
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/training" element={<TrainingHub />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/sydney" element={<Location />} />
+            <Route path="/melbourne" element={<Location />} />
+            <Route path="/brisbane" element={<Location />} />
+            <Route path="/perth" element={<Location />} />
+            <Route path="/adelaide" element={<Location />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
