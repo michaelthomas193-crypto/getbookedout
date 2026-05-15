@@ -1,8 +1,9 @@
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import fs from "fs";
 import { componentTagger } from "lovable-tagger";
+// @ts-expect-error - JS module without type declarations
 import { routes, rewriteHtmlForRoute } from "./prerender.config.mjs";
 
 /**
