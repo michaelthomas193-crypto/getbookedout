@@ -20,12 +20,20 @@ import Footer from "@/components/sections/Footer";
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.getbookedout.com.au/#business",
   "name": "Get Booked Out",
-  "image": "https://getbookedout.com.au/og-image.png",
+  "image": "https://www.getbookedout.com.au/og-image.png",
   "url": "https://www.getbookedout.com.au",
   "telephone": "+61485008132",
+  "email": "bookings@getbookedout.com.au",
+  "priceRange": "$$",
   "description": "AI receptionist that answers your business calls 24/7 — books appointments, filters spam, and never lets a lead slip through. Built for any small business.",
-  "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "AU" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressRegion": "NSW", "addressCountry": "AU" },
+  "areaServed": { "@type": "Country", "name": "Australia" },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61586125082752",
+    "https://www.instagram.com/getbookedout.au"
+  ],
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -33,6 +41,36 @@ const localBusinessSchema = {
     "bestRating": "5",
     "worstRating": "1"
   }
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.getbookedout.com.au/#organization",
+  "name": "Get Booked Out",
+  "url": "https://www.getbookedout.com.au",
+  "logo": "https://www.getbookedout.com.au/favicon.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+61485008132",
+    "contactType": "customer service",
+    "areaServed": "AU",
+    "availableLanguage": ["en"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61586125082752",
+    "https://www.instagram.com/getbookedout.au"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.getbookedout.com.au/#website",
+  "url": "https://www.getbookedout.com.au",
+  "name": "Get Booked Out",
+  "publisher": { "@id": "https://www.getbookedout.com.au/#organization" },
+  "inLanguage": "en-AU"
 };
 
 const faqSchema = {
