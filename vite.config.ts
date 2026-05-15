@@ -14,10 +14,10 @@ import { routes, rewriteHtmlForRoute } from "./prerender.config.mjs";
  * when present and falls back to SPA otherwise — so crawlers see the correct
  * title/meta in the initial HTML response without any framework migration.
  */
-function prerenderPlugin() {
+function prerenderPlugin(): Plugin {
   return {
     name: "gbo-static-prerender",
-    apply: "build",
+    apply: "build" as const,
     closeBundle() {
       const distDir = path.resolve(__dirname, "dist");
       const indexPath = path.join(distDir, "index.html");
