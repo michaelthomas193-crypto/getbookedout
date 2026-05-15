@@ -26,11 +26,22 @@ const columns = [
     ],
   },
   {
+    title: "Locations",
+    links: [
+      { label: "Sydney", to: "/sydney" },
+      { label: "Melbourne", to: "/melbourne" },
+      { label: "Brisbane", to: "/brisbane" },
+      { label: "Perth", to: "/perth" },
+      { label: "Adelaide", to: "/adelaide" },
+    ],
+  },
+  {
     title: "Company",
     links: [
       { label: "Pricing", to: "/pricing" },
       { label: "About us", to: "/who-we-are" },
       { label: "Why us", to: "/why-us" },
+      { label: "Blog", to: "/blog" },
       { label: "Schedule a demo", to: "/schedule-demo" },
     ],
   },
