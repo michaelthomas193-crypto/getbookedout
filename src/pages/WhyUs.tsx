@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import SeoHead from "@/components/SeoHead";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -6,7 +7,9 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const WhyUs = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="Why Get Booked Out vs Call Centres & Voicemail" description="See how Get Booked Out's AI receptionist compares to call centres, voicemail and missed calls — answering 24/7 from $99/week." path="/why-us" />
+      <div className="min-h-screen bg-background">
       <Header />
       
       {/* Section 1 - Hero */}
@@ -243,6 +246,7 @@ const WhyUs = () => {
       <Footer />
       <MobileStickyCTA />
     </div>
+  </>
   );
 };
 

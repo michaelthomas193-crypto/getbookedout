@@ -1,9 +1,12 @@
 import { CalendarCheck } from "lucide-react";
+import SeoHead from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 
 const ScheduleDemo = () => {
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
+    <>
+      <SeoHead title="Schedule a Demo | Get Booked Out" description="Book a live demo of Get Booked Out's AI receptionist and see how it answers calls and books appointments for your business." path="/schedule-demo" />
+      <div className="min-h-screen bg-background flex items-center justify-center px-4 py-12">
       <div className="max-w-lg w-full text-center space-y-8">
         {/* Icon */}
         <div className="flex justify-center">
@@ -32,6 +35,7 @@ const ScheduleDemo = () => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 

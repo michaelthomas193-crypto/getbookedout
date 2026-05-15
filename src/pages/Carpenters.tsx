@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import SeoHead from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 import { PhoneMissed, Clock, Star, MessageSquare, Bot, ThumbsUp, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -76,7 +77,9 @@ const Carpenters = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="AI Receptionist for Carpenters | Get Booked Out" description="Win more carpentry work. Our AI receptionist answers calls 24/7 and books quotes into your calendar." path="/carpentry" jsonLd={{"@context":"https://schema.org","@type":"Service","serviceType":"AI receptionist for carpentry businesses","provider":{"@type":"Organization","name":"Get Booked Out","url":"https://www.getbookedout.com.au"},"areaServed":{"@type":"Country","name":"Australia"},"name":"AI Receptionist for Carpenters | Get Booked Out","description":"Win more carpentry work. Our AI receptionist answers calls 24/7 and books quotes into your calendar."}} />
+      <div className="min-h-screen bg-background">
       {/* Minimal Header - Logo Only */}
       <header className="py-4 px-4 md:px-6 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -213,6 +216,7 @@ const Carpenters = () => {
         </div>
       )}
     </div>
+  </>
   );
 };
 

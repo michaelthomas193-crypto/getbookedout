@@ -1,0 +1,31 @@
+# Get Booked Out
+
+> 24/7 AI receptionist for Australian service businesses — answers calls, replies to texts and website messages, and books appointments straight into your calendar.
+
+Get Booked Out is an Australian-built AI receptionist for any business that takes bookings by phone, text, or web chat: trades, salons, clinics, real estate, automotive, hospitality, professional services and more. Plans start from $99/week with no lock-in contracts and a first-month money-back guarantee.
+
+## Pages
+
+- [Home](/): What Get Booked Out is and how the AI receptionist works.
+- [Who we are](/who-we-are): About the team and the business.
+- [Why us](/why-us): How Get Booked Out compares to call centres and voicemail.
+- [Pricing](/pricing): Essentials ($499/mo) and Complete ($999/mo) plans.
+- [Schedule a demo](/schedule-demo): Book a live walkthrough.
+- [Get started](/get-started): Sign-up and onboarding.
+- [Never miss an enquiry again](/never-miss-an-enquiry-again): Landing page about lead capture.
+
+## Industries
+
+- [Plumbing](/plumbing): AI receptionist for plumbers.
+- [Electrical](/electrical): AI receptionist for electricians.
+- [Painting](/painting): AI receptionist for painters.
+- [Landscaping](/landscaping): AI receptionist for landscapers.
+- [Handyman](/handyman): AI receptionist for handyman services.
+- [Carpentry](/carpentry): AI receptionist for carpenters.
+- [Concreting](/concreting): AI receptionist for concreters.
+
+## Optional
+
+- [Terms of service](/terms)
+- [Privacy policy](/privacy)
+- [Cookie policy](/cookies)

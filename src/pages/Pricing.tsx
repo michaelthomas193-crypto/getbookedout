@@ -1,4 +1,5 @@
 import Header from "@/components/sections/Header";
+import SeoHead from "@/components/SeoHead";
 import Footer from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -38,7 +39,9 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="Pricing — From $99/Week, No Lock-In | Get Booked Out" description="Simple AI receptionist pricing for Australian service businesses. Essentials $499/mo, Complete $999/mo. No lock-in, money-back guarantee." path="/pricing" />
+      <div className="min-h-screen bg-background">
       <Header />
 
       {/* Hero Section */}
@@ -144,6 +147,7 @@ const Pricing = () => {
       <Footer />
       <MobileStickyCTA />
     </div>
+  </>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import SeoHead from "@/components/SeoHead";
 import { Link } from "react-router-dom";
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
@@ -7,7 +8,9 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const WhoWeAre = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="About Us — The Team Behind Get Booked Out" description="Meet the Australian team building Get Booked Out — the AI receptionist helping service businesses answer every call and book more jobs." path="/who-we-are" />
+      <div className="min-h-screen bg-background">
       <Header />
       
       {/* Main Content Section */}
@@ -84,6 +87,7 @@ const WhoWeAre = () => {
       <Footer />
       <MobileStickyCTA />
     </div>
+  </>
   );
 };
 
