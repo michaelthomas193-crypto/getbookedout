@@ -28,7 +28,12 @@ const SeoHead = ({ title, description, path, image, noindex, jsonLd }: SeoHeadPr
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="en-AU" href={url} />
+      <link rel="alternate" hrefLang="x-default" href={url} />
+      <meta name="geo.region" content="AU" />
+      <meta name="geo.placename" content="Australia" />
       {noindex && <meta name="robots" content="noindex,nofollow" />}
+      {!noindex && <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />}
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
