@@ -1,9 +1,12 @@
 import Header from "@/components/sections/Header";
+import SeoHead from "@/components/SeoHead";
 import Footer from "@/components/sections/Footer";
 
 const Cookies = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="Cookie Policy | Get Booked Out" description="How Get Booked Out uses cookies on getbookedout.com.au." path="/cookies" />
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-24 pb-16 md:pt-32 md:pb-24">
@@ -109,6 +112,7 @@ const Cookies = () => {
 
       <Footer />
     </div>
+  </>
   );
 };
 

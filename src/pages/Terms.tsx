@@ -1,9 +1,12 @@
 import Header from "@/components/sections/Header";
+import SeoHead from "@/components/SeoHead";
 import Footer from "@/components/sections/Footer";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SeoHead title="Terms of Service | Get Booked Out" description="Terms of service for Get Booked Out — the AI receptionist for Australian service businesses." path="/terms" />
+      <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-24 pb-16 md:pt-32 md:pb-24">
@@ -166,6 +169,7 @@ const Terms = () => {
 
       <Footer />
     </div>
+  </>
   );
 };
 
