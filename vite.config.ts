@@ -1,7 +1,6 @@
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import fs from "fs";
 import { componentTagger } from "lovable-tagger";
 // @ts-expect-error - JS module without type declarations
 import { routes, rewriteHtmlForRoute } from "./prerender.config.mjs";
@@ -18,24 +17,31 @@ function prerenderPlugin(): Plugin {
   return {
     name: "gbo-static-prerender",
     apply: "build" as const,
-    closeBundle() {
-      const distDir = path.resolve(__dirname, "dist");
-      const indexPath = path.join(distDir, "index.html");
-      if (!fs.existsSync(indexPath)) return;
-      const baseHtml = fs.readFileSync(indexPath, "utf8");
+    generateBundle(_, bundle) {
+      const indexAsset = Object.values(bundle).find(
+        (asset) => asset.type === "asset" && asset.fileName === "index.html"
+      );
+
+      if (!indexAsset || typeof indexAsset.source !== "string") return;
+
+      const homeRoute = routes.find((route) => route.path === "/");
+      if (!homeRoute) return;
+
+      const baseHtml = indexAsset.source;
+      indexAsset.source = rewriteHtmlForRoute(baseHtml, homeRoute);
 
       for (const route of routes) {
-        const html = rewriteHtmlForRoute(baseHtml, route);
-        if (route.path === "/") {
-          fs.writeFileSync(indexPath, html);
-        } else {
-          const dir = path.join(distDir, route.path.replace(/^\//, ""));
-          fs.mkdirSync(dir, { recursive: true });
-          fs.writeFileSync(path.join(dir, "index.html"), html);
-        }
+        if (route.path === "/") continue;
+
+        this.emitFile({
+          type: "asset",
+          fileName: `${route.path.replace(/^\//, "")}/index.html`,
+          source: rewriteHtmlForRoute(baseHtml, route),
+        });
       }
+
       // eslint-disable-next-line no-console
-      console.log(`[prerender] wrote ${routes.length} static HTML files`);
+      console.log(`[prerender] emitted ${routes.length} static HTML files`);
     },
   };
 }
