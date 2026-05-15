@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://getbookedout.com.au/sitemap.xml
+Sitemap: https://www.getbookedout.com.au/sitemap.xml
