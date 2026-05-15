@@ -1,9 +1,23 @@
 import { defineConfig, type Plugin } from "vite";
+import type { OutputAsset, OutputBundle } from "rollup";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 // @ts-expect-error - JS module without type declarations
 import { routes, rewriteHtmlForRoute } from "./prerender.config.mjs";
+
+type PrerenderRoute = {
+  path: string;
+  title: string;
+  description: string;
+  jsonLd?: unknown | unknown[];
+};
+
+const prerenderRoutes = routes as PrerenderRoute[];
+
+function isIndexHtmlAsset(asset: OutputBundle[string] | undefined): asset is OutputAsset {
+  return Boolean(asset && asset.type === "asset" && asset.fileName === "index.html" && typeof asset.source === "string");
+}
 
 /**
  * Build-time prerender plugin.
@@ -22,15 +36,15 @@ function prerenderPlugin(): Plugin {
         (asset) => asset.type === "asset" && asset.fileName === "index.html"
       );
 
-      if (!indexAsset || typeof indexAsset.source !== "string") return;
+      if (!isIndexHtmlAsset(indexAsset)) return;
 
-      const homeRoute = routes.find((route) => route.path === "/");
+      const homeRoute = prerenderRoutes.find((route) => route.path === "/");
       if (!homeRoute) return;
 
       const baseHtml = indexAsset.source;
       indexAsset.source = rewriteHtmlForRoute(baseHtml, homeRoute);
 
-      for (const route of routes) {
+      for (const route of prerenderRoutes) {
         if (route.path === "/") continue;
 
         this.emitFile({
@@ -41,7 +55,7 @@ function prerenderPlugin(): Plugin {
       }
 
       // eslint-disable-next-line no-console
-      console.log(`[prerender] emitted ${routes.length} static HTML files`);
+      console.log(`[prerender] emitted ${prerenderRoutes.length} static HTML files`);
     },
   };
 }
