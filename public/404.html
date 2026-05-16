@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Redirecting…</title>
+  <script>
+    // Get Booked Out — GitHub Pages 404 handler
+    // Purpose: handle uppercase URL paths and unknown deep links without 404ing the user.
+    // GitHub Pages serves this file for any path that doesn't have a matching index.html.
+    (function () {
+      var p = window.location.pathname;
+      var s = window.location.search;
+      var h = window.location.hash;
+
+      // 1) Lowercase enforcement — if path has uppercase letters, redirect to lowercased version.
+      if (p !== p.toLowerCase()) {
+        window.location.replace(p.toLowerCase() + s + h);
+        return;
+      }
+
+      // 2) Unknown deep link → fall through to the SPA at "/" so React Router can resolve it
+      //    (and show a real 404 page if needed). We preserve the original path in sessionStorage
+      //    so main.tsx can restore it after mount.
+      try { sessionStorage.setItem('gh_pages_redirect', p + s + h); } catch (e) {}
+      window.location.replace('/');
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
