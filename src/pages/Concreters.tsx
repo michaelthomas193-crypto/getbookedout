@@ -34,7 +34,7 @@ const Concreters = () => (
       "One lost driveway = $6,000–$15,000 walking down the road",
     ]}
     realEnquiryH2="How it handles a real concreting enquiry"
-    realEnquiryBody="A homeowner calls Saturday morning for a 60 m² driveway with exposed aggregate. The AI captures the details, sends a \"what to expect\" link, books a Tuesday 8am site visit, and pushes the brief to your phone."
+    realEnquiryBody={`A homeowner calls Saturday morning for a 60 m² driveway with exposed aggregate. The AI captures the details, sends a "what to expect" link, books a Tuesday 8am site visit, and pushes the brief to your phone.`}
     liveH2="Live in 48 hours"
   />
 );
