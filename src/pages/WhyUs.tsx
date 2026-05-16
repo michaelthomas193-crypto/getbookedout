@@ -8,19 +8,37 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 const WhyUs = () => {
   return (
     <>
-      <SeoHead title="Why Get Booked Out vs Call Centres & Voicemail" description="See how Get Booked Out's AI receptionist compares to call centres, voicemail and missed calls — answering 24/7 from $99/week." path="/why-us" />
+      <SeoHead
+        title="The Real Cost of Missed Calls for Australian Tradies | Get Booked Out"
+        description="Missed calls cost the average Australian tradie $14,000 to $34,000 a month. See the math, then see how a $99/week AI receptionist pays for itself in week one."
+        path="/why-us"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "What Missed Calls Are Really Costing Your Trade Business",
+          url: "https://www.getbookedout.com.au/why-us",
+          description: "The real cost of missed calls for Australian tradies, with the math and a $99/week alternative.",
+          isPartOf: { "@id": "https://www.getbookedout.com.au/#website" },
+          breadcrumb: {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.getbookedout.com.au/" },
+              { "@type": "ListItem", position: 2, name: "Why Us", item: "https://www.getbookedout.com.au/why-us" },
+            ],
+          },
+        }}
+      />
       <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Section 1 - Hero */}
       <section className="pt-8 pb-4 md:pt-10 md:pb-6 bg-secondary/30">
         <div className="container-padding max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Good Businesses Lose Jobs Every Day.{" "}
-            <span className="text-primary">Not Because They're Bad—Because They're Busy.</span>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-foreground">
+            What Missed Calls Are Really Costing Your Trade Business
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            You're busy doing the work. You can't answer every call. But your customers don't wait—they call the next business on the list. Here's why that changes with us.
+            You're busy doing the work. You can't answer every call. And your customers don't wait — they call the next tradie on Google. Australian small businesses lose somewhere between $14,000 and $34,000 every single month to missed calls. That is not a typo. Let us show you the math.
           </p>
         </div>
       </section>
