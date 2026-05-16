@@ -43,20 +43,28 @@ const WhoWeAre = () => {
 
             {/* Headline - Centered */}
             <div className="text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="text-foreground">I Know Why Good Businesses</span>
-                <br />
-                <span className="text-primary">Lose Jobs</span>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
+                Why We Built Get Booked Out
               </h1>
             </div>
           </div>
 
           {/* Body Text */}
           <div className="text-foreground/90 space-y-4 md:space-y-5">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground">
+              Built by someone who got tired of leaving voicemails
+            </h2>
+            <p className="text-base md:text-xl leading-relaxed">
+              Get Booked Out was built by Michael Thomas, an Australian business owner who has spent more than $17.5 million on property and six figures on renovations — and lost count of how many times he picked up the phone, called a local tradie, got no answer, and just moved on to the next one. He kept seeing the same thing: brilliant business owners who were incredible at their craft but losing thousands of dollars a month because they were too busy doing the work to answer the phone. Get Booked Out is the system he wished every one of those businesses had.
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-foreground pt-4">
+              The system every Australian tradie deserves
+            </h2>
             <p className="text-base md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
-            
+
             <p className="text-base md:text-xl leading-relaxed">
               I've built a $17.5 million property portfolio. I've spent six figures on renovations. And I've lost count of how many times I've called a business, got no answer, and just moved on to the next one.
             </p>
