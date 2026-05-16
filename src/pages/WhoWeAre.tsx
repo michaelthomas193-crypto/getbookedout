@@ -92,6 +92,13 @@ const WhoWeAre = () => {
             <p className="text-base md:text-xl leading-relaxed font-semibold text-foreground">
               You focus on the work. We make sure the phone doesn't cost you jobs.
             </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-foreground pt-6">
+              Our promise
+            </h2>
+            <p className="text-base md:text-xl leading-relaxed">
+              If our AI receptionist doesn't pay for itself in your first month, you don't pay. That is the promise. We're not asking you to trust us — we're asking you to test us.
+            </p>
           </div>
         </div>
       </section>
