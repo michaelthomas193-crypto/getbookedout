@@ -77,18 +77,14 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { q: "What kinds of businesses is this for?", a: "Any business with a phone. We work with home services, salons, clinics, legal practices, real estate, auto shops, cleaners, fitness studios, and more. If your customers call you and you sometimes can't pick up, this is for you." },
-    { q: "I'm not tech-savvy. Can I still use this?", a: "Absolutely. We handle setup end-to-end. Your AI learns from your website automatically, you review and tweak the answers, and we connect everything to your phone." },
-    { q: "How quickly will it be live?", a: "Most businesses are up and taking calls within 48 hours. We do the heavy lifting — you just confirm the details and forward your number." },
-    { q: "Will my customers know it's AI?", a: "The voice is natural enough that most callers don't realise. You can also pick a custom name and greeting so it sounds like part of your team." },
-    { q: "What happens to spam and sales calls?", a: "Filtered out automatically. Robocalls, 1-800 numbers, and sales reps don't make it through to you — only real customers do." },
-    { q: "Is there a lock-in contract?", a: "No. Month-to-month, cancel any time." },
-    { q: "Can it book appointments straight into my calendar?", a: "Yes — on the Complete plan and above. Works with Google Calendar, Calendly, Acuity, and most popular booking tools." },
-    { q: "How do you connect to our phone system?", a: "Simple call forwarding. You keep your existing number — we give you instructions to forward unanswered or all calls to your AI receptionist." },
-    { q: "Can I access call history, recordings, and transcripts?", a: "Yes. Every call is logged with a full transcript, audio recording, AI-generated summary, and the caller's number." },
-    { q: "Will I get notified when there's a new call or booking?", a: "Instantly — by SMS, email, and push notification on the mobile app." },
-    { q: "Do I need a developer to set this up?", a: "No. We handle the setup end-to-end. No code, no integrations to wire up — just a 30-minute onboarding call and you're live." },
-    { q: "Is there a free trial?", a: "We don't run free trials, but every plan is month-to-month with no lock-in. If it's not pulling its weight in the first 30 days, cancel and walk away." },
+    { q: "What is an AI receptionist?", a: "An AI receptionist is software that answers phone calls and website enquiries on behalf of your business using natural-sounding voice and text. Get Booked Out's AI is trained on your business – your prices, hours, services and FAQs – so it talks to customers exactly the way you would, books their appointments straight into your calendar, and texts you a transcript the moment the call ends." },
+    { q: "How much does an AI receptionist cost in Australia?", a: "Get Booked Out starts at $99 per week with no lock-in contracts. That is roughly one-tenth the cost of a full-time receptionist (around $50,000 to $65,000 per year in Australia) and works 24 hours a day, including weekends and public holidays." },
+    { q: "Will customers know they're talking to AI?", a: "Most customers cannot tell. The AI is trained on natural Australian conversational patterns and responds in real time. We always tell you on setup whether you want the AI to identify itself as an AI assistant or simply as your business – your choice." },
+    { q: "What happens if the AI can't answer a question?", a: "The AI transfers the call to you (or any team member you nominate), or texts the customer to say a human will call them back shortly. You get a notification with the full transcript so you can follow up instantly." },
+    { q: "How long does setup take?", a: "Under 48 hours. We onboard your business, train the AI on your services and pricing, set up your call forwarding and review automation, and run a test call with you before going live." },
+    { q: "Does it work for plumbers, electricians and other trades?", a: "Yes. Get Booked Out is built specifically for Australian tradies, with purpose-built configurations for plumbing, electrical, carpentry, painting, landscaping, concreting and handyman businesses." },
+    { q: "Can I cancel anytime?", a: "Yes. No lock-in contracts. If the AI does not pay for itself in your first month, you do not pay." },
+    { q: "What CRMs and tools does it integrate with?", a: "Get Booked Out integrates with Google Calendar, Outlook, Go High Level, ServiceM8, Tradify, AroFlo, simPRO, Jobber, Housecall Pro and most major job-management platforms. Custom systems are connected via API or Zapier." },
   ].map(({ q, a }) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } })),
 };
 
@@ -96,8 +92,8 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SeoHead
-        title="AI Receptionist for Your Business Calls | Get Booked Out"
-        description="Get Booked Out is your 24/7 AI receptionist. It answers calls, books appointments, filters spam, and sends you every lead — for any small business."
+        title="AI Receptionist for Tradies Australia | Get Booked Out"
+        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies to texts, books appointments and chases reviews 24/7 for Australian tradies. From $99/week. No lock-in."
         path="/"
         jsonLd={[organizationSchema, websiteSchema, localBusinessSchema, faqSchema]}
       />

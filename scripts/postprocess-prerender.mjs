@@ -6,13 +6,17 @@ const DIST = path.resolve("dist");
 const OG_IMAGE = `${SITE}/og-image.jpg`;
 const OG_ALT = "Get Booked Out — AI receptionist for Australian businesses";
 
-const org = {
-  "@context": "https://schema.org",
+const ORG_ID = `${SITE}/#organization`;
+
+const organization = {
   "@type": "Organization",
-  "@id": `${SITE}/#organization`,
+  "@id": ORG_ID,
   name: "Get Booked Out",
-  url: SITE,
+  url: `${SITE}/`,
   logo: `${SITE}/favicon.png`,
+  description: "AI receptionist for Australian tradies. Answers calls, replies to texts, books appointments and chases Google reviews 24/7.",
+  founder: { "@type": "Person", name: "Michael Thomas" },
+  areaServed: { "@type": "Country", name: "Australia" },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+61485008132",
@@ -27,132 +31,184 @@ const org = {
 };
 
 const website = {
-  "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE}/#website`,
-  url: SITE,
+  url: `${SITE}/`,
   name: "Get Booked Out",
-  publisher: { "@id": `${SITE}/#organization` },
+  publisher: { "@id": ORG_ID },
   inLanguage: "en-AU",
 };
 
-const localBusiness = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${SITE}/#business`,
-  name: "Get Booked Out",
-  image: OG_IMAGE,
-  url: SITE,
-  telephone: "+61485008132",
-  email: "bookings@getbookedout.com.au",
-  priceRange: "$$",
-  description:
-    "AI receptionist that answers your business calls 24/7 — books appointments, filters spam, and never lets a lead slip through.",
-  address: { "@type": "PostalAddress", addressLocality: "Sydney", addressRegion: "NSW", addressCountry: "AU" },
+const homepageService = {
+  "@type": "Service",
+  name: "AI Receptionist for Tradies",
+  provider: { "@id": ORG_ID },
   areaServed: { "@type": "Country", name: "Australia" },
-  sameAs: [
-    "https://www.facebook.com/profile.php?id=61586125082752",
-    "https://www.instagram.com/getbookedout.au",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "52",
-    bestRating: "5",
-    worstRating: "1",
+  description: "24/7 AI receptionist that answers calls, replies to website enquiries, books appointments and automates 5-star Google reviews for Australian service businesses.",
+  offers: {
+    "@type": "Offer",
+    price: "99",
+    priceCurrency: "AUD",
+    priceSpecification: { "@type": "UnitPriceSpecification", price: "99", priceCurrency: "AUD", unitText: "WEEK" },
   },
 };
 
-const tradeService = (trade, label, description) => ({
+const homepageFaq = {
+  "@type": "FAQPage",
+  mainEntity: [
+    ["What is an AI receptionist?", "An AI receptionist is software that answers phone calls and website enquiries on behalf of your business using natural-sounding voice and text. Get Booked Out's AI is trained on your business – your prices, hours, services and FAQs – so it talks to customers exactly the way you would, books their appointments straight into your calendar, and texts you a transcript the moment the call ends."],
+    ["How much does an AI receptionist cost in Australia?", "Get Booked Out starts at $99 per week with no lock-in contracts. That is roughly one-tenth the cost of a full-time receptionist (around $50,000 to $65,000 per year in Australia) and works 24 hours a day, including weekends and public holidays."],
+    ["Will customers know they're talking to AI?", "Most customers cannot tell. The AI is trained on natural Australian conversational patterns and responds in real time. We always tell you on setup whether you want the AI to identify itself as an AI assistant or simply as your business – your choice."],
+    ["What happens if the AI can't answer a question?", "The AI transfers the call to you (or any team member you nominate), or texts the customer to say a human will call them back shortly. You get a notification with the full transcript so you can follow up instantly."],
+    ["How long does setup take?", "Under 48 hours. We onboard your business, train the AI on your services and pricing, set up your call forwarding and review automation, and run a test call with you before going live."],
+    ["Does it work for plumbers, electricians and other trades?", "Yes. Get Booked Out is built specifically for Australian tradies, with purpose-built configurations for plumbing, electrical, carpentry, painting, landscaping, concreting and handyman businesses."],
+    ["Can I cancel anytime?", "Yes. No lock-in contracts. If the AI does not pay for itself in your first month, you do not pay."],
+    ["What CRMs and tools does it integrate with?", "Get Booked Out integrates with Google Calendar, Outlook, Go High Level, ServiceM8, Tradify, AroFlo, simPRO, Jobber, Housecall Pro and most major job-management platforms. Custom systems are connected via API or Zapier."],
+  ].map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })),
+};
+
+const homepageGraph = { "@context": "https://schema.org", "@graph": [organization, website, homepageService, homepageFaq] };
+
+const tradeService = (slug, name, serviceType, audienceType) => ({
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: `AI receptionist for ${trade} businesses`,
-  provider: { "@type": "Organization", name: "Get Booked Out", url: SITE },
+  name,
+  serviceType,
+  provider: { "@id": ORG_ID },
   areaServed: { "@type": "Country", name: "Australia" },
-  name: label,
-  description,
+  audience: { "@type": "BusinessAudience", audienceType },
+  offers: {
+    "@type": "Offer",
+    price: "99",
+    priceCurrency: "AUD",
+    priceSpecification: { "@type": "UnitPriceSpecification", price: "99", priceCurrency: "AUD", unitText: "WEEK" },
+  },
+  url: `${SITE}${slug}`,
 });
 
 const routes = [
   {
     path: "/",
-    title: "AI Receptionist for Your Business Calls | Get Booked Out",
-    description:
-      "Get Booked Out is your 24/7 AI receptionist. It answers calls, books appointments, filters spam, and sends you every lead — for any small business.",
-    jsonLd: [org, website, localBusiness],
+    title: "AI Receptionist for Tradies Australia | Get Booked Out",
+    description: "Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies to texts, books appointments and chases reviews 24/7 for Australian tradies. From $99/week. No lock-in.",
+    jsonLd: homepageGraph,
   },
   {
     path: "/why-us",
-    title: "Why Get Booked Out vs Call Centres & Voicemail",
-    description:
-      "See how Get Booked Out's AI receptionist compares to call centres, voicemail and missed calls — answering 24/7 from $99/week.",
+    title: "The Real Cost of Missed Calls for Australian Tradies | Get Booked Out",
+    description: "Missed calls cost the average Australian tradie $14,000 to $34,000 a month. See the math, then see how a $99/week AI receptionist pays for itself in week one.",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "What Missed Calls Are Really Costing Your Trade Business",
+      url: `${SITE}/why-us`,
+      description: "The real cost of missed calls for Australian tradies, with the math and a $99/week alternative.",
+      isPartOf: { "@id": `${SITE}/#website` },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+          { "@type": "ListItem", position: 2, name: "Why Us", item: `${SITE}/why-us` },
+        ],
+      },
+    },
   },
   {
     path: "/pricing",
     title: "AI Receptionist Pricing Australia — From $99/week | Get Booked Out",
-    description:
-      "Simple AI receptionist pricing for Australian service businesses. Essentials $499/mo, Complete $999/mo. No lock-in, money-back guarantee.",
+    description: "One simple price. No lock-in. From $99/week for an AI receptionist that answers calls, books jobs and chases reviews 24/7. If it doesn't pay for itself in month one, you don't pay.",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: "Get Booked Out AI Receptionist",
+      description: "24/7 AI receptionist for Australian tradies — answers calls, books appointments, chases Google reviews.",
+      brand: { "@type": "Brand", name: "Get Booked Out" },
+      offers: {
+        "@type": "Offer",
+        url: `${SITE}/pricing`,
+        priceCurrency: "AUD",
+        price: "99",
+        priceSpecification: { "@type": "UnitPriceSpecification", price: "99", priceCurrency: "AUD", unitText: "WEEK" },
+        availability: "https://schema.org/InStock",
+        areaServed: { "@type": "Country", name: "Australia" },
+      },
+    },
   },
   {
     path: "/who-we-are",
-    title: "About Us — The Team Behind Get Booked Out",
-    description:
-      "Meet the Australian team building Get Booked Out — the AI receptionist helping service businesses answer every call and book more jobs.",
+    title: "About Get Booked Out — Built by an Aussie Who Got Sick of Missed Calls",
+    description: "Get Booked Out was founded by Michael Thomas after losing count of how many tradies he hired who never answered their phone. The AI receptionist he wished existed.",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "Why We Built Get Booked Out",
+      url: `${SITE}/who-we-are`,
+      mainEntity: {
+        "@type": "Person",
+        name: "Michael Thomas",
+        jobTitle: "Founder",
+        worksFor: { "@id": ORG_ID },
+      },
+    },
   },
   {
     path: "/plumbing",
-    title: "AI Receptionist for Plumbers | Get Booked Out",
-    description:
-      "Stop missing plumbing jobs. Our 24/7 AI receptionist answers every call, books emergencies and quotes straight into your calendar.",
-    jsonLd: tradeService("plumbing", "AI Receptionist for Plumbers | Get Booked Out", "Stop missing plumbing jobs. Our 24/7 AI receptionist answers every call, books emergencies and quotes straight into your calendar."),
+    title: "AI Receptionist for Plumbers Australia | Never Miss a Job | Get Booked Out",
+    description: "The AI receptionist built for Australian plumbers. Answers calls while you're under a house, texts customers back instantly, books jobs into your calendar 24/7. From $99/week.",
+    jsonLd: tradeService("/plumbing", "AI Receptionist for Plumbers", "AI receptionist and lead automation for plumbing businesses", "Plumbers"),
   },
   {
     path: "/electrical",
-    title: "AI Receptionist for Electricians | Get Booked Out",
-    description:
-      "Never miss an electrical job. AI receptionist answers calls 24/7, qualifies leads and books work into your diary.",
-    jsonLd: tradeService("electrical", "AI Receptionist for Electricians | Get Booked Out", "Never miss an electrical job. AI receptionist answers calls 24/7, qualifies leads and books work into your diary."),
-  },
-  {
-    path: "/painting",
-    title: "AI Receptionist for Painters | Get Booked Out",
-    description:
-      "Quote more painting jobs. Our AI receptionist answers calls, replies to enquiries and books in quotes 24/7.",
-    jsonLd: tradeService("painting", "AI Receptionist for Painters | Get Booked Out", "Quote more painting jobs. Our AI receptionist answers calls, replies to enquiries and books in quotes 24/7."),
-  },
-  {
-    path: "/landscaping",
-    title: "AI Receptionist for Landscapers | Get Booked Out",
-    description:
-      "Land more landscaping jobs. AI receptionist answers calls 24/7 and books quotes straight into your calendar.",
-    jsonLd: tradeService("landscaping", "AI Receptionist for Landscapers | Get Booked Out", "Land more landscaping jobs. AI receptionist answers calls 24/7 and books quotes straight into your calendar."),
-  },
-  {
-    path: "/handyman",
-    title: "AI Receptionist for Handyman Services | Get Booked Out",
-    description:
-      "Never miss a handyman job. Our AI answers calls, books work and replies to texts and web messages 24/7.",
-    jsonLd: tradeService("handyman services", "AI Receptionist for Handyman Services | Get Booked Out", "Never miss a handyman job. Our AI answers calls, books work and replies to texts and web messages 24/7."),
+    title: "AI Receptionist for Electricians Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian electricians. Answers calls while you're up a ladder or in a switchboard. Books jobs, qualifies leads and chases reviews 24/7. From $99/week.",
+    jsonLd: tradeService("/electrical", "AI Receptionist for Electricians", "AI receptionist and lead automation for electrical businesses", "Electricians"),
   },
   {
     path: "/carpentry",
-    title: "AI Receptionist for Carpenters | Get Booked Out",
-    description:
-      "Win more carpentry work. Our AI receptionist answers calls 24/7 and books quotes into your calendar.",
-    jsonLd: tradeService("carpentry", "AI Receptionist for Carpenters | Get Booked Out", "Win more carpentry work. Our AI receptionist answers calls 24/7 and books quotes into your calendar."),
+    title: "AI Receptionist for Carpenters Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian carpenters and chippies. Answers calls while you're on the tools. Quotes, books and chases reviews 24/7. From $99/week. No lock-in.",
+    jsonLd: tradeService("/carpentry", "AI Receptionist for Carpenters", "AI receptionist and lead automation for carpentry businesses", "Carpenters"),
+  },
+  {
+    path: "/painting",
+    title: "AI Receptionist for Painters Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian painters. Captures every enquiry while you're up a ladder, books quotes and chases reviews 24/7. From $99/week. No lock-in.",
+    jsonLd: tradeService("/painting", "AI Receptionist for Painters", "AI receptionist and lead automation for painting businesses", "Painters"),
+  },
+  {
+    path: "/landscaping",
+    title: "AI Receptionist for Landscapers Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian landscapers. Captures backyard reno, paving, turf and garden enquiries while you're on site. Books quotes 24/7. From $99/week.",
+    jsonLd: tradeService("/landscaping", "AI Receptionist for Landscapers", "AI receptionist and lead automation for landscaping businesses", "Landscapers"),
   },
   {
     path: "/concreting",
-    title: "AI Receptionist for Concreters | Get Booked Out",
-    description:
-      "Stop losing concrete jobs to missed calls. AI receptionist answers 24/7 and books quotes for you.",
-    jsonLd: tradeService("concreting", "AI Receptionist for Concreters | Get Booked Out", "Stop losing concrete jobs to missed calls. AI receptionist answers 24/7 and books quotes for you."),
+    title: "AI Receptionist for Concreters Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian concreters. Captures driveway, slab and exposed-aggregate enquiries while you're mid-pour. Books quotes 24/7. From $99/week.",
+    jsonLd: tradeService("/concreting", "AI Receptionist for Concreters", "AI receptionist and lead automation for concreting businesses", "Concreters"),
+  },
+  {
+    path: "/handyman",
+    title: "AI Receptionist for Handyman Businesses Australia | Get Booked Out",
+    description: "The AI receptionist built for Australian handymen. Captures every odd-job, repair and maintenance enquiry, qualifies scope, books and chases reviews 24/7. From $99/week.",
+    jsonLd: tradeService("/handyman", "AI Receptionist for Handyman Businesses", "AI receptionist and lead automation for handyman businesses", "Handyman"),
   },
   {
     path: "/schedule-demo",
-    title: "Schedule a Demo | Get Booked Out",
-    description:
-      "Book a live demo of Get Booked Out's AI receptionist and see how it answers calls and books appointments for your business.",
+    title: "Book a Demo — See Get Booked Out Live | Get Booked Out",
+    description: "Book a 20-minute demo and we'll show you exactly how Get Booked Out's AI receptionist would handle your business's calls, enquiries and reviews. From $99/week. No lock-in.",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Book a Demo of Get Booked Out",
+      url: `${SITE}/schedule-demo`,
+      description: "Book a 20-minute live demo of the Get Booked Out AI receptionist.",
+      potentialAction: {
+        "@type": "ReserveAction",
+        target: `${SITE}/schedule-demo`,
+        result: { "@type": "Reservation", name: "Get Booked Out demo booking" },
+      },
+    },
   },
 ];
 

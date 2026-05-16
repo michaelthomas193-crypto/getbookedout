@@ -9,10 +9,26 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 const WhoWeAre = () => {
   return (
     <>
-      <SeoHead title="About Us — The Team Behind Get Booked Out" description="Meet the Australian team building Get Booked Out — the AI receptionist helping service businesses answer every call and book more jobs." path="/who-we-are" />
+      <SeoHead
+        title="About Get Booked Out — Built by an Aussie Who Got Sick of Missed Calls"
+        description="Get Booked Out was founded by Michael Thomas after losing count of how many tradies he hired who never answered their phone. The AI receptionist he wished existed."
+        path="/who-we-are"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "Why We Built Get Booked Out",
+          url: "https://www.getbookedout.com.au/who-we-are",
+          mainEntity: {
+            "@type": "Person",
+            name: "Michael Thomas",
+            jobTitle: "Founder",
+            worksFor: { "@id": "https://www.getbookedout.com.au/#organization" },
+          },
+        }}
+      />
       <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Main Content Section */}
       <section className="py-8 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
@@ -27,20 +43,28 @@ const WhoWeAre = () => {
 
             {/* Headline - Centered */}
             <div className="text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                <span className="text-foreground">I Know Why Good Businesses</span>
-                <br />
-                <span className="text-primary">Lose Jobs</span>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
+                Why We Built Get Booked Out
               </h1>
             </div>
           </div>
 
           {/* Body Text */}
           <div className="text-foreground/90 space-y-4 md:space-y-5">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground">
+              Built by someone who got tired of leaving voicemails
+            </h2>
+            <p className="text-base md:text-xl leading-relaxed">
+              Get Booked Out was built by Michael Thomas, an Australian business owner who has spent more than $17.5 million on property and six figures on renovations — and lost count of how many times he picked up the phone, called a local tradie, got no answer, and just moved on to the next one. He kept seeing the same thing: brilliant business owners who were incredible at their craft but losing thousands of dollars a month because they were too busy doing the work to answer the phone. Get Booked Out is the system he wished every one of those businesses had.
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-foreground pt-4">
+              The system every Australian tradie deserves
+            </h2>
             <p className="text-base md:text-xl leading-relaxed">
               I'm Michael, the founder of Get Booked Out.
             </p>
-            
+
             <p className="text-base md:text-xl leading-relaxed">
               I've built a $17.5 million property portfolio. I've spent six figures on renovations. And I've lost count of how many times I've called a business, got no answer, and just moved on to the next one.
             </p>
@@ -67,6 +91,13 @@ const WhoWeAre = () => {
             
             <p className="text-base md:text-xl leading-relaxed font-semibold text-foreground">
               You focus on the work. We make sure the phone doesn't cost you jobs.
+            </p>
+
+            <h2 className="text-xl md:text-2xl font-bold text-foreground pt-6">
+              Our promise
+            </h2>
+            <p className="text-base md:text-xl leading-relaxed">
+              If our AI receptionist doesn't pay for itself in your first month, you don't pay. That is the promise. We're not asking you to trust us — we're asking you to test us.
             </p>
           </div>
         </div>

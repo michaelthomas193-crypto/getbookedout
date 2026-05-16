@@ -37,10 +37,51 @@ const pricingPlans = [
   },
 ];
 
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Get Booked Out AI Receptionist",
+  description: "24/7 AI receptionist for Australian tradies — answers calls, books appointments, chases Google reviews.",
+  brand: { "@type": "Brand", name: "Get Booked Out" },
+  offers: {
+    "@type": "Offer",
+    url: "https://www.getbookedout.com.au/pricing",
+    priceCurrency: "AUD",
+    price: "99",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "99",
+      priceCurrency: "AUD",
+      unitText: "WEEK",
+    },
+    availability: "https://schema.org/InStock",
+    areaServed: { "@type": "Country", name: "Australia" },
+  },
+};
+
+const includedList = [
+  "Inbound call answering, 24 hours a day, 7 days a week",
+  "Missed call instant text-back",
+  "Website chat that captures and converts after-hours enquiries",
+  "Appointment booking straight into Google Calendar, Outlook or your CRM",
+  "Spam and sales-call filtering",
+  "Automated review requests after every job, with 5-stars routed to Google",
+  "Live call transcripts and recordings in the Get Booked Out app",
+  "Push notifications for every new booking",
+  "iOS and Android apps included",
+  "Setup in under 48 hours",
+  "No lock-in contracts — cancel anytime",
+];
+
 const Pricing = () => {
   return (
     <>
-      <SeoHead title="AI Receptionist Pricing Australia — From $99/week | Get Booked Out" description="Simple AI receptionist pricing for Australian service businesses. Essentials $499/mo, Complete $999/mo. No lock-in, money-back guarantee." path="/pricing" />
+      <SeoHead
+        title="AI Receptionist Pricing Australia — From $99/week | Get Booked Out"
+        description="One simple price. No lock-in. From $99/week for an AI receptionist that answers calls, books jobs and chases reviews 24/7. If it doesn't pay for itself in month one, you don't pay."
+        path="/pricing"
+        jsonLd={pricingSchema}
+      />
       <div className="min-h-screen bg-background">
       <Header />
 
@@ -48,18 +89,29 @@ const Pricing = () => {
       <section className="pt-8 pb-8 md:pt-32 md:pb-16 bg-background">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
-            Simple Pricing. No Lock-In Contracts.
+            AI Receptionist Pricing for Australian Tradies — From $99 / Week
           </h1>
           <p className="text-base md:text-xl text-muted-foreground">
-            Cancel anytime. We earn your business every month.
+            Stop losing jobs to missed calls. You're on a job. Phone rings. You can't answer. Instead of losing that customer to the next tradie on Google, Get Booked Out's AI receptionist texts them back in seconds, handles your website enquiries 24/7, and books appointments straight into your calendar.
           </p>
+          <p className="text-base md:text-lg text-foreground mt-4 font-semibold">
+            From $99 / week. No lock-in. Cancel anytime. If it doesn't pay for itself in your first month, you don't pay.
+          </p>
+        </div>
+      </section>
+
+      {/* H2: One simple plan. Everything included. */}
+      <section className="pb-4 bg-background">
+        <div className="container-padding max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
+            One simple plan. Everything included.
+          </h2>
         </div>
       </section>
 
       {/* Pricing Cards */}
       <section className="pb-8 md:pb-16 bg-background">
         <div className="container-padding max-w-5xl mx-auto">
-          {/* Stack on mobile, 2 columns on desktop */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {pricingPlans.map((plan) => (
               <Card
@@ -118,7 +170,6 @@ const Pricing = () => {
             ))}
           </div>
 
-          {/* Money-Back Guarantee */}
           <div className="mt-8 md:mt-10 flex items-center justify-center gap-2 sm:gap-3 rounded-xl bg-primary/10 border-2 border-primary/20 px-4 py-4 sm:px-6 sm:py-5 max-w-2xl mx-auto">
             <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary shrink-0" />
             <span className="text-base sm:text-lg md:text-xl font-bold text-primary text-center">
@@ -128,15 +179,40 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Bottom CTA Section */}
+      {/* H2: A full-time receptionist costs $50,000+. This does the same job for a fraction. */}
+      <section className="py-10 md:py-14 bg-background">
+        <div className="container-padding max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+            A full-time receptionist costs $50,000+. This does the same job for a fraction.
+          </h2>
+        </div>
+      </section>
+
+      {/* H2: What's included */}
+      <section className="py-10 md:py-14 bg-secondary/30">
+        <div className="container-padding max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 text-center">
+            What's included
+          </h2>
+          <ul className="space-y-3">
+            {includedList.map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <Check className="h-5 w-5 text-primary shrink-0 mt-1" />
+                <span className="text-base md:text-lg text-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* H2: Not sure if it fits? Let's talk. */}
       <section className="py-12 md:py-20 bg-secondary/30">
         <div className="container-padding max-w-3xl mx-auto text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
-            Not Sure Which Plan Fits?
+            Not sure if it fits? Let's talk.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
-            Jump on a quick call. We'll help you figure out what makes sense
-            for your business.
+            Jump on a quick call. We'll help you figure out what makes sense for your business.
           </p>
           <Button size="xl" className="w-full sm:w-auto min-h-[52px]" asChild>
             <a href="/#hero">Let's Chat</a>
