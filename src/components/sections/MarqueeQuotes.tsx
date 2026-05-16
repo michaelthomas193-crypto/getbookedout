@@ -32,11 +32,12 @@ const MarqueeQuotes = () => {
       </div>
 
       {/* Video testimonials */}
-      <div className="container-padding max-w-3xl mx-auto mb-10 md:mb-14">
-        <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
+      <div className="container-padding max-w-5xl mx-auto mb-10 md:mb-14">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {[
             { src: "/testimonials/joe-trades2you.mp4", name: "Joe", role: "Trades2You", initial: "J" },
             { src: "/testimonials/client-2.mp4", name: "Lili", role: "Suite 3 hair in Paddington", initial: "L" },
+            { src: "/testimonials/sheen.mp4", name: "Sheen", role: "Sheen Hair Salon", initial: "S" },
           ].map((v) => (
             <figure key={v.src} className="flex flex-col bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all">
               <video
