@@ -9,10 +9,26 @@ import MobileStickyCTA from "@/components/MobileStickyCTA";
 const WhoWeAre = () => {
   return (
     <>
-      <SeoHead title="About Us — The Team Behind Get Booked Out" description="Meet the Australian team building Get Booked Out — the AI receptionist helping service businesses answer every call and book more jobs." path="/who-we-are" />
+      <SeoHead
+        title="About Get Booked Out — Built by an Aussie Who Got Sick of Missed Calls"
+        description="Get Booked Out was founded by Michael Thomas after losing count of how many tradies he hired who never answered their phone. The AI receptionist he wished existed."
+        path="/who-we-are"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "Why We Built Get Booked Out",
+          url: "https://www.getbookedout.com.au/who-we-are",
+          mainEntity: {
+            "@type": "Person",
+            name: "Michael Thomas",
+            jobTitle: "Founder",
+            worksFor: { "@id": "https://www.getbookedout.com.au/#organization" },
+          },
+        }}
+      />
       <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Main Content Section */}
       <section className="py-8 md:py-20 bg-secondary/40">
         <div className="container-padding max-w-3xl mx-auto">
