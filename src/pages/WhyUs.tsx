@@ -46,9 +46,8 @@ const WhyUs = () => {
       {/* Section 2 - The Cost of Missed Calls */}
       <section className="py-6 md:py-8 bg-background">
         <div className="container-padding max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4">
-            That Missed Call at 7pm?{" "}
-            <span className="text-primary">It Was Worth $500.</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 text-foreground">
+            The math: 28 missed calls a week, $14,000 to $34,000 a month
           </h2>
           
           <div className="prose prose-lg max-w-none mb-6">
@@ -135,9 +134,8 @@ const WhyUs = () => {
       {/* Section 3 - Receptionist Comparison */}
       <section className="py-8 md:py-10 bg-secondary/30">
         <div className="container-padding max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
-            A Receptionist Costs $80k.{" "}
-            <span className="text-primary">We Cost $999/month.</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground">
+            A full-time receptionist costs $60,000 a year. This costs $5,148.
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-10">
@@ -215,9 +213,8 @@ const WhyUs = () => {
       {/* Section 4 - The Stress */}
       <section className="py-8 md:py-10 bg-muted/50">
         <div className="container-padding max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10">
-            You Became a Business Owner to Do the Work.{" "}
-            <span className="text-primary">Not to Be a Secretary.</span>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-10 text-foreground">
+            Why Australian tradies switch to Get Booked Out
           </h2>
 
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -247,11 +244,10 @@ const WhyUs = () => {
       <section className="py-8 md:py-10 bg-primary text-primary-foreground">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-            Stop Losing Jobs. Stop Paying Receptionist Wages.{" "}
-            <span className="block mt-2">Stop Doing It All Yourself.</span>
+            What you get back the moment you switch
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8">
-            Get Booked Out from $499/month.
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            An AI receptionist is not a replacement for the craft you've spent years mastering — it is a replacement for the $50,000-a-year admin role you've been doing for free, at night, on weekends, between jobs. Get Booked Out costs $99 a week. The math is not subtle.
           </p>
           <Link to="/get-started">
             <Button variant="white" size="xl">
