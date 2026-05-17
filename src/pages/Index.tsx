@@ -13,6 +13,7 @@ import AudioDemos from "@/components/sections/AudioDemos";
 
 import MobileApp from "@/components/sections/MobileApp";
 import PhoneQuiz from "@/components/sections/PhoneQuiz";
+import Industries from "@/components/sections/Industries";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/sections/Footer";
@@ -109,6 +110,7 @@ const Index = () => {
       <UseCases />
       <PremiumFeatures />
       <PhoneQuiz />
+      <Industries />
       <FAQ />
       <FinalCTA />
       <Footer />
