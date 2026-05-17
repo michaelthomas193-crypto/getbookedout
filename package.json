@@ -102,7 +102,22 @@
       "/handyman",
       "/carpentry",
       "/concreting",
-      "/schedule-demo"
+      "/schedule-demo",
+      "/blog",
+      "/blog/missed-call-cost-australian-business",
+      "/blog/ai-receptionist-vs-call-centre",
+      "/blog/google-reviews-for-tradies",
+      "/sydney",
+      "/melbourne",
+      "/brisbane",
+      "/perth",
+      "/adelaide",
+      "/never-miss-an-enquiry-again",
+      "/get-started",
+      "/rate-us",
+      "/terms",
+      "/privacy",
+      "/cookies"
     ],
     "skipThirdPartyRequests": true,
     "puppeteerArgs": [
