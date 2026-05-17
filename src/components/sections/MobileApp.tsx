@@ -70,7 +70,7 @@ const MobileApp = () => {
               Mobile app
             </div>
             <h2 className="section-title mb-4">
-              Manage your calls <span className="text-primary">on the go.</span>
+              Manage every call <span className="text-primary">from your phone</span>
             </h2>
             <p className="section-subtitle mx-0 lg:max-w-none mb-6">
               Every call your AI receptionist handles is in your pocket within seconds. Read the transcript,
