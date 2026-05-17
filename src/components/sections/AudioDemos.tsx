@@ -65,7 +65,7 @@ const AudioDemos = () => {
           <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide mb-4">
             Listen for yourself
           </div>
-          <h2 className="section-title mb-4">Hear it in action</h2>
+          <h2 className="section-title mb-4">Your customers won't call back. <span className="text-primary">We make sure they don't have to.</span></h2>
           <p className="section-subtitle">
             Real calls, real conversations. This is what your customers will experience.
           </p>

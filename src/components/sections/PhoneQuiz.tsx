@@ -17,9 +17,9 @@ const PhoneQuiz = () => {
                 <Sparkles className="w-3 h-3" />
                 Free 60-second quiz
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-3">
                 What's your business phone personality?
-              </h2>
+              </h3>
               <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl">
                 Take this quick quiz to find out how your business handles incoming calls today —
                 and unlock a special discount on your first month.

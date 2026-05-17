@@ -33,8 +33,8 @@ const Hero = () => {
     >
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         {/* Mobile-only headline above visual */}
-        <h1 className="lg:hidden text-[34px] sm:text-5xl font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
-          Get more bookings without <span className="text-primary">answering every call yourself</span>
+        <h1 className="lg:hidden text-[30px] sm:text-[40px] font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
+          AI Receptionist for Australian Tradies — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
         </h1>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -57,8 +57,8 @@ const Hero = () => {
             </div>
 
             {/* Headline - desktop only */}
-            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-6xl lg:text-[60px] font-bold leading-[1.05] mb-5 text-foreground tracking-tight">
-              Get more bookings without <span className="text-primary">answering every call yourself</span>
+            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-[52px] lg:text-[56px] font-bold leading-[1.05] mb-5 text-foreground tracking-tight">
+              AI Receptionist for Australian Tradies — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
             </h1>
 
             {/* Subheadline - desktop only */}

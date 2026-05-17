@@ -36,7 +36,7 @@ const Problems = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
           <h2 className="section-title mb-4">
-            Right now, you have <span className="text-primary">three bad options</span> for handling incoming calls
+            Three bad options. <span className="text-primary">One that actually works.</span>
           </h2>
           <p className="section-subtitle">
             Every business owner ends up in one of these traps. None of them actually work.
