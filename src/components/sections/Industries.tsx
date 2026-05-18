@@ -17,7 +17,7 @@ const Industries = () => {
         <div className="text-center mb-8 md:mb-10">
           <h2 className="section-title mb-3">Industries we work with</h2>
           <p className="section-subtitle">
-            Get Booked Out is trusted by tradies across Australia. See how the AI receptionist works for your industry:
+            Get Booked Out works for service businesses across Australia. Popular industries we support:
           </p>
         </div>
 

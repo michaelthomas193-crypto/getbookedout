@@ -32,9 +32,9 @@ const faqs = [
       "Under 48 hours. We onboard your business, train the AI on your services and pricing, set up your call forwarding and review automation, and run a test call with you before going live.",
   },
   {
-    question: "Does it work for plumbers / electricians / [my trade]?",
+    question: "Does it work for my industry?",
     answer:
-      "Yes. Get Booked Out is built specifically for Australian tradies. We have purpose-built configurations for plumbing, electrical, carpentry, painting, landscaping, concreting and handyman businesses — see the dedicated page for your trade for examples.",
+      "Yes. Get Booked Out works for any service-based business — trades, home services, health and wellness, professional services, beauty, automotive and more. We also have purpose-built configurations for plumbing, electrical, carpentry, painting, landscaping, concreting and handyman businesses — see the dedicated page for your industry for examples.",
   },
   {
     question: "Can I cancel anytime?",
