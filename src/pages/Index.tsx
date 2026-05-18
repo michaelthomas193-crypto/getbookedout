@@ -6,6 +6,7 @@ import Problem from "@/components/sections/Problem";
 import Benefits from "@/components/sections/Benefits";
 import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
 import Proof from "@/components/sections/Proof";
+import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
 import OfferInclusions from "@/components/sections/OfferInclusions";
 import Industries from "@/components/sections/Industries";
 import FAQ from "@/components/sections/FAQ";
@@ -97,11 +98,12 @@ const Index = () => {
       />
       <Header />
       <Hero />
+      <Proof />
+      <MarqueeQuotes />
       <TrustStrip />
       <Problem />
       <Benefits />
       <HowItWorksSteps />
-      <Proof />
       <OfferInclusions />
       <Industries />
       <FAQ />
