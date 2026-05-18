@@ -39,7 +39,7 @@ const UseCases = () => {
       <div className="container-padding max-w-7xl mx-auto">
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="section-title mb-4">
-            Built for plumbers, electricians, carpenters <span className="text-primary">and every trade in between</span>
+            Built for service businesses <span className="text-primary">across every industry</span>
           </h2>
           <p className="section-subtitle">
             Service-based, brick-and-mortar, online, or a mix — Get Booked Out fits the way you actually work.
