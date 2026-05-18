@@ -58,13 +58,13 @@ const Hero = () => {
 
             {/* Headline - desktop only */}
             <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-[52px] lg:text-[56px] font-bold leading-[1.05] mb-5 text-foreground tracking-tight">
-              AI Receptionist for Australian Tradies — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
+              AI Receptionist for Australian Service Businesses — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
             </h1>
 
             {/* Subheadline - desktop only */}
             <div className="hidden lg:block mb-7 max-w-[560px] mx-auto lg:mx-0 space-y-4">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Australian tradies lose thousands of dollars a year to missed calls. Get Booked Out is the AI receptionist built specifically for plumbers, electricians, carpenters, painters, landscapers, concreters and handymen — answering every call, replying to every website enquiry, booking appointments straight into your calendar, and chasing 5-star Google reviews after every job. 24/7. From $99 a week. No lock-in contracts.
+                Australian service businesses lose thousands of dollars a year to missed calls. Get Booked Out is the AI receptionist built for service-based businesses — answering every call, replying to every website enquiry, booking appointments straight into your calendar, and chasing 5-star Google reviews after every job. 24/7. From $99 a week. No lock-in contracts.
               </p>
               <p className="text-base md:text-lg text-muted-foreground/90 leading-relaxed">
                 Whether you call it an AI answering service, a virtual receptionist, a missed call text-back system or a 24/7 phone agent — we built Get Booked Out so Australian service businesses never lose another customer to voicemail.
