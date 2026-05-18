@@ -93,8 +93,8 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SeoHead
-        title="AI Receptionist for Tradies Australia | Get Booked Out"
-        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies to texts, books appointments and chases reviews 24/7 for Australian tradies. From $99/week. No lock-in."
+        title="AI Receptionist for Service Businesses Australia | Get Booked Out"
+        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies to texts, books appointments and chases reviews 24/7 for Australian service businesses. From $99/week. No lock-in."
         path="/"
         jsonLd={[organizationSchema, websiteSchema, localBusinessSchema, faqSchema]}
       />
