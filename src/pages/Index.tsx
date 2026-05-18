@@ -1,18 +1,12 @@
 import SeoHead from "@/components/SeoHead";
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-
-import StatsBar from "@/components/sections/StatsBar";
-import ReviewAutomationDemo from "@/components/sections/ReviewAutomationDemo";
-import Problems from "@/components/sections/Problems";
-
-import UseCases from "@/components/sections/UseCases";
-import PremiumFeatures from "@/components/sections/PremiumFeatures";
-import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
-import AudioDemos from "@/components/sections/AudioDemos";
-
-import MobileApp from "@/components/sections/MobileApp";
-import PhoneQuiz from "@/components/sections/PhoneQuiz";
+import TrustStrip from "@/components/sections/TrustStrip";
+import Problem from "@/components/sections/Problem";
+import Benefits from "@/components/sections/Benefits";
+import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
+import Proof from "@/components/sections/Proof";
+import OfferInclusions from "@/components/sections/OfferInclusions";
 import Industries from "@/components/sections/Industries";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -28,19 +22,33 @@ const localBusinessSchema = {
   "telephone": "+61485008132",
   "email": "bookings@getbookedout.com.au",
   "priceRange": "$$",
-  "description": "AI receptionist that answers your business calls 24/7 — books appointments, filters spam, and never lets a lead slip through. Built for any small business.",
+  "description": "AI receptionist for Australian service businesses. Answers every call, replies instantly, and books jobs 24/7. From $99/week. No lock-in contracts.",
   "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressRegion": "NSW", "addressCountry": "AU" },
   "areaServed": { "@type": "Country", "name": "Australia" },
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61586125082752",
     "https://www.instagram.com/getbookedout.au"
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "52",
-    "bestRating": "5",
-    "worstRating": "1"
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Receptionist",
+  "provider": { "@id": "https://www.getbookedout.com.au/#business" },
+  "areaServed": { "@type": "Country", "name": "Australia" },
+  "name": "AI Receptionist for Australian Service Businesses",
+  "description": "24/7 AI receptionist that answers calls, replies to enquiries, qualifies leads and books jobs straight into your calendar.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "AUD",
+    "price": "99",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "99",
+      "priceCurrency": "AUD",
+      "unitText": "WEEK"
+    }
   }
 };
 
@@ -64,28 +72,17 @@ const organizationSchema = {
   ]
 };
 
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.getbookedout.com.au/#website",
-  "url": "https://www.getbookedout.com.au",
-  "name": "Get Booked Out",
-  "publisher": { "@id": "https://www.getbookedout.com.au/#organization" },
-  "inLanguage": "en-AU"
-};
-
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { q: "What is an AI receptionist?", a: "An AI receptionist is software that answers phone calls and website enquiries on behalf of your business using natural-sounding voice and text. Get Booked Out's AI is trained on your business – your prices, hours, services and FAQs – so it talks to customers exactly the way you would, books their appointments straight into your calendar, and texts you a transcript the moment the call ends." },
-    { q: "How much does an AI receptionist cost in Australia?", a: "Get Booked Out starts at $99 per week with no lock-in contracts. That is roughly one-tenth the cost of a full-time receptionist (around $50,000 to $65,000 per year in Australia) and works 24 hours a day, including weekends and public holidays." },
-    { q: "Will customers know they're talking to AI?", a: "Most customers cannot tell. The AI is trained on natural Australian conversational patterns and responds in real time. We always tell you on setup whether you want the AI to identify itself as an AI assistant or simply as your business – your choice." },
-    { q: "What happens if the AI can't answer a question?", a: "The AI transfers the call to you (or any team member you nominate), or texts the customer to say a human will call them back shortly. You get a notification with the full transcript so you can follow up instantly." },
-    { q: "How long does setup take?", a: "Under 48 hours. We onboard your business, train the AI on your services and pricing, set up your call forwarding and review automation, and run a test call with you before going live." },
-    { q: "Does it work for my industry?", a: "Yes. Get Booked Out works for any service-based business — trades, home services, health and wellness, professional services, beauty, automotive and more. We also have purpose-built configurations for plumbing, electrical, carpentry, painting, landscaping, concreting and handyman businesses." },
-    { q: "Can I cancel anytime?", a: "Yes. No lock-in contracts. If the AI does not pay for itself in your first month, you do not pay." },
-    { q: "What CRMs and tools does it integrate with?", a: "Get Booked Out integrates with Google Calendar, Outlook, Go High Level, ServiceM8, Tradify, AroFlo, simPRO, Jobber, Housecall Pro and most major job-management platforms. Custom systems are connected via API or Zapier." },
+    { q: "What is an AI receptionist?", a: "An AI receptionist answers your phone calls and website enquiries on behalf of your business using natural-sounding voice and text. It's trained on your services, pricing and FAQs, books appointments straight into your calendar, and sends you a full transcript every time." },
+    { q: "Who is Get Booked Out for?", a: "Any Australian service business that misses calls — tradies, cleaners, beauty clinics, allied health, auto services, and more." },
+    { q: "How long does setup take?", a: "Under 48 hours. We onboard your business, train the AI, connect your calls and calendar, and run a live test with you before going live." },
+    { q: "How much does it cost?", a: "From $99/week. No lock-in contracts. Roughly one-tenth the cost of a full-time receptionist, working 24/7." },
+    { q: "Are there lock-in contracts?", a: "No. Cancel anytime. If it doesn't pay for itself in your first month, you don't pay." },
+    { q: "Does it replace my staff?", a: "No — it backs them up. The AI handles overflow, after-hours and missed calls so your team can focus on the work that pays." },
+    { q: "What happens after hours?", a: "The AI answers every call, replies to every enquiry, and books jobs into your calendar — even at 2am on a Sunday." },
   ].map(({ q, a }) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } })),
 };
 
@@ -93,23 +90,19 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SeoHead
-        title="AI Receptionist for Service Businesses Australia | Get Booked Out"
-        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies to texts, books appointments and chases reviews 24/7 for Australian service businesses. From $99/week. No lock-in."
+        title="AI Receptionist for Australian Service Businesses | Get Booked Out"
+        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies instantly, and books jobs 24/7. From $99/week. No lock-in contracts."
         path="/"
-        jsonLd={[organizationSchema, websiteSchema, localBusinessSchema, faqSchema]}
+        jsonLd={[organizationSchema, localBusinessSchema, serviceSchema, faqSchema]}
       />
       <Header />
       <Hero />
-      
-      <ReviewAutomationDemo />
-      <AudioDemos />
-      <MarqueeQuotes />
-      <StatsBar />
-      <MobileApp />
-      <Problems />
-      <UseCases />
-      <PremiumFeatures />
-      <PhoneQuiz />
+      <TrustStrip />
+      <Problem />
+      <Benefits />
+      <HowItWorksSteps />
+      <Proof />
+      <OfferInclusions />
       <Industries />
       <FAQ />
       <FinalCTA />
