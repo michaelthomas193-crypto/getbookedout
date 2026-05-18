@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="container-padding max-w-7xl mx-auto relative z-10">
         {/* Mobile-only headline above visual */}
         <h1 className="lg:hidden text-[30px] sm:text-[40px] font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
-          AI Receptionist for Australian Tradies — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
+          AI Receptionist for Australian Service Businesses — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
         </h1>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
