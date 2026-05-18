@@ -1,20 +1,11 @@
-import { Check } from "lucide-react";
+import { ArrowRight, Phone, Calendar, Check, MessageSquare } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import HeroMultiChannel from "@/components/HeroMultiChannel";
-
-const bullets = [
-  "Answers phone calls so you never miss a customer",
-  "Replies to texts and website messages in seconds",
-  "Books appointments straight into your calendar",
-  "Works 24/7 — even when you're with a customer",
-];
 
 const Hero = () => {
   const navigate = useNavigate();
 
-  const handleGetStarted = () => {
+  const goGetStarted = () => {
     navigate("/get-started");
-
     window.setTimeout(() => {
       if (window.location.pathname !== "/get-started") {
         window.location.assign("/get-started");
@@ -22,105 +13,63 @@ const Hero = () => {
     }, 120);
   };
 
+  const goDemo = () => navigate("/schedule-demo");
+
   return (
     <section
       id="hero"
-      className="relative pt-8 pb-10 md:pt-20 md:pb-24 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(105deg, hsl(0 0% 100%) 0%, hsl(280 60% 97%) 38%, hsl(280 65% 92%) 62%, hsl(275 70% 86%) 100%)",
-      }}
+      className="relative overflow-hidden bg-background"
     >
-      <div className="container-padding max-w-7xl mx-auto relative z-10">
-        {/* Mobile-only headline above visual */}
-        <h1 className="lg:hidden text-[30px] sm:text-[40px] font-bold leading-[1.1] mb-4 text-foreground tracking-tight text-center animate-fade-up">
-          AI Receptionist for Australian Service Businesses — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
-        </h1>
+      {/* subtle background accent */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-32 -right-32 h-[480px] w-[480px] rounded-full bg-primary/10 blur-3xl" />
+      </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="animate-fade-up text-center lg:text-left order-2 lg:order-1">
-            {/* Mobile-only subheadline (now below CTA) */}
-            <div className="lg:hidden mb-6 max-w-[560px] mx-auto text-center space-y-3">
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Australian service businesses lose thousands of dollars a year to missed calls. Get Booked Out is the AI receptionist built for service-based businesses — answering every call, replying to every website enquiry, booking appointments straight into your calendar, and chasing 5-star Google reviews after every job. 24/7. From $99 a week. No lock-in contracts.
-              </p>
-              <p className="text-sm sm:text-base text-muted-foreground/90 leading-relaxed">
-                Whether you call it an AI answering service, a virtual receptionist, a missed call text-back system or a 24/7 phone agent — we built Get Booked Out so Australian service businesses never lose another customer to voicemail.
-              </p>
-            </div>
-
-            {/* Badge - desktop only */}
-            <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-5 uppercase tracking-wide">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+      <div className="container-padding max-w-7xl mx-auto pt-10 pb-12 md:pt-20 md:pb-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          {/* LEFT */}
+          <div className="lg:col-span-6 text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
               New · 24/7 AI Receptionist
-            </div>
+            </span>
 
-            {/* Headline - desktop only */}
-            <h1 className="hidden lg:block text-4xl sm:text-5xl md:text-[52px] lg:text-[56px] font-bold leading-[1.05] mb-5 text-foreground tracking-tight">
-              AI Receptionist for Australian Service Businesses — <span className="text-primary">Never Miss a Call, Never Miss a Job</span>
+            <h1 className="mt-5 text-[34px] sm:text-5xl lg:text-[60px] font-bold leading-[1.05] tracking-tight text-foreground">
+              Never Miss a Call.
+              <br />
+              <span className="text-primary">Never Miss a Job.</span>
             </h1>
 
-            {/* Subheadline - desktop only */}
-            <div className="hidden lg:block mb-7 max-w-[560px] mx-auto lg:mx-0 space-y-4">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Australian service businesses lose thousands of dollars a year to missed calls. Get Booked Out is the AI receptionist built for service-based businesses — answering every call, replying to every website enquiry, booking appointments straight into your calendar, and chasing 5-star Google reviews after every job. 24/7. From $99 a week. No lock-in contracts.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground/90 leading-relaxed">
-                Whether you call it an AI answering service, a virtual receptionist, a missed call text-back system or a 24/7 phone agent — we built Get Booked Out so Australian service businesses never lose another customer to voicemail.
-              </p>
-            </div>
+            <p className="mt-5 mx-auto lg:mx-0 max-w-[540px] text-lg md:text-xl text-muted-foreground leading-relaxed">
+              AI receptionist for Australian service businesses that answers every call, replies instantly, and books jobs 24/7.
+            </p>
 
-            {/* Bullets */}
-            <ul className="space-y-3 mb-8 max-w-[560px] mx-auto lg:mx-0 text-left">
-              {bullets.map((b) => (
-                <li key={b} className="flex items-start gap-3">
-                  <span className="mt-0.5 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-primary" strokeWidth={3} />
-                  </span>
-                  <span className="text-foreground text-base leading-relaxed">{b}</span>
-                </li>
-              ))}
-            </ul>
-
-          </div>
-
-          {/* Right Content - Animated chat panel */}
-          <div className="relative animate-fade-up order-1 lg:order-2" style={{ animationDelay: "0.15s" }}>
-            <div className="pointer-events-none absolute -inset-6 bg-gradient-to-br from-primary/30 to-[hsl(var(--purple-glow)/0.4)] rounded-3xl blur-3xl opacity-70" />
-            <div className="relative pointer-events-none">
-              <HeroMultiChannel />
-            </div>
-            {/* Mobile CTA directly under chat */}
-            <div className="relative z-10 lg:hidden mt-5 text-center">
-              <OfferBadge className="w-full" />
+            <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <button
                 type="button"
-                onClick={handleGetStarted}
-                className="mt-3 inline-flex w-full items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all"
+                onClick={goGetStarted}
+                className="inline-flex items-center justify-center gap-2 min-h-[56px] rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all"
               >
                 Get Started Today
+                <ArrowRight className="h-4 w-4" />
               </button>
-              <p className="text-xs text-muted-foreground mt-3">
-                No lock-in contracts · Cancel anytime
-              </p>
+              <button
+                type="button"
+                onClick={goDemo}
+                className="inline-flex items-center justify-center min-h-[56px] rounded-full border border-border bg-card px-8 text-base font-semibold text-foreground hover:border-primary/40 hover:text-primary transition-all"
+              >
+                Book a Demo
+              </button>
             </div>
-            {/* Desktop CTA below visual */}
-            <div className="relative z-10 hidden lg:block mt-6 text-center">
-              <OfferBadge className="inline-flex" />
-              <div className="mt-3">
-                <button
-                  type="button"
-                  onClick={handleGetStarted}
-                  className="inline-flex items-center justify-center min-h-[52px] rounded-full bg-primary text-primary-foreground text-base font-semibold px-8 shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all"
-                >
-                  Get Started Today
-                </button>
-              </div>
-              <p className="text-xs text-muted-foreground mt-3">
-                No lock-in contracts · Cancel anytime
-              </p>
-            </div>
+
+            <p className="mt-4 text-sm text-muted-foreground">
+              From <span className="font-semibold text-foreground">$99/week</span> · No lock-in contracts
+            </p>
+          </div>
+
+          {/* RIGHT — single clean visual */}
+          <div className="lg:col-span-6">
+            <HeroVisual />
           </div>
         </div>
       </div>
@@ -128,18 +77,70 @@ const Hero = () => {
   );
 };
 
-const OfferBadge = ({ className = "" }: { className?: string }) => (
-  <div
-    className={`${className} items-center justify-center gap-x-2 gap-y-0.5 rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 px-4 py-2.5 text-foreground shadow-sm flex flex-wrap text-center`}
-  >
-    <span className="inline-flex items-center gap-1.5 font-bold text-primary text-sm sm:text-[15px] whitespace-nowrap">
-      <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-      From $99 / week
-    </span>
-    <span className="hidden sm:inline text-primary/30">•</span>
-    <span className="text-[13px] sm:text-sm font-medium leading-snug w-full sm:w-auto">
-      If it doesn't pay for itself in the first month, you don't pay.
-    </span>
+const HeroVisual = () => (
+  <div className="relative mx-auto max-w-[480px]">
+    <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 to-transparent rounded-[2rem] blur-2xl" aria-hidden />
+    <div className="relative rounded-3xl border border-border bg-card shadow-2xl overflow-hidden">
+      {/* Top: call answered */}
+      <div className="px-6 pt-6 pb-5 border-b border-border">
+        <div className="flex items-center gap-3">
+          <div className="relative h-11 w-11 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+            <Phone className="h-5 w-5 text-primary" />
+            <span className="absolute inset-0 rounded-full ring-2 ring-primary/30 animate-ping" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-semibold text-foreground">Incoming call answered</p>
+            <p className="text-xs text-muted-foreground">+61 4·· ··· 218 · 7:42 pm</p>
+          </div>
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2 py-1 rounded-full">Live</span>
+        </div>
+      </div>
+
+      {/* Middle: conversation */}
+      <div className="px-6 py-5 space-y-3 bg-muted/30">
+        <div className="flex gap-2 items-start">
+          <div className="h-7 w-7 rounded-full bg-primary text-primary-foreground text-[11px] font-bold flex items-center justify-center shrink-0">AI</div>
+          <div className="rounded-2xl rounded-tl-sm bg-card border border-border px-3.5 py-2.5 text-sm text-foreground max-w-[80%]">
+            Hi, you've reached Get Booked Out. How can I help today?
+          </div>
+        </div>
+        <div className="flex justify-end">
+          <div className="rounded-2xl rounded-tr-sm bg-primary text-primary-foreground px-3.5 py-2.5 text-sm max-w-[80%]">
+            Need a hot water system repaired tomorrow morning.
+          </div>
+        </div>
+        <div className="flex gap-2 items-start">
+          <div className="h-7 w-7 rounded-full bg-primary text-primary-foreground text-[11px] font-bold flex items-center justify-center shrink-0">AI</div>
+          <div className="rounded-2xl rounded-tl-sm bg-card border border-border px-3.5 py-2.5 text-sm text-foreground max-w-[80%]">
+            Got it — booking you in for 8:30am tomorrow. Confirmation on its way.
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom: booking confirmed */}
+      <div className="px-6 py-4 border-t border-border bg-card flex items-center gap-3">
+        <div className="h-9 w-9 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+          <Check className="h-5 w-5 text-emerald-600" strokeWidth={3} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-semibold text-foreground flex items-center gap-1.5">
+            <Calendar className="h-3.5 w-3.5" /> Job booked · Tue 8:30 am
+          </p>
+          <p className="text-xs text-muted-foreground truncate">Added to your calendar · SMS sent to customer</p>
+        </div>
+      </div>
+    </div>
+
+    {/* floating badge */}
+    <div className="hidden sm:flex absolute -left-6 -bottom-6 items-center gap-2 rounded-2xl border border-border bg-card px-4 py-3 shadow-xl">
+      <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+        <MessageSquare className="h-4 w-4 text-primary" />
+      </div>
+      <div>
+        <p className="text-xs text-muted-foreground">Reply sent</p>
+        <p className="text-sm font-semibold text-foreground">in 4 seconds</p>
+      </div>
+    </div>
   </div>
 );
 

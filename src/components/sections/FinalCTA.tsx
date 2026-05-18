@@ -1,53 +1,50 @@
-import { Check } from "lucide-react";
-import LeadFormEmbed from "@/components/LeadFormEmbed";
-
-const points = [
-  "Set up in under 48 hours",
-  "No tech skills required",
-  "No lock-in contracts — cancel anytime",
-];
+import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const FinalCTA = () => {
-  return (
-    <section id="hero-form" className="section-padding relative overflow-hidden bg-gradient-to-br from-primary via-primary to-primary/80">
-      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-      <div className="container-padding max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left */}
-          <div className="text-center lg:text-left text-primary-foreground">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold mb-5 uppercase tracking-wide backdrop-blur-sm">
-              Ready when you are
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-tight">
-              Stop missing calls. Start booking more jobs.
-            </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Set up your AI receptionist today and never let another customer slip through to voicemail.
-            </p>
-            <div className="space-y-3 max-w-md mx-auto lg:mx-0 text-left">
-              {points.map((p) => (
-                <div key={p} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-                    <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
-                  </div>
-                  <span className="text-primary-foreground text-base">{p}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+  const navigate = useNavigate();
+  const goGetStarted = () => {
+    navigate("/get-started");
+    window.setTimeout(() => {
+      if (window.location.pathname !== "/get-started") {
+        window.location.assign("/get-started");
+      }
+    }, 120);
+  };
+  const goDemo = () => navigate("/schedule-demo");
 
-          {/* Right form */}
-          <div className="relative">
-            <div className="absolute -inset-3 bg-white/10 rounded-3xl blur-2xl" />
-            <div className="relative bg-card rounded-2xl border border-border shadow-2xl overflow-hidden">
-              <div className="px-6 pt-6 pb-2 text-center">
-                <h3 className="text-xl font-bold text-foreground">Get started in 2 minutes</h3>
-                <p className="text-sm text-muted-foreground mt-1">No credit card. No pressure.</p>
-              </div>
-              <LeadFormEmbed height={420} showHeader={false} className="rounded-none border-0 shadow-none" />
-            </div>
-          </div>
+  return (
+    <section id="final-cta" className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/85">
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at 20% 20%, white 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
+      <div className="container-padding max-w-4xl mx-auto relative z-10 py-16 md:py-24 text-center text-primary-foreground">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+          Ready to stop losing jobs to missed calls?
+        </h2>
+        <p className="mt-5 text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
+          See how Get Booked Out can answer more leads, book more jobs, and take admin pressure off your team.
+        </p>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <button
+            type="button"
+            onClick={goGetStarted}
+            className="inline-flex items-center justify-center gap-2 min-h-[56px] rounded-full bg-card px-8 text-base font-semibold text-foreground shadow-xl hover:-translate-y-0.5 transition-all"
+          >
+            Get Started Today
+            <ArrowRight className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            onClick={goDemo}
+            className="inline-flex items-center justify-center min-h-[56px] rounded-full border border-white/40 bg-white/10 px-8 text-base font-semibold text-primary-foreground hover:bg-white/15 transition-all backdrop-blur-sm"
+          >
+            Book a Demo
+          </button>
         </div>
+
+        <p className="mt-5 text-sm text-primary-foreground/85">
+          From <span className="font-semibold">$99/week</span> · No lock-in contracts
+        </p>
       </div>
     </section>
   );
