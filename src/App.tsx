@@ -34,6 +34,7 @@ const Location = lazy(() => import("./pages/Location"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Offer = lazy(() => import("./pages/Offer"));
 
 const queryClient = new QueryClient();
 
