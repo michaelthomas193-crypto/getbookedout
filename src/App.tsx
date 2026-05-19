@@ -81,6 +81,7 @@ const App = () => (
             <Route path="/brisbane" element={<Location />} />
             <Route path="/perth" element={<Location />} />
             <Route path="/adelaide" element={<Location />} />
+            <Route path="/offer" element={<Offer />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
