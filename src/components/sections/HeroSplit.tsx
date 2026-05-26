@@ -76,20 +76,20 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-3 md:py-4 lg:py-5">
-        <div className="grid items-start gap-5 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-8">
+      <div className="container-padding mx-auto max-w-7xl py-5 md:py-7 lg:py-9">
+        <div className="grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-10">
           {/* LEFT — headline + bullets */}
           <div className="text-center md:text-left md:pr-4">
             <motion.p
               {...fade(0)}
-              className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary md:text-[11px]"
+              className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary md:text-xs"
             >
               For Australian service-based businesses
             </motion.p>
 
             <motion.h1
               {...fade(0)}
-              className="mt-2 text-[2.85rem] font-bold leading-[0.95] tracking-tight text-foreground md:text-[3.2rem] lg:text-[3.6rem]"
+              className="mt-4 text-[2.85rem] font-bold leading-[1.02] tracking-tight text-foreground md:text-[3.2rem] lg:text-[3.6rem]"
             >
               We save you time.
               <br />
@@ -100,10 +100,10 @@ const HeroSplit = () => {
 
             <motion.ul
               {...fade(0.08)}
-              className="mx-auto mt-4 grid max-w-[42ch] gap-2 md:mx-0"
+              className="mx-auto mt-6 grid max-w-[42ch] gap-3 md:mx-0"
             >
               {BULLETS.map((b) => (
-                <li key={b} className="flex items-start gap-2.5 text-left">
+                <li key={b} className="flex items-start gap-3 text-left">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <Check className="h-3 w-3" strokeWidth={3} />
                   </span>
@@ -114,6 +114,7 @@ const HeroSplit = () => {
               ))}
             </motion.ul>
           </div>
+
 
           {/* RIGHT — short native form + secondary CTA */}
           <motion.div {...fade(0.1)} className="w-full">
