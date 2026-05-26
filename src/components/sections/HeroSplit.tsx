@@ -98,14 +98,14 @@ const HeroSplit = () => {
               <button
                 type="button"
                 onClick={handlePrimary}
-                className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:min-h-[50px] md:text-base"
+                className="inline-flex h-12 w-full items-center justify-center rounded-full border border-primary bg-primary px-6 text-sm font-semibold leading-none text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:h-[52px] md:text-base"
               >
                 Show me how to get Booked Out
               </button>
               <button
                 type="button"
                 onClick={handleSecondary}
-                className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:min-h-[50px] md:text-base"
+                className="inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold leading-none text-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:h-[52px] md:text-base"
               >
                 Show me how it works
               </button>
