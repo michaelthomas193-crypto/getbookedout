@@ -175,6 +175,18 @@ const HeroSplit = () => {
                 Show me how it works
               </button>
             </form>
+
+            <ul className="mt-4 grid grid-cols-3 gap-2 text-center">
+              {["No lock-in contracts", "Setup in 48 hours", "Cancel anytime"].map((t) => (
+                <li
+                  key={t}
+                  className="flex items-center justify-center gap-1.5 rounded-full border border-border bg-card/60 px-2 py-1.5 text-[11px] font-medium text-muted-foreground"
+                >
+                  <Check className="h-3 w-3 shrink-0 text-primary" strokeWidth={3} />
+                  <span className="truncate">{t}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </div>
