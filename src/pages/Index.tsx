@@ -1,6 +1,7 @@
 import SeoHead from "@/components/SeoHead";
 import Header from "@/components/sections/Header";
-import Hero from "@/components/sections/Hero";
+import HeroSplit from "@/components/sections/HeroSplit";
+import TrustStripBold from "@/components/sections/TrustStripBold";
 import TrustStrip from "@/components/sections/TrustStrip";
 import Problem from "@/components/sections/Problem";
 import Benefits from "@/components/sections/Benefits";
@@ -91,13 +92,14 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SeoHead
-        title="AI Receptionist for Australian Service Businesses | Get Booked Out"
-        description="Never miss a call, never miss a job. Get Booked Out's AI receptionist answers calls, replies instantly, and books jobs 24/7. From $99/week. No lock-in contracts."
+        title="Get Booked Out | More Bookings, Less Admin for Australian Service Businesses"
+        description="We save you time, save you money and make you more money. Done-for-you systems for Australian service businesses — tradies, beauty, wellness, auto, allied health and cleaning."
         path="/"
         jsonLd={[organizationSchema, localBusinessSchema, serviceSchema, faqSchema]}
       />
       <Header />
-      <Hero />
+      <HeroSplit />
+      <TrustStripBold />
       <Proof />
       <MarqueeQuotes />
       <TrustStrip />
