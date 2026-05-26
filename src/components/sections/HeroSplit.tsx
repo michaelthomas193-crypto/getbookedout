@@ -42,8 +42,8 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-4 md:py-5 lg:py-6">
-        <div className="grid items-center gap-6 md:grid-cols-[minmax(0,1fr)_minmax(340px,420px)] lg:gap-8">
+      <div className="container-padding mx-auto max-w-7xl py-3 md:py-4 lg:py-5">
+        <div className="grid items-start gap-5 md:grid-cols-[minmax(0,1fr)_minmax(340px,400px)] lg:gap-7">
           {/* LEFT — headline + copy */}
           <div className="text-center md:text-left md:pr-4">
             <motion.p
@@ -55,7 +55,7 @@ const HeroSplit = () => {
 
             <motion.h1
               {...fade(0)}
-              className="mt-3 text-4xl font-bold leading-[1.02] tracking-tight text-foreground md:text-[3.1rem] lg:text-[4.1rem]"
+              className="mt-3 text-[3.35rem] font-bold leading-[0.96] tracking-tight text-foreground md:text-[3.6rem] lg:text-[4rem]"
             >
               We save you time.
               <br />
@@ -66,16 +66,15 @@ const HeroSplit = () => {
 
             <motion.p
               {...fade(0.08)}
-              className="mx-auto mt-4 max-w-[50ch] text-[15px] leading-relaxed text-muted-foreground md:mx-0 md:text-base"
+              className="mx-auto mt-3 max-w-[46ch] text-sm leading-relaxed text-muted-foreground md:mx-0 md:text-[15px]"
             >
-              Done-for-you systems that turn more enquiries into booked jobs, follow up with every
-              lead automatically, and take the admin off your plate — so your calendar stays full
-              and your week stays yours.
+              We help you turn more enquiries into booked jobs, follow up faster, and take admin
+              off your plate so your calendar stays full.
             </motion.p>
 
             <motion.p
               {...fade(0.16)}
-              className="mx-auto mt-4 max-w-[48ch] text-sm text-muted-foreground md:mx-0"
+              className="mx-auto mt-3 max-w-[46ch] text-sm text-muted-foreground md:mx-0"
             >
               Built for tradies, beauty, wellness, auto, allied health and cleaning. No tech skills
               needed — we set it all up for you.
@@ -85,7 +84,7 @@ const HeroSplit = () => {
           {/* RIGHT — lead form + CTAs */}
           <motion.div {...fade(0.1)} id="hero-lead-form" className="w-full">
             <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]">
-              <div className="px-4 pt-4 pb-1 text-center md:px-5 md:pt-5">
+              <div className="px-4 pt-3 pb-1 text-center md:px-5 md:pt-4">
                 <h2 className="text-lg font-bold text-foreground md:text-xl">
                   Let's get you booked out
                 </h2>
@@ -93,10 +92,10 @@ const HeroSplit = () => {
                   Pop your details in. We'll be in touch within one business hour.
                 </p>
               </div>
-              <LeadFormEmbed showHeader={false} height={430} />
+              <LeadFormEmbed showHeader={false} height={390} />
             </div>
 
-            <div className="mt-3 grid gap-3">
+            <div className="mt-2.5 grid gap-2.5">
               <button
                 type="button"
                 onClick={handlePrimary}
