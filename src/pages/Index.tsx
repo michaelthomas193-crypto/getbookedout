@@ -98,7 +98,8 @@ const Index = () => {
         jsonLd={[organizationSchema, localBusinessSchema, serviceSchema, faqSchema]}
       />
       <Header />
-      <Hero />
+      <HeroSplit />
+      <TrustStripBold />
       <Proof />
       <MarqueeQuotes />
       <TrustStrip />
