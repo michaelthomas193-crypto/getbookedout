@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
-import LeadFormEmbed from "@/components/LeadFormEmbed";
+
+const HERO_FORM_SRC = "https://api.leadconnectorhq.com/widget/form/l0s50SAT3j1HjcABaNr8";
 
 declare global {
   interface Window {
@@ -42,8 +43,8 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-3 md:py-4 lg:py-5">
-        <div className="grid items-start gap-5 md:grid-cols-[minmax(0,1fr)_minmax(340px,400px)] lg:gap-7">
+      <div className="container-padding mx-auto max-w-7xl py-2 md:py-3 lg:py-4">
+        <div className="grid items-start gap-4 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-6">
           {/* LEFT — headline + copy */}
           <div className="text-center md:text-left md:pr-4">
             <motion.p
@@ -55,7 +56,7 @@ const HeroSplit = () => {
 
             <motion.h1
               {...fade(0)}
-              className="mt-3 text-[3.35rem] font-bold leading-[0.96] tracking-tight text-foreground md:text-[3.6rem] lg:text-[4rem]"
+              className="mt-2 text-[3.15rem] font-bold leading-[0.94] tracking-tight text-foreground md:text-[3.35rem] lg:text-[3.8rem]"
             >
               We save you time.
               <br />
@@ -66,7 +67,7 @@ const HeroSplit = () => {
 
             <motion.p
               {...fade(0.08)}
-              className="mx-auto mt-3 max-w-[46ch] text-sm leading-relaxed text-muted-foreground md:mx-0 md:text-[15px]"
+              className="mx-auto mt-2.5 max-w-[44ch] text-sm leading-relaxed text-muted-foreground md:mx-0"
             >
               We help you turn more enquiries into booked jobs, follow up faster, and take admin
               off your plate so your calendar stays full.
@@ -74,7 +75,7 @@ const HeroSplit = () => {
 
             <motion.p
               {...fade(0.16)}
-              className="mx-auto mt-3 max-w-[46ch] text-sm text-muted-foreground md:mx-0"
+              className="mx-auto mt-2 max-w-[44ch] text-sm text-muted-foreground md:mx-0"
             >
               Built for tradies, beauty, wellness, auto, allied health and cleaning. No tech skills
               needed — we set it all up for you.
@@ -84,18 +85,16 @@ const HeroSplit = () => {
           {/* RIGHT — lead form + CTAs */}
           <motion.div {...fade(0.1)} id="hero-lead-form" className="w-full">
             <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]">
-              <div className="px-4 pt-3 pb-1 text-center md:px-5 md:pt-4">
-                <h2 className="text-lg font-bold text-foreground md:text-xl">
-                  Let's get you booked out
-                </h2>
-                <p className="mt-1 text-xs text-muted-foreground md:text-sm">
-                  Pop your details in. We'll be in touch within one business hour.
-                </p>
-              </div>
-              <LeadFormEmbed showHeader={false} height={390} />
+              <iframe
+                src={HERO_FORM_SRC}
+                style={{ width: "100%", height: "330px", border: "none", background: "transparent" }}
+                scrolling="yes"
+                loading="eager"
+                title="Get Booked Out contact form"
+              />
             </div>
 
-            <div className="mt-2.5 grid gap-2.5">
+            <div className="mt-2 grid gap-2">
               <button
                 type="button"
                 onClick={handlePrimary}
