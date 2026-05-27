@@ -134,10 +134,10 @@ const HeroSplit = () => {
               className="rounded-2xl border border-border bg-card p-5 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]"
             >
               <h2 className="text-base font-bold text-foreground md:text-lg">
-                Get a free 10-min strategy call
+                Speak with our team
               </h2>
               <p className="mt-0.5 text-xs text-muted-foreground">
-                No sales pitch. Just a yarn.
+                Leave your details and we'll be in touch.
               </p>
 
               <div className="mt-3 grid gap-2.5">
