@@ -76,8 +76,8 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-5 md:py-7 lg:py-9">
-        <div className="grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-10">
+      <div className="container-padding mx-auto max-w-7xl py-3 md:py-7 lg:py-9">
+        <div className="grid items-start gap-3 md:gap-6 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-10">
           {/* LEFT — headline + bullets */}
           <div className="text-center md:text-left md:pr-4">
             <motion.p
@@ -87,9 +87,19 @@ const HeroSplit = () => {
               For Australian service-based businesses
             </motion.p>
 
+            {/* Mobile-only compact headline */}
             <motion.h1
               {...fade(0)}
-              className="mt-4 text-[2.85rem] font-bold leading-[1.02] tracking-tight text-foreground md:text-[3.2rem] lg:text-[3.6rem]"
+              className="mt-2 text-[1.65rem] font-bold leading-[1.05] tracking-tight text-foreground md:hidden"
+            >
+              More jobs. Less admin.{" "}
+              <span className="text-primary">Get Booked Out.</span>
+            </motion.h1>
+
+            {/* Desktop headline */}
+            <motion.h1
+              {...fade(0)}
+              className="mt-4 hidden text-[2.85rem] font-bold leading-[1.02] tracking-tight text-foreground md:block md:text-[3.2rem] lg:text-[3.6rem]"
             >
               We save you time.
               <br />
@@ -100,7 +110,7 @@ const HeroSplit = () => {
 
             <motion.ul
               {...fade(0.08)}
-              className="mx-auto mt-6 grid max-w-[42ch] gap-3 md:mx-0"
+              className="mx-auto mt-6 hidden max-w-[42ch] gap-3 md:mx-0 md:grid"
             >
               {BULLETS.map((b) => (
                 <li key={b} className="flex items-start gap-3 text-left">
@@ -114,6 +124,7 @@ const HeroSplit = () => {
               ))}
             </motion.ul>
           </div>
+
 
 
           {/* RIGHT — short native form + secondary CTA */}
