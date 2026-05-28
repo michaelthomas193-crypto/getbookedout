@@ -7,7 +7,7 @@ const industries = [
   { label: "AI receptionist for painters", to: "/painting" },
   { label: "AI receptionist for landscapers", to: "/landscaping" },
   { label: "AI receptionist for concreters", to: "/concreting" },
-  { label: "AI receptionist for handyman businesses", to: "/handyman" },
+  { label: "AI receptionist for handymen", to: "/handyman" },
 ];
 
 const Industries = () => {
