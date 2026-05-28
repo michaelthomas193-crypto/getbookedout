@@ -133,10 +133,10 @@ const HeroSplit = () => {
               onSubmit={handleSubmit}
               className="rounded-2xl border border-border bg-card p-5 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]"
             >
-              <h2 className="text-base font-bold text-foreground md:text-lg">
+              <h2 className="text-center text-base font-bold text-foreground md:text-left md:text-lg">
                 Speak with our team
               </h2>
-              <p className="mt-0.5 text-xs text-muted-foreground">
+              <p className="mt-0.5 text-center text-xs text-muted-foreground md:text-left">
                 Leave your details and we'll be in touch.
               </p>
 
