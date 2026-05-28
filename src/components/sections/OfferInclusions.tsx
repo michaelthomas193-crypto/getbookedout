@@ -10,7 +10,7 @@ const inclusions = [
 ];
 
 const OfferInclusions = () => (
-  <section className="section-padding bg-background">
+  <section id="whats-included" className="section-padding bg-background">
     <div className="container-padding max-w-6xl mx-auto">
       <div className="max-w-3xl mb-12 md:mb-16">
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">What's included</p>

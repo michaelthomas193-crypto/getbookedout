@@ -55,8 +55,7 @@ const HeroSplit = () => {
   const handleSecondary = () => {
     window.gtag?.("event", "cta_click", { label: "hero_secondary_see_how_it_works" });
     const target =
-      document.getElementById("how-it-works") ||
-      document.querySelector<HTMLElement>("[data-process-steps]");
+      document.getElementById("whats-included");
     target?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
