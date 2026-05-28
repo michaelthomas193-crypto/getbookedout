@@ -21,7 +21,7 @@ const Industries = () => {
           </p>
         </div>
 
-        <ul className="grid sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
+        <ul className="grid grid-cols-1 gap-3 max-w-xl mx-auto">
           {industries.map((i) => (
             <li key={i.to}>
               <Link
