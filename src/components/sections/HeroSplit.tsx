@@ -187,14 +187,14 @@ const HeroSplit = () => {
               </button>
             </form>
 
-            <ul className="mt-4 grid grid-cols-3 gap-2 text-center">
+            <ul className="mt-4 flex flex-wrap justify-center gap-2">
               {["No lock-in contracts", "Setup in 48 hours", "Cancel anytime"].map((t) => (
                 <li
                   key={t}
-                  className="flex items-center justify-center gap-1.5 rounded-full border border-border bg-card/60 px-2 py-1.5 text-[11px] font-medium text-muted-foreground"
+                  className="flex items-center gap-1.5 rounded-full border border-border bg-card/60 px-3 py-1.5 text-[11px] font-medium text-muted-foreground"
                 >
                   <Check className="h-3 w-3 shrink-0 text-primary" strokeWidth={3} />
-                  <span className="truncate">{t}</span>
+                  <span className="whitespace-nowrap">{t}</span>
                 </li>
               ))}
             </ul>
