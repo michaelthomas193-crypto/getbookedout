@@ -89,9 +89,10 @@ const HeroSplit = () => {
             {/* Mobile-only compact headline */}
             <motion.h1
               {...fade(0)}
-              className="mt-2 text-[1.65rem] font-bold leading-[1.05] tracking-tight text-foreground md:hidden"
+              className="mt-2 text-[1.65rem] font-bold leading-[1.1] tracking-tight text-foreground md:hidden"
             >
-              More jobs. Less admin.{" "}
+              More jobs. Less admin.
+              <br />
               <span className="text-primary">Get Booked Out.</span>
             </motion.h1>
 
