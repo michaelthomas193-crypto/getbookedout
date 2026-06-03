@@ -123,10 +123,11 @@ const HeroSplit = () => {
                   title="Book a time with Get Booked Out"
                   scrolling="no"
                   id={`${GHL_CALENDAR_ID}_embed`}
-                  style={{ width: "100%", border: "none", overflow: "hidden" }}
-                  className="block h-[640px] w-full md:h-[680px]"
+                  style={{ width: "100%", minHeight: "720px", border: "none" }}
+                  className="block w-full"
                 />
               </div>
+
 
               <button
                 type="button"
