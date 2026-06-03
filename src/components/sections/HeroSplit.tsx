@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
 
@@ -9,8 +9,9 @@ declare global {
   }
 }
 
-const GHL_FORM_ID = "Bs7UvhiUOzhzwBcZlxtm";
-const GHL_SUBMIT_URL = "https://backend.leadconnectorhq.com/forms/submit";
+const GHL_CALENDAR_ID = "1grlbLaT09ltqgrmm4uj";
+const GHL_CALENDAR_SRC = `https://api.leadconnectorhq.com/widget/booking/${GHL_CALENDAR_ID}`;
+const GHL_EMBED_SCRIPT = "https://link.msgsndr.com/js/form_embed.js";
 
 const BULLETS = [
   "Turn more enquiries into booked jobs",
@@ -21,41 +22,19 @@ const BULLETS = [
 
 const HeroSplit = () => {
   const prefersReduced = useReducedMotion();
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (submitting || !name.trim() || !phone.trim()) return;
-    setSubmitting(true);
-
-    window.gtag?.("event", "generate_lead", { label: "hero_form_submit" });
-    window.fbq?.("track", "Lead");
-
-    try {
-      const formData = new FormData();
-      formData.append("formId", GHL_FORM_ID);
-      formData.append("location_id", "");
-      formData.append("full_name", name);
-      formData.append("phone", phone);
-      await fetch(GHL_SUBMIT_URL, { method: "POST", body: formData, mode: "no-cors" });
-    } catch {
-      // swallow — no-cors hides response anyway
-    }
-
-    setSubmitted(true);
-    setSubmitting(false);
-    setTimeout(() => {
-      window.location.href = "/form-thank-you";
-    }, 600);
-  };
+  useEffect(() => {
+    if (document.querySelector(`script[src="${GHL_EMBED_SCRIPT}"]`)) return;
+    const s = document.createElement("script");
+    s.src = GHL_EMBED_SCRIPT;
+    s.type = "text/javascript";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
 
   const handleSecondary = () => {
     window.gtag?.("event", "cta_click", { label: "hero_secondary_see_how_it_works" });
-    const target =
-      document.getElementById("whats-included");
+    const target = document.getElementById("whats-included");
     target?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -67,6 +46,7 @@ const HeroSplit = () => {
           animate: { opacity: 1, y: 0 },
           transition: { duration: 0.2, delay, ease: "easeOut" as const },
         };
+
 
   return (
     <section id="hero" className="relative overflow-hidden bg-background">
