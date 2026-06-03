@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Check } from "lucide-react";
 
@@ -9,8 +9,9 @@ declare global {
   }
 }
 
-const GHL_FORM_ID = "Bs7UvhiUOzhzwBcZlxtm";
-const GHL_SUBMIT_URL = "https://backend.leadconnectorhq.com/forms/submit";
+const GHL_CALENDAR_ID = "1grlbLaT09ltqgrmm4uj";
+const GHL_CALENDAR_SRC = `https://api.leadconnectorhq.com/widget/booking/${GHL_CALENDAR_ID}`;
+const GHL_EMBED_SCRIPT = "https://link.msgsndr.com/js/form_embed.js";
 
 const BULLETS = [
   "Turn more enquiries into booked jobs",
@@ -21,41 +22,19 @@ const BULLETS = [
 
 const HeroSplit = () => {
   const prefersReduced = useReducedMotion();
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (submitting || !name.trim() || !phone.trim()) return;
-    setSubmitting(true);
-
-    window.gtag?.("event", "generate_lead", { label: "hero_form_submit" });
-    window.fbq?.("track", "Lead");
-
-    try {
-      const formData = new FormData();
-      formData.append("formId", GHL_FORM_ID);
-      formData.append("location_id", "");
-      formData.append("full_name", name);
-      formData.append("phone", phone);
-      await fetch(GHL_SUBMIT_URL, { method: "POST", body: formData, mode: "no-cors" });
-    } catch {
-      // swallow — no-cors hides response anyway
-    }
-
-    setSubmitted(true);
-    setSubmitting(false);
-    setTimeout(() => {
-      window.location.href = "/form-thank-you";
-    }, 600);
-  };
+  useEffect(() => {
+    if (document.querySelector(`script[src="${GHL_EMBED_SCRIPT}"]`)) return;
+    const s = document.createElement("script");
+    s.src = GHL_EMBED_SCRIPT;
+    s.type = "text/javascript";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
 
   const handleSecondary = () => {
     window.gtag?.("event", "cta_click", { label: "hero_secondary_see_how_it_works" });
-    const target =
-      document.getElementById("whats-included");
+    const target = document.getElementById("whats-included");
     target?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -67,6 +46,7 @@ const HeroSplit = () => {
           animate: { opacity: 1, y: 0 },
           transition: { duration: 0.2, delay, ease: "easeOut" as const },
         };
+
 
   return (
     <section id="hero" className="relative overflow-hidden bg-background">
@@ -127,65 +107,36 @@ const HeroSplit = () => {
 
 
 
-          {/* RIGHT — short native form + secondary CTA */}
+          {/* RIGHT — GHL calendar embed + secondary CTA */}
           <motion.div {...fade(0.1)} className="w-full">
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-2xl border border-border bg-card p-5 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)]"
-            >
+            <div className="rounded-2xl border border-border bg-card p-4 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] md:p-5">
               <h2 className="text-center text-base font-bold text-foreground md:text-left md:text-lg">
                 Speak with our team
               </h2>
               <p className="mt-0.5 text-center text-xs text-muted-foreground md:text-left">
-                Leave your details and we'll be in touch.
+                Pick a time that suits — we'll call you then.
               </p>
 
-              <div className="mt-3 grid gap-2.5">
-                <div>
-                  <label htmlFor="hero-name" className="sr-only">Full name</label>
-                  <input
-                    id="hero-name"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Full name"
-                    className="h-11 w-full rounded-lg border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="hero-phone" className="sr-only">Phone number</label>
-                  <input
-                    id="hero-phone"
-                    type="tel"
-                    required
-                    autoComplete="tel"
-                    inputMode="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="Phone number"
-                    className="h-11 w-full rounded-lg border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-                  />
-                </div>
+              <div className="mt-3 overflow-hidden rounded-lg bg-background">
+                <iframe
+                  src={GHL_CALENDAR_SRC}
+                  title="Book a time with Get Booked Out"
+                  scrolling="no"
+                  id={`${GHL_CALENDAR_ID}_embed`}
+                  style={{ width: "100%", border: "none", overflow: "hidden" }}
+                  className="block h-[640px] w-full md:h-[680px]"
+                />
               </div>
-
-              <button
-                type="submit"
-                disabled={submitting || submitted}
-                className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-full border border-primary bg-primary px-6 text-sm font-semibold leading-none text-primary-foreground shadow-lg shadow-primary/25 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background disabled:opacity-70 md:h-[52px] md:text-base"
-              >
-                {submitted ? "Thanks — redirecting…" : submitting ? "Sending…" : "Show me how to get Booked Out"}
-              </button>
 
               <button
                 type="button"
                 onClick={handleSecondary}
-                className="mt-2 inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold leading-none text-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:h-[52px] md:text-base"
+                className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold leading-none text-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:h-[52px] md:text-base"
               >
                 Show me how it works
               </button>
-            </form>
+            </div>
+
 
             <ul className="mt-4 flex flex-wrap justify-center gap-2">
               {["No lock-in contracts", "Setup in 48 hours", "Cancel anytime"].map((t) => (
