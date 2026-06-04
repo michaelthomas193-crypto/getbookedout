@@ -62,14 +62,16 @@ const HeroSplit = () => {
             >
               Never miss another job.
               <br />
-              <span className="text-primary">Booked out, on autopilot.</span>
+              <span className="text-primary">Get booked out,</span>
+              <br />
+              <span className="text-primary">on autopilot.</span>
             </motion.h1>
 
             <motion.p
               {...fade(0.05)}
               className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
             >
-              Our AI receptionist answers every call, replies to every enquiry in under a minute, and books straight into your calendar — 24/7. Live in 48 hours. From $499/month.
+              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks. Live in 48 hours. From $499/month.
             </motion.p>
 
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
@@ -79,10 +81,10 @@ const HeroSplit = () => {
                   e.preventDefault();
                   document.getElementById("proof")?.scrollIntoView({ behavior: "smooth", block: "start" });
                 }}
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1.5 text-xs font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:text-sm"
+                className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border bg-card/70 px-3 py-1.5 text-[11px] font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary sm:text-xs md:text-sm"
               >
-                <PlayCircle className="h-4 w-4 text-primary" />
-                Watch real client stories — tradies, salons & clinics
+                <PlayCircle className="h-4 w-4 shrink-0 text-primary" />
+                Watch real client stories
               </a>
 
               <div className="grid w-full max-w-md grid-cols-1 gap-2 sm:grid-cols-2">
@@ -105,7 +107,7 @@ const HeroSplit = () => {
 
 
               <p className="text-xs text-muted-foreground">
-                Drop your details — we'll call you within 1 business hour. No lock-in.
+                Drop your details — we'll be in touch shortly. No lock-in.
               </p>
             </motion.div>
 
