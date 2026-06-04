@@ -13,7 +13,7 @@ const BULLETS = [
   "Website, Google rankings & reviews working for you 24/7",
   "Missed-call text-back so no lead ever goes cold",
   "Lead follow-ups & calendar bookings on autopilot",
-  "Live in 48 hours. No lock-in. First month money-back.",
+  "No lock-in. First month money-back.",
 ];
 
 const HeroSplit = () => {
@@ -62,16 +62,16 @@ const HeroSplit = () => {
             >
               Never miss another job.
               <br />
-              <span className="text-primary">Get booked out,</span>
+              <span className="text-primary">Get booked out.</span>
               <br />
-              <span className="text-primary">on autopilot.</span>
+              <span className="text-primary">On autopilot.</span>
             </motion.h1>
 
             <motion.p
               {...fade(0.05)}
               className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
             >
-              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks. Live in 48 hours. From $499/month.
+              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks.
             </motion.p>
 
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
@@ -140,7 +140,7 @@ const HeroSplit = () => {
             </div>
 
             <ul className="mt-4 flex flex-wrap justify-center gap-2">
-              {["No lock-in contracts", "Setup in 48 hours", "First month money-back"].map((t) => (
+              {["No lock-in contracts", "First month money-back"].map((t) => (
                 <li
                   key={t}
                   className="flex items-center gap-1.5 rounded-full border border-border bg-card/60 px-3 py-1.5 text-[11px] font-medium text-muted-foreground"
