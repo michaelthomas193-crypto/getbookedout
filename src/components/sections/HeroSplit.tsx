@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Star, ArrowRight } from "lucide-react";
 
 declare global {
   interface Window {
@@ -14,10 +14,10 @@ const GHL_CALENDAR_SRC = `https://api.leadconnectorhq.com/widget/booking/${GHL_C
 const GHL_EMBED_SCRIPT = "https://link.msgsndr.com/js/form_embed.js";
 
 const BULLETS = [
-  "Turn more enquiries into booked jobs",
-  "Follow up with leads instantly, 24/7",
-  "Take admin off your plate",
-  "Done-for-you setup — no tech skills needed",
+  "Reply to every lead in under 60 seconds — even at 2am",
+  "Book 3-5 extra jobs a week without lifting your phone",
+  "Live in 48 hours — we do the setup, training and integrations",
+  "First-month money-back guarantee. No lock-in. Cancel anytime.",
 ];
 
 const HeroSplit = () => {
@@ -32,10 +32,14 @@ const HeroSplit = () => {
     document.body.appendChild(s);
   }, []);
 
+  const handlePrimary = () => {
+    window.gtag?.("event", "cta_click", { label: "hero_primary_book_call" });
+    document.getElementById("book-a-call")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const handleSecondary = () => {
     window.gtag?.("event", "cta_click", { label: "hero_secondary_see_how_it_works" });
-    const target = document.getElementById("whats-included");
-    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("whats-included")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const fade = (delay = 0) =>
@@ -47,7 +51,6 @@ const HeroSplit = () => {
           transition: { duration: 0.2, delay, ease: "easeOut" as const },
         };
 
-
   return (
     <section id="hero" className="relative overflow-hidden bg-background">
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -55,10 +58,10 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-3 md:py-7 lg:py-9">
-        <div className="grid items-start gap-3 md:gap-6 md:grid-cols-[minmax(0,1fr)_minmax(330px,390px)] lg:gap-10">
-          {/* LEFT — headline + bullets */}
-          <div className="text-center md:text-left md:pr-4">
+      <div className="container-padding mx-auto max-w-7xl py-4 md:py-9 lg:py-12">
+        <div className="grid items-start gap-6 md:gap-8 md:grid-cols-[minmax(0,1fr)_minmax(330px,420px)] lg:gap-12">
+          {/* LEFT — headline, proof, CTA, bullets */}
+          <div className="text-center md:text-left">
             <motion.p
               {...fade(0)}
               className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary md:text-xs"
@@ -66,31 +69,64 @@ const HeroSplit = () => {
               For Australian service-based businesses
             </motion.p>
 
-            {/* Mobile-only compact headline */}
             <motion.h1
               {...fade(0)}
-              className="mt-2 text-[1.65rem] font-bold leading-[1.1] tracking-tight text-foreground md:hidden"
+              className="mt-3 text-[1.85rem] font-bold leading-[1.05] tracking-tight text-foreground md:mt-4 md:text-[3rem] lg:text-[3.5rem]"
             >
-              More jobs. Less admin.
+              Never miss another job.
               <br />
-              <span className="text-primary">Get Booked Out.</span>
+              <span className="text-primary">Booked out, on autopilot.</span>
             </motion.h1>
 
-            {/* Desktop headline */}
-            <motion.h1
-              {...fade(0)}
-              className="mt-4 hidden text-[2.85rem] font-bold leading-[1.02] tracking-tight text-foreground md:block md:text-[3.2rem] lg:text-[3.6rem]"
+            <motion.p
+              {...fade(0.05)}
+              className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
             >
-              We save you time.
-              <br />
-              We save you money.
-              <br />
-              <span className="text-primary">Get Booked Out.</span>
-            </motion.h1>
+              Our AI receptionist answers every call, replies to every enquiry in under a minute, and books straight into your calendar — 24/7. Live in 48 hours. From $499/month.
+            </motion.p>
+
+            {/* AtF proof + primary CTA */}
+            <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-start">
+                <div className="flex items-center gap-1.5">
+                  <div className="flex items-center" aria-hidden="true">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <span className="text-sm font-semibold text-foreground">4.9</span>
+                  <span className="text-sm text-muted-foreground">from Australian tradies & operators</span>
+                </div>
+                <div className="hidden h-4 w-px bg-border md:block" />
+                <span className="text-sm font-medium text-muted-foreground">Trusted across AU service businesses</span>
+              </div>
+
+              <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
+                <button
+                  type="button"
+                  onClick={handlePrimary}
+                  className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-lg"
+                >
+                  Book a 15-min strategy call
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSecondary}
+                  className="inline-flex h-14 items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:h-[60px] md:text-base"
+                >
+                  See how it works
+                </button>
+              </div>
+
+              <p className="text-xs text-muted-foreground">
+                No credit card. No lock-in. We'll call you on the dot.
+              </p>
+            </motion.div>
 
             <motion.ul
-              {...fade(0.08)}
-              className="mx-auto mt-6 hidden max-w-[42ch] gap-3 md:mx-0 md:grid"
+              {...fade(0.12)}
+              className="mx-auto mt-7 hidden max-w-[46ch] gap-3 md:mx-0 md:grid"
             >
               {BULLETS.map((b) => (
                 <li key={b} className="flex items-start gap-3 text-left">
@@ -105,16 +141,14 @@ const HeroSplit = () => {
             </motion.ul>
           </div>
 
-
-
-          {/* RIGHT — GHL calendar embed + secondary CTA */}
-          <motion.div {...fade(0.1)} className="w-full">
+          {/* RIGHT — GHL calendar embed */}
+          <motion.div {...fade(0.1)} id="book-a-call" className="w-full scroll-mt-24">
             <div className="rounded-2xl border border-border bg-card p-4 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] md:p-5">
               <h2 className="text-center text-base font-bold text-foreground md:text-left md:text-lg">
-                Speak with our team
+                Pick a time — we'll call you then
               </h2>
               <p className="mt-0.5 text-center text-xs text-muted-foreground md:text-left">
-                Pick a time that suits — we'll call you then.
+                15 minutes. No pitch — just straight answers on whether we're a fit.
               </p>
 
               <div className="mt-3 overflow-hidden rounded-lg bg-background">
@@ -127,20 +161,10 @@ const HeroSplit = () => {
                   className="block w-full"
                 />
               </div>
-
-
-              <button
-                type="button"
-                onClick={handleSecondary}
-                className="mt-3 inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold leading-none text-foreground transition-colors hover:border-primary/40 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[3px] focus-visible:ring-offset-background md:h-[52px] md:text-base"
-              >
-                Show me how it works
-              </button>
             </div>
 
-
             <ul className="mt-4 flex flex-wrap justify-center gap-2">
-              {["No lock-in contracts", "Setup in 48 hours", "Cancel anytime"].map((t) => (
+              {["No lock-in contracts", "Setup in 48 hours", "First month money-back"].map((t) => (
                 <li
                   key={t}
                   className="flex items-center gap-1.5 rounded-full border border-border bg-card/60 px-3 py-1.5 text-[11px] font-medium text-muted-foreground"
