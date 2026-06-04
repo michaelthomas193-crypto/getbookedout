@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Check, Star, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, PlayCircle } from "lucide-react";
 
 declare global {
   interface Window {
