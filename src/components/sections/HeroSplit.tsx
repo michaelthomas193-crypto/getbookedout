@@ -111,14 +111,14 @@ const HeroSplit = () => {
 
             <motion.ul
               {...fade(0.12)}
-              className="mx-auto mt-7 hidden max-w-[46ch] gap-3 md:mx-0 md:grid"
+              className="mt-7 hidden gap-3 md:grid"
             >
               {BULLETS.map((b) => (
-                <li key={b} className="flex items-start gap-3 text-left">
-                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                <li key={b} className="flex items-center gap-3 text-left">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <Check className="h-3 w-3" strokeWidth={3} />
                   </span>
-                  <span className="text-[15px] font-medium leading-snug text-foreground md:text-base">
+                  <span className="whitespace-nowrap text-[14px] font-medium leading-snug text-foreground lg:text-[15px]">
                     {b}
                   </span>
                 </li>
