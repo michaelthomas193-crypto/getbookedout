@@ -1,7 +1,7 @@
 import { Star, Check, MessageSquare, Calendar, Phone } from "lucide-react";
 
 const Proof = () => (
-  <section className="section-padding bg-muted/30">
+  <section id="proof" className="section-padding bg-muted/30 scroll-mt-20">
     <div className="container-padding max-w-6xl mx-auto">
       <div className="max-w-3xl mb-12 md:mb-16">
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">Proof</p>
