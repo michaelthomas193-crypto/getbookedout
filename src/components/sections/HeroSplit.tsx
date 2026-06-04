@@ -10,10 +10,10 @@ declare global {
 }
 
 const BULLETS = [
-  "Reply to every lead in under 60 seconds — even at 2am",
-  "Book 3-5 extra jobs a week without lifting your phone",
-  "Live in 48 hours — we do the setup, training and integrations",
-  "First-month money-back guarantee. No lock-in. Cancel anytime.",
+  "Website, Google rankings & reviews working for you 24/7",
+  "Missed-call text-back so no lead ever goes cold",
+  "Lead follow-ups & calendar bookings on autopilot",
+  "Live in 48 hours. No lock-in. First month money-back.",
 ];
 
 const HeroSplit = () => {
