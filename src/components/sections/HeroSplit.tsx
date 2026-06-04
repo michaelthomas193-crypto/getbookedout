@@ -62,9 +62,9 @@ const HeroSplit = () => {
             >
               Never miss another job.
               <br />
-              <span className="text-primary">Get booked out.</span>
+              <span className="text-primary">Get Booked Out.</span>
               <br />
-              <span className="text-primary">On autopilot.</span>
+              <span className="text-primary">On Autopilot.</span>
             </motion.h1>
 
             <motion.p
