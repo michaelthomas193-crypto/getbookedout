@@ -64,7 +64,7 @@ const HeroSplit = () => {
               <br />
               <span className="text-primary">Get Booked Out.</span>
               <br />
-              <span className="text-primary">On Autopilot.</span>
+              <span className="text-primary">On autopilot.</span>
             </motion.h1>
 
             <motion.p
