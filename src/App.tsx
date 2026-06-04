@@ -83,6 +83,11 @@ const App = () => (
             <Route path="/perth" element={<Location />} />
             <Route path="/adelaide" element={<Location />} />
             <Route path="/offer" element={<Offer />} />
+            <Route path="/lp" element={<Lp />} />
+            <Route path="/lp/meta" element={<Lp />} />
+            <Route path="/lp/facebook" element={<Lp />} />
+            <Route path="/lp/instagram" element={<Lp />} />
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
