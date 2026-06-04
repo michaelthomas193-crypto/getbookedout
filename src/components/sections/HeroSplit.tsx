@@ -71,7 +71,7 @@ const HeroSplit = () => {
               {...fade(0.05)}
               className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
             >
-              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks. Live in 48 hours. From $499/month.
+              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks.
             </motion.p>
 
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
