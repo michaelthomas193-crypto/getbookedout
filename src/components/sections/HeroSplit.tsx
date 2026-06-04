@@ -87,19 +87,18 @@ const HeroSplit = () => {
 
             {/* AtF proof + primary CTA */}
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
-              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 md:justify-start">
-                <div className="flex items-center gap-1.5">
-                  <div className="flex items-center" aria-hidden="true">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <span className="text-sm font-semibold text-foreground">4.9</span>
-                  <span className="text-sm text-muted-foreground">from Australian tradies & operators</span>
-                </div>
-                <div className="hidden h-4 w-px bg-border md:block" />
-                <span className="text-sm font-medium text-muted-foreground">Trusted across AU service businesses</span>
-              </div>
+              <a
+                href="#proof"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("proof")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1.5 text-xs font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:text-sm"
+              >
+                <PlayCircle className="h-4 w-4 text-primary" />
+                Watch real client stories — tradies, salons & clinics
+              </a>
+
 
               <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
                 <button
