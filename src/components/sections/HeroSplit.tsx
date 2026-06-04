@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Check, ArrowRight, PlayCircle } from "lucide-react";
+import LeadFormEmbed from "@/components/LeadFormEmbed";
 
 declare global {
   interface Window {
@@ -8,10 +8,6 @@ declare global {
     fbq?: (...args: unknown[]) => void;
   }
 }
-
-const GHL_CALENDAR_ID = "1grlbLaT09ltqgrmm4uj";
-const GHL_CALENDAR_SRC = `https://api.leadconnectorhq.com/widget/booking/${GHL_CALENDAR_ID}`;
-const GHL_EMBED_SCRIPT = "https://link.msgsndr.com/js/form_embed.js";
 
 const BULLETS = [
   "Reply to every lead in under 60 seconds — even at 2am",
@@ -23,18 +19,9 @@ const BULLETS = [
 const HeroSplit = () => {
   const prefersReduced = useReducedMotion();
 
-  useEffect(() => {
-    if (document.querySelector(`script[src="${GHL_EMBED_SCRIPT}"]`)) return;
-    const s = document.createElement("script");
-    s.src = GHL_EMBED_SCRIPT;
-    s.type = "text/javascript";
-    s.async = true;
-    document.body.appendChild(s);
-  }, []);
-
   const handlePrimary = () => {
-    window.gtag?.("event", "cta_click", { label: "hero_primary_book_call" });
-    document.getElementById("book-a-call")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.gtag?.("event", "cta_click", { label: "hero_primary_get_started" });
+    document.getElementById("hero-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleSecondary = () => {
@@ -60,7 +47,7 @@ const HeroSplit = () => {
 
       <div className="container-padding mx-auto max-w-7xl py-4 md:py-9 lg:py-12">
         <div className="grid items-start gap-6 md:gap-8 md:grid-cols-[minmax(0,1fr)_minmax(330px,420px)] lg:gap-12">
-          {/* LEFT — headline, proof, CTA, bullets */}
+          {/* LEFT — headline, proof link, CTA, bullets */}
           <div className="text-center md:text-left">
             <motion.p
               {...fade(0)}
@@ -85,7 +72,6 @@ const HeroSplit = () => {
               Our AI receptionist answers every call, replies to every enquiry in under a minute, and books straight into your calendar — 24/7. Live in 48 hours. From $499/month.
             </motion.p>
 
-            {/* AtF proof + primary CTA */}
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
               <a
                 href="#proof"
@@ -99,14 +85,13 @@ const HeroSplit = () => {
                 Watch real client stories — tradies, salons & clinics
               </a>
 
-
               <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
                 <button
                   type="button"
                   onClick={handlePrimary}
                   className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-lg"
                 >
-                  Book a 15-min strategy call
+                  Get my free strategy call
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </button>
                 <button
@@ -119,7 +104,7 @@ const HeroSplit = () => {
               </div>
 
               <p className="text-xs text-muted-foreground">
-                No credit card. No lock-in. We'll call you on the dot.
+                Drop your details — we'll call you within 1 business hour. No lock-in.
               </p>
             </motion.div>
 
@@ -140,26 +125,15 @@ const HeroSplit = () => {
             </motion.ul>
           </div>
 
-          {/* RIGHT — GHL calendar embed */}
-          <motion.div {...fade(0.1)} id="book-a-call" className="w-full scroll-mt-24">
+          {/* RIGHT — short lead form */}
+          <motion.div {...fade(0.1)} id="hero-form" className="w-full scroll-mt-24">
             <div className="rounded-2xl border border-border bg-card p-4 shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] md:p-5">
-              <h2 className="text-center text-base font-bold text-foreground md:text-left md:text-lg">
-                Pick a time — we'll call you then
-              </h2>
-              <p className="mt-0.5 text-center text-xs text-muted-foreground md:text-left">
-                15 minutes. No pitch — just straight answers on whether we're a fit.
-              </p>
-
-              <div className="mt-3 overflow-hidden rounded-lg bg-background">
-                <iframe
-                  src={GHL_CALENDAR_SRC}
-                  title="Book a time with Get Booked Out"
-                  scrolling="no"
-                  id={`${GHL_CALENDAR_ID}_embed`}
-                  style={{ width: "100%", minHeight: "720px", border: "none" }}
-                  className="block w-full"
-                />
-              </div>
+              <LeadFormEmbed
+                title="Stop losing jobs"
+                subtitle="Quick chat. No sales pitch — just straight answers."
+                height={520}
+                showHeader
+              />
             </div>
 
             <ul className="mt-4 flex flex-wrap justify-center gap-2">
