@@ -6,8 +6,8 @@ import TrustStrip from "@/components/sections/TrustStrip";
 import Problem from "@/components/sections/Problem";
 import Benefits from "@/components/sections/Benefits";
 import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
-import Proof from "@/components/sections/Proof";
 import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
+import GoogleReviews from "@/components/sections/GoogleReviews";
 import OfferInclusions from "@/components/sections/OfferInclusions";
 import Industries from "@/components/sections/Industries";
 import FAQ from "@/components/sections/FAQ";
@@ -100,12 +100,12 @@ const Index = () => {
       <Header />
       <HeroSplit />
       <TrustStripBold />
-      <Proof />
       <MarqueeQuotes />
+      <GoogleReviews />
+      <HowItWorksSteps />
       <TrustStrip />
       <Problem />
       <Benefits />
-      <HowItWorksSteps />
       <OfferInclusions />
       <Industries />
       <FAQ />

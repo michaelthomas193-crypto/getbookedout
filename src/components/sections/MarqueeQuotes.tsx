@@ -24,7 +24,9 @@ const MarqueeQuotes = () => {
     <section className="py-14 md:py-20 bg-background overflow-hidden">
       <div className="container-padding max-w-7xl mx-auto text-center mb-10">
         <h2 className="section-title mb-3">
-          Real businesses. <span className="text-primary">Real results.</span>
+          Real businesses.
+          <br />
+          <span className="text-primary">Real results.</span>
         </h2>
         <p className="section-subtitle">
           Here's what owners are saying after switching to Get Booked Out.
