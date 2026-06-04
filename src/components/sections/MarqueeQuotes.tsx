@@ -63,31 +63,6 @@ const MarqueeQuotes = () => {
         </div>
       </div>
 
-      {/* Featured long-form testimonials */}
-      <div className="container-padding max-w-7xl mx-auto mb-10 md:mb-14">
-        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
-          {featured.map((t) => (
-            <figure
-              key={t.name}
-              className="flex flex-col p-6 md:p-8 bg-card rounded-2xl border border-border hover:shadow-lg transition-all"
-            >
-              <div className="text-5xl text-primary/30 leading-none mb-4 font-serif">"</div>
-              <blockquote className="flex-1 text-foreground text-base leading-relaxed mb-6">
-                {t.quote}
-              </blockquote>
-              <figcaption className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-primary/60 text-primary-foreground font-bold flex items-center justify-center">
-                  {t.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="font-semibold text-foreground text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </div>
 
     </section>
   );
