@@ -13,7 +13,7 @@ const BULLETS = [
   "Website, Google rankings & reviews working for you 24/7",
   "Missed-call text-back so no lead ever goes cold",
   "Lead follow-ups & calendar bookings on autopilot",
-  "Live in 48 hours. No lock-in. First month money-back.",
+  "No lock-in. First month money-back.",
 ];
 
 const HeroSplit = () => {
