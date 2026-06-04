@@ -85,23 +85,24 @@ const HeroSplit = () => {
                 Watch real client stories — tradies, salons & clinics
               </a>
 
-              <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center">
+              <div className="grid w-full max-w-md grid-cols-1 gap-2 sm:grid-cols-2">
                 <button
                   type="button"
                   onClick={handlePrimary}
-                  className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-primary px-7 text-base font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-lg"
+                  className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-base"
                 >
-                  Get my free strategy call
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  Get my strategy call
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
                 <button
                   type="button"
                   onClick={handleSecondary}
-                  className="inline-flex h-14 items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:h-[60px] md:text-base"
+                  className="inline-flex h-14 w-full items-center justify-center rounded-full border border-border bg-card px-5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:h-[60px] md:text-base"
                 >
                   See how it works
                 </button>
               </div>
+
 
               <p className="text-xs text-muted-foreground">
                 Drop your details — we'll call you within 1 business hour. No lock-in.
