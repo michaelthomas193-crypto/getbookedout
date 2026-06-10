@@ -172,21 +172,11 @@ const Pricing = () => {
             ))}
           </div>
 
-          <div className="mt-8 md:mt-10 flex items-center justify-center gap-2 sm:gap-3 rounded-xl bg-primary/10 border-2 border-primary/20 px-4 py-4 sm:px-6 sm:py-5 max-w-2xl mx-auto">
-            <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary shrink-0" />
-            <span className="text-base sm:text-lg md:text-xl font-bold text-primary text-center">
-              Guaranteed $1000+ in revenue or your money back
-            </span>
+          <div className="mt-8 md:mt-10 rounded-xl bg-primary/10 border-2 border-primary/20 px-4 py-4 sm:px-6 sm:py-5 max-w-2xl mx-auto text-center">
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-primary">
+              Websites sold separately from $1K–$5K. One decent job usually pays for the whole build.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* H2: A full-time receptionist costs $50,000+. This does the same job for a fraction. */}
-      <section className="py-10 md:py-14 bg-background">
-        <div className="container-padding max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-            A full-time receptionist costs $50,000+. This does the same job for a fraction.
-          </h2>
         </div>
       </section>
 
