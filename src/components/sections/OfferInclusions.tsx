@@ -1,36 +1,42 @@
-import { Check } from "lucide-react";
+import { Wallet, Clock, BellRing } from "lucide-react";
 
-const inclusions = [
-  { title: "24/7 call answering", body: "Every call picked up in your business's voice — day, night, weekends." },
-  { title: "Instant SMS & website chat replies", body: "New enquiries answered in seconds, before the lead goes cold." },
-  { title: "Calendar booking integration", body: "Jobs dropped straight into Google Calendar, Outlook, or your job-management tool." },
-  { title: "Missed-call text-back flows", body: "Automatic SMS recovery on any call you can't take." },
-  { title: "Lead qualification", body: "AI captures the job, location, urgency and contact details — ready for you to run." },
-  { title: "Review follow-up support", body: "Automated 5-star Google review requests after every completed job." },
+const items = [
+  {
+    icon: Wallet,
+    title: "No extra wages",
+    body: "AI receptionists answer and book jobs without sick days, penalties or overtime.",
+  },
+  {
+    icon: Clock,
+    title: "Less admin time",
+    body: "Automation sends quotes, reminders and follow-ups automatically, freeing up hours each week.",
+  },
+  {
+    icon: BellRing,
+    title: "Fewer no-shows and cancellations",
+    body: "Reminder and confirmation messages keep customers on track, so you're not wasting time on empty slots.",
+  },
 ];
 
 const OfferInclusions = () => (
   <section id="whats-included" className="section-padding bg-background">
     <div className="container-padding max-w-6xl mx-auto">
-      <div className="max-w-3xl mb-12 md:mb-16">
-        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">What's included</p>
+      <div className="max-w-3xl mb-10 md:mb-14">
+        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">Saves you money</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
-          Everything you need to stop losing jobs to missed calls.
+          How our AI saves you money.
         </h2>
+        <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+          Instead of paying for extra office staff, our AI handles admin, follow-up and booking, so you only pay one flat fee while the work gets done for you.
+        </p>
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-        {inclusions.map((i) => (
-          <div key={i.title} className="rounded-2xl border border-border bg-card p-6">
-            <div className="flex items-start gap-3">
-              <span className="mt-0.5 h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                <Check className="h-3.5 w-3.5 text-primary" strokeWidth={3} />
-              </span>
-              <div>
-                <h3 className="text-base font-semibold text-foreground mb-1.5">{i.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{i.body}</p>
-              </div>
-            </div>
+        {items.map(({ icon: Icon, title, body }) => (
+          <div key={title} className="rounded-2xl border border-border bg-card p-6">
+            <Icon className="h-6 w-6 text-primary mb-4" />
+            <h3 className="text-base md:text-lg font-semibold text-foreground mb-2">{title}</h3>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{body}</p>
           </div>
         ))}
       </div>

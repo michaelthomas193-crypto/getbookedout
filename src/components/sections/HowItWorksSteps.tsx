@@ -1,18 +1,18 @@
 const steps = [
   {
     n: "01",
-    title: "We connect your call and enquiry flows",
-    body: "Plug into your existing number, website forms and inbox. No new hardware, no IT headache.",
+    title: "Quick chat",
+    body: "We map out your trade, services and how your phone and bookings work now.",
   },
   {
     n: "02",
-    title: "The AI answers, replies and qualifies leads instantly",
-    body: "Trained on your services, pricing and FAQs — so it sounds like your business, 24/7.",
+    title: "Build",
+    body: "We set up your AI receptionist, chat, automation and booking system to match how you actually run jobs.",
   },
   {
     n: "03",
-    title: "Jobs book straight into your calendar",
-    body: "Confirmed appointments, customer details and full transcripts — sent to you in real time.",
+    title: "Run",
+    body: "We turn everything on, monitor the AI and adjust scripts and automations as real enquiries come in.",
   },
 ];
 
@@ -22,7 +22,7 @@ const HowItWorks = () => (
       <div className="max-w-3xl mb-12 md:mb-16">
         <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">How it works</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
-          From missed calls to booked jobs in 3 simple steps.
+          How our AI gets you booked out.
         </h2>
       </div>
 
