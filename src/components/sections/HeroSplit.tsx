@@ -53,25 +53,30 @@ const HeroSplit = () => {
               {...fade(0)}
               className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary md:text-xs"
             >
-              For Australian service-based businesses
+              AI for service businesses · Australia & USA
             </motion.p>
 
             <motion.h1
               {...fade(0)}
               className="mt-3 text-[1.85rem] font-bold leading-[1.05] tracking-tight text-foreground md:mt-4 md:text-[3rem] lg:text-[3.5rem]"
             >
-              Never miss another job.
+              Never miss another
               <br />
-              <span className="text-primary">Get Booked Out.</span>
-              <br />
-              <span className="text-primary">On autopilot.</span>
+              <span className="text-primary">job again.</span>
             </motion.h1>
 
             <motion.p
               {...fade(0.05)}
-              className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
+              className="mx-auto mt-4 max-w-[52ch] text-base font-semibold leading-relaxed text-foreground md:mx-0 md:text-lg"
             >
-              The complete done-for-you growth system for Aussie service businesses. We dial in your website, Google rankings, reviews, missed-call text-backs, lead follow-ups and calendar — so the phone rings, the diary fills, and nothing slips through the cracks.
+              AI for service businesses that makes you money, saves you money, and is built and run for you.
+            </motion.p>
+
+            <motion.p
+              {...fade(0.07)}
+              className="mx-auto mt-3 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
+            >
+              We use AI receptionists and automation to answer your calls, handle enquiries, and fill your calendar while you stay on the tools.
             </motion.p>
 
             <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
@@ -93,7 +98,7 @@ const HeroSplit = () => {
                   onClick={handlePrimary}
                   className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-base"
                 >
-                  Get my strategy call
+                  Get my AI game plan
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </button>
                 <button
@@ -101,7 +106,7 @@ const HeroSplit = () => {
                   onClick={handleSecondary}
                   className="inline-flex h-14 w-full items-center justify-center rounded-full border border-border bg-card px-5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:h-[60px] md:text-base"
                 >
-                  See how it works
+                  See how the AI works
                 </button>
               </div>
 
