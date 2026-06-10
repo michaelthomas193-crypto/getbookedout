@@ -10,10 +10,10 @@ declare global {
 }
 
 const BULLETS = [
-  "Website, Google rankings & reviews working for you 24/7",
-  "Missed-call text-back so no lead ever goes cold",
-  "Lead follow-ups & calendar bookings on autopilot",
-  "No lock-in. First month money-back.",
+  "AI receptionist answers every call and books the job",
+  "AI chat handles website, Facebook and Instagram enquiries 24/7",
+  "Automation follows up, sends reminders and chases reviews",
+  "Built and run for you. No lock-in.",
 ];
 
 const HeroSplit = () => {
