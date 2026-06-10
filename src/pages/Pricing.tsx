@@ -3,7 +3,7 @@ import SeoHead from "@/components/SeoHead";
 import Footer from "@/components/sections/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Check, ShieldCheck } from "lucide-react";
+import { Check } from "lucide-react";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 const pricingPlans = [
