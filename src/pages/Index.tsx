@@ -9,6 +9,7 @@ import HowItWorksSteps from "@/components/sections/HowItWorksSteps";
 import MarqueeQuotes from "@/components/sections/MarqueeQuotes";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import OfferInclusions from "@/components/sections/OfferInclusions";
+import BuiltAndRun from "@/components/sections/BuiltAndRun";
 import Industries from "@/components/sections/Industries";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -92,8 +93,8 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SeoHead
-        title="Get Booked Out | More Bookings, Less Admin for Australian Service Businesses"
-        description="We save you time, save you money and make you more money. Done-for-you systems for Australian service businesses — tradies, beauty, wellness, auto, allied health and cleaning."
+        title="Get Booked Out | AI for Service Businesses — Built and Run for You"
+        description="AI and automation for tradies and service businesses, using AI receptionists, chat and booking systems to make you more money, save you time and keep your diary full."
         path="/"
         jsonLd={[organizationSchema, localBusinessSchema, serviceSchema, faqSchema]}
       />
@@ -107,6 +108,7 @@ const Index = () => {
       <Problem />
       <Benefits />
       <OfferInclusions />
+      <BuiltAndRun />
       <Industries />
       <FAQ />
       <FinalCTA />

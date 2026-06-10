@@ -1,50 +1,43 @@
-import { PhoneOff, Clock, MoonStar, Flame, Star, Wallet } from "lucide-react";
+import { Phone, MessageCircle, Repeat, Settings2 } from "lucide-react";
 
-const pains = [
+const items = [
   {
-    icon: PhoneOff,
-    title: "Every missed call is a job for your competitor",
-    body: "Most callers won't leave a voicemail — they just ring the next business on Google. That's revenue walking out the door.",
+    icon: Phone,
+    title: "AI receptionist answers missed calls",
+    body: "Picks up when you can't, books jobs and sends you the details.",
   },
   {
-    icon: Clock,
-    title: "Slow replies kill hot leads stone dead",
-    body: "Most enquiries go cold inside 5 minutes. By the time you wipe your hands and reply, they've already booked someone else.",
+    icon: MessageCircle,
+    title: "AI chat across web and socials",
+    body: "Handles website, Facebook and Instagram enquiries 24/7 so you stop losing jobs while you're on the tools.",
   },
   {
-    icon: MoonStar,
-    title: "Nights and weekends bleed revenue silently",
-    body: "Most trade enquiries land outside business hours. While you're at dinner, your competitors are answering and booking.",
+    icon: Repeat,
+    title: "Automation that does the chasing",
+    body: "Follows up every enquiry, sends reminders and chases reviews without you hiring office staff.",
   },
   {
-    icon: Flame,
-    title: "You're burning out doing admin you hate",
-    body: "Voicemails, callbacks, quotes, follow-ups. Hours every week on unpaid admin instead of on the tools — or with your family.",
-  },
-  {
-    icon: Star,
-    title: "Ghosted customers tank your reputation",
-    body: "Every ignored enquiry is a potential 1-star review or 'never got back to me' Facebook post. Trust takes years to build, minutes to lose.",
-  },
-  {
-    icon: Wallet,
-    title: "You paid for those leads — twice",
-    body: "Google Ads, Facebook, SEO, vehicle wraps. Every missed lead is money you already spent to win, then chucked in the bin.",
+    icon: Settings2,
+    title: "Built and run for you",
+    body: "We build and run everything for you in GoHighLevel and LeadConnector, so you don't have to learn another system.",
   },
 ];
 
 const Problem = () => (
   <section className="section-padding bg-background">
     <div className="container-padding max-w-6xl mx-auto">
-      <div className="max-w-3xl mb-12 md:mb-16">
-        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">What's quietly costing you a fortune</p>
+      <div className="max-w-3xl mb-10 md:mb-14">
+        <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary mb-3">What we do</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
-          You're losing jobs you already paid to win — and you probably don't even know it.
+          AI that runs the boring stuff for you.
         </h2>
+        <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+          Get Booked Out is a done-for-you AI and automation service for tradies and local service businesses. We plug in AI receptionists, smart messaging and booking systems so every enquiry is answered, followed up and booked without you touching a screen.
+        </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {pains.map(({ icon: Icon, title, body }) => (
+      <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+        {items.map(({ icon: Icon, title, body }) => (
           <div key={title} className="rounded-2xl border border-border bg-card p-6 md:p-7">
             <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
               <Icon className="h-5 w-5 text-primary" />
