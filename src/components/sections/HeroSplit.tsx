@@ -45,8 +45,8 @@ const HeroSplit = () => {
         <div className="absolute -bottom-40 -left-40 h-[420px] w-[420px] rounded-full bg-primary/5 blur-3xl" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl py-4 md:py-9 lg:py-12">
-        <div className="grid items-start gap-6 md:gap-8 md:grid-cols-[minmax(0,1fr)_minmax(330px,420px)] lg:gap-12">
+      <div className="container-padding mx-auto max-w-7xl py-4 md:py-6 md:[@media(min-height:900px)]:py-12 lg:py-8 lg:[@media(min-height:900px)]:py-16 xl:[@media(min-height:1000px)]:py-20">
+        <div className="grid items-start gap-6 md:gap-6 md:[@media(min-height:900px)]:gap-10 md:grid-cols-[minmax(0,1fr)_minmax(330px,420px)] lg:gap-8 lg:[@media(min-height:900px)]:gap-12">
           {/* LEFT — headline, proof link, CTA, bullets */}
           <div className="text-center md:text-left">
             <motion.p
@@ -58,7 +58,7 @@ const HeroSplit = () => {
 
             <motion.h1
               {...fade(0)}
-              className="mt-3 text-[1.85rem] font-bold leading-[1.05] tracking-tight text-foreground md:mt-4 md:text-[3rem] lg:text-[3.5rem]"
+              className="mt-3 text-[1.85rem] font-bold leading-[1.05] tracking-tight text-foreground md:mt-3 md:[@media(min-height:900px)]:mt-4 md:text-[2.4rem] md:[@media(min-height:900px)]:text-[3rem] lg:text-[2.75rem] lg:[@media(min-height:900px)]:text-[3.5rem] xl:[@media(min-height:1000px)]:text-[3.75rem]"
             >
               Never miss another
               <br />
@@ -67,50 +67,20 @@ const HeroSplit = () => {
 
             <motion.p
               {...fade(0.05)}
-              className="mx-auto mt-4 max-w-[52ch] text-base font-semibold leading-relaxed text-foreground md:mx-0 md:text-lg"
+              className="mx-auto mt-3 md:[@media(min-height:900px)]:mt-4 max-w-[52ch] text-base font-semibold leading-relaxed text-foreground md:mx-0 md:text-base lg:text-lg"
             >
               AI for service businesses that makes you money, saves you money, and is built and run for you.
             </motion.p>
 
             <motion.p
               {...fade(0.07)}
-              className="mx-auto mt-3 max-w-[52ch] text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg"
+              className="mx-auto mt-2 md:[@media(min-height:900px)]:mt-3 max-w-[52ch] text-sm md:text-base xl:[@media(min-height:1000px)]:text-lg leading-relaxed text-muted-foreground md:mx-0"
             >
               We use AI receptionists and automation to answer your calls, handle enquiries, and fill your calendar while you stay on the tools.
             </motion.p>
 
-            <motion.div {...fade(0.08)} className="mt-6 flex flex-col items-center gap-4 md:items-start">
-              <a
-                href="#proof"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("proof")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-border bg-card/70 px-3 py-1.5 text-[11px] font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary sm:text-xs md:text-sm"
-              >
-                <PlayCircle className="h-4 w-4 shrink-0 text-primary" />
-                Watch real client stories
-              </a>
-
-              <div className="grid w-full max-w-md grid-cols-1 gap-2 sm:grid-cols-2">
-                <button
-                  type="button"
-                  onClick={handlePrimary}
-                  className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground shadow-[0_14px_40px_-12px_hsl(var(--primary)/0.6)] transition-all hover:translate-y-[-1px] hover:shadow-[0_18px_50px_-12px_hsl(var(--primary)/0.7)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background md:h-[60px] md:text-base"
-                >
-                  Get my AI game plan
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={handleSecondary}
-                  className="inline-flex h-14 w-full items-center justify-center rounded-full border border-border bg-card px-5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary md:h-[60px] md:text-base"
-                >
-                  See how the AI works
-                </button>
-              </div>
-
-
+            <motion.div {...fade(0.08)} className="mt-4 md:[@media(min-height:900px)]:mt-6 flex flex-col items-center gap-3 md:[@media(min-height:900px)]:gap-4 md:items-start">
+...
               <p className="text-xs text-muted-foreground">
                 Drop your details — we'll be in touch shortly. No lock-in.
               </p>
@@ -118,7 +88,7 @@ const HeroSplit = () => {
 
             <motion.ul
               {...fade(0.12)}
-              className="mt-7 hidden gap-3 md:grid"
+              className="mt-4 md:[@media(min-height:900px)]:mt-7 hidden gap-2 md:[@media(min-height:900px)]:gap-3 md:grid"
             >
               {BULLETS.map((b) => (
                 <li key={b} className="flex items-center gap-3 text-left">
