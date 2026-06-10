@@ -10,28 +10,31 @@ const pricingPlans = [
   {
     name: "Essentials",
     price: "$499",
-    tagline: "Stop Losing Jobs to Missed Calls",
+    tagline: "Automation that handles enquiries, reminders and reviews",
     features: [
-      "AI Chatbot — answers enquiries 24/7 on your website",
-      "Missed Call Text-Back — every unanswered call gets an instant response",
+      "AI follow-up on every enquiry",
+      "Automated reminders and confirmations",
+      "Review automation — 5-stars sent to Google",
+      "Built and run for you in GoHighLevel / LeadConnector",
     ],
     description:
-      "You're on a job. Phone rings. Can't answer. Instead of losing that customer to the next bloke on Google, they get a text in seconds. Your website chat handles the late-night browsers and weekend enquiries — so you wake up to jobs, not missed opportunities.",
+      "AI follow-up and automation to handle enquiries, reminders and reviews. Perfect if you want automation without full AI reception.",
     highlighted: false,
     badge: null,
   },
   {
     name: "Complete",
     price: "$999",
-    tagline: "Your Own Receptionist — Without the Salary",
+    tagline: "Full AI receptionist, chat, automation and booking",
     features: [
       "Everything in Essentials",
-      "AI Receptionist — answers calls, handles customer service, books appointments",
-      "Calendar Integration — customers book directly into your calendar",
-      "Google Review Automation — automatic requests after every job, only 5-stars go to Google",
+      "AI receptionist answers calls and books jobs",
+      "AI chat across website, Facebook and Instagram",
+      "Calendar booking built into your workflow",
+      "We build and run the whole stack for you",
     ],
     description:
-      "A full-time receptionist costs $50k+ a year. This does the same job for a fraction of the price — answers your phone, books jobs, filters tyre-kickers, and builds your Google reviews — while you stay focused on the work.",
+      "Full AI receptionist, chat, automation and booking, built and run for you. Best for busy trades and service businesses who never want to miss another job.",
     highlighted: true,
     badge: "Most Popular",
   },
@@ -40,19 +43,19 @@ const pricingPlans = [
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "Get Booked Out AI Receptionist",
-  description: "24/7 AI receptionist for Australian tradies — answers calls, books appointments, chases Google reviews.",
+  name: "Get Booked Out AI for Service Businesses",
+  description: "Done-for-you AI receptionist, chat and automation for tradies and service businesses. Built and run for you.",
   brand: { "@type": "Brand", name: "Get Booked Out" },
   offers: {
     "@type": "Offer",
     url: "https://www.getbookedout.com.au/pricing",
     priceCurrency: "AUD",
-    price: "99",
+    price: "499",
     priceSpecification: {
       "@type": "UnitPriceSpecification",
-      price: "99",
+      price: "499",
       priceCurrency: "AUD",
-      unitText: "WEEK",
+      unitText: "MONTH",
     },
     availability: "https://schema.org/InStock",
     areaServed: { "@type": "Country", name: "Australia" },
@@ -60,16 +63,15 @@ const pricingSchema = {
 };
 
 const includedList = [
-  "Inbound call answering, 24 hours a day, 7 days a week",
-  "Missed call instant text-back",
-  "Website chat that captures and converts after-hours enquiries",
-  "Appointment booking straight into Google Calendar, Outlook or your CRM",
-  "Spam and sales-call filtering",
-  "Automated review requests after every job, with 5-stars routed to Google",
-  "Live call transcripts and recordings in the Get Booked Out app",
-  "Push notifications for every new booking",
-  "iOS and Android apps included",
-  "Setup in under 48 hours",
+  "AI receptionist that answers calls and books jobs",
+  "AI chat across website, Facebook and Instagram",
+  "Automated follow-up on every enquiry",
+  "Reminders and confirmations to cut no-shows",
+  "Review automation with 5-stars sent to Google",
+  "Calendar booking built into your workflow",
+  "Built and run for you in GoHighLevel / LeadConnector",
+  "Done-for-you changes — tell us once, we update everything",
+  "Ongoing monitoring and tweaks",
   "No lock-in contracts — cancel anytime",
 ];
 
@@ -77,8 +79,8 @@ const Pricing = () => {
   return (
     <>
       <SeoHead
-        title="AI Receptionist Pricing Australia — From $99/week | Get Booked Out"
-        description="One simple price. No lock-in. From $99/week for an AI receptionist that answers calls, books jobs and chases reviews 24/7. If it doesn't pay for itself in month one, you don't pay."
+        title="AI for Service Businesses Pricing — From $499/month | Get Booked Out"
+        description="Simple plans. No lock-in. From $499/month for AI and automation built and run for you. AI receptionists, chat and booking that make you money and save you time."
         path="/pricing"
         jsonLd={pricingSchema}
       />
@@ -89,22 +91,22 @@ const Pricing = () => {
       <section className="pt-8 pb-8 md:pt-32 md:pb-16 bg-background">
         <div className="container-padding max-w-4xl mx-auto text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4 leading-tight">
-            AI Receptionist Pricing for Australian Tradies — From $99 / Week
+            Simple plans. No lock-in.
           </h1>
           <p className="text-base md:text-xl text-muted-foreground">
-            Stop losing jobs to missed calls. You're on a job. Phone rings. You can't answer. Instead of losing that customer to the next tradie on Google, Get Booked Out's AI receptionist texts them back in seconds, handles your website enquiries 24/7, and books appointments straight into your calendar.
+            AI for service businesses, built and run for you. AI receptionists, chat and automation that answer your calls, handle enquiries and fill your calendar while you stay on the tools.
           </p>
           <p className="text-base md:text-lg text-foreground mt-4 font-semibold">
-            From $99 / week. No lock-in. Cancel anytime. If it doesn't pay for itself in your first month, you don't pay.
+            From $499/month. No lock-in. Cancel anytime.
           </p>
         </div>
       </section>
 
-      {/* H2: One simple plan. Everything included. */}
+      {/* H2 */}
       <section className="pb-4 bg-background">
         <div className="container-padding max-w-5xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-2">
-            One simple plan. Everything included.
+            Pick the plan that fits your business.
           </h2>
         </div>
       </section>
