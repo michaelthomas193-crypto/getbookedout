@@ -200,6 +200,21 @@ function Hero() {
   const gridRef = useParallax(0.3);
   const glowRef = useParallax(-0.15);
   const videoWrapRef = useParallax(-0.08);
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    supabase.storage
+      .from("video-uploads")
+      .createSignedUrl(HERO_VIDEO_PATH, 60 * 60 * 24 * 365)
+      .then(({ data }) => {
+        if (!cancelled && data?.signedUrl) setVideoUrl(data.signedUrl);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section id="hero" className="relative overflow-hidden gl-bg-hero">
       <div ref={gridRef} className="pointer-events-none absolute inset-0 will-change-transform gl-grid-bg" />
