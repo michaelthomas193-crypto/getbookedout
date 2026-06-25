@@ -271,6 +271,7 @@ function SocialProof() {
           </h2>
         </div>
 
+        {/* Video testimonials */}
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
           {[
             { src: "/testimonials/joe-trades2you.mp4", name: "Joe", role: "Trades2You", initial: "J" },
@@ -297,6 +298,32 @@ function SocialProof() {
                   <div className="truncate text-xs gl-muted">{v.role}</div>
                 </div>
               </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* Written testimonials */}
+        <div className="mt-10 sm:mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+          {TESTIMONIALS.map((t) => (
+            <figure
+              key={t.name}
+              className="flex flex-col rounded-2xl border gl-border gl-card p-6 gl-shadow-card transition hover:border-[oklch(0.58_0.24_295/0.4)]"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full gl-bg-gradient text-sm font-bold gl-primary-fg">
+                  {t.initials}
+                </div>
+                <div className="min-w-0">
+                  <div className="font-semibold text-sm">{t.name}</div>
+                  <div className="text-xs gl-muted">{t.type}</div>
+                </div>
+              </div>
+              <blockquote className="flex-1 text-sm leading-relaxed gl-muted">
+                “{t.quote}”
+              </blockquote>
+              <div className="mt-4 pt-4 border-t gl-border text-xs font-semibold gl-success">
+                {t.outcome}
+              </div>
             </figure>
           ))}
         </div>
