@@ -3,9 +3,10 @@ import { Helmet } from "react-helmet-async";
 import { Check, ArrowRight, Star, Sparkles, Plug, Bot, CalendarClock } from "lucide-react";
 import videoThumbnail from "@/assets/hero-video-thumbnail.png.asset.json";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
-import { supabase } from "@/integrations/supabase/client";
 
 const HERO_VIDEO_PATH = "hero-video.mp4";
+const STORAGE_BASE_URL = "https://dipouppxidsmjfizdrmx.supabase.co/storage/v1";
+const STORAGE_PUBLISHABLE_KEY = "sb_publishable_TeQrR1ZRmoCUFJ5hL2vzGg_onSaNLdI";
 
 /**
  * Standalone paid-traffic landing page ported from the "GBO Booked Out" project.
@@ -204,12 +205,30 @@ function Hero() {
 
   useEffect(() => {
     let cancelled = false;
-    supabase.storage
-      .from("video-uploads")
-      .createSignedUrl(HERO_VIDEO_PATH, 60 * 60 * 24 * 365)
-      .then(({ data }) => {
-        if (!cancelled && data?.signedUrl) setVideoUrl(data.signedUrl);
-      });
+    const loadVideoUrl = async () => {
+      try {
+        const response = await fetch(
+          `${STORAGE_BASE_URL}/object/sign/video-uploads/${encodeURIComponent(HERO_VIDEO_PATH)}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              apikey: STORAGE_PUBLISHABLE_KEY,
+            },
+            body: JSON.stringify({ expiresIn: 60 * 60 * 24 * 365 }),
+          },
+        );
+        if (!response.ok) return;
+        const data = (await response.json()) as { signedURL?: string; signedUrl?: string };
+        const signedPath = data.signedURL ?? data.signedUrl;
+        if (!cancelled && signedPath) {
+          setVideoUrl(signedPath.startsWith("http") ? signedPath : `${STORAGE_BASE_URL}${signedPath}`);
+        }
+      } catch {
+        // Keep the poster visible if the video URL cannot be generated.
+      }
+    };
+    loadVideoUrl();
     return () => {
       cancelled = true;
     };
