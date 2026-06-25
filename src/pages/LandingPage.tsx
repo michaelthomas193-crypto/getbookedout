@@ -245,7 +245,7 @@ function Hero() {
           <div ref={glowRef} className="absolute -inset-3 -z-10 rounded-3xl gl-bg-gradient opacity-30 blur-2xl gl-animate-pulse-glow will-change-transform" />
           <div className="relative aspect-video overflow-hidden rounded-2xl border gl-border gl-card gl-shadow-elegant">
             <video
-              src={heroVideo.url}
+              src={videoUrl ?? undefined}
               poster={videoThumbnail.url}
               title="Get Booked Out Strategy Video"
               className="absolute inset-0 h-full w-full object-cover"
