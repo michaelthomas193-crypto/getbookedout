@@ -271,34 +271,34 @@ function SocialProof() {
           </h2>
         </div>
 
-        <div className="mt-12 -mx-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0">
-          <div className="flex snap-x snap-mandatory gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-4">
-            {TESTIMONIALS.map((t) => (
-              <article
-                key={t.name}
-                className="group min-w-[85%] snap-center rounded-2xl border gl-border gl-card p-6 gl-shadow-card transition hover:border-[oklch(0.58_0.24_295/0.4)] sm:min-w-0"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full gl-bg-gradient text-sm font-bold gl-primary-fg">
-                    {t.initials}
-                  </div>
-                  <div className="min-w-0">
-                    <div className="truncate font-semibold">{t.name}</div>
-                    <div className="truncate text-xs gl-muted">{t.type}</div>
-                  </div>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+          {[
+            { src: "/testimonials/joe-trades2you.mp4", name: "Joe", role: "Trades2You", initial: "J" },
+            { src: "/testimonials/client-2.mp4", name: "Lili", role: "Suite 3 hair in Paddington", initial: "L" },
+            { src: "/testimonials/sheen.mp4", name: "Sheen", role: "Sheen Hair Salon", initial: "S" },
+          ].map((v) => (
+            <figure
+              key={v.src}
+              className="flex flex-col rounded-2xl border gl-border gl-card overflow-hidden gl-shadow-card transition hover:border-[oklch(0.58_0.24_295/0.4)]"
+            >
+              <video
+                src={v.src}
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full h-[420px] bg-black object-cover"
+              />
+              <figcaption className="flex items-center gap-3 p-5 border-t gl-border">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full gl-bg-gradient text-sm font-bold gl-primary-fg">
+                  {v.initial}
                 </div>
-                <div className="mt-3 flex">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[oklch(0.58_0.24_295)] text-[oklch(0.58_0.24_295)]" />
-                  ))}
+                <div className="min-w-0">
+                  <div className="truncate font-semibold text-sm">{v.name}</div>
+                  <div className="truncate text-xs gl-muted">{v.role}</div>
                 </div>
-                <p className="mt-3 text-sm">"{t.quote}"</p>
-                <div className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-[oklch(0.62_0.2_255/0.1)] px-3 py-1 text-xs font-semibold gl-accent">
-                  <Sparkles className="h-3 w-3" /> {t.outcome}
-                </div>
-              </article>
-            ))}
-          </div>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
