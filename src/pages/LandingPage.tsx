@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Check, ArrowRight, Star, Sparkles, Plug, Bot, CalendarClock } from "lucide-react";
-import videoThumbnail from "@/assets/landing-video-thumbnail.png.asset.json";
+import videoThumbnail from "@/assets/hero-video-thumbnail.png.asset.json";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
 import { supabase } from "@/integrations/supabase/client";
 
