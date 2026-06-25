@@ -1,9 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Check, ArrowRight, Star, Sparkles, Plug, Bot, CalendarClock } from "lucide-react";
-import heroVideo from "@/assets/landing-hero.mp4.asset.json";
 import videoThumbnail from "@/assets/landing-video-thumbnail.png.asset.json";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
+import { supabase } from "@/integrations/supabase/client";
+
+const HERO_VIDEO_PATH = "hero-video.mp4";
 
 /**
  * Standalone paid-traffic landing page ported from the "GBO Booked Out" project.
