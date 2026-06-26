@@ -4,7 +4,7 @@ import { Check, ArrowRight, Star, Sparkles, Plug, Bot, CalendarClock } from "luc
 import videoThumbnail from "@/assets/hero-video-thumbnail.png.asset.json";
 import LeadFormEmbed from "@/components/LeadFormEmbed";
 
-const HERO_VIDEO_PATH = "hero-video-web.mp4";
+const HERO_VIDEO_PATH = "hero-video-hq.mp4";
 const STORAGE_BASE_URL = "https://dipouppxidsmjfizdrmx.supabase.co/storage/v1";
 const STORAGE_PUBLISHABLE_KEY = "sb_publishable_TeQrR1ZRmoCUFJ5hL2vzGg_onSaNLdI";
 
