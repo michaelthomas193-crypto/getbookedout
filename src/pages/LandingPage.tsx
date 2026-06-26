@@ -270,8 +270,11 @@ function Hero() {
               className="absolute inset-0 h-full w-full object-cover"
               controls
               playsInline
-              preload="metadata"
+              preload="auto"
+              // @ts-expect-error fetchpriority is a valid HTML attribute
+              fetchpriority="high"
             />
+
           </div>
         </div>
       </div>
