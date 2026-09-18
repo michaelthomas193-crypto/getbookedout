@@ -128,5 +128,8 @@
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ]
+  },
+  "overrides": {
+    "lodash": "^4.18.1"
   }
 }
